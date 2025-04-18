@@ -1,0 +1,286 @@
+;; What to remap, initial keyboard state definition
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+;; No change in language, standard qwerty used
+;; Select layout and layout switching in your OS
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @esc @a   @s   @d   @f   g    h    @j   @k   @l   @;   '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt         @space_nav       ralt rmet rctl
+)
+
+;; To disable home row mods and navigation layer on space
+;; Useful for gaming, use «switcher» layer to select
+(deflayer nomods
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  @esc a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt            spc           ralt rmet rctl
+)
+
+(deflayer navigation
+  esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  _ A-f4 C-S-tab tab C-tab @term esc home up   end  del  @smq @rub _
+  _   lmet lalt @octl lsft prnt @cw  left down rght bspc @emd _
+  rsft C-z  C-x  C-c  C-v C-S-z M-k  pgup menu pgdn ret  _
+  rctl rmet ralt           _              _    _    _
+)
+
+;; Note on switcher layer.
+;;
+;; My language binding for system layouts (feel free to select yours):
+;; - Ctrl-6 = Colemak
+;; - Ctrl-7 = Diktor
+;; - Ctrl-8 = Qwerty
+;; - Ctrl-9 = Йцукен
+;;
+;; It can be earily set up in KDE Plasma or Windows 11.
+;; Therefore, Diktor is only available in GNU Linux
+;; and should be installed separately on other systems.
+
+(deflayer switcher
+ lrld XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX  XX    @base @cmk  @dkt  XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX    C-6   C-7 @base @nomods C-8   C-9   XX    XX    XX    XX
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX                XX          XX    XX    XX
+)
+
+;; Layout layers
+;; not necessery, but just in case
+;; try to use system layouts
+(deflayer colemak
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  @esc @ca  @cr  @cs  @ct  d    h    @cn  @ce  @ci  @co    '    ret
+  lsft z    x    c    v    b    k    m    ,    .    /    rsft
+  lctl lmet lalt         @space_nav       ralt rmet rctl
+)
+;; Diktor is implemented with unicode symbols, use with caution, prefer system layout
+(deflayer diktor_unicode
+  grv  @1Ъ   @2Ь   @3№   @4%   @5:   @6;   @7-   @8dq  9     0      @star  =     bspc
+  tab  @цЦ   @ьъ   @яЯ   @,?   @.!   @зЗ   @вВ   @кК   @дД   @чЧ    @шШ    @щЩ    \
+  @esc @dуУ  @dиИ  @dеЕ  @dоО  @аА   @лЛ   @dнН  @dтТ  @dсС  @dрР   @йЙ    ret
+  lsft @фФ   @эЭ   @хХ   @ыЫ   @юЮ   @бБ   @мМ   @пП   @гГ   @жЖ    rsft
+  lctl lmet lalt         @space_nav       ralt rmet rctl
+)
+
+;; Variables and other settings
+(defvar
+  tap-time 200
+  hold-time 150
+)
+
+(defalias
+  space_nav (tap-hold 200 200 spc (layer-toggle navigation))
+  esc (tap-hold 200 200 esc (layer-toggle switcher))
+  base (layer-switch base)
+  nomods (layer-switch nomods)
+  cmk (layer-switch colemak)
+  dkt (layer-switch diktor_unicode)
+
+  term (macro C-8 50 lmet 250 S-t e r m i n a l 350 ret 50 C-6)
+  emd (macro ralt 50 - - -)
+  smq (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. left 50 C-6)
+  rub (macro C-8 50 ralt 50 = p 50 C-6)
+  cw (caps-word 2000)
+
+  octl (one-shot 500 lctl)
+
+  ;; qwerty modtaps
+  a (tap-hold $tap-time $hold-time a lmet)
+  s (tap-hold $tap-time $hold-time s lalt)
+  d (tap-hold $tap-time $hold-time d lctl)
+  f (tap-hold $tap-time $hold-time f lsft)
+  j (tap-hold $tap-time $hold-time j rsft)
+  k (tap-hold $tap-time $hold-time k rctl)
+  l (tap-hold $tap-time $hold-time l ralt)
+  ; (tap-hold $tap-time $hold-time ; rmet)
+
+  ;; colemak modtaps
+  ca (tap-hold $tap-time $hold-time a lmet)
+  cr (tap-hold $tap-time $hold-time r lalt)
+  cs (tap-hold $tap-time $hold-time s lctl)
+  ct (tap-hold $tap-time $hold-time t lsft)
+  cn (tap-hold $tap-time $hold-time n rsft)
+  ce (tap-hold $tap-time $hold-time e rctl)
+  ci (tap-hold $tap-time $hold-time i ralt)
+  co (tap-hold $tap-time $hold-time o rmet)
+
+  ;; diktor_unicode modetaps are below, in context with unicode definitions
+
+  ;; Unicode symbols for Diktor layout
+  ;; Row 1
+  Ъ (unicode Ъ)
+  1Ъ (fork 1 @Ъ (lsft rsft))
+
+  Ь (unicode Ь)
+  2Ь (fork 2 @Ь (lsft rsft))
+
+  № (unicode №)
+  3№ (fork 3 @№ (lsft rsft))
+
+  4% (fork 4 S-5 (lsft rsft))
+
+  5: (fork 5 S-; (lsft rsft))
+
+  6; (fork 6 ; (lsft rsft))
+
+  7- (fork 7 - (lsft rsft))
+
+  8dq (fork 8 S-' (lsft rsft))
+
+  star (fork S-8 S-- (lsft rsft))
+
+  ;; Row 2
+  ц (unicode ц)
+  Ц (unicode Ц)
+  цЦ (fork @ц @Ц (lsft rsft))
+
+  ь (unicode ь)
+  ъ (unicode ъ)
+  ьъ (fork @ь @ъ (lsft rsft))
+
+  я (unicode я)
+  Я (unicode Я)
+  яЯ (fork @я @Я (lsft rsft))
+
+  , (unicode ,)
+  ? (unicode ?)
+  ,? (fork @, @? (lsft rsft))
+
+  . (unicode .)
+  ! (unicode !)
+  .! (fork @. @! (lsft rsft))
+
+  з (unicode з)
+  З (unicode З)
+  зЗ (fork @з @З (lsft rsft))
+
+  в (unicode в)
+  В (unicode В)
+  вВ (fork @в @В (lsft rsft))
+
+  к (unicode к)
+  К (unicode К)
+  кК (fork @к @К (lsft rsft))
+
+  д (unicode д)
+  Д (unicode Д)
+  дД (fork @д @Д (lsft rsft))
+
+  ч (unicode ч)
+  Ч (unicode Ч)
+  чЧ (fork @ч @Ч (lsft rsft))
+
+  ш (unicode ш)
+  Ш (unicode Ш)
+  шШ (fork @ш @Ш (lsft rsft))
+
+  щ (unicode щ)
+  Щ (unicode Щ)
+  щЩ (fork @щ @Щ (lsft rsft))
+
+  ;; Row 3
+  у (unicode у)
+  У (unicode У)
+  уУ (fork @у @У (lsft rsft))
+  dуУ (tap-hold $tap-time $hold-time @уУ lmet)
+
+  и (unicode и)
+  И (unicode И)
+  иИ (fork @и @И (lsft rsft))
+  dиИ (tap-hold $tap-time $hold-time @иИ lalt)
+
+  е (unicode е)
+  Е (unicode Е)
+  еЕ (fork @е @Е (lsft rsft))
+  dеЕ (tap-hold $tap-time $hold-time @еЕ lctl)
+
+  о (unicode о)
+  О (unicode О)
+  оО (fork @о @О (lsft rsft))
+  dоО (tap-hold $tap-time $hold-time @оО lsft)
+
+  а (unicode а)
+  А (unicode А)
+  аА (fork @а @А (lsft rsft))
+
+  л (unicode л)
+  Л (unicode Л)
+  лЛ (fork @л @Л (lsft rsft))
+
+  н (unicode н)
+  Н (unicode Н)
+  нН (fork @н @Н (lsft rsft))
+  dнН (tap-hold $tap-time $hold-time @нН lsft)
+
+  т (unicode т)
+  Т (unicode Т)
+  тТ (fork @т @Т (lsft rsft))
+  dтТ (tap-hold $tap-time $hold-time @тТ lctl)
+
+  с (unicode с)
+  С (unicode С)
+  сС (fork @с @С (lsft rsft))
+  dсС (tap-hold $tap-time $hold-time @сС lalt)
+
+  р (unicode р)
+  Р (unicode Р)
+  рР (fork @р @Р (lsft rsft))
+  dрР (tap-hold $tap-time $hold-time @рР lmet)
+
+  й (unicode й)
+  Й (unicode Й)
+  йЙ (fork @й @Й (lsft rsft))
+
+  ;; Row 4
+  ф (unicode ф)
+  Ф (unicode Ф)
+  фФ (fork @ф @Ф (lsft rsft))
+
+  э (unicode э)
+  Э (unicode Э)
+  эЭ (fork @э @Э (lsft rsft))
+
+  х (unicode х)
+  Х (unicode Х)
+  хХ (fork @х @Х (lsft rsft))
+
+  ы (unicode ы)
+  Ы (unicode Ы)
+  ыЫ (fork @ы @Ы (lsft rsft))
+
+  ю (unicode ю)
+  Ю (unicode Ю)
+  юЮ (fork @ю @Ю (lsft rsft))
+
+  б (unicode б)
+  Б (unicode Б)
+  бБ (fork @б @Б (lsft rsft))
+
+  м (unicode м)
+  М (unicode М)
+  мМ (fork @м @М (lsft rsft))
+
+  п (unicode п)
+  П (unicode П)
+  пП (fork @п @П (lsft rsft))
+
+  г (unicode г)
+  Г (unicode Г)
+  гГ (fork @г @Г (lsft rsft))
+
+  ж (unicode ж)
+  Ж (unicode Ж)
+  жЖ (fork @ж @Ж (lsft rsft))
+)
