@@ -1,6 +1,6 @@
 # Extend
 
-My implementation ot Extend (navigation) layer in [Kanata](https://github.com/jtroo/kanata)
+My [implementation](kanata.kbd) ot Extend (navigation) layer in [Kanata](https://github.com/jtroo/kanata)
 
 ![](Extend.jpg)
 
