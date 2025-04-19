@@ -8,5 +8,10 @@ Hold space key to activate
 
 ## My implementations
 
-- [Kanata Extend implementation](kanata.kbd#L30-L36) ([Kanata page](https://github.com/jtroo/kanata))
-- [QMK Extend implementation](https://github.com/XelorR/Keychron_qmk/blob/wireless_playground/keyboards/keychron/k11_max/jis_encoder/rgb/keymaps/my/keymap.c#L131-L136) ([QMK page](https://qmk.fm/))
+- [Kanata Extend implementation](kanata.kbd#L47-L54) ([Kanata page](https://github.com/jtroo/kanata)), full config with other layers.
+- [QMK Extend implementation](https://github.com/XelorR/Keychron_qmk/blob/wireless_playground/keyboards/keychron/k11_max/jis_encoder/rgb/keymaps/my/keymap.c#L131-L136) ([QMK page](https://qmk.fm/)), full config with other layers.
+
+## TODO
+
+- [ ] implement Ctrl-letters like in Colemak, for Diktor
+- [ ] create separate Kanata config with Extend layer only, add link to it
