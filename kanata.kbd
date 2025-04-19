@@ -29,10 +29,10 @@
 
 (deflayer navigation
   esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _ A-f4 C-S-tab tab C-tab @term esc home up   end  del  @smq @rub _
-  _   lmet lalt @octl lsft prnt @cw  left down rght bspc @emd _
-  rsft C-z  C-x  C-c  C-v C-S-z M-k  pgup menu pgdn ret  _
-  rctl rmet ralt           _              _    _    _
+  _ A-f4   C-S-↹ ↹  C-↹ @term ⎋   ↖   ↑    ↘     ⌦  @smq @rub _
+  _   ‹⌘   ‹⌥  @⎈   ‹⇧  ⎙    @cw  ←   ↓    →    ⌫   @emd _
+  ⇧›  C-z  C-x  C-c  C-v C-S-z M-k  ⇞    ☰    ⇟    ⤶    _
+  ⎈›  ⌘›  ⌥›           _              _    _    _
 )
 
 ;; Note on switcher layer.
@@ -94,7 +94,7 @@
   rub (macro C-8 50 ralt 50 = p 50 C-6)
   cw (caps-word 2000)
 
-  octl (one-shot 500 lctl)
+  ⎈ (one-shot 500 lctl)
 
   ;; qwerty modtaps
   a (tap-hold $tap-time $hold-time a lmet)
