@@ -13,5 +13,5 @@ Hold space key to activate
 
 ## TODO
 
-- [ ] implement Ctrl-letters like in Colemak, for Diktor
+- [ ] fix colemac-alike ctrl-letters for «ь», «,» and «.» + better test other alphas
 - [ ] create separate Kanata config with Extend layer only, add link to it
