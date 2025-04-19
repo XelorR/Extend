@@ -1,6 +1,6 @@
 # Extend
 
-My personal [Extend](https://github.com/stevep99/keyboard-tweaks/tree/master/ExtendLayer) (navigation/function) layer rethink.
+My personal [Extend](https://github.com/stevep99/keyboard-tweaks/tree/master/ExtendLayer) (navigation/edition/function) layer rethink.
 Refer to [Extend layers](https://colemakmods.github.io/ergonomic-mods/extend.html) to know more
 
 ![](Extend.jpg)
