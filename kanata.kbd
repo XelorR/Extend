@@ -28,10 +28,10 @@
 )
 
 (deflayer navigation
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    A-f4 C-S-↹ ↹   C-↹  @term ⎋   ⇤    ↑    ⇥    ⌦    @smq @rub _
-  _    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @emd _
-  ⇧›   C-z  C-x  C-c  C-v C-S-z M-k  ⇞    ☰    ⇟    ⤶    _
+  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  ↹    A-f4 C-S-↹ ↹   C-↹ @term ⎀    ⇤    ↑    ⇥    ⌦    @smq @rub _
+  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @emd _
+  ⇧›   C-z  C-x  C-c  C-v C-S-z ⌥›   ⇞    ☰    ⇟    ⤶    _
   ⎈›   ⌘›  ⌥›              _              _    _    _
 )
 
