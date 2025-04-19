@@ -13,5 +13,5 @@ Hold space key to activate
 
 ## TODO
 
-- [ ] fix colemac-alike ctrl-letters for «ь», «,» and «.» + better test other alphas
+- [ ] fix colemak-alike ctrl-letters for «ь», «,» and «.» + better test other alphas (Ctrl-t works a expected)
 - [ ] create separate Kanata config with Extend layer only, add link to it
