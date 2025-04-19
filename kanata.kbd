@@ -28,11 +28,11 @@
 )
 
 (deflayer navigation
-  esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _ A-f4   C-S-↹ ↹  C-↹ @term ⎋   ↖   ↑    ↘     ⌦  @smq @rub _
-  _   ‹⌘   ‹⌥  @⎈   ‹⇧  ⎙    @cw  ←   ↓    →    ⌫   @emd _
-  ⇧›  C-z  C-x  C-c  C-v C-S-z M-k  ⇞    ☰    ⇟    ⤶    _
-  ⎈›  ⌘›  ⌥›           _              _    _    _
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  _    A-f4 C-S-↹ ↹   C-↹  @term ⎋   ↖    ↑    ↘    ⌦    @smq @rub _
+  _    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @emd _
+  ⇧›   C-z  C-x  C-c  C-v C-S-z M-k  ⇞    ☰    ⇟    ⤶    _
+  ⎈›   ⌘›  ⌥›              _              _    _    _
 )
 
 ;; Note on switcher layer.
@@ -48,7 +48,7 @@
 ;; and should be installed separately on other systems.
 
 (deflayer switcher
- lrld XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+ lrld XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
   XX  XX    @base @cmk  @dkt  XX    XX    XX    XX    XX    XX    XX    XX    XX
   XX  XX    XX    C-6   C-7 @base @nomods C-8   C-9   XX    XX    XX    XX
   XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
