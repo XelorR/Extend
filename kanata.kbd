@@ -106,7 +106,7 @@
   cmk (multi (layer-switch colemak) C-8)
   dkt (multi (layer-switch diktor) C-9)
   dktu (multi (layer-switch diktor_unicode) C-8)
-  gam (layer-switch gaming)
+  gam (multi (layer-switch gaming) C-8)
 
   ;; some symbols for Extend
   term (macro lmet 250 S-t e r m i n a l 350 ret 50)
