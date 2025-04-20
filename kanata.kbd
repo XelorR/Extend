@@ -132,8 +132,6 @@
   o (tap-hold $tap-time $hold-pinky o rmet)
 
 ;; Diktor symbols
-;; 1234567890*=
-;; ЪЬ№%:;-"()_+
   _1 (fork 1 S-] (lsft rsft))
   _2 (fork 2 S-m (lsft rsft))
   ;; 3 is the same in йцукен
@@ -142,39 +140,39 @@
   _6 (fork 6 S-4 (lsft rsft))
   _7 (fork 7 (unmod -) (lsft rsft))
   _8 (fork 8 S-2 (lsft rsft))
-  _ц (fork w C-q (lctl rctl))
+  _ц w
   _ь (fork m (unmod ]) (lsft rsft))
-  _я (fork z C-f (lctl rctl))
+  _я z
   _, (fork S-/ S-7 (lsft rsft))
   _. (fork / S-1 (lsft rsft))
-  _з (fork p C-j (lctl rctl))
-  _в (fork d C-l (lctl rctl))
-  _к (fork r C-u (lctl rctl))
-  _д (fork l C-y (lctl rctl))
-  _ч (fork x C-; (lctl rctl))
-  _ш (fork i C-[ (lctl rctl))
-  _щ (fork o C-] (lctl rctl))
-  _у (tap-hold $tap-time $hold-pinky (fork e C-a (lctl rctl)) lmet)
-  _и (tap-hold $tap-time $hold-ring (fork b C-r (lctl rctl)) lalt)
-  _е (tap-hold $tap-time $hold-middle (fork t C-s (lctl rctl)) lctl)
-  _о (tap-hold $tap-time $hold-index (fork j C-t (lctl rctl)) lsft)
-  _а (fork f C-d (lctl rctl))
-  _л (fork k C-h (lctl rctl))
-  _н (tap-hold $tap-time $hold-index (fork y C-n (lctl rctl)) rsft)
-  _т (tap-hold $tap-time $hold-middle (fork n C-e (lctl rctl)) rctl)
-  _с (tap-hold $tap-time $hold-ring (fork c C-i (lctl rctl)) ralt)
-  _р (tap-hold $tap-time $hold-pinky (fork h C-o (lctl rctl)) rmet)
-  _й (fork q C-' (lctl rctl))
-  _ф (tap-hold $tap-time $hold-pinky (fork a C-z (lctl rctl)) (layer-toggle switcher))
-  _э (fork ' C-x (lctl rctl))
-  _х (fork [ C-c (lctl rctl))
-  _ы (fork s C-v (lctl rctl))
-  _ю (fork . C-b (lctl rctl))
-  _б (fork , C-k (lctl rctl))
-  _м (fork v C-m (lctl rctl))
-  _п (fork g C-, (lctl rctl))
-  _г (fork u C-. (lctl rctl))
-  _ж (fork ; C-/ (lctl rctl))
+  _з p
+  _в d
+  _к r
+  _д l
+  _ч x
+  _ш i
+  _щ o
+  _у (tap-hold $tap-time $hold-pinky e lmet)
+  _и (tap-hold $tap-time $hold-ring b lalt)
+  _е (tap-hold $tap-time $hold-middle t lctl)
+  _о (tap-hold $tap-time $hold-index j lsft)
+  _а f
+  _л k
+  _н (tap-hold $tap-time $hold-index y rsft)
+  _т (tap-hold $tap-time $hold-middle n rctl)
+  _с (tap-hold $tap-time $hold-ring c ralt)
+  _р (tap-hold $tap-time $hold-pinky h rmet)
+  _й q
+  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle switcher))
+  _э '
+  _х [
+  _ы s
+  _ю .
+  _б ,
+  _м v
+  _п g
+  _г u
+  _ж ;
 
   ;; diktor_unicode modetaps are below, in context with unicode definitions
 
