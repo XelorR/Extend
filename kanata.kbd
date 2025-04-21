@@ -94,6 +94,13 @@
   hold-pinky 195
 )
 
+;; switching layers with chords
+(defcfg concurrent-tap-hold yes)
+(defchordsv2
+  (w e) @cmk 200 all-released (gaming navigation navigation_ru switcher)
+  (i o) @dkt 200 all-released (gaming navigation navigation_ru switcher)
+)
+
 (defalias
   ;; navigation "Extend" layer
   space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))

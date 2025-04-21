@@ -14,4 +14,3 @@ Hold space key to activate
 ## TODO
 
 - [ ] create separate Kanata config with Extend layer only, add link to it
-- [ ] implement layr switching combos
