@@ -181,8 +181,6 @@
   _г u
   _ж ;
 
-  ;; diktor_unicode modetaps are below, in context with unicode definitions
-
   ;; Unicode symbols for Diktor layout
   ;; Row 1
   Ъ (unicode Ъ)
