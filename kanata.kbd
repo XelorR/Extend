@@ -62,7 +62,7 @@
   ⎈›   ⌘›  ⌥›              _              _    _    _
 )
 
-;; Note on switcher layer.
+;; Note on media layer.
 ;;
 ;; My language binding for system layouts (feel free to select yours):
 ;; - Ctrl-6 = Colemak
@@ -75,12 +75,21 @@
 ;; Therefore, Diktor is only available in GNU Linux, but you can use йцукен with diktor layer.
 ;; and should be installed separately on other systems.
 
-(deflayer switcher
+(deflayer media
   XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
   XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
   XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
   XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
  @dr0 @dms  @dp0              XX          XX    XX    XX
+)
+
+;; switching languages with chords
+(defcfg concurrent-tap-hold yes)
+(defchordsv2
+  (w e) @cmk $hold-time all-released (gaming navigation navigation_ru media)
+  (x c) @gam $hold-time all-released (gaming navigation navigation_ru media)
+  (i o) @dkt $hold-time all-released (navigation navigation_ru media)
+  (, .) @dktu $hold-time all-released (navigation navigation_ru media)
 )
 
 ;; Variables and other settings
@@ -94,15 +103,6 @@
   hold-pinky 195
 )
 
-;; switching languages with chords
-(defcfg concurrent-tap-hold yes)
-(defchordsv2
-  (w e) @cmk $hold-time all-released (gaming navigation navigation_ru switcher)
-  (x c) @gam $hold-time all-released (gaming navigation navigation_ru switcher)
-  (i o) @dkt $hold-time all-released (navigation navigation_ru switcher)
-  (, .) @dktu $hold-time all-released (navigation navigation_ru switcher)
-)
-
 (defalias
   ;; navigation "Extend" layer
   space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
@@ -111,8 +111,8 @@
 
   ;; layer to switch layouts
   esc (tap-hold $tap-time $hold-time esc lctl)
-  ent (tap-hold $tap-time $hold-time ret (layer-toggle switcher))
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle switcher))
+  ent (tap-hold $tap-time $hold-time ret (layer-toggle media))
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle media))
 
   ;; layouts
   cmk (multi (layer-switch colemak) C-8)
@@ -178,7 +178,7 @@
   _с (tap-hold $tap-time $hold-ring c (multi ralt (layer-while-held colemak)))
   _р (tap-hold $tap-time $hold-pinky h (multi rmet (layer-while-held colemak)))
   _й q
-  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle switcher))
+  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle media))
   _э '
   _х [
   _ы s
@@ -325,7 +325,7 @@
   ;; Row 4
   ф (unicode ф)
   Ф (unicode Ф)
-  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle switcher))
+  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle media))
 
   э (unicode э)
   Э (unicode Э)
