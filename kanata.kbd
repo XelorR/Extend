@@ -94,7 +94,7 @@
   hold-pinky 195
 )
 
-;; switching layers with chords
+;; switching languages with chords
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
   (w e) @cmk 200 all-released (gaming navigation navigation_ru switcher)
