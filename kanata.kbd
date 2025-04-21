@@ -98,7 +98,9 @@
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
   (w e) @cmk $hold-time all-released (gaming navigation navigation_ru switcher)
-  (i o) @dkt $hold-time all-released (gaming navigation navigation_ru switcher)
+  (x c) @gam $hold-time all-released (gaming navigation navigation_ru switcher)
+  (i o) @dkt $hold-time all-released (navigation navigation_ru switcher)
+  (, .) @dktu $hold-time all-released (navigation navigation_ru switcher)
 )
 
 (defalias
