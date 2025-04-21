@@ -97,8 +97,8 @@
 ;; switching languages with chords
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (w e) @cmk 200 all-released (gaming navigation navigation_ru switcher)
-  (i o) @dkt 200 all-released (gaming navigation navigation_ru switcher)
+  (w e) @cmk $hold-time all-released (gaming navigation navigation_ru switcher)
+  (i o) @dkt $hold-time all-released (gaming navigation navigation_ru switcher)
 )
 
 (defalias
