@@ -127,7 +127,7 @@
   «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
   “” (macro ralt 50 S-' S-, 50 ralt 50 S-' S-. 50 left)
   cw (caps-word 2000)
-  comp (arbitrary-code 157)
+  comp M-e
 
   ⎈ (one-shot 500 lctl)
 
