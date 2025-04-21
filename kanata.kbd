@@ -152,16 +152,16 @@
   _ч x
   _ш i
   _щ o
-  _у (tap-hold $tap-time $hold-pinky e lmet)
-  _и (tap-hold $tap-time $hold-ring b lalt)
-  _е (tap-hold $tap-time $hold-middle t lctl)
+  _у (tap-hold $tap-time $hold-pinky e (multi lmet (layer-while-held colemak)))
+  _и (tap-hold $tap-time $hold-ring b (multi lalt (layer-while-held colemak)))
+  _е (tap-hold $tap-time $hold-middle t (multi lctl (layer-while-held colemak)))
   _о (tap-hold $tap-time $hold-index j lsft)
   _а f
   _л k
   _н (tap-hold $tap-time $hold-index y rsft)
-  _т (tap-hold $tap-time $hold-middle n rctl)
-  _с (tap-hold $tap-time $hold-ring c ralt)
-  _р (tap-hold $tap-time $hold-pinky h rmet)
+  _т (tap-hold $tap-time $hold-middle n (multi rctl (layer-while-held colemak)))
+  _с (tap-hold $tap-time $hold-ring c (multi ralt (layer-while-held colemak)))
+  _р (tap-hold $tap-time $hold-pinky h (multi rmet (layer-while-held colemak)))
   _й q
   _ф (tap-hold $tap-time $hold-pinky a (layer-toggle switcher))
   _э '
@@ -252,17 +252,17 @@
   у (unicode у)
   У (unicode У)
   уУ (fork @у @У (lsft rsft))
-  dуУ (tap-hold $tap-time $hold-pinky @уУ lmet)
+  dуУ (tap-hold $tap-time $hold-pinky @уУ (multi lmet (layer-while-held colemak)))
 
   и (unicode и)
   И (unicode И)
   иИ (fork @и @И (lsft rsft))
-  dиИ (tap-hold $tap-time $hold-ring @иИ lalt)
+  dиИ (tap-hold $tap-time $hold-ring @иИ (multi lalt (layer-while-held colemak)))
 
   е (unicode е)
   Е (unicode Е)
   еЕ (fork @е @Е (lsft rsft))
-  dеЕ (tap-hold $tap-time $hold-middle @еЕ lctl)
+  dеЕ (tap-hold $tap-time $hold-middle @еЕ (multi lctl (layer-while-held colemak)))
 
   о (unicode о)
   О (unicode О)
@@ -285,17 +285,17 @@
   т (unicode т)
   Т (unicode Т)
   тТ (fork @т @Т (lsft rsft))
-  dтТ (tap-hold $tap-time $hold-middle @тТ lctl)
+  dтТ (tap-hold $tap-time $hold-middle @тТ (multi lctl (layer-while-held colemak)))
 
   с (unicode с)
   С (unicode С)
   сС (fork @с @С (lsft rsft))
-  dсС (tap-hold $tap-time $hold-ring @сС lalt)
+  dсС (tap-hold $tap-time $hold-ring @сС (multi lalt (layer-while-held colemak)))
 
   р (unicode р)
   Р (unicode Р)
   рР (fork @р @Р (lsft rsft))
-  dрР (tap-hold $tap-time $hold-pinky @рР lmet)
+  dрР (tap-hold $tap-time $hold-pinky @рР (multi lmet (layer-while-held colemak)))
 
   й (unicode й)
   Й (unicode Й)
