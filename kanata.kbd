@@ -76,11 +76,11 @@
 ;; and should be installed separately on other systems.
 
 (deflayer switcher
- lrld XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
-  XX  XX    XX    @cmk  @dktu XX    XX    XX    XX    XX    XX    XX    XX    XX
-  XX  XX    lrld  @cmk  @dkt @gam   XX    XX    XX    XX    XX    XX    XX
-  XX  XX    XX    @cmk  @dkt  XX    XX    XX    XX    XX    XX    XX
-  XX  XX    XX                XX          XX    XX    XX
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
+ @dr0 @dms  @dp0              XX          XX    XX    XX
 )
 
 ;; Variables and other settings
@@ -130,6 +130,11 @@
   comp M-e
 
   ⎈ (one-shot 500 lctl)
+
+  ;; dynamic macro
+  dr0 (dynamic-macro-record 0)
+  dms dynamic-macro-record-stop
+  dp0 (dynamic-macro-play 0)
 
   ;; colemak modtaps
   a (tap-hold $tap-time $hold-pinky a lmet)
