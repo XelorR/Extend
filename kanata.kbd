@@ -22,7 +22,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч    @_ш    @_щ    \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р    @_й    @ent
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж    rsft
-  lctl lmet lalt         @space_nav_ru     ralt rmet rctl
+  @ctl @met @alt         @space_nav_ru      @ral @rme @rct
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -32,7 +32,7 @@
   tab  @цЦ   @ьъ   @яЯ   @,?   @.!   @зЗ   @вВ   @кК   @дД   @чЧ    @шШ    @щЩ    \
   @esc @dуУ  @dиИ  @dеЕ  @dоО  @аА   @лЛ   @dнН  @dтТ  @dсС  @dрР   @йЙ    @ent
   lsft @фФ   @эЭ   @хХ   @ыЫ   @юЮ   @бБ   @мМ   @пП   @гГ   @жЖ    rsft
-  lctl lmet lalt         @space_nav       ralt rmet rctl
+  @ctl @met @alt         @space_nav       @ral @rme @rct
 )
 
 ;; standard modless qwerty
@@ -180,6 +180,14 @@
   _п g
   _г u
   _ж ;
+  
+  ;; ensure modifiers to work as in colemak
+  ctl (multi lctl (layer-while-held colemak))
+  met (multi lmet (layer-while-held colemak))
+  alt (multi lalt (layer-while-held colemak))
+  rct (multi rctl (layer-while-held colemak))
+  rme (multi rmet (layer-while-held colemak))
+  ral (multi ralt (layer-while-held colemak))
 
   ;; Unicode symbols for Diktor layout
   ;; Row 1
