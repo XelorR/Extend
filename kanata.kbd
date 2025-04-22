@@ -76,10 +76,10 @@
 ;; switching languages with chords
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (w e) @cmk $hold-time all-released (gaming navigation navigation_ru media)
-  (x c) @gam $hold-time all-released (gaming navigation navigation_ru media)
-  (i o) @dkt $hold-time all-released (navigation navigation_ru media)
-  (, .) @dktu $hold-time all-released (navigation navigation_ru media)
+  (w e) @cmk $hold-time all-released (gaming navigation media)
+  (x c) @gam $hold-time all-released (gaming navigation media)
+  (i o) @dkt $hold-time all-released (navigation media)
+  (, .) @dktu $hold-time all-released (navigation media)
 )
 
 ;; Variables and other settings
@@ -113,10 +113,8 @@
   term (macro lmet 250 S-t e r m i n a l 350 ret 50)
   terr (macro C-8 50 lmet 250 S-t e r m i n a l 350 ret 50 C-9)
   ter (switch
-    (base-layer colemak) @term break
-    (base-layer gaming) @term break
-    (base-layer diktor_unicode) @term break
-    (base-layer diktor) @terr break
+    ((base-layer diktor)) @terr break
+    () @term break
   )
   — (macro ralt 50 - - -)
   «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
@@ -125,10 +123,9 @@
   u«» (macro @u« 50 @u» 50 left)
   “” (macro ralt 50 S-' S-, 50 ralt 50 S-' S-. 50 left)
   «” (switch
-    (base-layer colemak) @“” break
-    (base-layer gaming) @“” break
-    (base-layer diktor_unicode) @u«» break
-    (base-layer diktor) @«» break
+    ((base-layer diktor_unicode)) @u«» break
+    ((base-layer diktor)) @«» break
+    () @“” break
   )
   cw (caps-word 2000)
   fav C-S-o
