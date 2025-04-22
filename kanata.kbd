@@ -48,9 +48,9 @@
 (deflayer navigation
  C-A-⌦ f1    f2    f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  A-f4  C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
-  ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   @find
-  ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    _
-  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    _    _    _
+  ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
+  ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    🖱↑
+  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    🖱←   🖱↓   🖱→
 )
 
 (deflayer media
@@ -134,7 +134,6 @@
   copy C-c
   paste C-v
   redo C-S-v
-  find C-f
 
   ⎈ (one-shot 500 lctl)
 
