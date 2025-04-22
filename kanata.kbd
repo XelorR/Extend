@@ -22,7 +22,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч    @_ш    @_щ    \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р    @_й    @ent
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж    rsft
-  @ctl @met @alt         @space_nav_ru      @ral @rme @rct
+  @ctl @met @alt         @space_nav         @ral @rme @rct
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -47,16 +47,7 @@
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
  C-A-⌦ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
-  @“”  A-f4 C-S-↹ ↹   C-↹ @term ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
-  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
-  ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
-  ⎈›   ⌘›  ⌥›              _              M-e  _    _
-)
-
-;; Separate nav layer for use with russian language
-(deflayer navigation_ru
- C-A-⌦ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
-  @«»  A-f4 C-S-↹ ↹   C-↹ @terr ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
+  @«”  A-f4 C-S-↹ ↹   C-↹  @ter ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
   ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
   ⎈›   ⌘›  ⌥›              _              M-e  _    _
@@ -105,7 +96,6 @@
 (defalias
   ;; navigation "Extend" layer
   space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
-  space_nav_ru (tap-hold $tap-time $hold-time spc (layer-toggle navigation_ru))
   nav (layer-toggle navigation)
 
   ;; layer to switch layouts
@@ -122,9 +112,24 @@
   ;; some symbols for Extend
   term (macro lmet 250 S-t e r m i n a l 350 ret 50)
   terr (macro C-8 50 lmet 250 S-t e r m i n a l 350 ret 50 C-9)
+  ter (switch
+    (base-layer colemak) @term break
+    (base-layer gaming) @term break
+    (base-layer diktor_unicode) @term break
+    (base-layer diktor) @terr break
+  )
   — (macro ralt 50 - - -)
   «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
+  u« (unicode «)
+  u» (unicode »)
+  u«» (macro @u« 50 @u» 50 left)
   “” (macro ralt 50 S-' S-, 50 ralt 50 S-' S-. 50 left)
+  «” (switch
+    (base-layer colemak) @“” break
+    (base-layer gaming) @“” break
+    (base-layer diktor_unicode) @u«» break
+    (base-layer diktor) @«» break
+  )
   cw (caps-word 2000)
   fav C-S-o
   undo C-z
