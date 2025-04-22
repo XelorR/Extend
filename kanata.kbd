@@ -53,6 +53,14 @@
   ⎈›   ⌘›  ⌥›              _              M-e  _    _
 )
 
+(deflayer media
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
+  XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
+ @dr0 @dms  @dp0              XX          XX    XX    XX
+)
+
 ;; Note on layout switching.
 ;;
 ;; My language binding for system layouts:
@@ -65,17 +73,9 @@
 ;; If C-8 snd C-9 are not binded, it is possible to use
 ;;   Colemak and Diktor unicode version with US layout only.
 
-(deflayer media
-  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
-  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
-  XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
-  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
- @dr0 @dms  @dp0              XX          XX    XX    XX
-)
-
-;; switching languages with chords
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
+  ;; switching languages with chords
   (w e) @cmk $hold-time all-released (gaming navigation media)
   (x c) @gam $hold-time all-released (gaming navigation media)
   (i o) @dkt $hold-time all-released (navigation media)
