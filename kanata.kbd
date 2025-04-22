@@ -116,7 +116,12 @@
     ((base-layer diktor)) @terr break
     () @term break
   )
-  — (macro ralt 50 - - -)
+  emd (macro ralt 50 - - -)
+  u— (unicode —)
+  — (switch
+    ((base-layer diktor_unicode)) @u— break
+    () @emd break
+  )
   «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
   u« (unicode «)
   u» (unicode »)
