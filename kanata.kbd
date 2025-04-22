@@ -46,38 +46,37 @@
 
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
-  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  ↹    A-f4 C-S-↹ ↹   C-↹ @term ⎀    ⇤    ↑    ⇥    ⌦    @“”  _    @comp
-  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   _
-  ⇧›   C-z  C-x  C-c  C-v C-S-z ⌥›   ⇞    ☰    ⇟    ⤶    _
+  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
+  @“”  A-f4 C-S-↹ ↹   C-↹ @term ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
+  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
+  ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
   ⎈›   ⌘›  ⌥›              _              _    _    _
 )
 
 ;; Separate nav layer for use with russian language
 (deflayer navigation_ru
-  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  ↹    A-f4 C-S-↹ ↹   C-↹ @term_r ⎀    ⇤    ↑    ⇥    ⌦    @«» _  @comp
-  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   _
-  ⇧›   C-z  C-x  C-c  C-v C-S-z ⌥›   ⇞    ☰    ⇟    ⤶    _
+  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
+  @«»  A-f4 C-S-↹ ↹   C-↹ @terr ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
+  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
+  ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
   ⎈›   ⌘›  ⌥›              _              _    _    _
 )
 
-;; Note on media layer.
+;; Note on layout switching.
 ;;
-;; My language binding for system layouts (feel free to select yours):
-;; - Ctrl-6 = Colemak
-;; - Ctrl-7 = Diktor
+;; My language binding for system layouts:
 ;; - Ctrl-8 = Qwerty (colemak and diktor_unicode layers depends on it)
 ;; - Ctrl-9 = Йцукен (diktor layer depends on it)
 ;;
-;; It can be earily set up in KDE Plasma or Windows 11.
-;; qwerty, colemak and йцукен should be available in almost any os.
-;; Therefore, Diktor is only available in GNU Linux, but you can use йцукен with diktor layer.
-;; and should be installed separately on other systems.
+;; In this configuration I heavily rely on C-8 and C-9 shortcuts,
+;; which can be set up in KDE Plasma or Windows 11 via system settings.
+;;
+;; If C-8 snd C-9 are not binded, it is possible to use
+;;   Colemak and Diktor unicode version with US layout only.
 
 (deflayer media
   XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
-  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
   XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
   XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
  @dr0 @dms  @dp0              XX          XX    XX    XX
@@ -122,12 +121,18 @@
 
   ;; some symbols for Extend
   term (macro lmet 250 S-t e r m i n a l 350 ret 50)
-  term_r (macro C-8 50 lmet 250 S-t e r m i n a l 350 ret 50 C-9)
+  terr (macro C-8 50 lmet 250 S-t e r m i n a l 350 ret 50 C-9)
   — (macro ralt 50 - - -)
   «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
   “” (macro ralt 50 S-' S-, 50 ralt 50 S-' S-. 50 left)
   cw (caps-word 2000)
-  comp M-e
+  fav C-S-o
+  undo C-z
+  cut C-x
+  copy C-c
+  paste C-v
+  redo C-S-v
+  find C-f
 
   ⎈ (one-shot 500 lctl)
 
