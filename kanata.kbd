@@ -46,20 +46,20 @@
 
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
-  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
+ C-A-⌦ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
   @“”  A-f4 C-S-↹ ↹   C-↹ @term ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
   ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
-  ⎈›   ⌘›  ⌥›              _              _    _    _
+  ⎈›   ⌘›  ⌥›              _              M-e  _    _
 )
 
 ;; Separate nav layer for use with russian language
 (deflayer navigation_ru
-  ⎋    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
+ C-A-⌦ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
   @«»  A-f4 C-S-↹ ↹   C-↹ @terr ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
   ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
-  ⎈›   ⌘›  ⌥›              _              _    _    _
+  ⎈›   ⌘›  ⌥›              _              M-e  _    _
 )
 
 ;; Note on layout switching.
