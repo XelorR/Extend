@@ -54,7 +54,7 @@
 )
 
 (deflayer media
-  lrld @cmk  @gam  XX    XX    XX    \     @/    XX    XX    XX     🔈−   🔈+   🔇
+  lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX     🔈−   🔈+   🔇
   _    @dq   @<    =     @>    @`    XX    7     8     9     del    @[    @]    ▶⏸
   esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
   _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
