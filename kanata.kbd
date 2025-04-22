@@ -75,11 +75,15 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  ;; switching languages with chords
-  (w e) @cmk $hold-time all-released (gaming navigation media)
-  (x c) @gam $hold-time all-released (gaming navigation media)
-  (i o) @dkt $hold-time all-released (navigation media)
-  (, .) @dktu $hold-time all-released (navigation media)
+  ;; Switching languages with chords
+  ;; Colemak
+      (w e) @cmk $hold-time all-released (gaming navigation media)
+  ;; Qwerty, no modtaps
+      (x c) @gam $hold-time all-released (gaming navigation media)
+  ;; Diktor
+      (i o) @dkt $hold-time all-released (navigation media)
+  ;; Diktor unicode implementation
+      (, .) @dktu $hold-time all-released (navigation media)
 )
 
 ;; Variables and other settings
