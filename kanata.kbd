@@ -54,11 +54,11 @@
 )
 
 (deflayer media
-  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
-  XX  XX    XX    XX    lrld  XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
-  XX  XX    XX    XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
-  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX    _
- @dr0 @dms  @dp0              XX                XX    XX    XX    _     _     _
+  lrld @cmk  @gam  XX    XX    XX    XX    7     8     9     @/     🔈−   🔈+   🔇
+  _    @dq   @<    =     @>    @`    XX    4     5     6     @*    @[    @]    ▶⏸
+  esc  @#    @lb   @-    @rb   @~    XX    @1h   @2h   @3h   @bspc XX    XX
+  _    \    @[    @:    @]    XX    @|    0     @,    @.    ret   XX    🔈+
+  @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−     ▶▶
 )
 
 ;; Note on layout switching.
@@ -103,7 +103,7 @@
   nav (layer-toggle navigation)
 
   ;; layer to switch layouts
-  esc (tap-hold $tap-time $hold-time esc lctl)
+  esc (tap-hold $tap-time $hold-time esc (layer-toggle media))
   ent (tap-hold $tap-time $hold-time ret (layer-toggle media))
   z (tap-hold $tap-time $hold-pinky z (layer-toggle media))
 
@@ -145,6 +145,68 @@
   redo C-S-v
 
   ⎈ (one-shot 500 lctl)
+
+  ;; symbols for media layer
+  dq (switch
+    ((base-layer diktor)) S-2 break
+    () S-' break
+  )
+  < (switch
+    ((base-layer diktor)) (macro C-8 50 S-, 50 C-9) break
+    () S-, break
+  )
+  > (switch
+    ((base-layer diktor)) (macro C-8 50 S-. 50 C-9) break
+    () S-. break
+  )
+  ` (switch
+    ((base-layer diktor)) (macro C-8 50 grv 50 C-9) break
+    () grv break
+  )
+  ~ (switch
+    ((base-layer diktor)) (macro C-8 50 S-grv 50 C-9) break
+    () S-grv break
+  )
+  / (switch
+    ((base-layer diktor)) S-\ break
+    () / break
+  )
+  lb S-9
+  rb S-0
+  - -
+  [ (switch
+    ((base-layer diktor)) (macro C-8 50 [ 50 C-9) break
+    () [ break
+  )
+  ] (switch
+    ((base-layer diktor)) (macro C-8 50 ] 50 C-9) break
+    () ] break
+  )
+  | (switch
+    ((base-layer diktor)) (macro C-8 50 S-\ 50 C-9) break
+    () S-\ break
+  )
+  # (switch
+    ((base-layer diktor)) (macro C-8 50 S-3 50 C-9) break
+    () S-3 break
+  )
+  : (switch
+    ((base-layer diktor)) S-4 break
+    () S-; break
+  )
+  , (switch
+    ((base-layer diktor)) S-/ break
+    () , break
+  )
+  . (switch
+    ((base-layer diktor)) / break
+    () . break
+  )
+  1h 1
+  2h 2
+  3h 3
+  bspc bspc
+  * S-8
 
   ;; mouse
   🖱↑ (movemouse-up 1 1)
@@ -254,13 +316,13 @@
   Я (unicode Я)
   яЯ (fork @я @Я (lsft rsft))
 
-  , (unicode ,)
-  ? (unicode ?)
-  ,? (fork @, @? (lsft rsft))
+  u, (unicode ,)
+  u? (unicode ?)
+  ,? (fork @u, @u? (lsft rsft))
 
-  . (unicode .)
-  ! (unicode !)
-  .! (fork @. @! (lsft rsft))
+  u. (unicode .)
+  u! (unicode !)
+  .! (fork @u. @u! (lsft rsft))
 
   з (unicode з)
   З (unicode З)
