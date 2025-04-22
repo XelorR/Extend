@@ -49,8 +49,8 @@
  C-A-⌦ f1    f2    f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  A-f4  C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
-  ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    🖱↑
-  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    🖱←   🖱↓   🖱→
+  ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    @🖱↑
+  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    @🖱←   @🖱↓   @🖱→
 )
 
 (deflayer media
@@ -145,6 +145,12 @@
   redo C-S-v
 
   ⎈ (one-shot 500 lctl)
+
+  ;; mouse
+  🖱↑ (movemouse-up 1 1)
+  🖱↓ (movemouse-down 1 1)
+  🖱← (movemouse-left 1 1)
+  🖱→ (movemouse-right 1 1)
 
   ;; dynamic macro
   dr0 (dynamic-macro-record 0)
