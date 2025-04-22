@@ -57,7 +57,7 @@
   lrld @cmk  @gam  XX    XX    XX    XX    7     8     9     @/     🔈−   🔈+   🔇
   _    @dq   @<    =     @>    @`    XX    4     5     6     @*    @[    @]    ▶⏸
   esc  @#    @lb   @-    @rb   @~    XX    @1h   @2h   @3h   @bspc XX    XX
-  _    \    @[    @:    @]    XX    @|    0     @,    @.    ret   XX    🔈+
+  _    \     @[    @:    @]    XX    @|    0     @,    @.    ret   XX    🔈+
   @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−     ▶▶
 )
 
@@ -171,9 +171,13 @@
     ((base-layer diktor)) S-\ break
     () / break
   )
-  lb S-9
-  rb S-0
-  - -
+  # (tap-hold $tap-time $hold-pinky (switch
+    ((base-layer diktor)) (macro C-8 50 S-3 50 C-9) break
+    () S-3 break
+  ) lmet)
+  lb (tap-hold $tap-time $hold-ring S-9 lalt)
+  - (tap-hold $tap-time $hold-middle - lctl)
+  rb (tap-hold $tap-time $hold-index S-0 lsft)
   [ (switch
     ((base-layer diktor)) (macro C-8 50 [ 50 C-9) break
     () [ break
@@ -185,10 +189,6 @@
   | (switch
     ((base-layer diktor)) (macro C-8 50 S-\ 50 C-9) break
     () S-\ break
-  )
-  # (switch
-    ((base-layer diktor)) (macro C-8 50 S-3 50 C-9) break
-    () S-3 break
   )
   : (switch
     ((base-layer diktor)) S-4 break
@@ -202,10 +202,10 @@
     ((base-layer diktor)) / break
     () . break
   )
-  1h 1
-  2h 2
-  3h 3
-  bspc bspc
+  1h (tap-hold $tap-time $hold-index 1 lsft)
+  2h (tap-hold $tap-time $hold-middle 2 lctl)
+  3h (tap-hold $tap-time $hold-ring 3 lalt)
+  bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   * S-8
 
   ;; mouse
