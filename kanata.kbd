@@ -3,8 +3,8 @@
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet rctl
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
+  lctl lmet lalt           spc            ralt rmet rctl left down rght
 )
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
@@ -12,27 +12,27 @@
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent
-  lsft @z   x    c    v    b    k    m    ,    .    /    rsft
-  lctl lmet lalt         @space_nav       ralt rmet rctl
+  lsft @z   x    c    v    b    k    m    ,    .    /    rsft _
+  lctl lmet lalt         @space_nav       ralt rmet rctl _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
 (deflayer diktor
-  grv  @_1   @_2   3     @_4   @_5   @_6   @_7   @_8   9     0      @star  =     bspc
-  tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч    @_ш    @_щ    \
-  @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р    @_й    @ent
-  lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж    rsft
-  @ctl @met @alt         @space_nav         @ral @rme @rct
+  grv  @_1   @_2   3     @_4   @_5   @_6   @_7   @_8   9     0     @star =     bspc
+  tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
+  @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent
+  lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _
+  @ctl @met @alt         @space_nav              @ral  @rme  @rct  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
 ;; use with caution, prefer the previous one
 (deflayer diktor_unicode
   grv  @1Ъ   @2Ь   @3№   @4%   @5:   @6;   @7-   @8dq  9     0      @star  =     bspc
-  tab  @цЦ   @ьъ   @яЯ   @,?   @.!   @зЗ   @вВ   @кК   @дД   @чЧ    @шШ    @щЩ    \
+  tab  @цЦ   @ьъ   @яЯ   @,?   @.!   @зЗ   @вВ   @кК   @дД   @чЧ    @шШ    @щЩ   \
   @esc @dуУ  @dиИ  @dеЕ  @dоО  @аА   @лЛ   @dнН  @dтТ  @dсС  @dрР   @йЙ    @ent
-  lsft @фФ   @эЭ   @хХ   @ыЫ   @юЮ   @бБ   @мМ   @пП   @гГ   @жЖ    rsft
-  @ctl @met @alt         @space_nav       @ral @rme @rct
+  lsft @фФ   @эЭ   @хХ   @ыЫ   @юЮ   @бБ   @мМ   @пП   @гГ   @жЖ    rsft   _
+  @ctl @met @alt         @space_nav              @ral  @rme  @rct   _      _     _
 )
 
 ;; standard modless qwerty
@@ -40,25 +40,25 @@
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl @nav lalt            spc           ralt rmet rctl
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
+  lctl @nav lalt            spc           ralt rmet rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
- C-A-⌦ f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  brk
-  @«”  A-f4 C-S-↹ ↹   C-↹  @ter ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
-  ⎋    ‹⌘   ‹⌥   @⎈   ‹⇧   ⎙    @cw  ←    ↓    →    ⌫    @—   @find
-  ⇧›   @undo @cut @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _
-  ⎈›   ⌘›  ⌥›              _              M-e  _    _
+ C-A-⌦ f1    f2    f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
+  @«”  A-f4  C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
+  ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   @find
+  ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    _
+  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    _    _    _
 )
 
 (deflayer media
   XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    🔇    🔈−   🔈+   XX
-  XX  XX    XX    XX    XX    XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
-  XX  XX    lrld  XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
-  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX
- @dr0 @dms  @dp0              XX          XX    XX    XX
+  XX  XX    XX    XX    lrld  XX    XX    XX    XX    XX    XX    ◀◀    ▶▶    ▶⏸
+  XX  XX    XX    XX    XX   @gam   XX    XX    XX    XX    XX    XX    XX
+  XX  XX    XX    @cmk  XX    XX    XX    XX    XX    XX    XX    XX    _
+ @dr0 @dms  @dp0              XX                XX    XX    XX    _     _     _
 )
 
 ;; Note on layout switching.
