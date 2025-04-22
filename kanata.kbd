@@ -55,7 +55,7 @@
 
 (deflayer media
   lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX     🔈−   🔈+   🔇
-  _    @dq   @<    =     @>    @`    XX    7     8     9     del    @[    @]    ▶⏸
+  _    @dq   @<    =     @>    @`    XX    7     8     9     del    @{    @}    ▶⏸
   esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
   _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
   @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−     ▶▶
@@ -191,6 +191,14 @@
   ] (switch
     ((base-layer diktor)) (macro C-8 50 ] 50 C-9) break
     () ] break
+  )
+  { (switch
+    ((base-layer diktor)) (macro C-8 50 S-[ 50 C-9) break
+    () S-[ break
+  )
+  } (switch
+    ((base-layer diktor)) (macro C-8 50 S-] 50 C-9) break
+    () S-] break
   )
   | (switch
     ((base-layer diktor)) (macro C-8 50 S-\ 50 C-9) break
