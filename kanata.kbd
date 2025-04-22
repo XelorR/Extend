@@ -54,10 +54,10 @@
 )
 
 (deflayer media
-  lrld @cmk  @gam  XX    XX    XX    XX    7     8     9     @/     🔈−   🔈+   🔇
-  _    @dq   @<    =     @>    @`    XX    4     5     6     @*    @[    @]    ▶⏸
-  esc  @#    @lb   @-    @rb   @~    XX    @1h   @2h   @3h   @bspc XX    XX
-  _    \     @[    @:    @]    XX    @|    0     @,    @.    ret   XX    🔈+
+  lrld @cmk  @gam  XX    XX    XX    \     @/    XX    XX    XX     🔈−   🔈+   🔇
+  _    @dq   @<    =     @>    @`    XX    7     8     9     del    @[    @]    ▶⏸
+  esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
+  _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
   @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−     ▶▶
 )
 
@@ -208,9 +208,9 @@
     ((base-layer diktor)) / break
     () . break
   )
-  1h (tap-hold $tap-time $hold-index 1 lsft)
-  2h (tap-hold $tap-time $hold-middle 2 lctl)
-  3h (tap-hold $tap-time $hold-ring 3 lalt)
+  4h (tap-hold $tap-time $hold-index 4 lsft)
+  5h (tap-hold $tap-time $hold-middle 5 lctl)
+  6h (tap-hold $tap-time $hold-ring 6 lalt)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   * S-8
 
