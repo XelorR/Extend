@@ -47,10 +47,10 @@
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
  C-A-⌦ f1    f2    f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
-  @«”  A-f4  C-S-↹ ↹     C-↹    @tvsc ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
+  @«”  A-f4  C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
   ⇧›   @undo @cut  @copy @paste @redo ⌥›   ⇞    ☰    ⇟    ⤶    _    @🖱↑
-  ⎈›   ⌘›  ⌥›              _                    M-e  _    _    @🖱←   @🖱↓   @🖱→
+  ⎈›   ⌘›  ⌥›              _                    M-e  _    @vsc  @🖱←   @🖱↓   @🖱→
 )
 
 (deflayer media
@@ -116,16 +116,16 @@
   ;; some symbols for Extend
   term (macro lmet 300 S-t e r m i n a l 400 ret)
   terr (macro C-8 50 lmet 300 S-t e r m i n a l 400 ret 50 C-9)
-  vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 S-c o d e 400 ret)
+  vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
+  vscodr (macro C-8 50 lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 C-9)
   vsc (switch
-    ((base-layer diktor)) (macro C-8 @vscode C-9) break
+    ((base-layer diktor)) @vscodr break
     () @vscode break
   )
   ter (switch
     ((base-layer diktor)) @terr break
     () @term break
   )
-  tvsc (fork ter vsc (lsft rsft))
   emd (macro ralt 50 - - -)
   u— (unicode —)
   — (switch
