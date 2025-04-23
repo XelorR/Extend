@@ -8,6 +8,6 @@ Hold space key to activate
 
 ## My implementations
 
-- [Extend](extend.kbd#L17-L23) layer, minimal version, [Kanata](https://github.com/jtroo/kanata)
+- [Extend](extend.kbd#L17-L23) layer, minimal starter pack, [Kanata](https://github.com/jtroo/kanata)
 - My full config with [Extend](kanata.kbd#L47-L54), [Kanata](https://github.com/jtroo/kanata)
 - My full config with [Extend](https://github.com/XelorR/Keychron_qmk/blob/wireless_playground/keyboards/keychron/k11_max/jis_encoder/rgb/keymaps/my/keymap.c#L131-L136), [QMK](https://qmk.fm/)
