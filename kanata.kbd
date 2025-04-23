@@ -115,6 +115,7 @@
   gam (multi (layer-switch gaming) C-8)
 
   ;; some symbols for Extend
+  ;; launchers
   term (macro lmet 300 S-t e r m i n a l 400 ret)
   terr (macro C-8 50 lmet 300 S-t e r m i n a l 400 ret 50 C-9)
   vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
@@ -127,22 +128,27 @@
     ((base-layer diktor)) @terr break
     () @term break
   )
-  emd (macro ralt 50 - - -)
+  ;; unicode
   u— (unicode —)
+  ur— (macro C-8 50 @u— 50 C-9)
   — (switch
-    ((base-layer diktor_unicode)) @u— break
-    () @emd break
+    ((base-layer diktor)) @ur— break
+    () @u— break
   )
-  «» (macro C-8 50 ralt 50 S-, S-, 50 ralt 50 S-. S-. 50 left C-9)
   u« (unicode «)
   u» (unicode »)
   u«» (macro @u« 50 @u» 50 left)
-  “” (macro ralt 50 S-' S-, 50 ralt 50 S-' S-. 50 left)
+  ur«» (macro C-8 50 @u« 50 @u» 50 left 50 C-9)
+  u“ (unicode “)
+  u” (unicode ”)
+  u“” (macro @u“ 50 @u” 50 left)
+  ur“” (macro C-8 50 @u“ 50 @u” 50 left 50 C-9)
   «” (switch
     ((base-layer diktor_unicode)) @u«» break
-    ((base-layer diktor)) @«» break
-    () @“” break
+    ((base-layer diktor)) @ur«» break
+    () @u“” break
   )
+  ;; shortcuts
   cw (caps-word 2000)
   fav C-S-o
   undo C-z
@@ -150,7 +156,6 @@
   copy C-c
   paste C-v
   redo C-S-v
-
   ⎈ (one-shot 500 lctl)
 
   ;; symbols for media layer
