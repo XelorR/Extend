@@ -211,7 +211,7 @@
     () S-\ break
   )
   : (switch
-    ((base-layer diktor)) S-4 break
+    ((base-layer diktor)) S-6 break
     () S-; break
   )
   , (switch
