@@ -28,7 +28,7 @@
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
 ;; use with caution, prefer the previous one
 (deflayer diktor_unicode
-  grv  @1Ъ  @2Ь  @3№  @4%  @5:  @6;  @7-  @8dq 9    0    @star =     bspc
+  @ёЁ  @1Ъ  @2Ь  @3№  @4%  @5:  @6;  @7-  @8dq 9    0    @star =     bspc
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _
@@ -465,4 +465,8 @@
   ж (unicode ж)
   Ж (unicode Ж)
   жЖ (tap-hold $tap-time $hold-pinky (fork @ж @Ж (lsft rsft)) (layer-toggle media))
+
+  ё (unicode ё)
+  Ё (unicode Ё)
+  ёЁ (fork @ё @Ё (lsft rsft))
 )
