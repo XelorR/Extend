@@ -1,5 +1,6 @@
 ;; What to remap, initial keyboard state definition
 (defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -9,6 +10,7 @@
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
 (deflayer colemak
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent
@@ -18,6 +20,7 @@
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
 (deflayer diktor
+  _    _     _     _     _     _     _     _     _     _     _     _     _     _
   grv  @_1   @_2   3     @_4   @_5   @_6   @_7   @_8   9     0     @star =     bspc
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent
@@ -28,6 +31,7 @@
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
 ;; use with caution, prefer the previous one
 (deflayer diktor_unicode
+  _    _    _    _    _    _    _    _    _    _    _    _     _     _
   @ёЁ  @1Ъ  @2Ь  @3№  @4%  @5:  @6;  @7-  @8dq 9    0    @star =     bspc
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent
@@ -37,6 +41,7 @@
 
 ;; standard modless qwerty
 (deflayer gaming
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent
@@ -46,19 +51,21 @@
 
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
-  f13   f1    f2    f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
+  _    _     _    _     _      _     _    _    _    _    _    _    _    _
+  f13  f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
-  ⎋    ‹⌘    ‹⌥    @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
-  ⇧›   @undo @cut  @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
+  ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
+  ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
   ⎈›   ⌘›  ⌥›              _                    M-e  _    @vsc  @🖱←   @🖱↓   @🖱→
 )
 
 (deflayer media
-  lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX     🔈−   🔈+   🔇
-  _    @dq   @<    =     @>    @`    XX    7     8     9     del    @{    @}    ▶⏸
+  _    _     _     _     _     _     _     _     _     _     _     _     _     _
+  lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX    🔈−   🔈+   🔇
+  _    @dq   @<    =     @>    @`    XX    7     8     9     del   @{    @}    ▶⏸
   esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
   _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
-  @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−     ▶▶
+  @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
 ;; Note on layout switching.
