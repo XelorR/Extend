@@ -5,7 +5,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
-  lctl lmet lalt           spc            ralt rmet rctl left down rght
+  lctl lmet lalt f23       spc       f24  ralt rmet rctl left down rght
 )
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
@@ -15,7 +15,7 @@
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent
   lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _
-  lctl lmet lalt         @space_nav      @ralt rmet rctl _    _    _
+  lctl lmet lalt @mos    @space_nav @sym @ralt rmet rctl _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
@@ -25,7 +25,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _
-  @ctl @met @alt         @space_nav             @ralt  @rme  @rct  _     _     _
+  @ctl @met @alt   @mos  @space_nav        @sym @ralt  @rme  @rct  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -36,7 +36,7 @@
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _
-  @ctl @met @alt         @space_nav      @ralt @rme @rct _     _     _
+  @ctl @met @alt @mos    @space_nav @sym @ralt @rme @rct _     _     _
 )
 
 ;; standard modless qwerty
@@ -46,7 +46,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up
-  lctl @nav lalt            spc           ralt rmet rctl left down rght
+  lctl @nav lalt _          spc      _    ralt rmet rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
@@ -56,16 +56,34 @@
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
   ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
-  ⎈›   ⌘›  ⌥›              _                    M-e  _    @vsc  @🖱←   @🖱↓   @🖱→
+  ⎈›   ⌘›  ⌥›    _         _               _    M-e  _    @vsc  @🖱←   @🖱↓   @🖱→
 )
 
-(deflayer media
+(deflayer num
   _    _     _     _     _     _     _     _     _     _     _     _     _     _
   lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX    🔈−   🔈+   🔇
   _    @dq   @<    =     @>    @`    XX    7     8     9     del   @{    @}    ▶⏸
   esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
   _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
-  @dr0 @dms  @dp0              spc               XX    XX    XX    ◀◀    🔈−   ▶▶
+  @dr0 @dms  @dp0  _           spc         _     XX    XX    XX    ◀◀    🔈−   ▶▶
+)
+
+(deflayer symbol
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    @cmk @gam XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
+  _    @dq  @<   =    @>   @`   XX   XX   XX   XX   XX   XX   _    _
+  _    @#   @lb  @-   @rb  @~   XX   XX   XX   XX   XX   XX   _
+  _    @*   @[   @:   @]   XX   XX   XX   XX   XX   XX   XX   _
+  _    _    _    _          spc      _    _    _    _    _    _    _
+)
+
+(deflayer mouse
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    @🖱↑  _    _    _    _    _
+  _    _    _    _    _    _    _    @🖱←  @🖱↓  @🖱→  _    _    _
+  _    _    _    _    _    _    _    mltp mrtp _    _    _    _
+  _    _    _    _          spc      _    _    _    _    _    _    _
 )
 
 ;; Note on layout switching.
@@ -84,13 +102,13 @@
 (defchordsv2
   ;; Switching languages with chords
   ;; Colemak
-      (w e) @cmk $hold-time all-released (gaming navigation media)
+      (w e) @cmk $hold-time all-released (gaming navigation num)
   ;; Qwerty, no modtaps
-      (x c) @gam $hold-time all-released (gaming navigation media)
+      (x c) @gam $hold-time all-released (gaming navigation num)
   ;; Diktor
-      (i o) @dkt $hold-time all-released (navigation media)
+      (i o) @dkt $hold-time all-released (navigation num)
   ;; Diktor unicode implementation
-      (, .) @dktu $hold-time all-released (navigation media)
+      (, .) @dktu $hold-time all-released (navigation num)
 )
 
 ;; Variables and other settings
@@ -108,13 +126,15 @@
   ;; navigation "Extend" layer
   space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
   nav (layer-toggle navigation)
+  mos (layer-toggle mouse)
+  sym (layer-toggle symbol)
 
   ;; layer to switch layouts
-  esc (tap-hold $tap-time $hold-time esc (layer-toggle media))
-  ent (tap-hold $tap-time $hold-time ret (layer-toggle media))
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle media))
-  _/ (tap-hold $tap-time $hold-pinky / (layer-toggle media))
-  ralt (tap-hold $tap-time $hold-time ralt (layer-toggle media))
+  esc (tap-hold $tap-time $hold-time esc (layer-toggle num))
+  ent (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle num))
+  _/ (tap-hold $tap-time $hold-pinky / (layer-toggle num))
+  ralt (tap-hold $tap-time $hold-time ralt (layer-toggle num))
 
   ;; layouts
   cmk (multi (layer-switch colemak) C-8)
@@ -166,7 +186,7 @@
   redo C-S-v
   ⎈ (one-shot 500 lctl)
 
-  ;; symbols for media layer
+  ;; symbols for num layer
   dq (switch
     ((base-layer diktor)) S-2 break
     () S-' break
@@ -289,7 +309,7 @@
   _с (tap-hold $tap-time $hold-ring c (multi ralt (layer-while-held colemak)))
   _р (tap-hold $tap-time $hold-pinky h (multi rmet (layer-while-held colemak)))
   _й q
-  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle media))
+  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle num))
   _э '
   _х [
   _ы s
@@ -298,7 +318,7 @@
   _м v
   _п g
   _г u
-  _ж (tap-hold $tap-time $hold-pinky ; (layer-toggle media))
+  _ж (tap-hold $tap-time $hold-pinky ; (layer-toggle num))
   
   ;; ensure modifiers to work as in colemak
   ctl (multi lctl (layer-while-held colemak))
@@ -436,7 +456,7 @@
   ;; Row 4
   ф (unicode ф)
   Ф (unicode Ф)
-  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle media))
+  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle num))
 
   э (unicode э)
   Э (unicode Э)
@@ -472,7 +492,7 @@
 
   ж (unicode ж)
   Ж (unicode Ж)
-  жЖ (tap-hold $tap-time $hold-pinky (fork @ж @Ж (lsft rsft)) (layer-toggle media))
+  жЖ (tap-hold $tap-time $hold-pinky (fork @ж @Ж (lsft rsft)) (layer-toggle num))
 
   ё (unicode ё)
   Ё (unicode Ё)
