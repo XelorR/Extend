@@ -275,7 +275,7 @@
     ((base-layer diktor)) / break
     () . break
   )
-  ! (tap-hold $tap-time $hold-pinky lmet)
+  ! (tap-hold $tap-time $hold-pinky S-1 lmet)
   ? (switch
     ((base-layer diktor)) S-7 break
     () S-/ break
