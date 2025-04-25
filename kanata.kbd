@@ -49,6 +49,15 @@
   lctl @nav lalt _          spc      _    ralt rmet rctl left down rght
 )
 
+(deflayer gaming_split
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
+  g    lsft a    s    d    f    h    j    k    l    ;    '    @ent
+  b    lctl z    x    c    v    n    m    ,    .    /    rsft up
+  caps @nav lalt spc        spc      _    ralt rmet rctl left down rght
+)
+
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
@@ -102,13 +111,15 @@
 (defchordsv2
   ;; Switching languages with chords
   ;; Colemak
-      (w e) @cmk $hold-time all-released (gaming navigation num)
+      (w e) @cmk $hold-time all-released (gaming_split gaming navigation num mouse symbol)
   ;; Qwerty, no modtaps
-      (x c) @gam $hold-time all-released (gaming navigation num)
+      (x c) @gam $hold-time all-released (gaming_split gaming navigation num mouse symbol)
+  ;; Gaming layout for split keyboard
+      (z x) @gams $hold-time all-released (gaming_split gaming navigation num mouse symbol)
   ;; Diktor
-      (i o) @dkt $hold-time all-released (navigation num)
+      (i o) @dkt $hold-time all-released (navigation num mouse symbol)
   ;; Diktor unicode implementation
-      (, .) @dktu $hold-time all-released (navigation num)
+      (, .) @dktu $hold-time all-released (navigation num mouse symbol)
 )
 
 ;; Variables and other settings
@@ -141,6 +152,7 @@
   dkt (multi (layer-switch diktor) C-9)
   dktu (multi (layer-switch diktor_unicode) C-8)
   gam (multi (layer-switch gaming) C-8)
+  gams (multi (layer-switch gaming_split) C-8)
 
   ;; some symbols for Extend
   ;; launchers
