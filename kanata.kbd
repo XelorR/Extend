@@ -56,34 +56,34 @@
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
   ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
-  ⎈›   ⌘›  ⌥›    _         _               _    M-e  _    @vsc  @🖱←   @🖱↓   @🖱→
+  ⎈›   ⌘›  ⌥›    _         _              _    M-e  _    @vsc @🖱←  @🖱↓  @🖱→
 )
 
 (deflayer num
   _    _     _     _     _     _     _     _     _     _     _     _     _     _
-  lrld @cmk  @gam  XX    XX    XX    \     @/    @,    @.    XX    🔈−   🔈+   🔇
-  _    @dq   @<    =     @>    @`    XX    7     8     9     del   @{    @}    ▶⏸
-  esc  @#    @lb   @-    @rb   @~    @|    @4h   @5h   @6h   @bspc XX    XX
-  _    @*    @[    @:    @]    XX    0     1     2     3     ret   XX    🔈+
+  lrld @:    @,    @.    -     XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
+  _    del   7     8     9     XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
+  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    XX
+  _    0     1     2     3     XX    0     1     2     3     ret   XX    🔈+
   @dr0 @dms  @dp0  _           spc         _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
 (deflayer symbol
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    @cmk @gam XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
-  _    @dq  @<   =    @>   @`   XX   XX   XX   XX   XX   XX   _    _
-  _    @#   @lb  @-   @rb  @~   XX   XX   XX   XX   XX   XX   _
-  _    @*   @[   @:   @]   XX   XX   XX   XX   XX   XX   XX   _
-  _    _    _    _          spc      _    _    _    _    _    _    _
+  _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
+  @«”  @dq  @<   =    @>   @`   @^   @[   S--  @]   @'   XX   _    _
+  _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _
+  _    @#   @*   @:   @/   @$   @at  @|   @~   @&   @?   XX   _
+  _    _    _    _      @space_nav   _    _    _    _    _    _    _
 )
 
 (deflayer mouse
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    @🖱↑  _    _    _    _    _
-  _    _    _    _    _    _    _    @🖱←  @🖱↓  @🖱→  _    _    _
-  _    _    _    _    _    _    _    mltp mrtp _    _    _    _
-  _    _    _    _          spc      _    _    _    _    _    _    _
+  _    _     _    _     _      _     _    _    _    _    _    _    _    _
+  _    _     _    _     _      _     _    _    _    _    _    _    _    _
+  _    ⌦    C-S-↹ ↹     C-↹    @ter  _    @🖱w← @🖱↑  @🖱w→ @🖱w↑ _    _    _
+  _    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     _    @🖱←  @🖱↓  @🖱→  @🖱w↓ _    _
+  _    @undo @cut @copy @paste @redo _    mltp mrtp mmtp ret  _    _
+  _    _     _    _              spc      mrtp mltp _    _    _    _    _
 )
 
 ;; Note on layout switching.
@@ -211,10 +211,15 @@
     ((base-layer diktor)) S-\ break
     () / break
   )
-  # (tap-hold $tap-time $hold-pinky (switch
+  # (switch
     ((base-layer diktor)) (macro C-8 50 S-3 50 C-9) break
     () S-3 break
-  ) lmet)
+  )
+  ^ (switch
+    ((base-layer diktor)) (macro C-8 50 S-6 50 C-9) break
+    () S-6 break
+  )
+  \ (tap-hold $tap-time $hold-pinky \ lmet)
   lb (tap-hold $tap-time $hold-ring S-9 lalt)
   - (tap-hold $tap-time $hold-middle - lctl)
   rb (tap-hold $tap-time $hold-index S-0 lsft)
@@ -226,22 +231,42 @@
     ((base-layer diktor)) (macro C-8 50 ] 50 C-9) break
     () ] break
   )
-  { (switch
+  { (tap-hold $tap-time $hold-index (switch
     ((base-layer diktor)) (macro C-8 50 S-[ 50 C-9) break
     () S-[ break
-  )
-  } (switch
+  ) lsft)
+  } (tap-hold $tap-time $hold-ring (switch
     ((base-layer diktor)) (macro C-8 50 S-] 50 C-9) break
     () S-] break
-  )
+  ) lalt)
   | (switch
     ((base-layer diktor)) (macro C-8 50 S-\ 50 C-9) break
     () S-\ break
+  )
+  $ (switch
+    ((base-layer diktor)) (macro C-8 50 S-4 50 C-9) break
+    () S-4 break
+  )
+  & (switch
+    ((base-layer diktor)) (macro C-8 50 S-7 50 C-9) break
+    () S-7 break
+  )
+  ' (switch
+    ((base-layer diktor)) (macro C-8 50 ' 50 C-9) break
+    () ' break
+  )
+  at (switch
+    ((base-layer diktor)) (macro C-8 50 S-2 50 C-9) break
+    () S-2 break
   )
   : (switch
     ((base-layer diktor)) S-6 break
     () S-; break
   )
+  ; (tap-hold $tap-time $hold-middle (switch
+    ((base-layer diktor)) S-4 break
+    () ; break
+  ) lctl)
   , (switch
     ((base-layer diktor)) S-/ break
     () , break
@@ -250,9 +275,16 @@
     ((base-layer diktor)) / break
     () . break
   )
+  ! (tap-hold $tap-time $hold-pinky lmet)
+  ? (switch
+    ((base-layer diktor)) S-7 break
+    () S-/ break
+  )
   4h (tap-hold $tap-time $hold-index 4 lsft)
   5h (tap-hold $tap-time $hold-middle 5 lctl)
   6h (tap-hold $tap-time $hold-ring 6 lalt)
+  4g (tap-hold $tap-time $hold-ring 4 lalt)
+  6g (tap-hold $tap-time $hold-index 6 lsft)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   * S-8
 
@@ -261,6 +293,10 @@
   🖱↓ (movemouse-down 1 1)
   🖱← (movemouse-left 1 1)
   🖱→ (movemouse-right 1 1)
+  🖱w↑ (mwheel-up 50 120)
+  🖱w↓ (mwheel-down 50 120)
+  🖱w← (mwheel-left 50 120)
+  🖱w→ (mwheel-right 50 120)
 
   ;; dynamic macro
   dr0 (dynamic-macro-record 0)
