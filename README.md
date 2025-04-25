@@ -9,5 +9,5 @@ Hold space key to activate
 ## My implementations
 
 - [Extend](extend.kbd#L17-L23) layer, minimal starter pack, [Kanata](https://github.com/jtroo/kanata)
-- My full config with [Extend](kanata.kbd#L53-L60), [Kanata](https://github.com/jtroo/kanata) (use [this](Split.png) key arrangement on ergo split keyboard)
+- My full config with [Extend](kanata.kbd#L61-L69), [Kanata](https://github.com/jtroo/kanata) (use [this](Split.png) key arrangement on ergo split keyboard)
 - My full config with [Extend](https://github.com/XelorR/Keychron_qmk/blob/wireless_playground/keyboards/keychron/k11_max/jis_encoder/rgb/keymaps/my/keymap.c#L131-L136), [QMK](https://qmk.fm/)
