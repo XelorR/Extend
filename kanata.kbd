@@ -63,7 +63,7 @@
   _    _     _     _     _     _     _     _     _     _     _     _     _     _
   lrld @:    @,    @.    -     XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
   _    del   7     8     9     XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    XX
+  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    🔇
   _    0     1     2     3     XX    0     1     2     3     ret   XX    🔈+
   @dr0 @dms  @dp0  _           spc         _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
@@ -134,7 +134,7 @@
   ent (tap-hold $tap-time $hold-time ret (layer-toggle num))
   z (tap-hold $tap-time $hold-pinky z (layer-toggle num))
   _/ (tap-hold $tap-time $hold-pinky / (layer-toggle num))
-  ralt (tap-hold $tap-time $hold-time ralt (layer-toggle num))
+  ralt (tap-hold $tap-time $hold-time ralt (layer-toggle symbol))
 
   ;; layouts
   cmk (multi (layer-switch colemak) C-8)
