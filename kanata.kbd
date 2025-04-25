@@ -15,7 +15,7 @@
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent
   lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _
-  lctl lmet lalt @mos    @space_nav @sym @ralt rmet rctl _    _    _
+  lmet lalt lctl @mos    @space_nav @sym @ralt rmet rctl _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
@@ -25,7 +25,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _
-  @ctl @met @alt   @mos  @space_nav        @sym @ralt  @rme  @rct  _     _     _
+  @met @alt  @ctl  @mos  @space_nav        @sym @ralt  @rme  @rct  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -36,7 +36,7 @@
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _
-  @ctl @met @alt @mos    @space_nav @sym @ralt @rme @rct _     _     _
+  @met @alt @ctl @mos    @space_nav @sym @ralt @rme @rct _     _     _
 )
 
 ;; standard modless qwerty
@@ -56,7 +56,7 @@
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
   ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
-  ⎈›   ⌘›  ⌥›    _         _              _    M-e  _    @vsc @🖱←  @🖱↓  @🖱→
+  ⌘›   ⌥›    ⎈›   _        _              _    M-e  _    @vsc @🖱←  @🖱↓  @🖱→
 )
 
 (deflayer num
