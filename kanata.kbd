@@ -134,6 +134,10 @@
 )
 
 (defalias
+  ;; system combinations to switch languages
+  en C-8
+  ru C-9
+
   ;; navigation "Extend" layer
   space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
   nav (layer-toggle navigation)
@@ -148,18 +152,18 @@
   ralt (tap-hold $tap-time $hold-time ralt (layer-toggle symbol))
 
   ;; layouts
-  cmk (multi (layer-switch colemak) C-8)
-  dkt (multi (layer-switch diktor) C-9)
-  dktu (multi (layer-switch diktor_unicode) C-8)
-  gam (multi (layer-switch gaming) C-8)
-  gams (multi (layer-switch gaming_split) C-8)
+  cmk (multi (layer-switch colemak) @en)
+  dkt (multi (layer-switch diktor) @ru)
+  dktu (multi (layer-switch diktor_unicode) @en)
+  gam (multi (layer-switch gaming) @en)
+  gams (multi (layer-switch gaming_split) @en)
 
   ;; some symbols for Extend
   ;; launchers
   term (macro lmet 300 S-t e r m i n a l 400 ret)
-  terr (macro C-8 50 lmet 300 S-t e r m i n a l 400 ret 50 C-9)
+  terr (macro @en 50 lmet 300 S-t e r m i n a l 400 ret 50 @ru)
   vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
-  vscodr (macro C-8 50 lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 C-9)
+  vscodr (macro @en 50 lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
   vsc (switch
     ((base-layer diktor)) @vscodr break
     () @vscode break
@@ -170,7 +174,7 @@
   )
   ;; unicode
   u— (unicode —)
-  ur— (macro C-8 50 @u— 50 C-9)
+  ur— (macro @en 50 @u— 50 @ru)
   — (switch
     ((base-layer diktor)) @ur— break
     () @u— break
@@ -178,11 +182,11 @@
   u« (unicode «)
   u» (unicode »)
   u«» (macro @u« 50 @u» 50 left)
-  ur«» (macro C-8 50 @u« 50 @u» 50 left 50 C-9)
+  ur«» (macro @en 50 @u« 50 @u» 50 left 50 @ru)
   u“ (unicode “)
   u” (unicode ”)
   u“” (macro @u“ 50 @u” 50 left)
-  ur“” (macro C-8 50 @u“ 50 @u” 50 left 50 C-9)
+  ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
   «” (switch
     ((base-layer diktor_unicode)) @u«» break
     ((base-layer diktor)) @ur«» break
@@ -204,19 +208,19 @@
     () S-' break
   )
   < (switch
-    ((base-layer diktor)) (macro C-8 50 S-, 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-, 50 @ru) break
     () S-, break
   )
   > (switch
-    ((base-layer diktor)) (macro C-8 50 S-. 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-. 50 @ru) break
     () S-. break
   )
   ` (switch
-    ((base-layer diktor)) (macro C-8 50 grv 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 grv 50 @ru) break
     () grv break
   )
   ~ (switch
-    ((base-layer diktor)) (macro C-8 50 S-grv 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-grv 50 @ru) break
     () S-grv break
   )
   / (switch
@@ -224,11 +228,11 @@
     () / break
   )
   # (switch
-    ((base-layer diktor)) (macro C-8 50 S-3 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-3 50 @ru) break
     () S-3 break
   )
   ^ (switch
-    ((base-layer diktor)) (macro C-8 50 S-6 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-6 50 @ru) break
     () S-6 break
   )
   \ (tap-hold $tap-time $hold-pinky \ lmet)
@@ -236,39 +240,39 @@
   - (tap-hold $tap-time $hold-middle - lctl)
   rb (tap-hold $tap-time $hold-index S-0 lsft)
   [ (switch
-    ((base-layer diktor)) (macro C-8 50 [ 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 [ 50 @ru) break
     () [ break
   )
   ] (switch
-    ((base-layer diktor)) (macro C-8 50 ] 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 ] 50 @ru) break
     () ] break
   )
   { (tap-hold $tap-time $hold-index (switch
-    ((base-layer diktor)) (macro C-8 50 S-[ 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-[ 50 @ru) break
     () S-[ break
   ) lsft)
   } (tap-hold $tap-time $hold-ring (switch
-    ((base-layer diktor)) (macro C-8 50 S-] 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-] 50 @ru) break
     () S-] break
   ) lalt)
   | (switch
-    ((base-layer diktor)) (macro C-8 50 S-\ 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-\ 50 @ru) break
     () S-\ break
   )
   $ (switch
-    ((base-layer diktor)) (macro C-8 50 S-4 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-4 50 @ru) break
     () S-4 break
   )
   & (switch
-    ((base-layer diktor)) (macro C-8 50 S-7 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-7 50 @ru) break
     () S-7 break
   )
   ' (switch
-    ((base-layer diktor)) (macro C-8 50 ' 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 ' 50 @ru) break
     () ' break
   )
   at (switch
-    ((base-layer diktor)) (macro C-8 50 S-2 50 C-9) break
+    ((base-layer diktor)) (macro @en 50 S-2 50 @ru) break
     () S-2 break
   )
   : (switch
