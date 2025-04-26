@@ -10,7 +10,7 @@
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
 (deflayer colemak
-  @esc _    _    _    _    _    _    _    _    _    _    _    _    _
+  @esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent _
@@ -20,7 +20,7 @@
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
 (deflayer diktor
-  @esc _     _     _     _     _     _     _     _     _     _     _     _     _
+  @esc f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   _
   grv  @_1   @_2   3     @_4   @_5   @_6   @_7   @_8   9     0     @star =     bspc
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent  _
@@ -31,7 +31,7 @@
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
 ;; use with caution, prefer the previous one
 (deflayer diktor_unicode
-  @esc _    _    _    _    _    _    _    _    _    _    _     _     _
+  @esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12   _
   @ёЁ  @1Ъ  @2Ь  @3№  @4%  @5:  @6;  @7-  @8dq 9    0    @star =     bspc
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent  _
@@ -41,7 +41,7 @@
 
 ;; standard modless qwerty
 (deflayer gaming
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent _
@@ -50,7 +50,7 @@
 )
 
 (deflayer gaming_split
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
   g    lsft a    s    d    f    h    j    k    l    ;    '    @ent _
@@ -60,7 +60,7 @@
 
 ;; Extend (navigation/edition/function) layer
 (deflayer navigation
-  _    _     _    _     _      _     _    _    _    _    _    _    _    _
+  _    f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  _
   f13  f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
@@ -69,7 +69,7 @@
 )
 
 (deflayer num
-  _    _     _     _     _     _     _     _     _     _     _     _     _     _
+  _    f1    f2    f3   f4     f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld @:    @,    @.    -     XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
   _    del   7     8     9     XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
   esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    🔇   _
@@ -78,7 +78,7 @@
 )
 
 (deflayer symbol
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
   @«”  @dq  @<   =    @>   @`   @^   @[   S--  @]   @'   XX   _    _
   _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _    _
@@ -87,7 +87,7 @@
 )
 
 (deflayer mouse
-  _    _     _    _     _      _     _    _    _    _    _    _    _    _
+  _    f1   f2   f3     f4     f5    f6   f7   f8   f9   f10  f11  f12  _
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
   _    ⌦    C-S-↹ ↹     C-↹    @ter  _    @🖱w← @🖱↑  @🖱w→ @🖱w↑ _    _    _
   _    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     _    @🖱←  @🖱↓  @🖱→  @🖱w↓ _    _    _
