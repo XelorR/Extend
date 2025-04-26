@@ -71,9 +71,9 @@
 (deflayer num
   _    f1    f2    f3   f4     f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld @:    @,    @.    -     XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
-  _    del   7     8     9     XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    🔇   _
-  _    0     1     2     3     XX    0     1     2     3     ret   XX    🔈+  _
+  _    del   kp7   kp8   kp9   XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
+  esc  ‹⌘    @4g   @5g   @6g   nlk   XX    @4h   @5h   @6h   @bspc XX    🔇   _
+  _    kp0   kp1   kp2   kp3   XX    0     1     2     3     ret   XX    🔈+  _
   @dr0 @dms  @dp0  _           spc   _     _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
@@ -299,8 +299,9 @@
   4h (tap-hold $tap-time $hold-index 4 lsft)
   5h (tap-hold $tap-time $hold-middle 5 lctl)
   6h (tap-hold $tap-time $hold-ring 6 lalt)
-  4g (tap-hold $tap-time $hold-ring 4 lalt)
-  6g (tap-hold $tap-time $hold-index 6 lsft)
+  4g (tap-hold $tap-time $hold-ring kp4 lalt)
+  5g (tap-hold $tap-time $hold-middle kp5 lctl)
+  6g (tap-hold $tap-time $hold-index kp6 lsft)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   * S-8
 
