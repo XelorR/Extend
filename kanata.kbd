@@ -50,12 +50,12 @@
 )
 
 (deflayer gaming_split
-  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  g    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
   g    lsft a    s    d    f    h    j    k    l    ;    '    @ent _
   b    lctl z    x    c    v    n    m    ,    .    /    rsft up   _
-  caps @nav lalt spc        spc _    ralt rmet menu rctl left down rght
+  caps @nav lalt i          spc _    ralt rmet menu rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
