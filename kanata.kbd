@@ -3,9 +3,9 @@
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  del
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
-  lctl lmet lalt f23       spc       f24  ralt rmet rctl left down rght
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret  pgup
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up   pgdn
+  lctl lmet lalt f23       spc  f24  ralt rmet menu rctl left down rght
 )
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
@@ -13,9 +13,9 @@
   @esc _    _    _    _    _    _    _    _    _    _    _    _    _
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent
-  lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _
-  lmet lalt lctl @mos    @space_nav @sym @ralt rmet rctl _    _    _
+  @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent _
+  lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _    _
+  lmet lalt lctl @mos     @spc @sym @ralt menu rmet rctl _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
@@ -23,9 +23,9 @@
   @esc _     _     _     _     _     _     _     _     _     _     _     _     _
   grv  @_1   @_2   3     @_4   @_5   @_6   @_7   @_8   9     0     @star =     bspc
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
-  @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent
-  lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _
-  @met @alt  @ctl  @mos  @space_nav        @sym @ralt  @rme  @rct  _     _     _
+  @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent  _
+  lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _     _
+  @met @alt  @ctl  @mos  @spc        @sym @ralt  menu  @rme  @rct  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -34,9 +34,9 @@
   @esc _    _    _    _    _    _    _    _    _    _    _     _     _
   @ёЁ  @1Ъ  @2Ь  @3№  @4%  @5:  @6;  @7-  @8dq 9    0    @star =     bspc
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
-  @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent
-  lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _
-  @met @alt @ctl @mos    @space_nav @sym @ralt @rme @rct _     _     _
+  @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent  _
+  lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _     _
+  @met @alt @ctl @mos     @spc @sym @ralt menu @rme @rct _     _     _
 )
 
 ;; standard modless qwerty
@@ -44,18 +44,18 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
-  caps a    s    d    f    g    h    j    k    l    ;    '    @ent
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft up
-  lctl @nav lalt _          spc      _    ralt rmet rctl left down rght
+  caps a    s    d    f    g    h    j    k    l    ;    '    @ent _
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft up   _
+  lctl @nav lalt _         spc   _   ralt rmet menu rctl left down rght
 )
 
 (deflayer gaming_split
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
-  g    lsft a    s    d    f    h    j    k    l    ;    '    @ent
-  b    lctl z    x    c    v    n    m    ,    .    /    rsft up
-  caps @nav lalt spc        spc      _    ralt rmet rctl left down rght
+  g    lsft a    s    d    f    h    j    k    l    ;    '    @ent _
+  b    lctl z    x    c    v    n    m    ,    .    /    rsft up   _
+  caps @nav lalt spc        spc _    ralt rmet menu rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
@@ -63,36 +63,36 @@
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
   f13  f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
-  ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp
-  ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑
-  ⌘›   ⌥›    ⎈›   _        _              _    M-e  _    @vsc @🖱← @🖱↓ @🖱→
+  ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
+  ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
+  ⌘›   ⌥›    ⎈›   _        _         _    M-e  _    _    @vsc @🖱← @🖱↓ @🖱→
 )
 
 (deflayer num
   _    _     _     _     _     _     _     _     _     _     _     _     _     _
   lrld @:    @,    @.    -     XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
   _    del   7     8     9     XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    🔇
-  _    0     1     2     3     XX    0     1     2     3     ret   XX    🔈+
-  @dr0 @dms  @dp0  _           spc         _     XX    XX    XX    ◀◀    🔈−   ▶▶
+  esc  ‹⌘    @4g   @5h   @6g   XX    XX    @4h   @5h   @6h   @bspc XX    🔇   _
+  _    0     1     2     3     XX    0     1     2     3     ret   XX    🔈+  _
+  @dr0 @dms  @dp0  _           spc   _     _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
 (deflayer symbol
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
   @«”  @dq  @<   =    @>   @`   @^   @[   S--  @]   @'   XX   _    _
-  _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _
-  _    @#   @*   @:   @/   @$   @at  @|   @~   @&   @?   XX   _
-  _    _    _    _      @space_nav   _    _    _    _    _    _    _
+  _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _    _
+  _    @#   @*   @:   @/   @$   @at  @|   @~   @&   @?   XX   _    _
+  _    _    _    _         @spc _    _    _    _    _    _    _    _
 )
 
 (deflayer mouse
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
   _    ⌦    C-S-↹ ↹     C-↹    @ter  _    @🖱w← @🖱↑  @🖱w→ @🖱w↑ _    _    _
-  _    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     _    @🖱←  @🖱↓  @🖱→  @🖱w↓ _    _
-  _    @undo @cut @copy @paste @redo _    mltp mrtp mmtp ret  _    _
-  _    _     _    _              spc      mrtp mltp _    _    _    _    _
+  _    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     _    @🖱←  @🖱↓  @🖱→  @🖱w↓ _    _    _
+  _    @undo @cut @copy @paste @redo _    mltp mrtp mmtp ret  _    _    _
+  _    _     _    _            spc   mrtp mltp _    _    _    _    _    _
 )
 
 ;; Note on layout switching.
@@ -139,7 +139,7 @@
   ru C-9
 
   ;; navigation "Extend" layer
-  space_nav (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
   nav (layer-toggle navigation)
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mouse))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle symbol))
