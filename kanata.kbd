@@ -46,7 +46,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent _
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up   _
-  lctl @nav lalt _         spc   _   ralt rmet menu rctl left down rght
+  lctl @nav lalt @inv      spc   _   ralt rmet menu rctl left down rght
 )
 
 (deflayer gaming_split
@@ -55,7 +55,7 @@
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
   g    lsft a    s    d    f    h    j    k    l    ;    '    @ent _
   b    lctl z    x    c    v    n    m    ,    .    /    rsft up   _
-  caps @nav lalt i          spc _    ralt rmet menu rctl left down rght
+  caps @nav lalt @inv       spc _    ralt rmet menu rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
@@ -71,9 +71,9 @@
 (deflayer num
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld XX    XX    XX    XX    XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
-  _    f12   f7    f8    f9    XX    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  @f11  @f4   @f5   @f6   XX    XX    @4h   @5h   @6h   @bspc XX    🔇   _
-  _    f10   f1    f2    f3    XX    0     1     2     3     ret   XX    🔈+  _
+  _    f12   f7    f8    f9    🔈+    XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
+  esc  @f11  @f4   @f5   @f6   🔈−    XX    @4h   @5h   @6h   @bspc XX    🔇   _
+  _    f10   f1    f2    f3    🔇     0     1     2     3     ret   XX    🔈+  _
   @dr0 @dms  @dp0  _           spc   _     _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
@@ -143,6 +143,7 @@
   nav (layer-toggle navigation)
   num (tap-hold $tap-time $hold-time tab (layer-toggle num))
   fun (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  inv (tap-hold $tap-time $hold-time i (layer-toggle num))
 
   ;; layer to switch layouts
   esc (tap-hold $tap-time $hold-time esc (layer-toggle num))
