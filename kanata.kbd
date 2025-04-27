@@ -13,7 +13,7 @@
   @esc f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
-  @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    @ent _
+  @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   @_'  @ent _
   lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _    _
   lmet lalt lctl @num     @spc @fun @ralt menu rmet rctl _    _    _
 )
@@ -72,7 +72,7 @@
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld XX    XX    XX    XX    XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
   _    f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  @f11  @f4   @f5   @f6   🔈−   XX    @4h   @5h   @6h   @bspc XX    🔇   _
+  esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc XX    🔇   _
   _    f10   f1    @f2   f3    🔇    0     1     2     3     ret   XX    🔈+  _
   @dr0 @dms  @dp0  _           spc   _     _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
@@ -148,6 +148,7 @@
   inv (tap-hold $tap-time $hold-time i (layer-toggle num))
   esc (tap-hold $tap-time $hold-time esc (layer-toggle num))
   ent (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  _' (tap-hold $tap-time $hold-time ' (layer-toggle num))
   _/ (tap-hold $tap-time $hold-pinky / (layer-toggle num))
 
   ;; symbol layer
@@ -369,8 +370,8 @@
   _т (tap-hold $tap-time $hold-middle n (multi rctl (layer-while-held colemak)))
   _с (tap-hold $tap-time $hold-ring c (multi ralt (layer-while-held colemak)))
   _р (tap-hold $tap-time $hold-pinky h (multi rmet (layer-while-held colemak)))
-  _й q
-  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle num))
+  _й (tap-hold $tap-time $hold-time q (layer-toggle num))
+  _ф (tap-hold $tap-time $hold-pinky a (layer-toggle mouse))
   _э '
   _х [
   _ы s
@@ -512,12 +513,12 @@
 
   й (unicode й)
   Й (unicode Й)
-  йЙ (fork @й @Й (lsft rsft))
+  йЙ (tap-hold $tap-time $hold-time (fork @й @Й (lsft rsft)) (layer-toggle num))
 
   ;; Row 4
   ф (unicode ф)
   Ф (unicode Ф)
-  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle num))
+  фФ (tap-hold $tap-time $hold-pinky (fork @ф @Ф (lsft rsft)) (layer-toggle mouse))
 
   э (unicode э)
   Э (unicode Э)
