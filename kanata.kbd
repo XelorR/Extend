@@ -46,7 +46,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    @ent _
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up   _
-  lctl @nav lalt @inv      spc   _   ralt rmet menu rctl left down rght
+  lctl @nav lalt @inv      spc  @fun ralt rmet menu rctl left down rght
 )
 
 (deflayer gaming_split
@@ -55,7 +55,7 @@
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
   g    lsft a    s    d    f    h    j    k    l    ;    '    @ent _
   b    lctl z    x    c    v    n    m    ,    .    /    rsft up   _
-  caps @nav lalt @inv       spc _    ralt rmet menu rctl left down rght
+  caps @nav lalt @inv      spc  @fun ralt rmet menu rctl left down rght
 )
 
 ;; Extend (navigation/edition/function) layer
@@ -141,18 +141,22 @@
   ;; navigation "Extend" layer
   spc (tap-hold $tap-time $hold-time spc (layer-toggle navigation))
   nav (layer-toggle navigation)
+
+  ;; numeric, function and media layer
   num (tap-hold $tap-time $hold-time tab (layer-toggle num))
   fun (tap-hold $tap-time $hold-time ret (layer-toggle num))
   inv (tap-hold $tap-time $hold-time i (layer-toggle num))
-
-  ;; layer to switch layouts
   esc (tap-hold $tap-time $hold-time esc (layer-toggle num))
   ent (tap-hold $tap-time $hold-time ret (layer-toggle num))
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle mouse))
   _/ (tap-hold $tap-time $hold-pinky / (layer-toggle num))
+
+  ;; symbol layer
   ralt (tap-hold $tap-time $hold-time ralt (layer-toggle symbol))
 
-  ;; layouts
+  ;; mouse layer
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle mouse))
+
+  ;; layout layers
   cmk (multi (layer-switch colemak) @en)
   dkt (multi (layer-switch diktor) @ru)
   dktu (multi (layer-switch diktor_unicode) @en)
