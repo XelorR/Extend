@@ -64,7 +64,7 @@
   f13  f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
-  ⇧›   @undo @cut @copy @paste @redo mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
+  ⇧›   @undo @cut @copy @paste @vsc  mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
   ⌘›   ⌥›    ⎈›   _        _         mrtp mltp _    _    _    @🖱← @🖱↓ @🖱→
 )
 
@@ -163,7 +163,6 @@
   gam (multi (layer-switch gaming) @en)
   gams (multi (layer-switch gaming_split) @en)
 
-  ;; some symbols for Extend
   ;; launchers
   term (macro lmet 300 S-t e r m i n a l 400 ret)
   terr (macro @en 50 lmet 300 S-t e r m i n a l 400 ret 50 @ru)
@@ -177,6 +176,7 @@
     ((base-layer diktor)) @terr break
     () @term break
   )
+
   ;; unicode
   u— (unicode —)
   ur— (macro @en 50 @u— 50 @ru)
@@ -197,6 +197,7 @@
     ((base-layer diktor)) @ur«» break
     () @u“” break
   )
+
   ;; shortcuts
   cw (caps-word 2000)
   fav C-S-o
