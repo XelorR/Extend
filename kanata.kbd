@@ -5,7 +5,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret  pgup
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up   pgdn
-  lctl lmet lalt f24       spc       ralt rmet menu rctl left down rght
+  lctl lmet lalt      spc  f24       ralt rmet menu rctl left down rght
 )
 
 ;; Colemak (default) implemented with simple alpha shuffle, requires national US (qwerty) layout to be enabled
@@ -15,7 +15,7 @@
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @num @a   @r   @s   @t   d    h    @n   @e   @i   @o   '    ret  _
   lsft @z   x    c    v    b    k    m    ,    .    /    rsft _    _
-  lmet lalt lctl @mos     @nav       @sym @nlm @fun @nlm _    _    _
+  lmet lalt lctl      @nav @mos      @sym @nlm @fun @nlm _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
@@ -25,7 +25,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @num @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   ret  _
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _     _
-  @met @alt  @ctl  @mos        @nav        @sym  @nlm  @fun  @nlm  _     _     _
+  @met @alt  @ctl        @nav  @mos        @sym  @nlm  @fun  @nlm  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -36,7 +36,7 @@
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @num @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   ret   _
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _     _
-  @met @alt @ctl @mos      @nav      @sym @nlm @fun @nlm _     _     _
+  @met @alt @ctl      @nav @mos          @sym @nlm @fun @nlm _     _     _
 )
 
 ;; standard modless qwerty
@@ -46,7 +46,7 @@
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret  _
   lsft z    x    c    v    b    n    m    ,    .    /    rsft up   _
-  lctl @nav lalt @inv      spc       ralt rmet menu rctl left down rght
+  lctl @nav lalt      spc  @inv      ralt rmet menu rctl left down rght
 )
 
 (deflayer gaming_split
@@ -55,7 +55,7 @@
   t    tab  q    w    e    r    y    u    i    o    p    [    ]    \
   @g   lsft a    s    d    f    h    j    k    l    ;    '    ret  _
   b    lctl z    x    c    v    n    m    ,    .    /    rsft up   _
-  caps @nav lalt @inv      spc       ralt rmet menu rctl left down rght
+  caps @nav lalt      spc  @inv      ralt rmet menu rctl left down rght
 )
 
 (deflayer num_left
@@ -64,7 +64,7 @@
   _    grv  7    8    9    _    _    _    _    _    _    _    _    _
   _    _    4    5    6    _    _    @s-  @c,  @a.  @g:  _    _    _
   _    0    1    2    3    _    _    _    _    _    _    _    _    _
-  _    _    _    _         _         _    _    _    _    _    _    _
+  _    _    _         _    _         _    _    _    _    _    _    _
 )
 
 ;; Extend (nav/edition/function) layer
@@ -74,7 +74,7 @@
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
   ⇧›   @undo @cut @copy @paste @vsc  mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
-  ⌘›   ⌥›    ⎈›   _        _             mrtp mltp _    _    @🖱← @🖱↓ @🖱→
+  ⌘›   ⌥›    ⎈›       _    _             mrtp mltp _    _    @🖱← @🖱↓ @🖱→
 )
 
 (deflayer num_fun
@@ -83,7 +83,7 @@
   @«”  f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
   esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc @—    🔇   _
   _    f10   f1    @f2   f3    🔇    0     1     2     3     ret   XX    🔈+  _
-  @dr0 @dms  @dp0  _           spc         _     XX    XX    XX    ◀◀    🔈−   ▶▶
+  @dr0 @dms  @dp0        spc   _           _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
 (deflayer symbol
@@ -92,7 +92,7 @@
   @«”  @dq  @<   =    @>   @`   @^   @[   S--  @]   @'   XX   _    _
   _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _    _
   _    @#   @*   @:   @/   @$   @at  @|   @~   @&   @?   XX   _    _
-  _    _    _    _         @nav      _    _    _    _    _    _    _
+  _    _    _         @nav _         _    _    _    _    _    _    _
 )
 
 (deflayer mouse
@@ -101,7 +101,7 @@
   _    ⌦    C-S-↹ ↹     C-↹    @ter  _    @🖱w← @🖱↑  @🖱w→ @🖱w↑ _    _    _
   _    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     _    @🖱←  @🖱↓  @🖱→  @🖱w↓ _    _    _
   _    @undo @cut @copy @paste @redo _    mltp mrtp mmtp ret  _    _    _
-  _    _     _    _            spc      mrtp mltp _    _    _    _    _
+  _    _     _          spc    _          mrtp mltp _    _    _    _    _
 )
 
 ;; Note on layout switching.
