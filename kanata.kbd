@@ -39,7 +39,7 @@
   @met @alt @ctl      @nav @mos          @sym @nlm @fun @nlm _     _     _
 )
 
-;; standard modless qwerty
+;; Standard modless qwerty
 (deflayer gaming
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -49,6 +49,8 @@
   lctl @nav lalt      spc  @inv      ralt rmet menu rctl left down rght
 )
 
+;; For coulmn staggered split keyboard,
+;; it is more ergonomic to have WASD moved one column to the right
 (deflayer gaming_split
   @g   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -58,6 +60,7 @@
   caps @nav lalt      spc  @inv      ralt rmet menu rctl left down rght
 )
 
+;; Miryoku-like num layer for left thumb activation
 (deflayer num_left
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
@@ -77,6 +80,7 @@
   ⌘›   ⌥›    ⎈›       _    _             mrtp mltp _    _    @🖱← @🖱↓ @🖱→
 )
 
+;; Right-handed num layer + left-handed fun layer
 (deflayer num_fun
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld XX    XX    XX    XX    XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
@@ -86,6 +90,7 @@
   @dr0 @dms  @dp0        spc   _           _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
 
+;; Symbol layer with modtaps for both hands
 (deflayer symbol
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
   _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
@@ -95,6 +100,7 @@
   _    _    _         @nav _         _    _    _    _    _    _    _
 )
 
+;; Control mouse from your keyboard
 (deflayer mouse
   _    f1   f2   f3     f4     f5    f6   f7   f8   f9   f10  f11  f12  _
   _    _     _    _     _      _     _    _    _    _    _    _    _    _
