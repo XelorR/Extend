@@ -36,7 +36,7 @@
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @num @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   ret   _
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _     _
-  @met @alt @ctl      @nav @mos          @sym @nlm @fun @nlm _     _     _
+  @met @alt @ctl      @nav @mos      @sym @nlm @fun @nlm _     _     _
 )
 
 ;; Standard modless qwerty
@@ -77,7 +77,7 @@
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
   ⇧›   @undo @cut @copy @paste @vsc  mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
-  ⌘›   ⌥›    ⎈›       _    _             mrtp mltp _    _    @🖱← @🖱↓ @🖱→
+  ⌘›   ⌥›    ⎈›         _      _          mrtp mltp _    _    @🖱← @🖱↓ @🖱→
 )
 
 ;; Right-handed num layer + left-handed fun layer
