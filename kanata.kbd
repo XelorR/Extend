@@ -80,8 +80,8 @@
 (deflayer num
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld XX    XX    XX    XX    XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
-  _    f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
-  esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc XX    🔇   _
+  @«”  f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
+  esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc @—    🔇   _
   _    f10   f1    @f2   f3    🔇    0     1     2     3     ret   XX    🔈+  _
   @dr0 @dms  @dp0  _           spc   _     _     XX    XX    XX    ◀◀    🔈−   ▶▶
 )
