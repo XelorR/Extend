@@ -63,7 +63,7 @@
 ;; Miryoku-like num layer for left thumb activation
 (deflayer num_left
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    S-9  S-0  _    _    -    @,   @.   @:   _    _    _
   @«”  @~   7    8    9    =    _    _    _    _    _    _    _    _
   esc  @;   4    5    6    S-=  _    @s-  @c,  @a.  @g:  @—   _    _
   _    @`   1    2    3    \    _    S-8  S-9  S-0  @/   _    _    _
@@ -83,7 +83,7 @@
 ;; Right-handed num layer + left-handed fun layer
 (deflayer num_fun
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
-  lrld XX    XX    XX    XX    XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
+  lrld XX    XX    S-9   S-0   XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
   @«”  f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
   esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc @—    🔇   _
   _    f10   f1    @f2   f3    🔇    0     1     2     3     ret   XX    🔈+  _
@@ -93,7 +93,7 @@
 ;; Symbol layer with modtaps for both hands
 (deflayer symbol
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
-  _    XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   _    _
+  _    XX   XX   S-9  S-0  XX   XX   -    @,   @.   @:   XX   _    _
   @«”  @dq  @<   =    @>   @`   @^   @[   S--  @]   @'   XX   _    _
   _    @\   @lb  @-   @rb  S-=  S-5  @{   @;   @}   @!   @—   _    _
   _    @#   @*   @:   @/   @$   @at  @|   @~   @&   @?   XX   _    _
