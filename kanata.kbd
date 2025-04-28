@@ -224,7 +224,7 @@
   redo C-S-v
   ⎈ (one-shot 500 lctl)
 
-  ;; symbols for num layer
+  ;; symbols for sym layer
   dq (switch
     ((base-layer diktor)) S-2 break
     () S-' break
@@ -318,6 +318,8 @@
     ((base-layer diktor)) S-7 break
     () S-/ break
   )
+
+  ;; modtaps for num_fun layer
   4h (tap-hold $tap-time $hold-index 4 lsft)
   5h (tap-hold $tap-time $hold-middle 5 lctl)
   6h (tap-hold $tap-time $hold-ring 6 lalt)
