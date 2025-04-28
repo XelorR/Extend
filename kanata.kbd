@@ -15,7 +15,7 @@
   tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
   @esc @a   @r   @s   @t   d    h    @n   @e   @i   @o   @_'  @ent _
   lsft @z   x    c    v    b    k    m    ,    .    @_/  rsft _    _
-  lmet lalt lctl @num     @spc @fun @ralt @mnu rmet rctl _    _    _
+  lmet lalt lctl @num     @spc @sym @ralt @mnu rmet rctl _    _    _
 )
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
@@ -25,7 +25,7 @@
   tab  @_ц   @_ь   @_я   @_,   @_.   @_з   @_в   @_к   @_д   @_ч   @_ш   @_щ   \
   @esc @_у   @_и   @_е   @_о   @_а   @_л   @_н   @_т   @_с   @_р   @_й   @ent  _
   lsft @_ф   @_э   @_х   @_ы   @_ю   @_б   @_м   @_п   @_г   @_ж   rsft  _     _
-  @met @alt  @ctl  @num  @spc        @fun @ralt  @mnu  @rme  @rct  _     _     _
+  @met @alt  @ctl  @num  @spc        @sym @ralt  @mnu  @rme  @rct  _     _     _
 )
 
 ;; Diktor implemented with unicode symbols, requires national US (qwerty) layout to be enabled
@@ -36,7 +36,7 @@
   tab  @цЦ  @ьъ  @яЯ  @,?  @.!  @зЗ  @вВ  @кК  @дД  @чЧ  @шШ   @щЩ   \
   @esc @dуУ @dиИ @dеЕ @dоО @аА  @лЛ  @dнН @dтТ @dсС @dрР @йЙ   @ent  _
   lsft @фФ  @эЭ  @хХ  @ыЫ  @юЮ  @бБ  @мМ  @пП  @гГ  @жЖ  rsft  _     _
-  @met @alt @ctl @num     @spc @fun @ralt @mnu @rme @rct _     _     _
+  @met @alt @ctl @num     @spc @sym @ralt @mnu @rme @rct _     _     _
 )
 
 ;; standard modless qwerty
@@ -163,8 +163,9 @@
 
   ;; symbol layer
   ralt (tap-hold $tap-time $hold-time ralt (layer-toggle symbol))
-  mnu (tap-hold $tap-time $hold-time ralt (layer-toggle symbol))
-
+  mnu (tap-hold $tap-time $hold-time menu (layer-toggle symbol))
+  sym (tap-hold $tap-time $hold-time ret (layer-toggle symbol))
+ 
   ;; mouse layer
   z (tap-hold $tap-time $hold-pinky z (layer-toggle mouse))
 
