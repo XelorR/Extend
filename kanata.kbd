@@ -378,9 +378,9 @@
   _а f
   _л k
   _н (tap-hold $tap-time $hold-index y rsft)
-  _т (tap-hold $tap-time $hold-middle n (multi rctl (layer-while-held colemak)))
-  _с (tap-hold $tap-time $hold-ring c (multi ralt (layer-while-held colemak)))
-  _р (tap-hold $tap-time $hold-pinky h (multi rmet (layer-while-held colemak)))
+  _т (tap-hold $tap-time $hold-middle n (multi lctl (layer-while-held colemak)))
+  _с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held colemak)))
+  _р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held colemak)))
   _й (tap-hold $tap-time $hold-time q (layer-toggle num))
   _ф (tap-hold $tap-time $hold-pinky a (layer-toggle mouse))
   _э '
