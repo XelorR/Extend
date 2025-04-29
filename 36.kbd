@@ -78,14 +78,6 @@
                                       @num  _
 )
 
-(deflayer rus_u
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
-                                       _    _
-)
-
 (deflayer nav
   del  C-S-tab tab  C-tab C-S-T            ins  home up   end  del
   lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc
