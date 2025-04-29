@@ -93,7 +93,7 @@
 (deflayer num_fun
   _    f1    f2    f3    f4    f5    f6   f7     f8    f9    f10   f11   f12   _
   lrld XX    XX    S-9   S-0   XX    XX    -     @,    @.    @:    🔈−   🔈+   🔇
-  @«”  f12   f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
+  @«”  @f12  f7    f8    f9    🔈+   XX    7     8     9     del   ◀◀    ▶▶    ▶⏸
   esc  @f11  @f4   @f5   @f6   🔈−   @/    @4h   @5h   @6h   @bspc @—    🔇   _
   _    f10   f1    @f2   f3    🔇    0     1     2     3     ret   XX    🔈+  _
   @dr0 @dms  @dp0        spc   _           _     XX    XX    XX    ◀◀    🔈−   ▶▶
@@ -373,6 +373,7 @@
   f5 (tap-hold $tap-time $hold-middle f5 lctl)
   f6 (tap-hold $tap-time $hold-index f6 lsft)
   f11 (tap-hold $tap-time $hold-pinky f11 lmet)
+  f12 (tap-hold $tap-time $hold-pinky f11 lalt)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   
   ;; left num modtaps
