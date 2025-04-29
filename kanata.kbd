@@ -65,7 +65,7 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _    _    _    S-9  S-0  _    _    -    @,   @.   @:   _    _    _
   @«”  @~   7    8    9    =    _    _    _    _    del  _    _    _
-  esc  @`   4    5    6    S-=  _    @s-  @c,  @a. @bspc @—   _    _
+  esc  @`   @4g  @5g  @6g  S-=  _    @s-  @c,  @a. @bspc @—   _    _
   _    0    1    2    3    \    _    S-8  S-9  S-0  ret  _    _    _
   _    _    @.        spc  0         _    _    _    _    _    _    _
 )
@@ -318,18 +318,24 @@
     ((base-layer diktor)) S-7 break
     () S-/ break
   )
+  * S-8
 
-  ;; modtaps for num_fun layer
+  ;; modtaps for num layers
+  ;; right numpad
   4h (tap-hold $tap-time $hold-index 4 lsft)
   5h (tap-hold $tap-time $hold-middle 5 lctl)
   6h (tap-hold $tap-time $hold-ring 6 lalt)
+  ;; left numpad
+  4g (tap-hold $tap-time $hold-ring 4 lalt)
+  5g (tap-hold $tap-time $hold-middle 5 lctl)
+  6g (tap-hold $tap-time $hold-pinky 6 lsft)
+  ;; fun pad
   f2 (tap-hold $tap-time $hold-middle f2 lalt)
   f4 (tap-hold $tap-time $hold-ring f4 lalt)
   f5 (tap-hold $tap-time $hold-middle f5 lctl)
   f6 (tap-hold $tap-time $hold-index f6 lsft)
   f11 (tap-hold $tap-time $hold-pinky f11 lmet)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
-  * S-8
 
   ;; mouse
   🖱↑ (movemouse-up 1 1)
