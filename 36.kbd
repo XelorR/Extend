@@ -118,6 +118,12 @@
   en C-8
   ru C-9
 
+  ;; layouts
+  eng (multi (layer-switch eng) @en)
+  rus (multi (layer-switch rus) @ru)
+  rus_u (multi (layer-switch rus_u) @en)
+  gam (multi (layer-switch gam) @en)
+
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
