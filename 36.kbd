@@ -18,7 +18,7 @@
  @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч
  @у   @и   @е   @о   @а               @л   @н   @т   @с   @р
  @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
-               @cesc @nav @mos   @sym @num @fun
+               @cesc @nav @mos @sym_r @num @fun
                                       @num @fun
 )
 
@@ -26,7 +26,7 @@
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
-               @cesc @nav @mos @sym_r @num @fun
+               @cesc @nav @mos   @sym @num @fun
                                       @num @fun
 )
 
