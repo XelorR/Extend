@@ -10,7 +10,7 @@
   q    w    f    p    g                j    l    u    y    '
  @a   @r   @s   @t    d                h   @n   @e   @i   @o
   z    x    c    v    b                k    m    ,    .    /
-                 esc  spc tab     ret  [    ]
+                 esc @nav tab     ret  [    ]
                                        [    ]
 )
 
@@ -18,7 +18,7 @@
  @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч
  @у   @и   @е   @о   @а               @л   @н   @т   @с   @р
  @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
-                 esc  spc tab     ret @ш   @щ
+                 esc @nav tab     ret @ш   @щ
                                       @ш   @щ
 )
 
@@ -26,7 +26,7 @@
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
+                 _   @nav _       _    _    _
                                        _    _
 )
 
@@ -117,6 +117,8 @@
   ;; system combinations to switch languages
   en C-8
   ru C-9
+
+  nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
 
   a (tap-hold $tap-time $hold-pinky a lmet)
   r (tap-hold $tap-time $hold-ring r lalt)
