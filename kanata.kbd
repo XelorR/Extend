@@ -17,6 +17,15 @@
   lsft @z   x    c    v    b    k    m    ,    .    /    rsft _    _
   lmet lalt lctl      @nav @mos      @sym @nlm @fun @nlm _    _    _
 )
+;; Version for disabling home row mods when typing rapidly
+(deflayer colemak_nomods
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    f    p    g    j    l    u    y    ;    [    ]    \
+  esc  a    r    s    t    d    h    n    e    i    o    '    ret  _
+  lsft z    x    c    v    b    k    m    ,    .    /    rsft _    _
+  lmet lalt lctl      spc  tab       ret  menu menu menu _    _    _
+)
 
 ;; Diktor implemented with simple key remap, requires national RU (йцукен) layout to be enabled
 (deflayer diktor
@@ -146,6 +155,21 @@
   hold-middle 150
   hold-ring 170
   hold-pinky 195
+
+  left-hand-keys (
+    q w e r t
+    a s d f g
+    z x c v b
+  )
+  right-hand-keys (
+    y u i o p
+    h j k l ;
+    n m , . /
+  )
+)
+
+(deffakekeys
+  to-base-colemak (layer-switch colemak)
 )
 
 (defalias
@@ -178,6 +202,20 @@
   dktu (multi (layer-switch diktor_unicode) @en)
   gam (multi (layer-switch gaming) @en)
   gams (multi (layer-switch gaming_split) @en)
+
+  ;; colemak modtaps
+  tap_colemak (multi
+    (layer-switch colemak_nomods)
+    (on-idle-fakekey to-base-colemak tap 20)
+  )
+  a (tap-hold-release-keys $tap-time $hold-pinky (multi a @tap_colemak) lmet $left-hand-keys)
+  r (tap-hold-release-keys $tap-time $hold-ring (multi r @tap_colemak) lalt $left-hand-keys)
+  s (tap-hold-release-keys $tap-time $hold-middle (multi s @tap_colemak) lctl $left-hand-keys)
+  t (tap-hold-release-keys $tap-time $hold-index (multi t @tap_colemak) lsft $left-hand-keys)
+  n (tap-hold-release-keys $tap-time $hold-index (multi n @tap_colemak) lsft $right-hand-keys)
+  e (tap-hold-release-keys $tap-time $hold-middle (multi e @tap_colemak) lctl $right-hand-keys)
+  i (tap-hold-release-keys $tap-time $hold-ring (multi i @tap_colemak) lalt $right-hand-keys)
+  o (tap-hold-release-keys $tap-time $hold-pinky (multi o @tap_colemak) lmet $right-hand-keys)
 
   ;; launchers
   term (macro lmet 300 S-t e r m i n a l 400 ret)
@@ -336,6 +374,12 @@
   f6 (tap-hold $tap-time $hold-index f6 lsft)
   f11 (tap-hold $tap-time $hold-pinky f11 lmet)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
+  
+  ;; left num modtaps
+  s- (tap-hold $tap-time $hold-index - rsft)
+  c, (tap-hold $tap-time $hold-middle @, rctl)
+  a. (tap-hold $tap-time $hold-ring @. ralt)
+  g: (tap-hold $tap-time $hold-pinky @: rmet)
 
   ;; mouse
   🖱↑ (movemouse-up 1 1)
@@ -351,23 +395,7 @@
   dr0 (dynamic-macro-record 0)
   dms dynamic-macro-record-stop
   dp0 (dynamic-macro-play 0)
-
-  ;; colemak modtaps
-  a (tap-hold $tap-time $hold-pinky a lmet)
-  r (tap-hold $tap-time $hold-ring r lalt)
-  s (tap-hold $tap-time $hold-middle s lctl)
-  t (tap-hold $tap-time $hold-index t lsft)
-  n (tap-hold $tap-time $hold-index n rsft)
-  e (tap-hold $tap-time $hold-middle e rctl)
-  i (tap-hold $tap-time $hold-ring i ralt)
-  o (tap-hold $tap-time $hold-pinky o rmet)
-
-  ;; left num modtaps
-  s- (tap-hold $tap-time $hold-index - rsft)
-  c, (tap-hold $tap-time $hold-middle @, rctl)
-  a. (tap-hold $tap-time $hold-ring @. ralt)
-  g: (tap-hold $tap-time $hold-pinky @: rmet)
-
+  
   ;; Diktor symbols
   _1 (fork 1 S-] (lsft rsft))
   _2 (fork 2 S-m (lsft rsft))
