@@ -85,7 +85,7 @@
   f13  f1    f2   f3    f4     f5    f6   f7   f8   f9   f10  f11  f12  brk
   @«”  ⌦    C-S-↹ ↹     C-↹    @ter  ins  ⇤    ↑    ⇥    ⌦    bck  fwd  @fav
   ⎋    ‹⌘    ‹⌥   @⎈    ‹⇧     ⎙     @cw  ←    ↓    →    ⌫    @—   mltp _
-  ⇧›   @undo @cut @copy @paste @vsc  mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
+  A-f4 @undo @cut @copy @paste @vsc  mltp ⇞    ☰    ⇟    ⤶    _    @🖱↑  _
   ⌘›   ⌥›    ⎈›         _      _          mrtp mltp _    _    @🖱← @🖱↓ @🖱→
 )
 
