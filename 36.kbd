@@ -31,18 +31,18 @@
 )
 
 (deflayer gam
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
-                                       _    _
+  tab  q    w    e    r                y    u    i    o    p
+  lsft a    s    d    f                h    j    k    l    ;
+  lctl z    x    c    v                n    m    ,    .    /
+                 lalt spc _       prnt [    ]
+                                       [    ]
 )
 
 (deflayer gfn
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
+  esc  7    8    9    t                tab  home up   end  del
+  caps 4    5    6    g                lsft left down rght bspc
+  0    1    2    3    b                lctl pgdn menu pgup ret
+                 ret  _   _       _    _    _
                                        _    _
 )
 
@@ -79,8 +79,8 @@
 )
 
 (deflayer nav
-  del  C-S-tab tab  C-tab _                ins  home up   end  del
-  lmet lalt   @lctl lsft  _               @cw   left down rght bspc
+  del  C-S-tab tab  C-tab C-S-T            ins  home up   end  del
+  lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc
   C-z  C-x     C-c  C-v   _                mltp pgdn menu pgup ret
                     esc   spc tab     mrtp mltp _
                                            _    _
