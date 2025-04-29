@@ -131,6 +131,8 @@
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
+  num (tap-hold $tap-time $hold-time [ (layer-toggle num))
+  fun (tap-hold $tap-time $hold-time ] (layer-toggle fun))
 
   ;; eng
   a (tap-hold $tap-time $hold-pinky a lmet)
