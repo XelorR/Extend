@@ -1,0 +1,102 @@
+(defsrc
+  q    w    e    r    t                y    u    i    o    p
+  a    s    d    f    g                h    j    k    l    ;
+  z    x    c    v    b                n    m    ,    .    /
+                 lalt spc lgui    ralt rgui menu
+                                       rctl left
+)
+
+(deflayer eng
+  q    w    f    p    g                j    l    u    y    '
+ @a   @r   @s   @t    d                h   @n   @e   @i   @o
+  z    x    c    v    b                k    m    ,    .    /
+                 esc  spc tab     ret  [    ]
+                                       [    ]
+)
+
+(deflayer rus
+ @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч
+ @у   @и   @е   @о   @а               @л   @н   @т   @с   @р
+ @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
+                 esc  spc tab     ret @ш   @щ
+                                      @ш   @щ
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+
+  hold-index 150
+  hold-middle 150
+  hold-ring 170
+  hold-pinky 195
+)
+
+(defchordsv2
+  (w e) @en $hold-time all-released ()
+  (i o) @ru $hold-time all-released ()
+  (. /) @й $hold-time all-released (eng)
+)
+
+(defalias
+  ;; system combinations to switch languages
+  en C-8
+  ru C-9
+
+  a (tap-hold $tap-time $hold-pinky a lmet)
+  r (tap-hold $tap-time $hold-ring r lalt)
+  s (tap-hold $tap-time $hold-middle s lctl)
+  t (tap-hold $tap-time $hold-index t lsft)
+  n (tap-hold $tap-time $hold-index n lsft)
+  e (tap-hold $tap-time $hold-middle e lctl)
+  i (tap-hold $tap-time $hold-ring i lalt)
+  o (tap-hold $tap-time $hold-pinky o lmet)
+
+  cw (caps-word 2000)
+
+  ;; mouse
+  m↑ (movemouse-up 1 1)
+  m↓ (movemouse-down 1 1)
+  m← (movemouse-left 1 1)
+  m→ (movemouse-right 1 1)
+  mw↑ (mwheel-up 50 120)
+  mw↓ (mwheel-down 50 120)
+  mw← (mwheel-left 50 120)
+  mw→ (mwheel-right 50 120)
+
+  ;; Diktor symbols
+  ц w
+  ь (fork m (unmod ]) (lsft rsft))
+  я z
+  ,? (fork S-/ S-7 (lsft rsft))
+  .! (fork / S-1 (lsft rsft))
+  з p
+  в d
+  к r
+  д l
+  ч x
+  ш i
+  щ o
+  у (tap-hold $tap-time $hold-pinky e (multi lmet (layer-while-held colemak)))
+  и (tap-hold $tap-time $hold-ring b (multi lalt (layer-while-held colemak)))
+  е (tap-hold $tap-time $hold-middle t (multi lctl (layer-while-held colemak)))
+  о (tap-hold $tap-time $hold-index j lsft)
+  а f
+  л k
+  н (tap-hold $tap-time $hold-index y rsft)
+  т (tap-hold-except-keys $tap-time $hold-middle n (multi lctl (layer-while-held colemak)) (w))
+  с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held colemak)))
+  р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held colemak)))
+  й q
+  ф (tap-hold $tap-time $hold-pinky a (layer-toggle mouse))
+  э '
+  х [
+  ы s
+  ю .
+  б ,
+  м v
+  п g
+  г u
+  ж ;
+
+)
