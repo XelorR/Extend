@@ -9,7 +9,7 @@
 (deflayer eng
   q    w    f    p    g                j    l    u    y    '
  @a   @r   @s   @t    d                h   @n   @e   @i   @o
-  z    x    c    v    b                k    m    ,    .    /
+ @z    x    c    v    b                k    m    ,    .   @_/
                  esc @nav tab     ret  [    ]
                                        [    ]
 )
@@ -119,6 +119,8 @@
   ru C-9
 
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
+  _/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
 
   a (tap-hold $tap-time $hold-pinky a lmet)
   r (tap-hold $tap-time $hold-ring r lalt)
@@ -141,7 +143,7 @@
   mwd (mwheel-down 50 120)
   mwl (mwheel-left 50 120)
   mwr (mwheel-right 50 120)
-
+  
   ;; Diktor symbols
   ц w
   ь (fork m (unmod ]) (lsft rsft))
@@ -166,7 +168,7 @@
   с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held colemak)))
   р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held colemak)))
   й q
-  ф (tap-hold $tap-time $hold-pinky a (layer-toggle mouse))
+  ф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
   э '
   х [
   ы s
@@ -175,6 +177,6 @@
   м v
   п g
   г u
-  ж ;
+  ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
 
 )
