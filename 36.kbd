@@ -47,10 +47,10 @@
 )
 
 (deflayer num
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
+  grv  7    8    9    S-8              _    _    _    _    del
+ @:   @4   @5   @6    =                _   @s-  @c,  @a.  @bspc
+  0    1    2    3   @/                _    _    _    _    ret
+               @cesc @nav 0       _    _    _
                                        _    _
 )
 
@@ -219,6 +219,22 @@
   ~ (macro @en 50 S-grv 50 @ru)
 
   ;; num
+  : (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
+  4 (tap-hold $tap-time $hold-ring 4 lalt)
+  5 (tap-hold $tap-time $hold-middle 5 lctl)
+  6 (tap-hold $tap-time $hold-pinky 6 lsft)
+  s- (tap-hold $tap-time $hold-index - rsft)
+  c, (tap-hold $tap-time $hold-middle @, rctl)
+  a. (tap-hold $tap-time $hold-ring @. ralt)
+  / (switch ((base-layer rus)) S-\ break () / break )
 
   ;; fun
+  kp4 (tap-hold $tap-time $hold-index 4 lsft)
+  kp5 (tap-hold $tap-time $hold-middle 5 lctl)
+  kp6 (tap-hold $tap-time $hold-ring 6 lalt)
+  f4 (tap-hold $tap-time $hold-ring f4 lalt)
+  f5 (tap-hold $tap-time $hold-middle f5 lctl)
+  f6 (tap-hold $tap-time $hold-index f6 lsft)
+  f11 (tap-hold $tap-time $hold-pinky f11 lmet)
+  bspc (tap-hold $tap-time $hold-pinky bspc lmet)
 )
