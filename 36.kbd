@@ -125,8 +125,6 @@
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
-  _/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
 
   ;; eng
   a (tap-hold $tap-time $hold-pinky a lmet)
@@ -137,6 +135,8 @@
   e (tap-hold $tap-time $hold-middle e lctl)
   i (tap-hold $tap-time $hold-ring i lalt)
   o (tap-hold $tap-time $hold-pinky o lmet)
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
+  _/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
 
   ;; nav
   cw (caps-word 2000)
