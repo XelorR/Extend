@@ -55,19 +55,11 @@
 )
 
 (deflayer sym
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
-                                       _    _
-)
-
-(deflayer sym_r
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
-                                       _    _
+  S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '
+  _    _    _    _    S-=              S-5  _    _    _    _
+  S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/
+               @cesc @nav @mos    ret @num @fun
+                                      @num @fun
 )
 
 (deflayer fun
@@ -130,6 +122,8 @@
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
   cesc (tap-hold $tap-time $hold-time esc lctl)
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
+  sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
+  sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
   z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
   _/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
 
@@ -168,16 +162,16 @@
   ч x
   ш i
   щ o
-  у (tap-hold $tap-time $hold-pinky e (multi lmet (layer-while-held colemak)))
-  и (tap-hold $tap-time $hold-ring b (multi lalt (layer-while-held colemak)))
-  е (tap-hold $tap-time $hold-middle t (multi lctl (layer-while-held colemak)))
+  у (tap-hold $tap-time $hold-pinky e (multi lmet (layer-while-held eng)))
+  и (tap-hold $tap-time $hold-ring b (multi lalt (layer-while-held eng)))
+  е (tap-hold $tap-time $hold-middle t (multi lctl (layer-while-held eng)))
   о (tap-hold $tap-time $hold-index j lsft)
   а f
   л k
   н (tap-hold $tap-time $hold-index y rsft)
-  т (tap-hold-except-keys $tap-time $hold-middle n (multi lctl (layer-while-held colemak)) (w))
-  с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held colemak)))
-  р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held colemak)))
+  т (tap-hold-except-keys $tap-time $hold-middle n (multi lctl (layer-while-held eng)) (w))
+  с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held eng)))
+  р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held eng)))
   й q
   ф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
   э '
