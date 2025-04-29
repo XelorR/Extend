@@ -56,8 +56,16 @@
 
 (deflayer sym
   S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '
-  _    _    _    _    S-=              S-5  _    _    _    _
+ @\   @lb  @-   @rb   S-=              S-5 @{   @;   @]   @!
   S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/
+               @cesc @nav @mos    ret @num @fun
+                                      @num @fun
+)
+
+(deflayer sym_r
+  S-2 @<    =   @>   @`               @^   @[    S-- @]   @'
+ @\   @lb  @-   @rb   S-=              S-5 @{   @;   @]   @!
+ @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7
                @cesc @nav @mos    ret @num @fun
                                       @num @fun
 )
@@ -118,6 +126,7 @@
   en C-8
   ru C-9
 
+  ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
   cesc (tap-hold $tap-time $hold-time esc lctl)
@@ -127,6 +136,7 @@
   z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
   _/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
 
+  ;; eng
   a (tap-hold $tap-time $hold-pinky a lmet)
   r (tap-hold $tap-time $hold-ring r lalt)
   s (tap-hold $tap-time $hold-middle s lctl)
@@ -136,6 +146,7 @@
   i (tap-hold $tap-time $hold-ring i lalt)
   o (tap-hold $tap-time $hold-pinky o lmet)
 
+  ;; nav
   cw (caps-word 2000)
   lctl (one-shot 500 lctl)
 
@@ -149,7 +160,7 @@
   mwl (mwheel-left 50 120)
   mwr (mwheel-right 50 120)
   
-  ;; Diktor symbols
+  ;; rus
   ц w
   ь (fork m (unmod ]) (lsft rsft))
   я z
@@ -184,4 +195,30 @@
   г u
   ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
 
+  ;; sym
+  \ (tap-hold $tap-time $hold-pinky \ lmet)
+  lb (tap-hold $tap-time $hold-ring S-9 lalt)
+  - (tap-hold $tap-time $hold-middle - lctl)
+  rb (tap-hold $tap-time $hold-index S-0 lsft)
+  { (tap-hold $tap-time $hold-index (switch ((base-layer rus)) (macro @en 50 S-[ 50 @ru) break () S-[ break ) lsft)
+  ; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lctl)
+  } (tap-hold $tap-time $hold-ring (switch ((base-layer rus)) (macro @en 50 S-] 50 @ru) break () S-] break ) lalt)
+  ! (tap-hold $tap-time $hold-pinky S-1 lmet)
+  # (macro @en 50 S-3 50 @ru)
+  $ (macro @en 50 S-4 50 @ru)
+  & (macro @en 50 S-7 50 @ru)
+  ' (macro @en 50 ' 50 @ru)
+  < (macro @en 50 S-, 50 @ru)
+  > (macro @en 50 S-. 50 @ru)
+  [ (macro @en 50 [ 50 @ru)
+  ] (macro @en 50 ] 50 @ru)
+  ^ (macro @en 50 S-6 50 @ru)
+  ` (macro @en 50 grv 50 @ru)
+  at (macro @en 50 S-2 50 @ru)
+  | (macro @en 50 S-\ 50 @ru)
+  ~ (macro @en 50 S-grv 50 @ru)
+
+  ;; num
+
+  ;; fun
 )
