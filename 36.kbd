@@ -79,11 +79,11 @@
 )
 
 (deflayer nav
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _
-                 _    _   _       _    _    _
-                                       _    _
+  del  C-S-tab tab  C-tab _                ins  home up   end  del
+  lmet lalt   @lctl lsft  _               @cw   left down rght bspc
+  C-z  C-x     C-c  C-v   _                mltp pgdn menu pgup ret
+                    esc   spc tab     mrtp mltp _
+                                           _    _
 )
 
 (deflayer mos
@@ -128,6 +128,7 @@
   o (tap-hold $tap-time $hold-pinky o lmet)
 
   cw (caps-word 2000)
+  lctl (one-shot 500 lctl)
 
   ;; mouse
   m↑ (movemouse-up 1 1)
