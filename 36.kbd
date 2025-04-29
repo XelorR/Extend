@@ -105,9 +105,12 @@
 )
 
 (defchordsv2
-  (w e) @en $hold-time all-released ()
-  (i o) @ru $hold-time all-released ()
-  (. /) @й $hold-time all-released (eng)
+  (w e) @eng $hold-time all-released   (               gam gfn num sym fun nav mos)
+  (i o) @rus $hold-time all-released   (                   gfn num sym fun nav mos)
+  (, .) @rus_u $hold-time all-released (                   gfn num sym fun nav mos)
+  (. /) @й $hold-time all-released     (eng      rus_u gam gfn num sym fun nav mos)
+  (z x) grv $hold-time all-released    (eng      rus_u gam gfn num sym fun nav mos)
+  (x c) @gam $hold-time all-released   (               gam gfn num sym fun nav mos)
 )
 
 (defalias
