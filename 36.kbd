@@ -162,7 +162,7 @@
     () @term break
   )
 
-  ;; mouse
+  ;; mos
   mu (movemouse-up 1 1)
   md (movemouse-down 1 1)
   ml (movemouse-left 1 1)
