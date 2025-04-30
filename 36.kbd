@@ -104,6 +104,7 @@
   hold-pinky 195
 )
 
+(defcfg concurrent-tap-hold yes)
 (defchordsv2
   (w e) @eng $hold-time all-released   (               gam gfn num sym fun nav mos)
   (i o) @rus $hold-time all-released   (                   gfn num sym fun nav mos)
