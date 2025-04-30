@@ -33,7 +33,7 @@
 (deflayer gam
   tab  q    w    e    r                y    u    i    o    p
   lsft a    s    d    f                h    j    k    l    ;
-  lctl z    x    c    v                n    m    ,    .    /
+  lctl z    x    c    v                n    m    ,    .    @_/
                  lalt spc @gfn    prnt [    ]
                                        [    ]
 )
