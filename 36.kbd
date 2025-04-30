@@ -10,7 +10,7 @@
   q    w    f    p    g                j    l    u    y    '
  @a   @r   @s   @t    d                h   @n   @e   @i   @o
  @z    x    c    v    b                k    m    ,    .   @_/
-               @cesc @nav @mos   @sym @num @fun
+               @lfun @nav @mos   @sym @num @fun
                                       @num @fun
 )
 
@@ -18,7 +18,7 @@
  @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч
  @у   @и   @е   @о   @а               @л   @н   @т   @с   @р
  @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
-               @cesc @nav @mos @sym_r @num @fun
+               @lfun @nav @mos @sym_r @num @fun
                                       @num @fun
 )
 
@@ -26,7 +26,7 @@
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
   _    _    _    _    _                _    _    _    _    _
-               @cesc @nav @mos   @sym @num @fun
+               @lfun @nav @mos   @sym @num @fun
                                       @num @fun
 )
 
@@ -50,7 +50,7 @@
   grv  7    8    9    S-8              lrld _    _    _    del
  @:   @4   @5   @6    =                _   @s-  @c,  @a.  @bspc
   0    1    2    3   @/                _    _    _    _    ret
-               @cesc @nav 0       _    _    _
+               @lfun @nav 0       _    _    _
                                        _    _
 )
 
@@ -58,7 +58,7 @@
   S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '
  @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
   S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/
-               @cesc @nav @mos    ret @num @fun
+               @lfun @nav @mos    ret @num @fun
                                       @num @fun
 )
 
@@ -66,14 +66,14 @@
   S-2 @<    =   @>   @`               @^   @[    S-- @]   @'
  @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
  @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7
-               @cesc @nav @mos    ret @num @fun
+               @lfun @nav @mos    ret @num @fun
                                       @num @fun
 )
 
 (deflayer fun
   f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del
  @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc
-  f10  f1   f2   f3   mute             kp0  kp1  kp2  kp3  ret
+  f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret
                 nlck @nav @mos   kprt @num  _
                                       @num  _
 )
@@ -128,7 +128,7 @@
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
-  cesc (tap-hold $tap-time $hold-time esc lctl)
+  lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
@@ -246,6 +246,7 @@
   kp4 (tap-hold $tap-time $hold-index 4 lsft)
   kp5 (tap-hold $tap-time $hold-middle 5 lctl)
   kp6 (tap-hold $tap-time $hold-ring 6 lalt)
+  f2 (tap-hold $tap-time $hold-middle f2 lalt)
   f4 (tap-hold $tap-time $hold-ring f4 lalt)
   f5 (tap-hold $tap-time $hold-middle f5 lctl)
   f6 (tap-hold $tap-time $hold-index f6 lsft)
