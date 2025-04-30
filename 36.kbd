@@ -48,7 +48,7 @@
 
 (deflayer num
   grv  7    8    9    S-8              lrld _    _    _    del
- @:   @4   @5   @6    =                _   @s-  @c,  @a.  @bspc
+ @:   @4   @5   @6    =               @cw  @s-  @c,  @a.  @bspc
   0    1    2    3   @/                _    _    _    _    ret
                @lfun @nav 0       _    _    _
                                        _    _
@@ -88,7 +88,7 @@
 
 (deflayer mos
   del  C-S-tab tab  C-tab @ter         _   @mwl @mu  @mwr @mwu
-  lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd
+  lmet lalt   @lctl lsft  prnt        @cw  @ml  @md  @mr  @mwd
   C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret
                     esc   spc tab mrtp mltp mmtp
                                        mltp mmtp
