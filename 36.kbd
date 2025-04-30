@@ -129,16 +129,6 @@
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
 
-  ;; layers
-  nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
-  mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
-  lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
-  gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
-  sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
-  sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
-  num (tap-hold $tap-time $hold-time (switch ((base-layer rus)) i break () [ break ) (layer-toggle num))
-  fun (tap-hold $tap-time $hold-time (switch ((base-layer rus)) o break () ] break ) (layer-toggle fun))
-
   ;; eng
   a (tap-hold $tap-time $hold-pinky a lmet)
   r (tap-hold $tap-time $hold-ring r lalt)
@@ -368,5 +358,27 @@
   uё (unicode ё)
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
+
+  ;; layers
+  nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
+  mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
+  lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
+  gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
+  sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
+  sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
+  num (tap-hold $tap-time $hold-time
+      (switch
+        ((base-layer rus)) i break
+        ((base-layer rus_u)) @_ш break 
+        () [ break
+      )
+      (layer-toggle num))
+  fun (tap-hold $tap-time $hold-time
+      (switch
+        ((base-layer rus)) o break
+        ((base-layer rus_u)) @_щ break 
+        () ] break
+      )
+      (layer-toggle fun))
 )
 
