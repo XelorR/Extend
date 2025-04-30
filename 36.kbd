@@ -56,7 +56,7 @@
 
 (deflayer sym
   S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '
- @\   @lb  @-   @rb   S-=              S-5 @{   @;   @]   @!
+ @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
   S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/
                @cesc @nav @mos    ret @num @fun
                                       @num @fun
@@ -64,7 +64,7 @@
 
 (deflayer sym_r
   S-2 @<    =   @>   @`               @^   @[    S-- @]   @'
- @\   @lb  @-   @rb   S-=              S-5 @{   @;   @]   @!
+ @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
  @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7
                @cesc @nav @mos    ret @num @fun
                                       @num @fun
