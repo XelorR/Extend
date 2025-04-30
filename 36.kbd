@@ -106,12 +106,16 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (r e) @eng $hold-time all-released   (               gam gfn num sym fun nav mos)
-  (i u) @rus $hold-time all-released   (                   gfn num sym fun nav mos)
-  (, m) @rus_u $hold-time all-released (                   gfn num sym fun nav mos)
-  (o i) @й $hold-time all-released     (eng      rus_u gam gfn num sym fun nav mos)
-  (w e) grv $hold-time all-released    (eng      rus_u gam gfn num sym fun nav mos)
-  (v c) @gam $hold-time all-released   (               gam gfn num sym fun nav mos)
+  (r e) @eng $hold-time all-released        (               gam gfn num sym fun nav mos)
+  (i u) @rus $hold-time all-released        (                   gfn num sym fun nav mos)
+  (, m) @rus_u $hold-time all-released      (                   gfn num sym fun nav mos)
+  (o i) (switch ((base-layer rus)) @й break
+                ((base-layer rus_u)) @_й break )
+           $hold-time all-released          (eng            gam gfn num sym fun nav mos)
+  (w e) (switch ((base-layer rus)) grv break
+        ((base-layer rus_u)) @_ё break )
+           $hold-time all-released          (eng            gam gfn num sym fun nav mos)
+  (v c) @gam $hold-time all-released        (               gam gfn num sym fun nav mos)
 )
 
 (defalias
