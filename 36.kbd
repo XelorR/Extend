@@ -81,7 +81,7 @@
 (deflayer nav
   del  C-S-tab tab  C-tab @ter             ins  home up   end  del
   lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc
-  C-z  C-x     C-c  C-v   @vsc             mltp pgdn menu pgup ret
+  C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret
                     esc   spc tab     mrtp mltp _
                                            _    _
 )
@@ -132,8 +132,8 @@
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
-  num (tap-hold $tap-time $hold-time [ (layer-toggle num))
-  fun (tap-hold $tap-time $hold-time ] (layer-toggle fun))
+  num (tap-hold $tap-time $hold-time (switch ((base-layer rus)) i break () [ break ) (layer-toggle num))
+  fun (tap-hold $tap-time $hold-time (switch ((base-layer rus)) o break () ] break ) (layer-toggle fun))
 
   ;; eng
   a (tap-hold $tap-time $hold-pinky a lmet)
