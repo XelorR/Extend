@@ -119,8 +119,8 @@ _                       @lfun @nav 0       _    _    _
 )
 
 (deflayer nav
- _         _    _    _    _    _                _    _    _    _    _    _        _    _
- _         f1   f2   f3   f3   f5               f6   f7   f8   f9   f10  f11      f12  del
+ _         _    _       _    _     _                _    _    _    _    _         _    _    _
+ _         f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         del  C-S-tab tab  C-tab @ter             ins  home up   end  del       _    _    _
  _         lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc      _    _
@@ -131,8 +131,8 @@ _                       @lfun @nav 0       _    _    _
 )
 
 (deflayer mos
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
  _         del  C-S-tab tab  C-tab @ter         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt   @lctl lsft  prnt        @cw  @ml  @md  @mr  @mwd      _    _
