@@ -83,7 +83,7 @@
   lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc
   C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret
                     esc   spc tab     mrtp mltp _
-                                           _    _
+                                           mltp _
 )
 
 (deflayer mos
@@ -354,7 +354,7 @@
   _г (fork @uг @uГ (lsft rsft))
   uж (unicode ж)
   uЖ (unicode Ж)
-  _ж (fork @uж @uЖ (lsft rsft))
+  _ж (tap-hold $tap-time $hold-pinky (fork @uж @uЖ (lsft rsft)) (layer-toggle fun))
   uё (unicode ё)
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
