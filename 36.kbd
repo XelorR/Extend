@@ -154,16 +154,21 @@ _                       @lfun @nav 0       _    _    _
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (r e) @eng $hold-time all-released        (               gam gfn num sym fun nav mos)
-  (i u) @rus $hold-time all-released        (                   gfn num sym fun nav mos)
-  (, m) @rus_u $hold-time all-released      (                   gfn num sym fun nav mos)
+  (r e) @eng $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
+  (i u) @rus $hold-time all-released        (                   gfn num sym sym_r fun nav mos)
+  (, m) @rus_u $hold-time all-released      (                   gfn num sym sym_r fun nav mos)
   (o i) (switch ((base-layer rus)) @й break
                 ((base-layer rus_u)) @_й break )
-           $hold-time all-released          (eng            gam gfn num sym fun nav mos)
+           $hold-time all-released          (eng            gam gfn num sym sym_r fun nav mos)
   (w e) (switch ((base-layer rus)) grv break
         ((base-layer rus_u)) @_ё break )
-           $hold-time all-released          (eng            gam gfn num sym fun nav mos)
-  (v c) @gam $hold-time all-released        (               gam gfn num sym fun nav mos)
+           $hold-time all-released          (eng            gam gfn num sym sym_r fun nav mos)
+  (v c) @gam $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
+  (s f) @brc $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
+  (u o) @[]  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
+  (j l) @{}  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
+  (w r) @<>  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
+  (x v) @-[] $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
 )
 
 (defalias
@@ -240,6 +245,10 @@ _                       @lfun @nav 0       _    _    _
     () @u“” break
   )
   brc (macro S-9 S-0 left)
+  []  (switch ((base-layer rus)) (macro @en 50 [ ] left 50 @ru) break () (macro [ ] left) break )
+  {}  (switch ((base-layer rus)) (macro @en 50 S-[ S-] left 50 @ru) break () (macro S-[ S-] left) break )
+  <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
+  -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] end 50 @ru) break () (macro home - [ spc ] end) break )
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
