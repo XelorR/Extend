@@ -169,6 +169,9 @@ _                       @lfun @nav 0       _    _    _
   (j l) @{}  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
   (w r) @<>  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
   (x v) @-[] $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
+  (j k) @dr0 $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
+  (, .) @dms $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
+  (h j) @dp0 $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
 )
 
 (defalias
@@ -348,6 +351,9 @@ _                       @lfun @nav 0       _    _    _
   f6 (tap-hold $tap-time $hold-index f6 lsft)
   f11 (tap-hold $tap-time $hold-pinky f11 lmet)
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
+  dr0 (dynamic-macro-record 0)
+  dms dynamic-macro-record-stop
+  dp0 (dynamic-macro-play 0)
 
   ;; rus_u
   Ъ (unicode Ъ)
