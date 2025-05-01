@@ -242,7 +242,7 @@ _                       @lfun @nav 0       _    _    _
   brc (macro S-9 S-0 left)
   
   ;; custom shifted things
-  gesc (fork esc grv (lsft rsft))
+  gesc (fork esc (unmod grv) (lsft rsft))
 
   ;; tap dance
   td' (tap-dance-eager 500 (
