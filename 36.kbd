@@ -248,7 +248,7 @@ _                       @lfun @nav 0       _    _    _
   td' (tap-dance-eager 500 (
     (macro ') ;; use macro to prevent auto-repeat of the key
     (macro bspc S-' S-' left)
-    (macro bspc bspc S-9 S-0 left)
+    (macro bspc del S-9 S-0 left)
   ))
 
   ;; rus
