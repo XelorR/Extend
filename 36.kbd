@@ -74,7 +74,7 @@
 _          _    _    _    _    _                _    _    _    _    _        _    _    _
 _          _    _    _    _    _                _    _    _    _    _        _    _    _
 
-_          grv  7    8    9    S-8              lrld _    _    _    del      _    _    _
+_         @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
 _         @:   @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
 _          0    1    2    3   @/                _    _    _    _    ret      _
 _                       @lfun @nav 0       _    _    _
@@ -239,6 +239,7 @@ _                       @lfun @nav 0       _    _    _
     ((base-layer rus)) @ur«» break
     () @u“” break
   )
+  brc (macro S-9 S-0 left)
   
   ;; custom shifted things
   gesc (fork esc grv (lsft rsft))
@@ -247,7 +248,7 @@ _                       @lfun @nav 0       _    _    _
   td' (tap-dance-eager 500 (
     (macro ') ;; use macro to prevent auto-repeat of the key
     (macro bspc S-' S-' left)
-    (macro bspc bspc S-9 S-0 left)
+    (macro bspc bspc @brc)
   ))
 
   ;; rus
