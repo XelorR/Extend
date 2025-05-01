@@ -16,7 +16,7 @@
 
  _         q    w    f    p    g                j    l    u    y    '        _    _    _
  XX       @a   @r   @s   @t    d                h   @n   @e   @i   @o        _    _
- _        @z    x    c    v    b                k    m    ,    .   @_/       _
+ _        @z    x    c    v    b                k    m   @,?  @.!  @_/       _
  _                      @lfun @nav @mos   @sym @num @fun
 
                         @lfun                  @num @fun
@@ -258,8 +258,8 @@ _                       @lfun @nav 0       _    _    _
   ц w
   ь (fork m (unmod ]) (lsft rsft))
   я z
-  ,? (fork S-/ S-7 (lsft rsft))
-  .! (fork / S-1 (lsft rsft))
+  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
+  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
   з p
   в d
   к r
