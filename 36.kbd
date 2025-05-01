@@ -192,6 +192,18 @@ _                       @lfun @nav 0       _    _    _
   ;; nav
   cw (caps-word 2000)
   lctl (one-shot 500 lctl)
+
+  ;; mos
+  mu (movemouse-up 1 1)
+  md (movemouse-down 1 1)
+  ml (movemouse-left 1 1)
+  mr (movemouse-right 1 1)
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+  
+  ;; macros
   term (macro lmet 300 S-t e r m i n a l 400 ret)
   terr (macro @en 50 lmet 300 S-t e r m i n a l 400 ret 50 @ru)
   vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
@@ -204,17 +216,10 @@ _                       @lfun @nav 0       _    _    _
     ((base-layer rus)) @terr break
     () @term break
   )
-
-  ;; mos
-  mu (movemouse-up 1 1)
-  md (movemouse-down 1 1)
-  ml (movemouse-left 1 1)
-  mr (movemouse-right 1 1)
-  mwu (mwheel-up 50 120)
-  mwd (mwheel-down 50 120)
-  mwl (mwheel-left 50 120)
-  mwr (mwheel-right 50 120)
   
+  ;; custom shifted things
+  gesc (fork esc grv (lsft rsft))
+
   ;; rus
   1 (fork 1 S-] (lsft rsft))
   2 (fork 2 S-m (lsft rsft))
@@ -260,9 +265,6 @@ _                       @lfun @nav 0       _    _    _
   п g
   г u
   ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
-
-  ;; custom shifted things
-  gesc (fork esc grv (lsft rsft))
 
   ;; sym
   \ (tap-hold $tap-time $hold-pinky \ lmet)
