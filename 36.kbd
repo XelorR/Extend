@@ -1,145 +1,145 @@
 (defsrc
-  f1   f2   f3   f4   f5               f6   f7   f8   f9   f10  f11  f12  del
-  1    2    3    4    5                6    7    8    9    0    -    =    bspc
+ esc       f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
+ grv       1    2    3    4    5                6    7    8    9    0        -    =    bspc
 
-  q    w    e    r    t                y    u    i    o    p
-  a    s    d    f    g                h    j    k    l    ;
-  z    x    c    v    b                n    m    ,    .    /
-                 lalt spc f24     ralt rctl left
+ tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
+ caps      a    s    d    f    g                h    j    k    l    ;        '    ret
+ lsft      z    x    c    v    b                n    m    ,    .    /        rsft
+ lctl                     lalt spc f24     ralt rctl left
 
-                                       rmet menu
+                          lmet                  rmet menu
 )
 
 (deflayer eng
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  q    w    f    p    g                j    l    u    y    '
- @a   @r   @s   @t    d                h   @n   @e   @i   @o
- @z    x    c    v    b                k    m    ,    .   @_/
-               @lfun @nav @mos   @sym @num @fun
+ _         q    w    f    p    g                j    l    u    y    '        _    _    _
+ _        @a   @r   @s   @t    d                h   @n   @e   @i   @o        _    _
+ _        @z    x    c    v    b                k    m    ,    .   @_/       _
+ _                      @lfun @nav @mos   @sym @num @fun
 
-                                      @num @fun
+                        @lfun                  @num @fun
 )
 
 (deflayer rus
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
 
- @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч
- @у   @и   @е   @о   @а               @л   @н   @т   @с   @р
- @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
-               @lfun @nav @mos @sym_r @num @fun
+ _         @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч      @ш   @щ    _
+ _         @у   @и   @е   @о   @а               @л   @н   @т   @с   @р       _    _
+ _         @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж       _
+ _                       @lfun @nav @mos @sym_r @num @fun
 
-                                      @num @fun
+                         @lfun                  @num @fun
 )
 
 (deflayer rus_u
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+ @_ё        _    _    _    _    _                _    _    _    _    _       _    _    _
 
- @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч
- @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р
- @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж
-               @lfun @nav @mos   @sym @num @fun
+ _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
+ _         @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р     @_й   _
+ _         @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж      _
+ _                       @lfun @nav @mos   @sym @num @fun
 
-                                      @num @fun
+                         @lfun                  @num @fun
 )
 
 (deflayer gam
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+@gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  tab  q    w    e    r                y    u    i    o    p
-  lsft a    s    d    f                h    j    k    l    ;
-  lctl z    x    c    v                n    m    ,    .    @_/
-                 lalt spc @gfn    prnt [    ]
+@gesc     @ftab q    w    e    r                y    u    i    o    p        _    _    _
+ caps      lsft a    s    d    f                h    j    k    l    ;        _    _
+ m         lctl z    x    c    v                n    m    ,    .    @_/      _
+ _                        lalt spc @gfn    prnt [    ]
 
-                                       [    ]
+                          lalt                  [    ]
 )
 
 (deflayer gfn
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  esc  7    8    9    t                tab  home up   end  del
-  caps 4    5    6    g                lsft left down rght bspc
-  0    1    2    3    b                lctl pgdn menu pgup ret
-                 ret  _   _       _    _    _
+ _        @gesc 7    8    9    t                tab  home up   end  del      _    _    _
+ _         caps 4    5    6    g                lsft left down rght bspc     _    _
+ _         0    1    2    3    b                lctl pgdn menu pgup ret      _
+ _                        ret  _   _       _    _    _
 
-                                       _    _
+                          ret                   _    _
 )
 
 (deflayer num
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+_          _    _    _    _    _                _    _    _    _    _        _    _    _
+_          _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  grv  7    8    9    S-8              lrld _    _    _    del
- @:   @4   @5   @6    =               @cw  @s-  @c,  @a.  @bspc
-  0    1    2    3   @/                _    _    _    _    ret
-               @lfun @nav 0       _    _    _
+_          grv  7    8    9    S-8              lrld _    _    _    del      _    _    _
+_         @:   @4   @5   @6    =               @cw  @s-  @c,  @a.  @bspc     _    _
+_          0    1    2    3   @/                _    _    _    _    ret      _
+_                       @lfun @nav 0       _    _    _
 
-                                       _    _
+                        @lfun                   _    _
 )
 
 (deflayer sym
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '
- @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
-  S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/
-               @lfun @nav @mos    ret @num @fun
+ _         S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '        _    _    _
+ _        @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!        _    _
+ _         S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/      _
+ _                      @lfun @nav @mos    ret @num @fun
 
-                                      @num @fun
+                        @lfun                  @num @fun
 )
 
 (deflayer sym_r
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  S-2 @<    =   @>   @`               @^   @[    S-- @]   @'
- @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!
- @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7
-               @lfun @nav @mos    ret @num @fun
+ _         S-2 @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
+ _        @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!        _    _
+ _        @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7      _
+ _                      @lfun @nav @mos    ret @num @fun
 
-                                      @num @fun
+                        @lfun                  @num @fun
 )
 
 (deflayer fun
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del
- @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc
-  f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret
-                nlck @nav brk    kprt @num  nlck
+ _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del      _    _    _
+ _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _    _
+ _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret      _
+ _                       nlck @nav brk    kprt @num  nlck
 
-                                      @num  nlck
+                         nlck                  @num  nlck
 )
 
 (deflayer nav
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  f1   f2   f3   f3   f5               f6   f7   f8   f9   f10  f11  f12  del
+ _         _    _    _    _    _                _    _    _    _    _    _        _    _
+ _         f1   f2   f3   f3   f5               f6   f7   f8   f9   f10  f11      f12  del
 
-  del  C-S-tab tab  C-tab @ter             ins  home up   end  del
-  lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc
-  C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret
-                    esc   spc tab     mrtp mltp _
+ _         del  C-S-tab tab  C-tab @ter             ins  home up   end  del       _    _    _
+ _         lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc      _    _
+ _         C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret       _
+ _                           esc   spc tab     mrtp mltp _
 
-                                           mltp _
+                             esc                    mltp _
 )
 
 (deflayer mos
-  _    _    _    _    _                _    _    _    _    _    _    _    _
-  _    _    _    _    _                _    _    _    _    _    _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-  del  C-S-tab tab  C-tab @ter         _   @mwl @mu  @mwr @mwu
-  lmet lalt   @lctl lsft  prnt        @cw  @ml  @md  @mr  @mwd
-  C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret
-                    esc   spc tab mrtp mltp mmtp
+ _         del  C-S-tab tab  C-tab @ter         _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lmet lalt   @lctl lsft  prnt        @cw  @ml  @md  @mr  @mwd      _    _
+ _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      _
+ _                           esc   spc tab mrtp mltp mmtp
 
-                                       mltp mmtp
+                             esc                mltp mmtp
 )
 
 (defvar
@@ -249,6 +249,9 @@
   п g
   г u
   ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
+
+  ;; custom shifted things
+  gesc (fork esc grv (lsft rsft))
 
   ;; sym
   \ (tap-hold $tap-time $hold-pinky \ lmet)
@@ -411,6 +414,7 @@
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
+  ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
