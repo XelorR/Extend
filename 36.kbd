@@ -24,7 +24,7 @@
 
 (deflayer rus
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
+ grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
  _         @ц   @ь   @я   @,?  @.!              @з   @в   @к   @д   @ч      @ш   @щ    _
  XX        @у   @и   @е   @о   @а               @л   @н   @т   @с   @р       _    _
@@ -36,7 +36,7 @@
 
 (deflayer rus_u
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
- @_ё        _    _    _    _    _                _    _    _    _    _       _    _    _
+ @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
  XX        @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р     @_й   _
@@ -120,7 +120,7 @@ _                       @lfun @nav 0       _    _    _
 
 (deflayer nav
  _         _    _       _    _     _                _    _    _    _    _         _    _    _
- _         f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
+ f13       f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         del  C-S-tab tab  C-tab @ter             ins  home up   end  del       _    _    _
  _         lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc      _    _
@@ -216,6 +216,17 @@ _                       @lfun @nav 0       _    _    _
   mwr (mwheel-right 50 120)
   
   ;; rus
+  1 (fork 1 S-] (lsft rsft))
+  2 (fork 2 S-m (lsft rsft))
+  ;; 3 is the same in йцукен
+  4 (fork 4 S-5 (lsft rsft))
+  5 (fork 5 S-6 (lsft rsft))
+  6 (fork 6 S-4 (lsft rsft))
+  7 (fork 7 (unmod -) (lsft rsft))
+  8 (fork 8 S-2 (lsft rsft))
+  ;; 9 is the same in йцукен
+  ;; 0 is the same in йцукен
+  star (fork S-8 S-- (lsft rsft))
   ц w
   ь (fork m (unmod ]) (lsft rsft))
   я z
@@ -299,6 +310,17 @@ _                       @lfun @nav 0       _    _    _
   bspc (tap-hold $tap-time $hold-pinky bspc lmet)
 
   ;; rus_u
+  Ъ (unicode Ъ)
+  _1 (fork 1 @Ъ (lsft rsft))
+  Ь (unicode Ь)
+  _2 (fork 2 @Ь (lsft rsft))
+  № (unicode №)
+  _3 (fork 3 @№ (lsft rsft))
+  _4 (fork 4 S-5 (lsft rsft))
+  _5 (fork 5 S-; (lsft rsft))
+  _6 (fork 6 ; (lsft rsft))
+  _7 (fork 7 (unmod -) (lsft rsft))
+  _8 (fork 8 S-' (lsft rsft))
   uц (unicode ц)
   uЦ (unicode Ц)
   _ц (fork @uц @uЦ (lsft rsft))
