@@ -222,7 +222,7 @@ _                       @lfun @nav 0       _    _    _
   u— (unicode —)
   ur— (macro @en 50 @u— 50 @ru)
   — (switch
-    ((base-layer diktor)) @ur— break
+    ((base-layer rus)) @ur— break
     () @u— break
   )
   ;; smart quotes
@@ -235,8 +235,8 @@ _                       @lfun @nav 0       _    _    _
   u“” (macro @u“ 50 @u” 50 left)
   ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
   «” (switch
-    ((base-layer diktor_unicode)) @u«» break
-    ((base-layer diktor)) @ur«» break
+    ((base-layer rus_u)) @u«» break
+    ((base-layer rus)) @ur«» break
     () @u“” break
   )
   
