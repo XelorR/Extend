@@ -372,7 +372,7 @@ _                       @lfun @nav 0       _    _    _
   _ц (fork @uц @uЦ (lsft rsft))
   uь (unicode ь)
   uъ (unicode ъ)
-  _ь (fork @uь @uъ (lsft rsft))
+  _ь (tap-dance-eager 500 (fork @uь @uъ (lsft rsft)) (macro bspc S-' S-' left) (macro bspc del S-9 S-0 left))
   uя (unicode я)
   uЯ (unicode Я)
   _я (fork @uя @uЯ (lsft rsft))
