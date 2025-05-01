@@ -74,8 +74,8 @@
   f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del
  @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc
   f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret
-                nlck @nav @mos   kprt @num  nlck
-                                      @num  _
+                nlck @nav brk    kprt @num  nlck
+                                      @num  nlck
 )
 
 (deflayer nav
