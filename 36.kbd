@@ -75,7 +75,7 @@ _          _    _    _    _    _                _    _    _    _    _        _  
 _          _    _    _    _    _                _    _    _    _    _        _    _    _
 
 _          grv  7    8    9    S-8              lrld _    _    _    del      _    _    _
-_         @:   @4   @5   @6    =               @cw  @s-  @c,  @a.  @bspc     _    _
+_         @:   @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
 _          0    1    2    3   @/                _    _    _    _    ret      _
 _                       @lfun @nav 0       _    _    _
 
@@ -315,9 +315,9 @@ _                       @lfun @nav 0       _    _    _
 
   ;; num
   : (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
-  4 (tap-hold $tap-time $hold-ring 4 lalt)
-  5 (tap-hold $tap-time $hold-middle 5 lctl)
-  6 (tap-hold $tap-time $hold-pinky 6 lsft)
+  h4 (tap-hold $tap-time $hold-ring 4 lalt)
+  h5 (tap-hold $tap-time $hold-middle 5 lctl)
+  h6 (tap-hold $tap-time $hold-pinky 6 lsft)
   s- (tap-hold $tap-time $hold-index - rsft)
   c, (tap-hold $tap-time $hold-middle @, rctl)
   a. (tap-hold $tap-time $hold-ring @. ralt)
