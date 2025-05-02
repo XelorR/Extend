@@ -300,8 +300,8 @@
   o (tap-hold $tap-time $hold-pinky o lmet)
   z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
   /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
-  td' (tap-dance-eager 500 ( (macro ') (macro bspc S-' S-' left) ))
-  tdq (tap-dance-eager 500 ( (macro q) (macro bspc S-' S-' left) ))
+  td' (tap-dance-eager 500 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
+  tdq (tap-dance-eager 500 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
 
   ;; rus
   1 (fork 1 S-] (lsft rsft))
@@ -348,8 +348,8 @@
   п g
   г u
   ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
-  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) ))
-  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) ))
+  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
+  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
 
   ;; rus_u
   Ъ (unicode Ъ)
