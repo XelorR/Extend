@@ -74,8 +74,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-@«”       @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
- _        @h/  @h4  @h5  @h6   S-=              S-5 @s-  @c;  @a:  @bspc    @—    _
+@«”       @brc  7    8    9   @*                lrld _    _    _    del      _    _    _
+ _        @h/  @h4  @h5  @h6  @+               @%  @s-  @c;  @a:  @bspc    @—    _
  _         0    1    2    3   @$               @at   =   @,?  @.!   ret      _
  _                      @lfun @lsym             XX  @rfun
 
@@ -87,8 +87,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
 @«”       @dq  @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
- _        @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!       @—    _
- _        @#    S-8 @:   @/   @$               @at  @|   @~   @&   @?        _
+ _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!      @—    _
+ _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        _
  _                      @lfun  XX              XX   @num
 
                         @lfun                       @num
@@ -172,14 +172,15 @@
   gam (multi (layer-switch gam) @en)
 
   ;; sym
-  \ (tap-hold $tap-time $hold-pinky \ lmet)
-  lb (tap-hold $tap-time $hold-ring S-9 lalt)
-  - (tap-hold $tap-time $hold-middle - lctl)
-  rb (tap-hold $tap-time $hold-index S-0 lsft)
-  { (tap-hold $tap-time $hold-index (switch ((base-layer rus)) (macro @en 50 S-[ 50 @ru) break () S-[ break ) lsft)
-  ; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lctl)
-  } (tap-hold $tap-time $hold-ring (switch ((base-layer rus)) (macro @en 50 S-] 50 @ru) break () S-] break ) lalt)
-  ! (tap-hold $tap-time $hold-pinky S-1 lmet)
+  % S-5
+  + S-=
+  * S-8
+  lb S-9
+  rb S-0
+  { (switch ((base-layer rus)) (macro @en 50 S-[ 50 @ru) break () S-[ break )
+  ; (switch ((base-layer rus)) S-4 break () ; break )
+  } (switch ((base-layer rus)) (macro @en 50 S-] 50 @ru) break () S-] break )
+  ! S-1
   # (switch ((base-layer rus)) (macro @en 50 S-3 50 @ru) break () S-3 break)
   $ (switch ((base-layer rus)) (macro @en 50 S-4 50 @ru) break () S-4 break)
   & (switch ((base-layer rus)) (macro @en 50 S-7 50 @ru) break () S-7 break)
@@ -201,6 +202,14 @@
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
   td` (tap-dance-eager 500 ( (macro @`) (macro @``) ))
+  h\ (tap-hold $tap-time $hold-pinky \ lmet)
+  hlb (tap-hold $tap-time $hold-ring @lb lalt)
+  h- (tap-hold $tap-time $hold-middle - lctl)
+  hrb (tap-hold $tap-time $hold-index @rb lsft)
+  h{ (tap-hold $tap-time $hold-index @{ lsft)
+  h; (tap-hold $tap-time $hold-middle @; lctl)
+  h} (tap-hold $tap-time $hold-ring @} lalt)
+  h! (tap-hold $tap-time $hold-pinky @! lmet)
 
   ;; num
   h/ (tap-hold $tap-time $hold-pinky @/ lmet)
