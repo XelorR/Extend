@@ -86,21 +86,9 @@ _                       @lfun @sym              XX  @rfun
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
-@«”        S-'  S-,  =    S-.  grv              S-6  [    S--  ]    '        _    _    _
+@«”       @dq  @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
  _        @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!       @—    _
- _         S-3  S-8  S-;  /    S-4              S-2  S-\  S-`  S-7  S-/      _
- _                      @lfun  XX               XX  @rfun
-
-                        @lfun                       @rfun
-)
-
-(deflayer sym_r
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
-@«”        S-2 @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
- _        @\   @lb  @-   @rb   S-=              S-5 @{   @;   @}   @!       @—    _
- _        @#    S-8  S-6  S-\ @$               @at  @|   @~   @&    S-7      _
+ _        @#    S-8 @:    S-\ @$               @at  @|   @~   @&   @?        _
  _                      @lfun  XX              XX   @num
 
                         @lfun                       @num
@@ -154,22 +142,22 @@ _                       @lfun @sym              XX  @rfun
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (r e) @eng $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
-  (i u) @rus $hold-time all-released        (                   gfn num sym sym_r fun nav mos)
-  (, m) @rus_u $hold-time all-released      (                   gfn num sym sym_r fun nav mos)
-  (v c) @gam $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
-  (o i) @йЙ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
-  (o u) @ёЁ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
-  (w e) @шШ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
-  (w r) @щЩ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
-  (s f) @brc $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
-  (u o) @[]  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
-  (j l) @{}  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
-  (w r) @<>  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
-  (x v) @-[] $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
-  (k l) @dr0 $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
-  (, .) @dms $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
-  (j k) @dp0 $hold-time all-released        (eng rus rus_u  gam gfn num sym sym_r     nav mos)
+  (r e) @eng $hold-time all-released    (               gam gfn num sym lfun rfun nav mos)
+  (i u) @rus $hold-time all-released    (                   gfn num sym lfun rfun nav mos)
+  (, m) @rus_u $hold-time all-released  (                   gfn num sym lfun rfun nav mos)
+  (v c) @gam $hold-time all-released    (               gam gfn num sym lfun rfun nav mos)
+  (o i) @йЙ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
+  (o u) @ёЁ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
+  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
+  (w r) @щЩ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
+  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
+  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
+  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
+  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
+  (x v) @-[] $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
+  (k l) @dr0 $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
+  (, .) @dms $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
+  (j k) @dp0 $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
 )
 
 (defalias
@@ -326,9 +314,12 @@ _                       @lfun @sym              XX  @rfun
   ` (switch ((base-layer rus)) (macro @en 50 grv 50 @ru) break () grv)
   at (switch ((base-layer rus)) (macro @en 50 S-2 50 @ru) break () S-2)
   dq (switch ((base-layer rus)) S-2 break () S-')
+  : (switch ((base-layer rus)) S-6 break () S-;)
   | (switch ((base-layer rus)) (macro @en 50 S-\ 50 @ru) break () S-\)
   ~ (switch ((base-layer rus)) (macro @en 50 S-grv 50 @ru) break () S-grv)
-  , (switch ((base-layer rus)) S-/ break () , break ) . (switch ((base-layer rus)) / break () . break )
+  , (switch ((base-layer rus)) S-/ break () , break )
+  . (switch ((base-layer rus)) / break () . break )
+  ? (switch ((base-layer rus)) S-7 break () S-/ break )
 
   ;; num
   : (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
@@ -485,7 +476,7 @@ _                       @lfun @sym              XX  @rfun
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   gz (tap-hold $tap-time $hold-time z (layer-toggle gfn))
-  sym (switch ((base-layer rus)) (layer-toggle sym_r) break () (layer-toggle sym) break )
+  sym (layer-toggle sym)
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
