@@ -239,7 +239,7 @@ _                       @lfun @sym              XX  @rfun
   []  (switch ((base-layer rus)) (macro @en 50 [ ] left 50 @ru) break () (macro [ ] left) break )
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ S-] left 50 @ru) break () (macro S-[ S-] left) break )
   <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
-  -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] end 50 @ru) break () (macro home - [ spc ] end) break )
+  -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
