@@ -125,9 +125,9 @@ _                       @lfun @sym              XX  @rfun
  _         del  C-S-tab tab  C-tab @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _    _
  _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      _
- _                          @lfun  C-S-z       @num @rfun
+ _                          @lfun  C-S-z        mltp mrtp
 
-                            @lfun                   @rfun
+                            @lfun                    mrtp
 )
 
 (defvar
