@@ -75,7 +75,7 @@ _          _    _    _    _    _                _    _    _    _    _        _  
 _          _    _    _    _    _                _    _    _    _    _        _    _    _
 
 _         @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
-_         @:   @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
+_         @h:  @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
 _          0    1    2    3   @/                _    _    _    _    ret      _
 _                       @lfun @sym              XX  @rfun
 
@@ -142,22 +142,22 @@ _                       @lfun @sym              XX  @rfun
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (r e) @eng $hold-time all-released    (               gam gfn num sym lfun rfun nav mos)
-  (i u) @rus $hold-time all-released    (                   gfn num sym lfun rfun nav mos)
-  (, m) @rus_u $hold-time all-released  (                   gfn num sym lfun rfun nav mos)
-  (v c) @gam $hold-time all-released    (               gam gfn num sym lfun rfun nav mos)
-  (o i) @йЙ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
-  (o u) @ёЁ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
-  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
-  (w r) @щЩ $hold-time all-released     (eng            gam gfn num sym lfun rfun nav mos)
-  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
-  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
-  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
-  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
-  (x v) @-[] $hold-time all-released    (eng rus rus_u  gam gfn num     lfun rfun nav mos)
-  (k l) @dr0 $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
-  (, .) @dms $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
-  (j k) @dp0 $hold-time all-released    (eng rus rus_u  gam gfn num sym           nav mos)
+  (r e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (i u) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
+  (, m) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
+  (v c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (o i) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (j u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn num     fun nav mos)
+  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn num     fun nav mos)
+  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn num     fun nav mos)
+  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn num     fun nav mos)
+  (x v) @-[] $hold-time all-released    (eng rus rus_u  gam gfn num     fun nav mos)
+  (k l) @dr0 $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
+  (, .) @dms $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
+  (j k) @dp0 $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
 )
 
 (defalias
@@ -320,7 +320,7 @@ _                       @lfun @sym              XX  @rfun
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
 
   ;; num
-  : (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
+  h: (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
   h4 (tap-hold $tap-time $hold-ring 4 lalt)
   h5 (tap-hold $tap-time $hold-middle 5 lctl)
   h6 (tap-hold $tap-time $hold-pinky 6 lsft)
