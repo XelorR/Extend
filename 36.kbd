@@ -320,7 +320,7 @@ _                       @lfun @sym              XX  @rfun
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
 
   ;; num
-  h: (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-; break ) lmet)
+  h: (tap-hold $tap-time $hold-pinky (switch ((base-layer rus)) S-6 break () S-; break ) lmet)
   h4 (tap-hold $tap-time $hold-ring 4 lalt)
   h5 (tap-hold $tap-time $hold-middle 5 lctl)
   h6 (tap-hold $tap-time $hold-pinky 6 lsft)
