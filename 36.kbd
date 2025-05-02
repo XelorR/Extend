@@ -62,12 +62,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @gesc 7    8    9    t                tab  home up   end  del      _    _    _
+ _         grv  7    8    9    t                tab  home up   end  del      _    _    _
  _         caps 4    5    6    g                lsft left down rght bspc     _    _
  _         1    XX   2    3    b                lctl pgdn menu pgup ret      _
- _                        ret  _                _    _
+ _                        esc  ret              _    _
 
-                          ret                        _
+                          esc                        _
 )
 
 (deflayer num
@@ -184,6 +184,10 @@
   /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
   td' (tap-dance-eager 500 ( (macro ') (macro bspc S-' S-' left) ))
   tdq (tap-dance-eager 500 ( (macro q) (macro bspc S-' S-' left) ))
+
+  ;; gam
+  tdtab (tap-dance 300 ( tab i m ))
+  tdz (tap-dance 300 ( z esc m ))
 
   ;; nav
   lctl (one-shot 500 lctl)
@@ -474,8 +478,8 @@
 
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
-  ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
-  gz (tap-hold $tap-time $hold-time z (layer-toggle gfn))
+  ftab (tap-hold $tap-time $hold-time @tdtab (layer-toggle fun))
+  gz (tap-hold $tap-time $hold-time @tdz (layer-toggle gfn))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
