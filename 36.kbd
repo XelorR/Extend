@@ -279,6 +279,7 @@
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ S-] left 50 @ru) break () (macro S-[ S-] left) break )
   <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
+  cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ;) (bspc del)) break () (caps-word 2000) break )
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
@@ -481,6 +482,6 @@
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
-  rfun (tap-hold $tap-time $hold-time (caps-word 2000) (layer-toggle fun))
+  rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
 
