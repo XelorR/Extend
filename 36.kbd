@@ -77,7 +77,7 @@ _          _    _    _    _    _                _    _    _    _    _        _  
 _         @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
 _         @:   @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
 _          0    1    2    3   @/                _    _    _    _    ret      _
-_                       @lfun @nav 0       _    _    _
+_                       @lfun @sym_i 0     _    _    _
 
                         @lfun                   _    _
 )
@@ -125,7 +125,7 @@ _                       @lfun @nav 0       _    _    _
  _         del  C-S-tab tab  C-tab @ter             ins  home up   end  del       _    _    _
  _         lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc      _    _
  _         C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret       _
- _                           esc   spc tab     mrtp mltp _
+ _                           esc   spc tab    mrtp @sym_i _
 
                              esc                    mltp _
 )
@@ -489,6 +489,7 @@ _                       @lfun @nav 0       _    _    _
   gz (tap-hold $tap-time $hold-time z (layer-toggle gfn))
   sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
+  sym_i (switch ((base-layer rus)) (layer-toggle sym_r) break () (layer-toggle sym) break )
   num (tap-hold $tap-time $hold-time
       (switch
         ((base-layer rus)) i break
