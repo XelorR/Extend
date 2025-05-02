@@ -75,7 +75,7 @@ _          _    _    _    _    _                _    _    _    _    _        _  
 _          _    _    _    _    _                _    _    _    _    _        _    _    _
 
 _         @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
-_         @h:  @h4  @h5  @h6   =               @cw  @s-  @c,  @a.  @bspc     _    _
+_         @h:  @h4  @h5  @h6   =                _   @s-  @c,  @a.  @bspc     _    _
 _          0    1    2    3   @/                _    _    _    _    ret      _
 _                       @lfun @sym              XX  @rfun
 
@@ -110,9 +110,9 @@ _                       @lfun @sym              XX  @rfun
  _         _    _       _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         del  C-S-tab tab  C-tab @ter             ins  home up   end  del       _    _    _
- _         lmet lalt   @lctl lsft  prnt            @cw   left down rght bspc      _    _
- _         C-z  C-x     C-c  C-v   @vsc             mltp pgup menu pgdn ret       _
+ _         del  C-S-tab tab  C-tab @lnch            ins  home up   end  del       _    _    _
+ _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _    _
+ _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       _
  _                          @lfun  XX              @sym @rfun
 
                             @lfun                       @rfun
@@ -122,10 +122,10 @@ _                       @lfun @sym              XX  @rfun
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del  C-S-tab tab  C-tab @ter         _   @mwl @mu  @mwr @mwu      _    _    _
- _         lmet lalt   @lctl lsft  prnt        @cw  @ml  @md  @mr  @mwd      _    _
+ _         del  C-S-tab tab  C-tab @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _    _
  _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      _
- _                          @lfun  @nav        @num @rfun
+ _                          @lfun  C-S-z       @num @rfun
 
                             @lfun                   @rfun
 )
@@ -214,6 +214,8 @@ _                       @lfun @sym              XX  @rfun
     ((base-layer rus)) @terr break
     () @term break
   )
+  ;; tap dance to launch applications
+  lnch (tap-dance 500 ( @ter @vsc ))
   ;; emdash
   u— (unicode —)
   ur— (macro @en 50 @u— 50 @ru)
