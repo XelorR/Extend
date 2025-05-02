@@ -157,13 +157,9 @@ _                       @lfun @nav 0       _    _    _
   (r e) @eng $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
   (i u) @rus $hold-time all-released        (                   gfn num sym sym_r fun nav mos)
   (, m) @rus_u $hold-time all-released      (                   gfn num sym sym_r fun nav mos)
-  (o i) (switch ((base-layer rus)) @й break
-                ((base-layer rus_u)) @_й break )
-           $hold-time all-released          (eng            gam gfn num sym sym_r fun nav mos)
-  (w e) (switch ((base-layer rus)) grv break
-        ((base-layer rus_u)) @_ё break )
-           $hold-time all-released          (eng            gam gfn num sym sym_r fun nav mos)
   (v c) @gam $hold-time all-released        (               gam gfn num sym sym_r fun nav mos)
+  (o i) @йЙ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
+  (w e) @ёЁ $hold-time all-released         (eng            gam gfn num sym sym_r fun nav mos)
   (s f) @brc $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
   (u o) @[]  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
   (j l) @{}  $hold-time all-released        (eng rus rus_u  gam gfn num           fun nav mos)
@@ -477,6 +473,8 @@ _                       @lfun @nav 0       _    _    _
   uё (unicode ё)
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
+  йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
+  ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
 
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
