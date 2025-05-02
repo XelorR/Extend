@@ -77,7 +77,7 @@
 @«”       @brc  7    8    9    S-8              lrld _    _    _    del      _    _    _
  _        @h/  @h4  @h5  @h6   S-=              S-5 @s-  @c;  @a:  @bspc    @—    _
  _         0    1    2    3   @$               @at   =   @,?  @.!   ret      _
- _                      @lfun @sym              XX  @rfun
+ _                      @lfun @lsym             XX  @rfun
 
                         @lfun                       @rfun
 )
@@ -113,9 +113,9 @@
  _         del  C-S-tab tab  C-tab @lnch            ins  home up   end  del       _    _    _
  _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _    _
  _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       _
- _                          @lfun  XX              @sym @rfun
+ _                          @lfun  XX              @rsym @rfun
 
-                            @lfun                       @rfun
+                            @lfun                        @rfun
 )
 
 (deflayer mos
@@ -476,7 +476,8 @@
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   gz (tap-hold $tap-time $hold-time z (layer-toggle gfn))
-  sym (layer-toggle sym)
+  lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
+  rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time (caps-word 2000) (layer-toggle fun))
