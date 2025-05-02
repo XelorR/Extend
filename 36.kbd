@@ -475,6 +475,8 @@ _                       @lfun @nav 0       _    _    _
   _ё (fork @uё @uЁ (lsft rsft))
   йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
   ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
+  шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
+  щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
 
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
