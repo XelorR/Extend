@@ -190,6 +190,7 @@
   ] (switch ((base-layer rus)) (macro @en 50 ] 50 @ru) break () ] break)
   ^ (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-6 break)
   ` (switch ((base-layer rus)) (macro @en 50 grv 50 @ru) break () grv break)
+  `` (macro @` @` left)
   at (switch ((base-layer rus)) (macro @en 50 S-2 50 @ru) break () S-2 break)
   dq (switch ((base-layer rus)) S-2 break () S-' break)
   : (switch ((base-layer rus)) S-6 break () S-; break)
@@ -199,6 +200,7 @@
   . (switch ((base-layer rus)) / break () . break )
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
+  td` (tap-dance-eager 500 ( (macro @`) (macro @``) ))
 
   ;; num
   h/ (tap-hold $tap-time $hold-pinky @/ lmet)
