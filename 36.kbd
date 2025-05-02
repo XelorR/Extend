@@ -477,6 +477,6 @@ _                       @lfun @sym              XX  @rfun
   sym (layer-toggle sym)
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
-  rfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
+  rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
 
