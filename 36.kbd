@@ -171,20 +171,6 @@
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
 
-  ;; eng
-  a (tap-hold $tap-time $hold-pinky a lmet)
-  r (tap-hold $tap-time $hold-ring r lalt)
-  s (tap-hold $tap-time $hold-middle s lctl)
-  t (tap-hold $tap-time $hold-index t lsft)
-  n (tap-hold $tap-time $hold-index n lsft)
-  e (tap-hold $tap-time $hold-middle e lctl)
-  i (tap-hold $tap-time $hold-ring i lalt)
-  o (tap-hold $tap-time $hold-pinky o lmet)
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
-  /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
-  td' (tap-dance-eager 500 ( (macro ') (macro bspc S-' S-' left) ))
-  tdq (tap-dance-eager 500 ( (macro q) (macro bspc S-' S-' left) ))
-
   ;; gam
   tdtab (tap-dance 300 ( tab i m ))
   tdz (tap-dance 300 ( z esc m ))
@@ -248,6 +234,20 @@
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
+
+  ;; eng
+  a (tap-hold $tap-time $hold-pinky a lmet)
+  r (tap-hold $tap-time $hold-ring r lalt)
+  s (tap-hold $tap-time $hold-middle s lctl)
+  t (tap-hold $tap-time $hold-index t lsft)
+  n (tap-hold $tap-time $hold-index n lsft)
+  e (tap-hold $tap-time $hold-middle e lctl)
+  i (tap-hold $tap-time $hold-ring i lalt)
+  o (tap-hold $tap-time $hold-pinky o lmet)
+  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
+  /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
+  td' (tap-dance-eager 500 ( (macro ') (macro bspc S-' S-' left) ))
+  tdq (tap-dance-eager 500 ( (macro q) (macro bspc S-' S-' left) ))
 
   ;; rus
   1 (fork 1 S-] (lsft rsft))
