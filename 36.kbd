@@ -482,27 +482,11 @@ _                       @lfun @sym              XX  @rfun
 
   ;; layers
   nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
-  mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
-  lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
-  gfn (tap-hold $tap-time $hold-time i (layer-toggle gfn))
   gz (tap-hold $tap-time $hold-time z (layer-toggle gfn))
-  sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
-  sym_r (tap-hold $tap-time $hold-time ret (layer-toggle sym_r))
-  sym_i (switch ((base-layer rus)) (layer-toggle sym_r) break () (layer-toggle sym) break )
-  num (tap-hold $tap-time $hold-time
-      (switch
-        ((base-layer rus)) i break
-        ((base-layer rus_u)) @_ш break 
-        () [ break
-      )
-      (layer-toggle num))
-  fun (tap-hold $tap-time $hold-time
-      (switch
-        ((base-layer rus)) o break
-        ((base-layer rus_u)) @_щ break 
-        () ] break
-      )
-      (layer-toggle fun))
+  sym (switch ((base-layer rus)) (layer-toggle sym_r) break () (layer-toggle sym) break )
+  num (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
+  rfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
 )
 
