@@ -237,7 +237,7 @@
   tdz (tap-dance 300 ( z esc m ))
 
   ;; nav
-  lctl (one-shot 500 lctl)
+  lctl (one-shot 500 (multi (layer-while-held eng) lctl))
 
   ;; mos
   mu (movemouse-up 1 1)
