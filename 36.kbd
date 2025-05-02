@@ -89,9 +89,9 @@
 @«”       @dq  @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!      @—    _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        _
- _                      @lfun  XX              XX   @num
+ _                      @lfun  XX              XX   @rfun
 
-                        @lfun                       @num
+                        @lfun                       @rfun
 )
 
 (deflayer fun
