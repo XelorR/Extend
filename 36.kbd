@@ -134,7 +134,7 @@
 
  _         bspc @tlft tab @trgt @lnch             ins @home up  @end  S-bspc    _    _    _
  _         lctl @ocm @mopt lsft  M-S-4            ralt left down rght bspc      _
- _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
+ _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn ret       
  _                        @lfun @nav             @rsym @rfun
 
                           @lfun                        @rfun
@@ -160,7 +160,7 @@
 
  _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft  M-S-4        _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
+ _         M-z  M-x   M-c  M-v   M-S-z        _    mltp mrtp mmtp ret      
  _                        @lfun  @nav         mltp mrtp
 
                           @lfun                    mrtp
