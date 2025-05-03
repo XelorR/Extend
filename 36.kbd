@@ -172,6 +172,22 @@
   (q w) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
+(platform (win winiov2 wintercept)
+  (defalias
+    ;; system combinations to switch languages
+    en C-8
+    ru C-9
+  )
+)
+
+(platform (linux)
+  (defalias
+    ;; system combinations to switch languages
+    en caps
+    ru S-caps
+  )
+)
+
 (platform (win winiov2 wintercept linux)
   (defalias
     launch lmet
@@ -185,10 +201,6 @@
 )
 
 (defalias
-  ;; system combinations to switch languages
-  en C-8
-  ru C-9
-
   ;; layouts
   eng (multi (layer-switch eng) @en)
   rus (multi (layer-switch rus) @ru)
