@@ -16,7 +16,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
- XX       @a   @r   @s   @t    d                h   @n   @e   @i   @o        _
+ XX       @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       _
  _        @z    x    c    v    b               @tdk  m   @,?  @.!  @/\
  _                      @lfun @nav             @num @rfun
 
@@ -29,7 +29,7 @@
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
  _         @tdц @ь   @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
- XX        @у   @и   @е   @о   @а               @л   @н   @т   @с   @р      @й
+ XX        @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
  _         @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
  _                       @lfun @nav             @num @rfun
 
@@ -42,7 +42,7 @@
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
- XX        @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р     @_й
+ XX        @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр     @_й
  _         @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж      
  _                       @lfun @nav             @num @rfun
 
@@ -201,6 +201,7 @@
     launch M-spc
     tlft M-S-[
     trgt M-S-]
+    ;; system combinations to switch languages
   )
 )
 
@@ -334,14 +335,6 @@
   gesc (fork esc (unmod grv) (lsft rsft))
 
   ;; eng
-  a (tap-hold $tap-time $hold-pinky a lmet)
-  r (tap-hold $tap-time $hold-ring r lalt)
-  s (tap-hold $tap-time $hold-middle s lctl)
-  t (tap-hold $tap-time $hold-index t lsft)
-  n (tap-hold $tap-time $hold-index n lsft)
-  e (tap-hold $tap-time $hold-middle e lctl)
-  i (tap-hold $tap-time $hold-ring i lalt)
-  o (tap-hold $tap-time $hold-pinky o lmet)
   z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
   /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
@@ -373,16 +366,16 @@
   ч x
   ш i
   щ o
-  у (tap-hold $tap-time $hold-pinky e (multi lmet (layer-while-held eng)))
-  и (tap-hold $tap-time $hold-ring b (multi lalt (layer-while-held eng)))
-  е (tap-hold $tap-time $hold-middle t (multi lctl (layer-while-held eng)))
-  о (tap-hold $tap-time $hold-index j lsft)
+  у e
+  и b
+  е t
+  о j
   а f
   л k
-  н (tap-hold $tap-time $hold-index y rsft)
-  т (tap-hold-except-keys $tap-time $hold-middle n (multi lctl (layer-while-held eng)) (w))
-  с (tap-hold $tap-time $hold-ring c (multi lalt (layer-while-held eng)))
-  р (tap-hold $tap-time $hold-pinky h (multi lmet (layer-while-held eng)))
+  н y
+  т n
+  с c
+  р h
   й q
   ф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
   э '
@@ -447,20 +440,16 @@
   _щ (fork @uщ @uЩ (lsft rsft))
   uу (unicode у)
   uУ (unicode У)
-  уУ (fork @uу @uУ (lsft rsft))
-  _у (tap-hold $tap-time $hold-pinky @уУ (multi lmet (layer-while-held eng)))
+  _у (fork @uу @uУ (lsft rsft))
   uи (unicode и)
   uИ (unicode И)
-  иИ (fork @uи @uИ (lsft rsft))
-  _и (tap-hold $tap-time $hold-ring @иИ (multi lalt (layer-while-held eng)))
+  _и (fork @uи @uИ (lsft rsft))
   uе (unicode е)
   uЕ (unicode Е)
-  еЕ (fork @uе @uЕ (lsft rsft))
-  _е (tap-hold $tap-time $hold-middle @еЕ (multi lctl (layer-while-held eng)))
+  _е (fork @uе @uЕ (lsft rsft))
   uо (unicode о)
   uО (unicode О)
-  оО (fork @uо @uО (lsft rsft))
-  _о (tap-hold $tap-time $hold-index @оО lsft)
+  _о (fork @uо @uО (lsft rsft))
   uа (unicode а)
   uА (unicode А)
   _а (fork @uа @uА (lsft rsft))
@@ -469,20 +458,16 @@
   _л (fork @uл @uЛ (lsft rsft))
   uн (unicode н)
   uН (unicode Н)
-  нН (fork @uн @uН (lsft rsft))
-  _н (tap-hold $tap-time $hold-index @нН lsft)
+  _н (fork @uн @uН (lsft rsft))
   uт (unicode т)
   uТ (unicode Т)
-  тТ (fork @uт @uТ (lsft rsft))
-  _т (tap-hold $tap-time $hold-middle @тТ (multi lctl (layer-while-held eng)))
+  _т (fork @uт @uТ (lsft rsft))
   uс (unicode с)
   uС (unicode С)
-  сС (fork @uс @uС (lsft rsft))
-  _с (tap-hold $tap-time $hold-ring @сС (multi lalt (layer-while-held eng)))
+  _с (fork @uс @uС (lsft rsft))
   uр (unicode р)
   uР (unicode Р)
-  рР (fork @uр @uР (lsft rsft))
-  _р (tap-hold $tap-time $hold-pinky @рР (multi lmet (layer-while-held eng)))
+  _р (fork @uр @uР (lsft rsft))
   uй (unicode й)
   uЙ (unicode Й)
   _й (fork @uй @uЙ (lsft rsft))
@@ -535,3 +520,68 @@
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
 
+(platform (win winiov2 wintercept linux)
+  (defalias
+    ;; modtaps (GACS)
+    ;; eng
+    ha (tap-hold $tap-time $hold-pinky a lmet)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    hs (tap-hold $tap-time $hold-middle s lctl)
+    ht (tap-hold $tap-time $hold-index t lsft)
+    hn (tap-hold $tap-time $hold-index n lsft)
+    he (tap-hold $tap-time $hold-middle e lctl)
+    hi (tap-hold $tap-time $hold-ring i lalt)
+    ho (tap-hold $tap-time $hold-pinky o lmet)
+    ;; rus
+    hу (tap-hold $tap-time $hold-pinky @у (multi lmet (layer-while-held eng)))
+    hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
+    hе (tap-hold $tap-time $hold-middle @е (multi lctl (layer-while-held eng)))
+    hо (tap-hold $tap-time $hold-index @о lsft)
+    hн (tap-hold $tap-time $hold-index @н rsft)
+    hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lctl (layer-while-held eng)) (w))
+    hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
+    hр (tap-hold $tap-time $hold-pinky @р (multi lmet (layer-while-held eng)))
+    ;; rus_u
+    _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
+    _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
+    _hе (tap-hold $tap-time $hold-middle @_е (multi lctl (layer-while-held eng)))
+    _hо (tap-hold $tap-time $hold-index @_о lsft)
+    _hн (tap-hold $tap-time $hold-index @_н lsft)
+    _hт (tap-hold $tap-time $hold-middle @_т (multi lctl (layer-while-held eng)))
+    _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
+    _hр (tap-hold $tap-time $hold-pinky @_р (multi lmet (layer-while-held eng)))
+  )
+)
+
+(platform (macos)
+  (defalias
+    ;; modtaps (GCAS)
+    ;; eng
+    ha (tap-hold $tap-time $hold-pinky a lctl)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    hs (tap-hold $tap-time $hold-middle s lmet)
+    ht (tap-hold $tap-time $hold-index t lsft)
+    hn (tap-hold $tap-time $hold-index n lsft)
+    he (tap-hold $tap-time $hold-middle e lmet)
+    hi (tap-hold $tap-time $hold-ring i lalt)
+    ho (tap-hold $tap-time $hold-pinky o lctl)
+    ;; rus
+    hу (tap-hold $tap-time $hold-pinky @у (multi lctl (layer-while-held eng)))
+    hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
+    hе (tap-hold $tap-time $hold-middle @е (multi lmet (layer-while-held eng)))
+    hо (tap-hold $tap-time $hold-index @о lsft)
+    hн (tap-hold $tap-time $hold-index @н rsft)
+    hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lmet (layer-while-held eng)) (w))
+    hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
+    hр (tap-hold $tap-time $hold-pinky @р (multi lctl (layer-while-held eng)))
+    ;; rus_u
+    _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
+    _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
+    _hе (tap-hold $tap-time $hold-middle @_е (multi lmet (layer-while-held eng)))
+    _hо (tap-hold $tap-time $hold-index @_о lsft)
+    _hн (tap-hold $tap-time $hold-index @_н lsft)
+    _hт (tap-hold $tap-time $hold-middle @_т (multi lmet (layer-while-held eng)))
+    _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
+    _hр (tap-hold $tap-time $hold-pinky @_р (multi lctl (layer-while-held eng)))
+  )
+)
