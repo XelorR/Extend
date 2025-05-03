@@ -191,7 +191,7 @@
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (x v) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
+  (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (k l) @dr0 $hold-time all-released    (eng rus rus_u                      nav mos)
   (, .) @dms $hold-time all-released    (eng rus rus_u                      nav mos)
   (j k) @dp0 $hold-time all-released    (eng rus rus_u                      nav mos)
