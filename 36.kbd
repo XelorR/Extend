@@ -207,7 +207,7 @@
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
     kill A-f4 ;; Close current window
-	prnt M-S-s ;; Make a screenshot
+    prnt M-S-s ;; Make a screenshot
   )
 )
 
@@ -220,7 +220,7 @@
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
     kill C-q ;; Close current window
-	prnt prnt ;; Make a screenshot
+    prnt prnt ;; Make a screenshot
   )
 )
 
@@ -240,7 +240,7 @@
     files_ru (macro @en 50 @launch 300 S-f i n d e r 400 ret 50 @ru)
     file (switch ((base-layer rus)) @files_ru break () @files_en break ) ;; Launch file manager
     kill M-q ;; Close current window
-	prnt M-S-4 ;; Make a screenshot
+    prnt M-S-4 ;; Make a screenshot
   )
 )
 
