@@ -1,13 +1,14 @@
 (defsrc
- esc       f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
+ prnt      f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
  grv       1    2    3    4    5                6    7    8    9    0        -    =    bspc
 
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
- caps      a    s    d    f    g                h    j    k    l    ;        '    ret
- lsft      z    x    c    v    b                n    m    ,    .    /        rsft
- lctl                     lalt spc              ralt rctl
+ caps      a    s    d    f    g                h    j    k    l    ;        '
+ lsft      z    x    c    v    b                n    m    ,    .    /
+ lctl                     esc  spc              ret  rsft
 
-                          lmet                       rmet
+                          lalt                       rctl
+                          lmet                  ralt rmet
 )
 
 (deflayer eng
@@ -15,11 +16,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
- XX       @a   @r   @s   @t    d                h   @n   @e   @i   @o        _    _
- _        @z    x    c    v    b               @tdk  m   @,?  @.!  @/\       _
+ XX       @a   @r   @s   @t    d                h   @n   @e   @i   @o        _
+ _        @z    x    c    v    b               @tdk  m   @,?  @.!  @/\
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
+                        @lfun                  @num @rfun
 )
 
 (deflayer rus
@@ -27,11 +29,12 @@
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
  _         @tdц @ь   @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
- XX        @у   @и   @е   @о   @а               @л   @н   @т   @с   @р      @й    _
- _         @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж       _
+ XX        @у   @и   @е   @о   @а               @л   @н   @т   @с   @р      @й
+ _         @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
+                         @lfun                  @num @rfun
 )
 
 (deflayer rus_u
@@ -39,11 +42,12 @@
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
- XX        @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р     @_й   _
- _         @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж      _
+ XX        @_у  @_и  @_е  @_о  @_а              @_л  @_н  @_т  @_с  @_р     @_й
+ _         @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж      
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
+                         @lfun                  @num @rfun
 )
 
 (deflayer gam
@@ -51,11 +55,12 @@
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
 @gesc     @ftab q    w    e    r                y    u    i    o    p        _    _    _
- caps      lsft a    s    d    f                h    j    k    l    ;        _    _
- m         lctl @gz  x    c    v                n    m    ,    .   @/\       _
+ caps      lsft a    s    d    f                h    j    k    l    ;        _
+ m         lctl @gz  x    c    v                n    m    ,    .   @/\       
  _                        lalt spc              ret  prnt
 
                           lalt                       prnt
+                          lalt                  ret  prnt
 )
 
 (deflayer gfn
@@ -63,11 +68,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         grv  7    8    9    t                tab  home up   end  del      _    _    _
- _         caps 4    5    6    g                lsft left down rght bspc     _    _
- _         1    XX   2    3    b                lctl pgdn menu pgup ret      _
+ _         caps 4    5    6    g                lsft left down rght bspc     _
+ _         1    XX   2    3    b                lctl pgdn menu pgup ret      
  _                        esc  ret              _    _
 
-                          esc                        _
+                          esc                        _     
+                          esc                   _    _
 )
 
 (deflayer num
@@ -75,11 +81,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @brc  7    8    9   @₽               lrld @«”  @—   @°    del      _    _    _
- _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _    _
- _         0    1    2    3   @$               @at   =   @,?  @.!   ret      _
+ _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _
+ _         0    1    2    3   @$               @at   =   @,?  @.!   ret      
  _                      @lfun @lsym             XX  @rfun
 
                         @lfun                       @rfun
+                        @lfun                   XX  @rfun
 )
 
 (deflayer sym
@@ -87,11 +94,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @dq  @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
- _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _    _
- _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        _
+ _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
+ _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
  _                      @lfun  XX              XX   @rfun
 
                         @lfun                       @rfun
+                        @lfun                  XX   @rfun
 )
 
 (deflayer fun
@@ -99,11 +107,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del      _    _    _
- _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _    _
- _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret      _
+ _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _
+ _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret      
  _                       nlck @nav              kprt nlck
 
                          nlck                        nlck
+                         nlck                   kprt nlck
 )
 
 (deflayer nav
@@ -111,11 +120,12 @@
  f13       f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         del  C-S-tab tab  C-tab @lnch            ins  home up   end  del       _    _    _
- _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _    _
- _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       _
+ _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _
+ _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
  _                          @lfun  XX              @rsym @rfun
 
                             @lfun                        @rfun
+                            @lfun                  @rsym @rfun
 )
 
 (deflayer mos
@@ -123,11 +133,12 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
  _         del  C-S-tab tab  C-tab @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
- _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _    _
- _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      _
+ _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
+ _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      
  _                          @lfun  C-S-z        mltp mrtp
 
                             @lfun                    mrtp
+                            @lfun               mltp mrtp
 )
 
 (defvar
