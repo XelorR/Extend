@@ -120,7 +120,7 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         del @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
- _         lmet lalt @lctl lsft  prnt            @mcon left down rght bspc      _
+ _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
@@ -133,7 +133,7 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         bspc @tlft tab @trgt @lnch             ins @home up  @end  C-d       _    _    _
- _         lctl @ocm @mopt lsft  M-S-4           @mcon left down rght bspc      _
+ _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
@@ -146,7 +146,7 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
  _         del @tlft  tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
- _         lmet lalt @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
+ _         lmet lalt @lctl lsft @prnt         _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp @file
  _                        @lfun  @nav         mltp mrtp
 
@@ -159,7 +159,7 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
  _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
- _         lctl @ocm @mopt lsft  M-S-4        _   @ml  @md  @mr  @mwd      _
+ _         lctl @ocm @mopt lsft @prnt         _   @ml  @md  @mr  @mwd      _
  _         M-z  M-x   M-c  M-v   M-S-z        _    mltp mrtp mmtp ret      
  _                        @lfun  @nav         mltp mrtp
 
@@ -207,6 +207,7 @@
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
     kill A-f4 ;; Close current window
+	prnt M-S-s ;; Make a screenshot
   )
 )
 
@@ -219,6 +220,7 @@
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
     kill C-q ;; Close current window
+	prnt prnt ;; Make a screenshot
   )
 )
 
@@ -238,6 +240,7 @@
     files_ru (macro @en 50 @launch 300 S-f i n d e r 400 ret 50 @ru)
     file (switch ((base-layer rus)) @files_ru break () @files_en break ) ;; Launch file manager
     kill M-q ;; Close current window
+	prnt M-S-4 ;; Make a screenshot
   )
 )
 
