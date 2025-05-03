@@ -201,8 +201,8 @@
 (platform (win winiov2 wintercept)
   (defalias
     ;; system combinations to switch languages
-    en C-8
-    ru C-9
+    en A-S-8
+    ru A-S-9
   )
 )
 
@@ -217,8 +217,8 @@
 (platform (macos)
   (defalias
     ;; system combinations to switch languages
-    en C-8
-    ru C-9
+    en A-S-8
+    ru A-S-9
     ;; other alias
     launch M-spc
     tlft M-S-[
