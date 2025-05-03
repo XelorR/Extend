@@ -67,8 +67,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         grv  7    8    9    t                tab  home up   end  del      _    _    _
- _         caps 4    5    6    g                lsft left down rght bspc     _
+ _         grv  7    8    9    t                tab @home up  @end @del      _    _    _
+ _        caps @h4  @h5  @h6   g                lsft left down rght bspc     _
  _         1    XX   2    3    b                lctl pgup menu pgdn @file
  _                        esc  ret              _    _
 
@@ -80,7 +80,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @brc  7    8    9   @₽               lrld @«”  @—   @°    del      _    _    _
+ _        @brc  7    8    9   @₽               lrld @«”  @—   @°   @del      _    _    _
  _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _
  _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
  _                      @lfun @lsym            @num @rfun
@@ -106,7 +106,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del      _    _    _
+ _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9 @del      _    _    _
  _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _
  _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3 @kill
  _                       nlck @nav              kprt nlck
