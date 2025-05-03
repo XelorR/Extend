@@ -17,7 +17,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
  XX       @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       _
- _        @z    x    c    v    b               @tdk  m   @,?  @.!  @/\
+ _        @lz   x    c    v    b               @tdk  m   @,?  @.!  @l/\
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -30,7 +30,7 @@
 
  _         @tdц @ь   @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
  XX        @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
- _         @ф   @э   @х   @ы   @ю               @б   @м   @п   @г   @ж
+ _         @lф  @э   @х   @ы   @ю               @б   @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
@@ -42,8 +42,8 @@
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
- XX        @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр     @_й
- _         @_ф  @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_ж      
+ XX        @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
+ _         @_lф @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_lж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
@@ -56,7 +56,7 @@
 
 @gesc     @ftab q    w    e    r                y    u    i    o    p        _    _    _
  caps      lsft a    s    d    f                h    j    k    l    ;        _
- m         lctl @gz  x    c    v                n    m    ,    .   @/\       
+ m         lctl @gz  x    c    v                n    m    ,    .   @l/\       
  _                        lalt spc              ret  prnt
 
                           lalt                       prnt
@@ -133,7 +133,7 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         bspc @tlft tab @trgt @lnch             ins  home up   end  S-bspc    _    _    _
- _         lctl lalt @lmet lsft  prnt             ralt left down rght bspc      _
+ _         lctl lalt @lmet lsft  M-S-4            ralt left down rght bspc      _
  _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
  _                        @lfun @nav             @rsym @rfun
 
@@ -147,6 +147,19 @@
 
  _         del @tlft  tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
+ _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
+ _                        @lfun  @nav         mltp mrtp
+
+                          @lfun                    mrtp
+                          @lfun               mltp mrtp
+)
+
+(deflayer mos_mac
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+
+ _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lctl lalt @lmet lsft  M-S-4        _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
  _                        @lfun  @nav         mltp mrtp
 
@@ -201,20 +214,22 @@
   )
 )
 
-(platform (win winiov2 wintercept linux)
-  (defalias
-    launch lmet
-    tlft C-S-tab
-    trgt C-tab
-  )
-)
-
 (platform (macos)
   (defalias
     launch M-spc
     tlft M-S-[
     trgt M-S-]
     ;; system combinations to switch languages
+    en C-8
+    ru C-9
+  )
+)
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    launch lmet
+    tlft C-S-tab
+    trgt C-tab
   )
 )
 
@@ -255,34 +270,8 @@
   . (switch ((base-layer rus)) / break () . break )
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
-  h\ (tap-hold $tap-time $hold-pinky \ lmet)
-  hlb (tap-hold $tap-time $hold-ring @lb lalt)
-  h- (tap-hold $tap-time $hold-middle - lctl)
-  hrb (tap-hold $tap-time $hold-index @rb lsft)
-  h{ (tap-hold $tap-time $hold-index @{ lsft)
-  h; (tap-hold $tap-time $hold-middle @; lctl)
-  h} (tap-hold $tap-time $hold-ring @} lalt)
-  h! (tap-hold $tap-time $hold-pinky @! lmet)
-
-  ;; num
-  h_ (tap-hold $tap-time $hold-pinky @_ lmet)
-  h4 (tap-hold $tap-time $hold-ring 4 lalt)
-  h5 (tap-hold $tap-time $hold-middle 5 lctl)
-  h6 (tap-hold $tap-time $hold-pinky 6 lsft)
-  s- (tap-hold $tap-time $hold-index - rsft)
-  c; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) rctl)
-  a: (tap-hold $tap-time $hold-ring @: ralt)
 
   ;; fun
-  kp4 (tap-hold $tap-time $hold-index 4 lsft)
-  kp5 (tap-hold $tap-time $hold-middle 5 lctl)
-  kp6 (tap-hold $tap-time $hold-ring 6 lalt)
-  f2 (tap-hold $tap-time $hold-middle f2 lalt)
-  f4 (tap-hold $tap-time $hold-ring f4 lalt)
-  f5 (tap-hold $tap-time $hold-middle f5 lctl)
-  f6 (tap-hold $tap-time $hold-index f6 lsft)
-  f11 (tap-hold $tap-time $hold-pinky f11 lmet)
-  bspc (tap-hold $tap-time $hold-pinky bspc lmet)
   dr0 (dynamic-macro-record 0)
   dms dynamic-macro-record-stop
   dp0 (dynamic-macro-play 0)
@@ -349,8 +338,7 @@
   gesc (fork esc (unmod grv) (lsft rsft))
 
   ;; eng
-  z (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
-  /\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
@@ -391,7 +379,7 @@
   с c
   р h
   й q
-  ф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
+  ф a
   э '
   х [
   ы s
@@ -400,7 +388,8 @@
   м v
   п g
   г u
-  ж (tap-hold $tap-time $hold-pinky ; (layer-toggle fun))
+  ж ;
+  lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
 
@@ -487,7 +476,7 @@
   _й (fork @uй @uЙ (lsft rsft))
   uф (unicode ф)
   uФ (unicode Ф)
-  _ф (tap-hold $tap-time $hold-pinky (fork @uф @uФ (lsft rsft)) (layer-toggle mos))
+  _ф (fork @uф @uФ (lsft rsft))
   uэ (unicode э)
   uЭ (unicode Э)
   _э (fork @uэ @uЭ (lsft rsft))
@@ -514,10 +503,11 @@
   _г (fork @uг @uГ (lsft rsft))
   uж (unicode ж)
   uЖ (unicode Ж)
-  _ж (tap-hold $tap-time $hold-pinky (fork @uж @uЖ (lsft rsft)) (layer-toggle fun))
+  _ж (fork @uж @uЖ (lsft rsft))
   uё (unicode ё)
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
+  _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
   йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
   ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
   шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
@@ -536,6 +526,9 @@
 (platform (win winiov2 wintercept linux)
   (defalias
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
+    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
+    lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
+    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos))
     ;; modtaps (GACS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lmet)
@@ -564,12 +557,42 @@
     _hт (tap-hold $tap-time $hold-middle @_т (multi lctl (layer-while-held eng)))
     _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
     _hр (tap-hold $tap-time $hold-pinky @_р (multi lmet (layer-while-held eng)))
+    ;; num
+    h_ (tap-hold $tap-time $hold-pinky @_ lmet)
+    h4 (tap-hold $tap-time $hold-ring 4 lalt)
+    h5 (tap-hold $tap-time $hold-middle 5 lctl)
+    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
+    s- (tap-hold $tap-time $hold-index - rsft)
+    c; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lctl)
+    a: (tap-hold $tap-time $hold-ring @: ralt)
+    bspc (tap-hold $tap-time $hold-pinky bspc lmet)
+    ;; sym
+    h\ (tap-hold $tap-time $hold-pinky \ lmet)
+    hlb (tap-hold $tap-time $hold-ring @lb lalt)
+    h- (tap-hold $tap-time $hold-middle - lctl)
+    hrb (tap-hold $tap-time $hold-index @rb lsft)
+    h{ (tap-hold $tap-time $hold-index @{ lsft)
+    h; (tap-hold $tap-time $hold-middle @; lctl)
+    h} (tap-hold $tap-time $hold-ring @} lalt)
+    h! (tap-hold $tap-time $hold-pinky @! lmet)
+    ;; fun
+    f2 (tap-hold $tap-time $hold-middle f2 lalt)
+    f11 (tap-hold $tap-time $hold-pinky f11 lmet)
+    f4 (tap-hold $tap-time $hold-ring f4 lalt)
+    f5 (tap-hold $tap-time $hold-middle f5 lctl)
+    f6 (tap-hold $tap-time $hold-index f6 lsft)
+    kp4 (tap-hold $tap-time $hold-index 4 lsft)
+    kp5 (tap-hold $tap-time $hold-middle 5 lctl)
+    kp6 (tap-hold $tap-time $hold-ring 6 lalt)
   )
 )
 
 (platform (macos)
   (defalias
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav_mac))
+    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
+    lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos_mac))
+    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos_mac))
     ;; modtaps (GCAS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lctl)
@@ -598,5 +621,32 @@
     _hт (tap-hold $tap-time $hold-middle @_т (multi lmet (layer-while-held eng)))
     _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
     _hр (tap-hold $tap-time $hold-pinky @_р (multi lctl (layer-while-held eng)))
+    ;; num
+    h_ (tap-hold $tap-time $hold-pinky @_ lctl)
+    h4 (tap-hold $tap-time $hold-ring 4 lalt)
+    h5 (tap-hold $tap-time $hold-middle 5 lmet)
+    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
+    s- (tap-hold $tap-time $hold-index - rsft)
+    c; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lmet)
+    a: (tap-hold $tap-time $hold-ring @: ralt)
+    bspc (tap-hold $tap-time $hold-pinky bspc lctl)
+    ;; sym
+    h\ (tap-hold $tap-time $hold-pinky \ lctl)
+    hlb (tap-hold $tap-time $hold-ring @lb lalt)
+    h- (tap-hold $tap-time $hold-middle - lmet)
+    hrb (tap-hold $tap-time $hold-index @rb lsft)
+    h{ (tap-hold $tap-time $hold-index @{ lsft)
+    h; (tap-hold $tap-time $hold-middle @; lmet)
+    h} (tap-hold $tap-time $hold-ring @} lalt)
+    h! (tap-hold $tap-time $hold-pinky @! lctl)
+    ;; fun
+    f2 (tap-hold $tap-time $hold-middle f2 lalt)
+    f11 (tap-hold $tap-time $hold-pinky f11 lctl)
+    f4 (tap-hold $tap-time $hold-ring f4 lalt)
+    f5 (tap-hold $tap-time $hold-middle f5 lmet)
+    f6 (tap-hold $tap-time $hold-index f6 lsft)
+    kp4 (tap-hold $tap-time $hold-index 4 lsft)
+    kp5 (tap-hold $tap-time $hold-middle 5 lmet)
+    kp6 (tap-hold $tap-time $hold-ring 6 lalt)
   )
 )
