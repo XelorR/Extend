@@ -158,6 +158,7 @@
   (k l) @dr0 $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
   (, .) @dms $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
   (j k) @dp0 $hold-time all-released    (eng rus rus_u  gam gfn num sym     nav mos)
+  (q w) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
 (defalias
@@ -233,8 +234,8 @@
   dp0 (dynamic-macro-play 0)
 
   ;; gam
-  tdtab (tap-dance 300 ( tab i m ))
-  tdz (tap-dance 300 ( z esc m ))
+  tdtab (tap-dance 300 ( tab i ))
+  tdz (tap-dance 300 ( z m ))
 
   ;; nav
   lctl (one-shot 500 lctl)
