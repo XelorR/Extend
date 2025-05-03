@@ -132,7 +132,7 @@
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         bspc @tlft tab @trgt @lnch             ins  home up   end  S-bspc    _    _    _
+ _         bspc @tlft tab @trgt @lnch             ins @home up  @end  S-bspc    _    _    _
  _         lctl lalt @lmet lsft  M-S-4            ralt left down rght bspc      _
  _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
  _                        @lfun @nav             @rsym @rfun
@@ -216,12 +216,15 @@
 
 (platform (macos)
   (defalias
-    launch M-spc
-    tlft M-S-[
-    trgt M-S-]
     ;; system combinations to switch languages
     en C-8
     ru C-9
+    ;; other alias
+    launch M-spc
+    tlft M-S-[
+    trgt M-S-]
+    home M-left
+    end M-rght
   )
 )
 
@@ -230,6 +233,8 @@
     launch lmet
     tlft C-S-tab
     trgt C-tab
+    home home
+    end end
   )
 )
 
