@@ -195,7 +195,7 @@
   (k l) @dr0 $hold-time all-released    (eng rus rus_u                      nav mos)
   (, .) @dms $hold-time all-released    (eng rus rus_u                      nav mos)
   (j k) @dp0 $hold-time all-released    (eng rus rus_u                      nav mos)
-  (q w) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
+  (x v) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
 (platform (win winiov2 wintercept)
