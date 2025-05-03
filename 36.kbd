@@ -82,7 +82,7 @@
 
  _        @brc  7    8    9   @₽               lrld @«”  @—   @°    del      _    _    _
  _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _
- _         0    1    2    3   @$               @at   =   @,?  @.!   ret      
+ _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
  _                      @lfun @lsym            @num @rfun
 
                         @lfun                       @rfun
@@ -108,7 +108,7 @@
 
  _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9  del      _    _    _
  _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _
- _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3  ret      
+ _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3 @kill
  _                       nlck @nav              kprt nlck
 
                          nlck                        nlck
@@ -147,7 +147,7 @@
 
  _         del @tlft  tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
+ _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp @file
  _                        @lfun  @nav         mltp mrtp
 
                           @lfun                    mrtp
@@ -206,6 +206,7 @@
     ;; other alias
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
+    kill A-f4 ;; Close current window
   )
 )
 
@@ -217,6 +218,7 @@
     ;; other alias
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
+    kill C-q ;; Close current window
   )
 )
 
@@ -235,6 +237,7 @@
     files_en (macro @launch 300 S-f i n d e r 400 ret)
     files_ru (macro @en 50 @launch 300 S-f i n d e r 400 ret 50 @ru)
     file (switch ((base-layer rus)) @files_ru break () @files_en break ) ;; Launch file manager
+    kill M-q ;; Close current window
   )
 )
 
