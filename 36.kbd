@@ -132,7 +132,7 @@
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         bspc @tlft tab @trgt @lnch             ins @home up  @end  S-bspc    _    _    _
+ _         bspc @tlft tab @trgt @lnch             ins @home up  @end  C-d       _    _    _
  _         lctl @ocm @mopt lsft  M-S-4           @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
