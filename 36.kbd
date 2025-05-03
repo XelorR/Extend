@@ -201,8 +201,8 @@
 (platform (win winiov2 wintercept)
   (defalias
     ;; system combinations to switch languages
-    en A-S-8 ;; it can be set in windows language settings
-    ru A-S-9 ;; no additional software needed
+    en C-S-8 ;; it can be set in windows language settings
+    ru C-S-9 ;; no additional software needed
     ;; other alias
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
