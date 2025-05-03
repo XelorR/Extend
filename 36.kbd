@@ -132,7 +132,7 @@
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         bspc @tlft tab @trgt @lnch             ins @home up  @end  C-d       _    _    _
+ _         bspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
@@ -241,6 +241,7 @@
     file (switch ((base-layer rus)) @files_ru break () @files_en break ) ;; Launch file manager
     kill M-q ;; Close current window
     prnt M-S-4 ;; Make a screenshot
+	del C-d
   )
 )
 
@@ -251,6 +252,7 @@
     trgt C-tab
     home home
     end end
+	del del
   )
 )
 
@@ -262,6 +264,9 @@
   gam (multi (layer-switch gam) @en)
 
   ;; sym
+  ;; to use this symbols, you have to ensure:
+  ;; - that you have US (qwerty) and RU (йцукен) layouts set in the system
+  ;; - set separate activation shortcuts for @en and @ru - just look at the definitions
   % S-5
   + S-=
   * S-8
@@ -353,7 +358,7 @@
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ S-] left 50 @ru) break () (macro S-[ S-] left) break )
   <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
-  cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
+  cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc @del)) break () (caps-word 2000) break )
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
@@ -363,7 +368,7 @@
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
-  tdk (tap-dance-eager 300 ( (macro k) (macro bspc @lb @rb left) (macro bspc del [ ] left) (macro bspc del S-[ S-] left) (macro bspc del @lb @rb left) (macro bspc del [ ] left) (macro bspc del S-[ S-] left) (macro bspc del @lb @rb left) (macro bspc del [ ] left) (macro bspc del S-[ S-] left)))
+  tdk (tap-dance-eager 300 ( (macro k) (macro bspc @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left) (macro bspc @del @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left) (macro bspc @del @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left)))
 
   ;; rus
   1 (fork 1 S-] (lsft rsft))
