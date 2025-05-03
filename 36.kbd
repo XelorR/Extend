@@ -74,8 +74,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @brc  7    8    9   @₽               lrld @«”  @—   @*    del      _    _    _
- _        @h/  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _    _
+ _        @brc  7    8    9   @₽               lrld @«”  @—   @°    del      _    _    _
+ _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _    _
  _         0    1    2    3   @$               @at   =   @,?  @.!   ret      _
  _                      @lfun @lsym             XX  @rfun
 
@@ -86,7 +86,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @dq  @<    =   @>   @`               @^   @[    S-- @]   @'        _    _    _
+ _        @dq  @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _    _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        _
  _                      @lfun  XX              XX   @rfun
@@ -176,6 +176,7 @@
   % S-5
   + S-=
   * S-8
+  _ S--
   lb S-9
   rb S-0
   { (switch ((base-layer rus)) (macro @en 50 S-[ 50 @ru) break () S-[ break )
@@ -211,7 +212,7 @@
   h! (tap-hold $tap-time $hold-pinky @! lmet)
 
   ;; num
-  h/ (tap-hold $tap-time $hold-pinky @/ lmet)
+  h_ (tap-hold $tap-time $hold-pinky @_ lmet)
   h4 (tap-hold $tap-time $hold-ring 4 lalt)
   h5 (tap-hold $tap-time $hold-middle 5 lctl)
   h6 (tap-hold $tap-time $hold-pinky 6 lsft)
@@ -269,6 +270,10 @@
   u₽ (unicode ₽)
   ur₽ (macro @en 50 @u₽ 50 @ru)
   ₽ (switch ((base-layer rus)) @ur₽ break () @u₽ break )
+  ;; degree sign
+  u° (unicode °)
+  ur° (macro @en 50 @u° 50 @ru)
+  ° (switch ((base-layer rus)) @ur° break () @u° break )
   ;; smart quotes
   u« (unicode «)
   u» (unicode »)
