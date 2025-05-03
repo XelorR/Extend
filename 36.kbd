@@ -172,6 +172,18 @@
   (q w) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
+(platform (win winiov2 wintercept linux)
+  (defalias
+    launch lmet
+  )
+)
+
+(platform (macos)
+  (defalias
+    launch M-spc
+  )
+)
+
 (defalias
   ;; system combinations to switch languages
   en C-8
