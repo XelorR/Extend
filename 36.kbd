@@ -57,10 +57,10 @@
 @gesc     @ftab q    w    e    r                y    u    i    o    p        _    _    _
  caps      lsft a    s    d    f                h    j    k    l    ;        _
  m         lctl @gz  x    c    v                n    m    ,    .   @l/\       
- _                        lalt spc              ret  prnt
+ _                       @galt spc              ret  prnt
 
-                          lalt                       prnt
-                          lalt                  ret  prnt
+                         @galt                       prnt
+                         @galt                  ret  prnt
 )
 
 (deflayer gfn
@@ -242,6 +242,7 @@
     kill M-q ;; Close current window
     prnt M-S-4 ;; Make a screenshot
 	del C-d
+	galt lmet
   )
 )
 
@@ -253,6 +254,7 @@
     home home
     end end
 	del del
+	galt lalt
   )
 )
 
