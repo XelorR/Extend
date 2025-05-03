@@ -119,8 +119,21 @@
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         del @tlft  tab @trgt @lnch            ins  home up   end  del       _    _    _
+ _         del @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft  prnt             ralt left down rght bspc      _
+ _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
+ _                        @lfun @nav             @rsym @rfun
+
+                          @lfun                        @rfun
+                          @lfun                  @rsym @rfun
+)
+
+(deflayer nav_mac
+ _         _    _     _    _     _                _    _    _    _    _         _    _    _
+ f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
+
+ _         bspc @tlft tab @trgt @lnch             ins  home up   end  S-bspc    _    _    _
+ _         lctl lalt @lmet lsft  prnt             ralt left down rght bspc      _
  _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
  _                        @lfun @nav             @rsym @rfun
 
@@ -132,7 +145,7 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del @tlft  tab @trgt @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
+ _         del @tlft  tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
  _                        @lfun  @nav         mltp mrtp
@@ -280,6 +293,7 @@
 
   ;; nav
   lctl (one-shot 500 lctl)
+  lmet (one-shot 500 lmet)
 
   ;; mos
   mu (movemouse-up 1 1)
@@ -510,7 +524,6 @@
   щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
 
   ;; layers
-  nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
   ftab (tap-hold $tap-time $hold-time @tdtab (layer-toggle fun))
   gz (tap-hold $tap-time $hold-time @tdz (layer-toggle gfn))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
@@ -522,6 +535,7 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
+    nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
     ;; modtaps (GACS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lmet)
@@ -555,6 +569,7 @@
 
 (platform (macos)
   (defalias
+    nav (tap-hold $tap-time $hold-time spc (layer-toggle nav_mac))
     ;; modtaps (GCAS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lctl)
