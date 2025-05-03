@@ -116,29 +116,29 @@
 )
 
 (deflayer nav
- _         _    _       _    _     _                _    _    _    _    _         _    _    _
- f13       f1   f2      f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
+ _         _    _     _    _     _                _    _    _    _    _         _    _    _
+ f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
- _         del  C-S-tab tab  C-tab @lnch            ins  home up   end  del       _    _    _
- _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _
- _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
- _                          @lfun @nav             @rsym @rfun
+ _         del @tlft  tab @trgt @lnch            ins  home up   end  del       _    _    _
+ _         lmet lalt @lctl lsft  prnt             ralt left down rght bspc      _
+ _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
+ _                        @lfun @nav             @rsym @rfun
 
-                            @lfun                        @rfun
-                            @lfun                  @rsym @rfun
+                          @lfun                        @rfun
+                          @lfun                  @rsym @rfun
 )
 
 (deflayer mos
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del  C-S-tab tab  C-tab @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
- _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x     C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
- _                          @lfun  @nav         mltp mrtp
+ _         del @tlft  tab @trgt @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lmet lalt @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
+ _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
+ _                        @lfun  @nav         mltp mrtp
 
-                            @lfun                    mrtp
-                            @lfun               mltp mrtp
+                          @lfun                    mrtp
+                          @lfun               mltp mrtp
 )
 
 (defvar
@@ -191,12 +191,16 @@
 (platform (win winiov2 wintercept linux)
   (defalias
     launch lmet
+    tlft C-S-tab
+    trgt C-tab
   )
 )
 
 (platform (macos)
   (defalias
     launch M-spc
+    tlft M-S-[
+    trgt M-S-]
   )
 )
 
