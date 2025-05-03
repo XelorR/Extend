@@ -276,12 +276,12 @@
   
   ;; macros
   ;; launch visual studio code
-  vscode (macro lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
-  vscodr (macro @en 50 lmet 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
+  vscode (macro @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
+  vscodr (macro @en 50 @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
   vsc (switch ((base-layer rus)) @vscodr break () @vscode break )
   ;; launch terminal
-  term (macro lmet 300 S-t e r m i n a l 400 ret)
-  terr (macro @en 50 lmet 300 S-t e r m i n a l 400 ret 50 @ru)
+  term (macro @launch 300 S-t e r m i n a l 400 ret)
+  terr (macro @en 50 @launch 300 S-t e r m i n a l 400 ret 50 @ru)
   ter (switch ((base-layer rus)) @terr break () @term break )
   ;; tap dance to launch applications
   lnch (tap-dance 500 ( @ter @vsc ))
