@@ -160,7 +160,7 @@
 
  _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt         _   @ml  @md  @mr  @mwd      _
- _         M-z  M-x   M-c  M-v   M-S-z        _    mltp mrtp mmtp ret      
+ _         M-z  M-x   M-c  M-v   M-S-z        _    mltp mrtp mmtp @file
  _                        @lfun  @nav         mltp mrtp
 
                           @lfun                    mrtp
