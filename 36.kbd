@@ -133,7 +133,7 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         bspc @tlft tab @trgt @lnch             ins @home up  @end  S-bspc    _    _    _
- _         lctl lalt @lmet lsft  M-S-4            ralt left down rght bspc      _
+ _         lctl @ocm @mopt lsft  M-S-4            ralt left down rght bspc      _
  _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
  _                        @lfun @nav             @rsym @rfun
 
@@ -159,7 +159,7 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
  _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu      _    _    _
- _         lctl lalt @lmet lsft  M-S-4        _   @ml  @md  @mr  @mwd      _
+ _         lctl @ocm @mopt lsft  M-S-4        _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
  _                        @lfun  @nav         mltp mrtp
 
@@ -534,6 +534,8 @@
     lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
     _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos))
+    mopt @lctl
+    ocm lalt
     ;; modtaps (GACS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lmet)
@@ -598,6 +600,8 @@
     lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos_mac))
     _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos_mac))
+    mopt (tap-hold $tap-time $hold-middle @lmet lalt)
+    ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
     ;; eng
     ha (tap-hold $tap-time $hold-pinky a lctl)
