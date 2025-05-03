@@ -83,10 +83,10 @@
  _        @brc  7    8    9   @₽               lrld @«”  @—   @°    del      _    _    _
  _        @h_  @h4  @h5  @h6  @+               @%   @s-  @c;  @a:  @bspc     _
  _         0    1    2    3   @$               @at   =   @,?  @.!   ret      
- _                      @lfun @lsym             XX  @rfun
+ _                      @lfun @lsym            @num @rfun
 
                         @lfun                       @rfun
-                        @lfun                   XX  @rfun
+                        @lfun                  @num @rfun
 )
 
 (deflayer sym
@@ -96,10 +96,10 @@
  _        @dq  @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
- _                      @lfun  XX              XX   @rfun
+ _                      @lfun @nav            @num  @rfun
 
                         @lfun                       @rfun
-                        @lfun                  XX   @rfun
+                        @lfun                 @num  @rfun
 )
 
 (deflayer fun
@@ -122,7 +122,7 @@
  _         del  C-S-tab tab  C-tab @lnch            ins  home up   end  del       _    _    _
  _         lmet lalt   @lctl lsft  prnt             ralt left down rght bspc      _
  _         C-z  C-x     C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
- _                          @lfun  XX              @rsym @rfun
+ _                          @lfun @nav             @rsym @rfun
 
                             @lfun                        @rfun
                             @lfun                  @rsym @rfun
@@ -134,8 +134,8 @@
 
  _         del  C-S-tab tab  C-tab @lnch        _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt   @lctl lsft  prnt         _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x     C-c  C-v   @vsc         _    mltp mrtp mmtp ret      
- _                          @lfun  C-S-z        mltp mrtp
+ _         C-z  C-x     C-c  C-v   C-S-z        _    mltp mrtp mmtp ret      
+ _                          @lfun  @nav         mltp mrtp
 
                             @lfun                    mrtp
                             @lfun               mltp mrtp
