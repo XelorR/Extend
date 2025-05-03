@@ -69,7 +69,7 @@
 
  _         grv  7    8    9    t                tab  home up   end  del      _    _    _
  _         caps 4    5    6    g                lsft left down rght bspc     _
- _         1    XX   2    3    b                lctl pgdn menu pgup ret      
+ _         1    XX   2    3    b                lctl pgup menu pgdn @file
  _                        esc  ret              _    _
 
                           esc                        _     
@@ -120,8 +120,8 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         del @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
- _         lmet lalt @lctl lsft  prnt             ralt left down rght bspc      _
- _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn ret       
+ _         lmet lalt @lctl lsft  prnt            @mcon left down rght bspc      _
+ _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
                           @lfun                        @rfun
@@ -133,8 +133,8 @@
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
  _         bspc @tlft tab @trgt @lnch             ins @home up  @end  S-bspc    _    _    _
- _         lctl @ocm @mopt lsft  M-S-4            ralt left down rght bspc      _
- _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn ret       
+ _         lctl @ocm @mopt lsft  M-S-4           @mcon left down rght bspc      _
+ _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
                           @lfun                        @rfun
@@ -201,36 +201,46 @@
 (platform (win winiov2 wintercept)
   (defalias
     ;; system combinations to switch languages
-    en A-S-8
-    ru A-S-9
+    en A-S-8 ;; it can be set in windows language settings
+    ru A-S-9 ;; no additional software needed
+    ;; other alias
+    mcon M-tab ;; Mission Control, Windows default
+    file M-e ;; Launch file manager
   )
 )
 
 (platform (linux)
   (defalias
     ;; system combinations to switch languages
-    en caps
-    ru S-caps
+    en caps   ;; this can be set in most modern desktop environments
+    ru S-caps ;; usually, in "Key bindings" -> "Switching to antother layout"
+    ;; other alias
+    mcon M-w ;; Mission Control, KDE Plasma default
+    file M-e ;; Launch file manager
   )
 )
 
 (platform (macos)
   (defalias
     ;; system combinations to switch languages
-    en A-S-8
-    ru A-S-9
+    en A-S-8 ;; there is no default setting to set this in MacOS
+    ru A-S-9 ;; try to find 3rd party app
     ;; other alias
-    launch M-spc
+    launch M-spc ;; launch applications
     tlft M-S-[
     trgt M-S-]
     home M-left
     end M-rght
+    mcon mctl ;; Mission Control, MacOS native
+    files_en (macro @launch 300 S-f i n d e r 400 ret)
+    files_ru (macro @en 50 @launch 300 S-f i n d e r 400 ret 50 @ru)
+    file (switch ((base-layer rus)) @files_ru break () @files_en break ) ;; Launch file manager
   )
 )
 
 (platform (win winiov2 wintercept linux)
   (defalias
-    launch lmet
+    launch lmet ;; launch applications
     tlft C-S-tab
     trgt C-tab
     home home
