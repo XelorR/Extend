@@ -230,8 +230,8 @@
     launch M-spc ;; launch applications
     tlft M-S-[
     trgt M-S-]
-    home M-left
-    end M-rght
+    home (fork M-left M-up (lalt))
+    end (fork M-rght M-down (lalt))
     mcon mctl ;; Mission Control, MacOS native
     files_en (macro @launch 300 S-f i n d e r 400 ret)
     files_ru (macro @en 50 @launch 300 S-f i n d e r 400 ret 50 @ru)
