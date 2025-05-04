@@ -148,10 +148,10 @@
  _         del @tlft  tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
  _         lmet lalt @lctl lsft @prnt          @dms @ml  @md  @mr  @mwd        _
  _         C-z  C-x   C-c  C-v   C-S-z         @dp0  mltp mrtp mmtp @file
- _                        @lfun  @nav         mltp mrtp
+ _                        @lfun @nav            mltp mrtp
 
-                          @lfun                    mrtp
-                          @lfun               mltp mrtp
+                          @lfun                      mrtp
+                          @lfun                 mltp mrtp
 )
 
 (deflayer mos_mac
@@ -161,10 +161,10 @@
  _         bspc @tlft tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
  _         lctl @ocm @mopt lsft @prnt          @dms @ml  @md  @mr  @mwd        _
  _         M-z  M-x   M-c  M-v   M-S-z         @dp0  mltp mrtp mmtp @file
- _                        @lfun  @nav         mltp mrtp
+ _                        @lfun @nav            mltp mrtp
 
-                          @lfun                    mrtp
-                          @lfun               mltp mrtp
+                          @lfun                      mrtp
+                          @lfun                 mltp mrtp
 )
 
 (defvar
