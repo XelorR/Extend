@@ -28,7 +28,7 @@
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
- _         @tdц @ь   @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
+ _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
  XX        @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
  _         @lф  @э   @х   @ы   @ю               @б   @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
@@ -421,6 +421,12 @@
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
+  *ь (switch
+    ((key-history @а 1)) (macro @т @ь) break
+    ((key-history @и 1)) (macro @т @ь) break
+    ((key-history @ы 1)) (macro @в @а) break
+	() @ь
+  )
 
   ;; rus_u
   Ъ (unicode Ъ)
