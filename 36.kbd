@@ -145,9 +145,9 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del @tlft  tab @trgt @lnch         _   @mwl @mu  @mwr @mwu        _    _    _
- _         lmet lalt @lctl lsft @prnt       @mcon @ml  @md  @mr  @mwd        _
- _         C-z  C-x   C-c  C-v   C-S-z        _    mltp mrtp mmtp @file
+ _         del @tlft  tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
+ _         lmet lalt @lctl lsft @prnt          @dms @ml  @md  @mr  @mwd        _
+ _         C-z  C-x   C-c  C-v   C-S-z         @dp0  mltp mrtp mmtp @file
  _                        @lfun  @nav         mltp mrtp
 
                           @lfun                    mrtp
@@ -158,9 +158,9 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         bspc @tlft tab @trgt @lnch         _   @mwl @mu  @mwr @mwu        _    _    _
- _         lctl @ocm @mopt lsft @prnt       @mcon @ml  @md  @mr  @mwd        _
- _         M-z  M-x   M-c  M-v   M-S-z        _    mltp mrtp mmtp @file
+ _         bspc @tlft tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
+ _         lctl @ocm @mopt lsft @prnt          @dms @ml  @md  @mr  @mwd        _
+ _         M-z  M-x   M-c  M-v   M-S-z         @dp0  mltp mrtp mmtp @file
  _                        @lfun  @nav         mltp mrtp
 
                           @lfun                    mrtp
@@ -183,7 +183,7 @@
   (i u) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
   (, m) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
   (v c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (y u) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (, .) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   (r t) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   (i o) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   (o p) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
@@ -192,9 +192,6 @@
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (k l) @dr0 $hold-time all-released    (eng rus rus_u                      nav mos)
-  (, .) @dms $hold-time all-released    (eng rus rus_u                      nav mos)
-  (j k) @dp0 $hold-time all-released    (eng rus rus_u                      nav mos)
   (x v) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
