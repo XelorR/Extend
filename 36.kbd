@@ -425,7 +425,7 @@
     ((key-history @а 1)) (macro @т @ь) break
     ((key-history @и 1)) (macro @т @ь) break
     ((key-history @ы 1)) (macro @в @а) break
-	() @ь
+	() @ь break
   )
 
   ;; rus_u
