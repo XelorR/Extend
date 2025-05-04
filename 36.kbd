@@ -298,6 +298,9 @@
   . (switch ((base-layer rus)) / break () . break )
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
+  № (switch ((base-layer rus)) S-3 break () (macro @ru 50 S-3 50 @en) break)
+  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
+  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
 
   ;; fun
   dr0 (dynamic-macro-record 0)
@@ -387,8 +390,6 @@
   ц w
   ь (fork m (unmod ]) (lsft rsft))
   я z
-  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
-  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
   з p
   в d
   к r
