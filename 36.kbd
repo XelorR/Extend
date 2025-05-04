@@ -423,6 +423,7 @@
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
+    ((key-history j 1)) (macro d f) break ;; о - ва
 	() @ь break
   )
 
