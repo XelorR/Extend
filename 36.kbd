@@ -16,7 +16,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
- XX       @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       _
+@lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       _
  _        @lz   x    c    v    b               @tdk  m   @,?  @.!  @l/\
  _                      @lfun @nav             @num @rfun
 
@@ -29,7 +29,7 @@
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
  _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
- XX        @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
+@lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
  _         @lф  @э   @х   @ы   @ю               @б   @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
 
@@ -42,7 +42,7 @@
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
- XX        @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
+@lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
  _         @_lф @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_lж
  _                       @lfun @nav             @num @rfun
 
