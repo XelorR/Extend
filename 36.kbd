@@ -106,13 +106,13 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         f12  f7   f8   f9   volu            slck  kp7  kp8  kp9 @del      _    _    _
- _        @f11 @f4  @f5  @f6   vold            caps @kp4 @kp5 @kp6 @bspc     _
- _         f10  f1  @f2   f3   mute             kp0  kp1  kp2  kp3 @kill
- _                       nlck @nav              kprt nlck
+ _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
+ _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @bspc     _
+ _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
+ _                       nlck @nav              kp0  nlck
 
                          nlck                        nlck
-                         nlck                   kprt nlck
+                         nlck                   kp0  nlck
 )
 
 (deflayer nav
@@ -145,9 +145,9 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del @tlft  tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
- _         lmet lalt @lctl lsft @prnt          @dms @ml  @md  @mr  @mwd        _
- _         C-z  C-x   C-c  C-v   C-S-z         @dp0  mltp mrtp mmtp @file
+ _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu        _    _    _
+ _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd        _
+ _         C-z  C-x   C-c  C-v   C-S-z          _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
@@ -158,9 +158,9 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         bspc @tlft tab @trgt @lnch          @dr0 @mwl @mu  @mwr @mwu        _    _    _
- _         lctl @ocm @mopt lsft @prnt          @dms @ml  @md  @mr  @mwd        _
- _         M-z  M-x   M-c  M-v   M-S-z         @dp0  mltp mrtp mmtp @file
+ _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu        _    _    _
+ _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd        _
+ _         M-z  M-x   M-c  M-v   M-S-z          _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
@@ -324,6 +324,7 @@
   
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
+  croll (fork caps (unmod slck) (lsft rsft))
 
   ;; eng
   l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
@@ -609,7 +610,6 @@
     h} (tap-hold $tap-time $hold-ring @} lalt)
     h! (tap-hold $tap-time $hold-pinky @! lmet)
     ;; fun
-    f2 (tap-hold $tap-time $hold-middle f2 lalt)
     f11 (tap-hold $tap-time $hold-pinky f11 lmet)
     f4 (tap-hold $tap-time $hold-ring f4 lalt)
     f5 (tap-hold $tap-time $hold-middle f5 lctl)
@@ -675,7 +675,6 @@
     h} (tap-hold $tap-time $hold-ring @} lalt)
     h! (tap-hold $tap-time $hold-pinky @! lctl)
     ;; fun
-    f2 (tap-hold $tap-time $hold-middle f2 lalt)
     f11 (tap-hold $tap-time $hold-pinky f11 lctl)
     f4 (tap-hold $tap-time $hold-ring f4 lalt)
     f5 (tap-hold $tap-time $hold-middle f5 lmet)
