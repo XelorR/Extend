@@ -72,8 +72,8 @@
  _         1    XX   2    3    p                _    pgup menu pgdn _
  _                        i   ret               _    _
 
-                          esc                        _     
-                          esc                   _    _
+                          i                          _     
+                          i                     _    _
 )
 
 (deflayer num
