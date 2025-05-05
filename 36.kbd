@@ -54,9 +54,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- i        @ftab q    w    e   @rt               _    _    _    _    _        _    _    _
- caps      lsft a    s    d   @fg               _    _    _    _    _        _
- m         lctl @gzm x    c   @vb               _    _    _    _    _
+ i        @ftab q    w    e    r               _    _    _    _    _        _    _    _
+ caps      lsft a    s    d    f               _    _    _    _    _        _
+ m         lctl z    x    c   @vb              _    _    _    _    _
  _                       @galt spc              ret  prnt
 
                          @galt                       prnt
@@ -67,13 +67,13 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         grv  7    8    9    j                _    home up   end  del      _    _    _
+ _       @gesc  1    2    3    t                _    home up   end  del      _    _    _
  _        caps @h4  @h5  @h6   o                _    left down rght bspc     _
- _         1    XX   2    3    p                _    pgup menu pgdn _
- _                        i   ret               _    _
+ _        m     j    i    g    p                _    pgup menu pgdn _
+ _                        XX  ret               _    _
 
-                          i                          _     
-                          i                     _    _
+                          XX                         _     
+                          XX                    _    _
 )
 
 (deflayer num
@@ -228,7 +228,7 @@
     kill M-q ;; Close current window
     prnt M-S-4 ;; Make a screenshot
 	del C-d
-	galt lmet
+	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
   )
 )
 
@@ -240,7 +240,7 @@
     home home
     end end
 	del del
-	galt lalt
+	galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
   )
 )
 
@@ -294,11 +294,7 @@
   dp0 (dynamic-macro-play 0)
 
   ;; gam
-  estab (fork tab esc (lsft rsft))
-  rt (fork r t (lsft rsft))
-  fg (fork f g (lsft rsft))
   vb (fork v b (lsft rsft))
-  zm (fork v b (lsft rsft))
 
   ;; nav
   lctl (switch ((base-layer rus)) lctl break (base-layer rus_u)) lctl break () (one-shot 500 lctl) break )
@@ -537,8 +533,7 @@
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   
   ;; layers
-  ftab (tap-hold $tap-time $hold-time @estab (layer-toggle fun))
-  gzm (tap-hold $tap-time $hold-time @zm (layer-toggle gfn))
+  ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
