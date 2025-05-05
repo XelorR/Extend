@@ -81,7 +81,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @brc  7    8    9   @₽               lrld @«”  @—   @°   @del      _    _    _
- _        @h_  @h4  @h5  @h6  @+               @%   @hn- @h;  @h:  @hbspc    _
+ _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h_  @hbspc    _
  _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
  _                      @lfun @lsym            @num @rfun
 
@@ -588,12 +588,12 @@
     _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
     _hр (tap-hold $tap-time $hold-pinky @_р (multi lmet (layer-while-held eng)))
     ;; num
-    h_ (tap-hold $tap-time $hold-pinky @_ lmet)
+    h: (tap-hold $tap-time $hold-ring @: rmet)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
     h5 (tap-hold $tap-time $hold-middle 5 lctl)
     h6 (tap-hold $tap-time $hold-pinky 6 lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h: (tap-hold $tap-time $hold-ring @: ralt)
+    h_ (tap-hold $tap-time $hold-pinky @_ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lmet)
@@ -652,12 +652,12 @@
     _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
     _hр (tap-hold $tap-time $hold-pinky @_р (multi lctl (layer-while-held eng)))
     ;; num
-    h_ (tap-hold $tap-time $hold-pinky @_ lctl)
+    h: (tap-hold $tap-time $hold-ring @: rctl)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
     h5 (tap-hold $tap-time $hold-middle 5 lmet)
     h6 (tap-hold $tap-time $hold-pinky 6 lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h: (tap-hold $tap-time $hold-ring @: ralt)
+    h_ (tap-hold $tap-time $hold-pinky @_ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lctl)
