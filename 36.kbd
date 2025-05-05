@@ -81,7 +81,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @brc  7    8    9   @₽               lrld @«”  @—   @°   @del      _    _    _
- _        @h_  @h4  @h5  @h6  @+               @%   @h-  @h;  @h:  @bspc     _
+ _        @h_  @h4  @h5  @h6  @+               @%   @h-  @h;  @h:  @hbspc    _
  _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
  _                      @lfun @lsym            @num @rfun
 
@@ -107,7 +107,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
- _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @bspc     _
+ _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
  _                       nlck @nav              kp0  nlck
 
@@ -600,7 +600,7 @@
     h- (tap-hold $tap-time $hold-index - rsft)
     h; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lctl)
     h: (tap-hold $tap-time $hold-ring @: ralt)
-    bspc (tap-hold $tap-time $hold-pinky bspc lmet)
+    hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lmet)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
@@ -665,7 +665,7 @@
     h- (tap-hold $tap-time $hold-index - rsft)
     h; (tap-hold $tap-time $hold-middle (switch ((base-layer rus)) S-4 break () ; break ) lmet)
     h: (tap-hold $tap-time $hold-ring @: ralt)
-    bspc (tap-hold $tap-time $hold-pinky bspc lctl)
+    hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lctl)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
