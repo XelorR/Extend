@@ -301,8 +301,8 @@
   zm (fork v b (lsft rsft))
 
   ;; nav
-  lctl (one-shot 500 lctl)
-  lmet (one-shot 500 lmet)
+  lctl (switch ((base-layer rus)) lctl break (base-layer rus_u)) lctl break () (one-shot 500 lctl) break )
+  lmet (switch ((base-layer rus)) lmet break (base-layer rus_u)) lmet break () (one-shot 500 lmet) break )
 
   ;; mos
   mu (movemouse-up 1 1)
