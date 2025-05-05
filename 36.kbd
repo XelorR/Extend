@@ -54,9 +54,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- i        @ftab q    w    e   @rt               y    u    i    o    p        _    _    _
- caps      lsft a    s    d   @fg               h    j    k    l    ;        _
- m         lctl @gzm x    c   @vb               n    m    ,    .    /
+ i        @ftab q    w    e   @rt               _    _    _    _    _        _    _    _
+ caps      lsft a    s    d   @fg               _    _    _    _    _        _
+ m         lctl @gzm x    c   @vb               _    _    _    _    _
  _                       @galt spc              ret  prnt
 
                          @galt                       prnt
