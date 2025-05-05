@@ -539,10 +539,6 @@
   <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
-  - (switch
-    ((key-history S-= 1)) @± break
-	() - break
-  )
   
   ;; layers
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
