@@ -54,9 +54,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
-@gesc     @ftab q    w    e    r                y    u    i    o    p        _    _    _
- caps      lsft a    s    d    f                h    j    k    l    ;        _
- m         lctl @gz  x    c    v                n    m    ,    .   @l/\       
+ i        @ftab q    w    e   @rt               y    u    i    o    p        _    _    _
+ caps      lsft a    s    d   @fg               h    j    k    l    ;        _
+ m         lctl @gzm x    c   @vb               n    m    ,    .    /
  _                       @galt spc              ret  prnt
 
                          @galt                       prnt
@@ -67,10 +67,10 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         grv  7    8    9    t                tab @home up  @end @del      _    _    _
- _        caps @h4  @h5  @h6   g                lsft left down rght bspc     _
- _         1    XX   2    3    b                lctl pgup menu pgdn @file
- _                        esc  ret              _    _
+ _         grv  7    8    9    j                _    home up   end  del      _    _    _
+ _        caps @h4  @h5  @h6   o                _    left down rght bspc     _
+ _         1    XX   2    3    p                _    pgup menu pgdn _
+ _                        i   ret              _    _
 
                           esc                        _     
                           esc                   _    _
@@ -192,7 +192,6 @@
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (x v) esc  $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
 )
 
 (platform (win winiov2 wintercept)
@@ -305,8 +304,11 @@
   dp0 (dynamic-macro-play 0)
 
   ;; gam
-  tdtab (tap-dance 300 ( tab i ))
-  tdz (tap-dance 300 ( z m ))
+  estab (fork tab esc (lsft rsft))
+  rt (fork r t (lsft rsft))
+  fg (fork f g (lsft rsft))
+  vb (fork v b (lsft rsft))
+  zm (fork v b (lsft rsft))
 
   ;; nav
   lctl (one-shot 500 lctl)
@@ -546,8 +548,8 @@
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   
   ;; layers
-  ftab (tap-hold $tap-time $hold-time @tdtab (layer-toggle fun))
-  gz (tap-hold $tap-time $hold-time @tdz (layer-toggle gfn))
+  ftab (tap-hold $tap-time $hold-time @estab (layer-toggle fun))
+  gzm (tap-hold $tap-time $hold-time @zm (layer-toggle gfn))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
