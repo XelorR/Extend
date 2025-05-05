@@ -167,16 +167,6 @@
                           @lfun                 mltp mrtp
 )
 
-(defvar
-  tap-time 200
-  hold-time 200
-
-  hold-index 150
-  hold-middle 150
-  hold-ring 170
-  hold-pinky 195
-)
-
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
   (r e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
@@ -554,6 +544,16 @@
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
+)
+
+(defvar
+  tap-time 200
+  hold-time 200
+
+  hold-index 150
+  hold-middle 150
+  hold-ring 170
+  hold-pinky 195
 )
 
 (platform (win winiov2 wintercept linux)
