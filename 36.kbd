@@ -17,7 +17,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
- _        @lz   x    c    v    b               @tdk  m   @,?  @.!  @l/\
+ _        @lz   x    c    v    b                k    m   @,?  @.!  @l/\
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -333,7 +333,6 @@
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
-  tdk (tap-dance-eager 300 ( (macro k) (macro bspc @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left) (macro bspc @del @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left) (macro bspc @del @lb @rb left) (macro bspc @del [ ] left) (macro bspc @del S-[ S-] left)))
 
   ;; rus
   1 (fork 1 S-] (lsft rsft))
