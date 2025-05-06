@@ -341,8 +341,8 @@
   ;; custom shifted things
   gesc (fork esc (unmod grv) (lsft rsft))
   croll (fork caps (unmod slck) (lsft rsft))
-  qdel (fork del (unmod @close_window) (lsft rsft))
-  qbspc (fork bspc (unmod @close_window) (lsft rsft))
+  qdel (fork del @close_window (lsft rsft))
+  qbspc (fork bspc @close_window (lsft rsft))
 
   ;; eng
   l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
