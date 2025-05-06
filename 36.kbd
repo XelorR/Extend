@@ -269,8 +269,8 @@
     file M-e ;; Launch file manager
     close_window C-q
     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
-    gprnt prnt ;; Make a screenshot
-    prnt prnt ;; Make a screenshot
+    gprnt prnt ;; Make a screenshot - full screen
+    prnt M-S-prnt ;; Make a screenshot - region
   )
 )
 
