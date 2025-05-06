@@ -173,10 +173,10 @@
   (i u) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
   (, m) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
   (v c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
@@ -321,19 +321,20 @@
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
 
   ;; rus
-  1 (fork 1 S-] (lsft rsft))
-  2 (fork 2 S-m (lsft rsft))
-  ;; 3 is the same in йцукен
-  4 (fork 4 S-5 (lsft rsft))
-  5 (fork 5 S-6 (lsft rsft))
-  6 (fork 6 S-4 (lsft rsft))
-  7 (fork 7 (unmod -) (lsft rsft))
-  8 (fork 8 S-2 (lsft rsft))
-  ;; 9 is the same in йцукен
-  ;; 0 is the same in йцукен
-  star (fork S-8 S-- (lsft rsft))
+  1 (fork 1 S-] (lsft rsft)) ;; diktor
+  2 (fork 2 S-m (lsft rsft)) ;; diktor
+  ;; 3 is the same in йцукен ;; diktor
+  4 (fork 4 S-5 (lsft rsft)) ;; diktor
+  5 (fork 5 S-6 (lsft rsft)) ;; diktor
+  6 (fork 6 S-4 (lsft rsft)) ;; diktor
+  7 (fork 7 (unmod -) (lsft rsft)) ;; diktor
+  8 (fork 8 S-2 (lsft rsft)) ;; diktor
+  ;; 9 is the same in йцукен ;; diktor
+  ;; 0 is the same in йцукен ;; diktor
+  star (fork S-8 S-- (lsft rsft)) ;; diktor
   ц w
-  ь (fork m (unmod ]) (lsft rsft))
+  ь m
+  ьъ (fork m (unmod ]) (lsft rsft)) ;; diktor
   я z
   з p
   в d
@@ -370,7 +371,7 @@
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
-	() @ь break
+	() @ьъ break
   )
 
   ;; rus_u
@@ -569,7 +570,7 @@
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
-    ;; eng
+    ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lmet)
     hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lctl)
@@ -578,7 +579,7 @@
     he (tap-hold $tap-time $hold-middle e lctl)
     hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lmet)
-    ;; rus
+    ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lmet (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
     hе (tap-hold $tap-time $hold-middle @е (multi lctl (layer-while-held eng)))
@@ -587,7 +588,7 @@
     hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lctl (layer-while-held eng)) (w))
     hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
     hр (tap-hold $tap-time $hold-pinky @р (multi lmet (layer-while-held eng)))
-    ;; rus_u
+    ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
     _hе (tap-hold $tap-time $hold-middle @_е (multi lctl (layer-while-held eng)))
@@ -633,7 +634,7 @@
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
-    ;; eng
+    ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lctl)
     hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lmet)
@@ -642,7 +643,7 @@
     he (tap-hold $tap-time $hold-middle e lmet)
     hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lctl)
-    ;; rus
+    ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lctl (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
     hе (tap-hold $tap-time $hold-middle @е (multi lmet (layer-while-held eng)))
@@ -651,7 +652,7 @@
     hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lmet (layer-while-held eng)) (w))
     hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
     hр (tap-hold $tap-time $hold-pinky @р (multi lctl (layer-while-held eng)))
-    ;; rus_u
+    ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
     _hе (tap-hold $tap-time $hold-middle @_е (multi lmet (layer-while-held eng)))
