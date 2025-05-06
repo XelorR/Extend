@@ -11,7 +11,7 @@
                           lmet                  ralt rmet
 )
 
-(deflayer eng
+(deflayer eng ;; colemak
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -24,7 +24,7 @@
                         @lfun                  @num @rfun
 )
 
-(deflayer rus
+(deflayer rus ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
 
@@ -37,7 +37,7 @@
                          @lfun                  @num @rfun
 )
 
-(deflayer rus_u
+(deflayer rus_u ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
 
@@ -365,6 +365,7 @@
   ж ;
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
+  tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
