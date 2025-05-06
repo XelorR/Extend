@@ -577,6 +577,14 @@
     he (tap-hold $tap-time $hold-middle e lctl)
     hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lmet)
+    ;; eng ;; qwerty
+    hqs (tap-hold $tap-time $hold-ring s lalt)
+    hd (tap-hold $tap-time $hold-middle d lctl)
+    hf (tap-hold $tap-time $hold-index f lsft)
+    hj (tap-hold $tap-time $hold-index j lsft)
+    hk (tap-hold $tap-time $hold-middle k lctl)
+    hl (tap-hold $tap-time $hold-ring l lalt)
+    hq; (tap-hold $tap-time $hold-pinky ; lmet)
     ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lmet (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
@@ -641,6 +649,14 @@
     he (tap-hold $tap-time $hold-middle e lmet)
     hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lctl)
+    ;; eng ;; qwerty
+    hqs (tap-hold $tap-time $hold-ring s lalt)
+    hd (tap-hold $tap-time $hold-middle d lmet)
+    hf (tap-hold $tap-time $hold-index f lsft)
+    hj (tap-hold $tap-time $hold-index j lsft)
+    hk (tap-hold $tap-time $hold-middle k lmet)
+    hl (tap-hold $tap-time $hold-ring l lalt)
+    hq; (tap-hold $tap-time $hold-pinky ; lctl)
     ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lctl (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
