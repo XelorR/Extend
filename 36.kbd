@@ -224,15 +224,21 @@
   (i u) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
   (, m) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
   (v c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
+  ;; comment following letters if you want to use йцукен instead of diktor
+  (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
+  ;; (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
 )
 
 ;; ------------------------------------------------------------------------------
