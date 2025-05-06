@@ -59,7 +59,7 @@
                          @lfun                  @num @rfun
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; gaming layer and sublayers
 
 (deflayer gam ;; gaming layer
@@ -88,7 +88,7 @@
                           XX                    _    _
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; layers with extra buttons: numeric, symbol, function
 
 (deflayer num ;; numeric and punctuation layer
@@ -130,7 +130,7 @@
                          nlck                   kp0  nlck
 )
 
-;; ------------------------------------------------------------------------------
+;; ------------------------------------------------------------------------------------------
 ;; layers for navigation, edition and function
 
 (deflayer nav ;; navigation layer
@@ -163,8 +163,8 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu        _    _    _
- _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd        _
+ _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v   C-S-z          _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
@@ -176,8 +176,8 @@
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
- _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu        _    _    _
- _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd        _
+ _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         M-z  M-x   M-c  M-v   M-S-z          _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
@@ -185,7 +185,7 @@
                           @lfun                 mltp mrtp
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; alt layers,
 ;; replace default eng and rus to use alternative layouts
 
@@ -215,7 +215,7 @@
                          @lfun                  @num @rfun
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; combo definition
 
 (defcfg concurrent-tap-hold yes)
@@ -241,7 +241,7 @@
   ;; (r t) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; platform specific configs
 
 (platform (win winiov2 wintercept)
@@ -309,7 +309,7 @@
 )
 
 (defalias
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; layouts switching
 
   eng (multi (layer-switch eng) @en)
@@ -317,7 +317,7 @@
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; symbols definition
 
   ;; sym
@@ -366,7 +366,7 @@
   ;; gam
   vb (fork v b (lsft rsft))
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; navigation and edition specific
 
   ;; nav
@@ -383,7 +383,7 @@
   mwl (mwheel-left 50 120)
   mwr (mwheel-right 50 120)
   
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; custom shifted things
 
   gesc (fork esc (unmod grv) (lsft rsft))
@@ -391,7 +391,7 @@
   qdel (fork del @close_window (lsft rsft))
   qbspc (fork bspc @close_window (lsft rsft))
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; special actions for English layer
 
   ;; eng
@@ -400,7 +400,7 @@
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; Russian letters
 
   ;; rus
@@ -459,7 +459,7 @@
 	() @ьъ break
   )
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; Russian letters, implemented as unicode symbols
 
   ;; rus_u
@@ -587,7 +587,7 @@
   эЭ (switch ((base-layer rus)) @э break ((base-layer rus_u)) @_э break )
   ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus_u)) @_ъ break )
 
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; Macros and special buttons with complicated logic
 
   ;; launch visual studio code
@@ -637,7 +637,7 @@
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   
-  ;; ------------------------------------------------------------------------------
+  ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
@@ -648,7 +648,7 @@
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; home row mods, settings
 
 (defvar
@@ -661,7 +661,7 @@
   hold-pinky 195
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; home row mods, GNU Linux and Windows version
 
 (platform (win winiov2 wintercept linux)
@@ -744,7 +744,7 @@
   )
 )
 
-;; ------------------------------------------------------------------------------
+;; -------------------------------------------------------------------------------------
 ;; home row mods, MacOS version
 
 (platform (macos)
