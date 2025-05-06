@@ -24,6 +24,19 @@
                         @lfun                  @num @rfun
 )
 
+(deflayer eng_qwerty
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
+@lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
+ _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
+ _                      @lfun @nav             @num @rfun
+
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
 (deflayer rus ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  grv       @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
@@ -584,7 +597,7 @@
     hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lctl)
     hl (tap-hold $tap-time $hold-ring l lalt)
-    hq; (tap-hold $tap-time $hold-pinky ; lmet)
+    hq' (tap-hold $tap-time $hold-pinky ' lmet)
     ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lmet (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
@@ -656,7 +669,7 @@
     hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lmet)
     hl (tap-hold $tap-time $hold-ring l lalt)
-    hq; (tap-hold $tap-time $hold-pinky ; lctl)
+    hq' (tap-hold $tap-time $hold-pinky ' lctl)
     ;; rus ;; diktor
     hу (tap-hold $tap-time $hold-pinky @у (multi lctl (layer-while-held eng)))
     hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
