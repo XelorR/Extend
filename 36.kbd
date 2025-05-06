@@ -235,10 +235,10 @@
   (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (i o) @эЭ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   ;; (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (w e) @хХ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (r t) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
 )
 
 ;; ------------------------------------------------------------------------------
@@ -479,7 +479,9 @@
   _ц (fork @uц @uЦ (lsft rsft))
   uь (unicode ь)
   uъ (unicode ъ)
+  uЪ (unicode Ъ)
   _ь (fork @uь @uъ (lsft rsft))
+  _ъ (fork @uъ @uЪ (lsft rsft))
   uя (unicode я)
   uЯ (unicode Я)
   _я (fork @uя @uЯ (lsft rsft))
@@ -581,6 +583,9 @@
   ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
   шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
   щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
+  хХ (switch ((base-layer rus)) @х break ((base-layer rus_u)) @_х break )
+  эЭ (switch ((base-layer rus)) @э break ((base-layer rus_u)) @_э break )
+  ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus_u)) @_ъ break )
 
   ;; ------------------------------------------------------------------------------
   ;; Macros and special buttons with complicated logic
