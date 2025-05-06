@@ -192,7 +192,7 @@
     ;; other alias
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
-    kill A-f4 ;; Close current window
+    kill (tap-dance 400 ( A-f4 C-S-esc )) ;; Close current window or kill any app
     prnt M-S-s ;; Make a screenshot
   )
 )
@@ -205,7 +205,7 @@
     ;; other alias
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
-    kill C-q ;; Close current window
+    kill (tap-dance 400 ( C-q M-A-esc )) ;; Close current window or kill any app
     prnt prnt ;; Make a screenshot
   )
 )
@@ -223,7 +223,7 @@
     end (fork M-rght M-down (lalt))
     mcon mctl ;; Mission Control, MacOS native
     file A-M-spc ;; Launch file manager
-    kill M-q ;; Close current window
+    kill (tap-dance 400 ( M-q A-M-esc )) ;; Close current window or kill any app
     prnt M-S-4 ;; Make a screenshot
 	del C-d
 	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
