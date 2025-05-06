@@ -1,3 +1,6 @@
+;; ------------------------------------------------------------------------------
+;; matrix, what to remap
+
 (defsrc
  f24       f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
  grv       1    2    3    4    5                6    7    8    9    0        -    =    bspc
@@ -11,6 +14,9 @@
                           lmet                  ralt rmet
 )
 
+;; ------------------------------------------------------------------------------
+;; main typing layers
+
 (deflayer eng ;; colemak
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
@@ -18,19 +24,6 @@
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
  _        @lz   x    c    v    b                k    m   @,?  @.!  @l/\
- _                      @lfun @nav             @num @rfun
-
-                        @lfun                       @rfun
-                        @lfun                  @num @rfun
-)
-
-(deflayer eng_qwerty
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
-@lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
- _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -50,18 +43,8 @@
                          @lfun                  @num @rfun
 )
 
-(deflayer rus_йцукен
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
-@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
-
- _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
-@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
- _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
- _                       @lfun @nav             @num @rfun
-
-                         @lfun                       @rfun
-                         @lfun                  @num @rfun
-)
+;; ------------------------------------------------------------------------------
+;; backup, unicode typing for Russian language
 
 (deflayer rus_u ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
@@ -75,6 +58,9 @@
                          @lfun                       @rfun
                          @lfun                  @num @rfun
 )
+
+;; ------------------------------------------------------------------------------
+;; gaming layer and sublayers
 
 (deflayer gam ;; gaming layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
@@ -101,6 +87,9 @@
                           XX                         _     
                           XX                    _    _
 )
+
+;; ------------------------------------------------------------------------------
+;; layers with extra buttons: numeric, symbol, function
 
 (deflayer num ;; numeric and punctuation layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
@@ -140,6 +129,9 @@
                          nlck                        nlck
                          nlck                   kp0  nlck
 )
+
+;; ------------------------------------------------------------------------------
+;; layers for navigation, edition and function
 
 (deflayer nav ;; navigation layer
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
@@ -193,6 +185,39 @@
                           @lfun                 mltp mrtp
 )
 
+;; ------------------------------------------------------------------------------
+;; alt layers,
+;; replace default eng and rus to use alternative layouts
+
+(deflayer eng_qwerty
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
+@lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
+ _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
+ _                      @lfun @nav             @num @rfun
+
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
+(deflayer rus_йцукен
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
+
+ _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
+@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
+ _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
+ _                       @lfun @nav             @num @rfun
+
+                         @lfun                       @rfun
+                         @lfun                  @num @rfun
+)
+
+;; ------------------------------------------------------------------------------
+;; combo definition
+
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
   (r e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
@@ -209,6 +234,9 @@
   (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
 )
+
+;; ------------------------------------------------------------------------------
+;; platform specific configs
 
 (platform (win winiov2 wintercept)
   (defalias
@@ -275,11 +303,16 @@
 )
 
 (defalias
-  ;; layouts
+  ;; ------------------------------------------------------------------------------
+  ;; layouts switching
+
   eng (multi (layer-switch eng) @en)
   rus (multi (layer-switch rus) @ru)
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
+
+  ;; ------------------------------------------------------------------------------
+  ;; symbols definition
 
   ;; sym
   ;; to use this symbols, you have to ensure:
@@ -327,6 +360,9 @@
   ;; gam
   vb (fork v b (lsft rsft))
 
+  ;; ------------------------------------------------------------------------------
+  ;; navigation and edition specific
+
   ;; nav
   lctl (switch ((base-layer rus)) lctl break ((base-layer rus_u)) lctl break () (one-shot 500 lctl) break )
   lmet (switch ((base-layer rus)) lmet break ((base-layer rus_u)) lmet break () (one-shot 500 lmet) break )
@@ -341,17 +377,25 @@
   mwl (mwheel-left 50 120)
   mwr (mwheel-right 50 120)
   
+  ;; ------------------------------------------------------------------------------
   ;; custom shifted things
+
   gesc (fork esc (unmod grv) (lsft rsft))
   croll (fork caps (unmod slck) (lsft rsft))
   qdel (fork del @close_window (lsft rsft))
   qbspc (fork bspc @close_window (lsft rsft))
+
+  ;; ------------------------------------------------------------------------------
+  ;; special actions for English layer
 
   ;; eng
   l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
+
+  ;; ------------------------------------------------------------------------------
+  ;; Russian letters
 
   ;; rus
   1 (fork 1 S-] (lsft rsft)) ;; diktor
@@ -408,6 +452,9 @@
     ((key-history j 1)) (macro d f) break ;; о - ва
 	() @ьъ break
   )
+
+  ;; ------------------------------------------------------------------------------
+  ;; Russian letters, implemented as unicode symbols
 
   ;; rus_u
   Ъ (unicode Ъ)
@@ -529,7 +576,9 @@
   шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
   щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
 
-  ;; macros
+  ;; ------------------------------------------------------------------------------
+  ;; Macros and special buttons with complicated logic
+
   ;; launch visual studio code
   vscode (macro @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
   vscodr (macro @en 50 @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
@@ -577,7 +626,9 @@
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   
-  ;; layers
+  ;; ------------------------------------------------------------------------------
+  ;; switchers to sublayers
+
   ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
@@ -585,6 +636,9 @@
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
+
+;; ------------------------------------------------------------------------------
+;; home row mods, settings
 
 (defvar
   tap-time 200
@@ -595,6 +649,9 @@
   hold-ring 170
   hold-pinky 195
 )
+
+;; ------------------------------------------------------------------------------
+;; home row mods, GNU Linux and Windows version
 
 (platform (win winiov2 wintercept linux)
   (defalias
@@ -675,6 +732,9 @@
     kp6 (tap-hold $tap-time $hold-ring 6 lalt)
   )
 )
+
+;; ------------------------------------------------------------------------------
+;; home row mods, MacOS version
 
 (platform (macos)
   (defalias
