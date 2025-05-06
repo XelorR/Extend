@@ -55,7 +55,7 @@
 @ё          _    _    _    _    _                _    _    _    _    _       _    _    _
 
  _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
-@lfun      @ф   @ы   @в   @а   @п               @р   @hо  @л   @д   @ж      @э
+@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
  _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
  _                       @lfun @nav             @num @rfun
 
@@ -631,6 +631,14 @@
     hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lctl (layer-while-held eng)) (w))
     hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
     hр (tap-hold $tap-time $hold-pinky @р (multi lmet (layer-while-held eng)))
+    ;; rus ;; йцукен
+    hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
+    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
+    hв (tap-hold $tap-time $hold-middle @в (multi lctl (layer-while-held eng)))
+    hа (tap-hold $tap-time $hold-index @а lsft)
+    hл (tap-hold $tap-time $hold-middle @л (multi lctl (layer-while-held eng)))
+    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
+    hж (tap-hold $tap-time $hold-pinky @ж (multi lmet (layer-while-held eng)))
     ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
@@ -703,6 +711,14 @@
     hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lmet (layer-while-held eng)) (w))
     hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
     hр (tap-hold $tap-time $hold-pinky @р (multi lctl (layer-while-held eng)))
+    ;; rus ;; йцукен
+    hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
+    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
+    hв (tap-hold $tap-time $hold-middle @в (multi lmet (layer-while-held eng)))
+    hа (tap-hold $tap-time $hold-index @а lsft)
+    hл (tap-hold $tap-time $hold-middle @л (multi lmet (layer-while-held eng)))
+    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
+    hж (tap-hold $tap-time $hold-pinky @ж (multi lctl (layer-while-held eng)))
     ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
