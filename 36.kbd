@@ -241,8 +241,8 @@
 (platform (macos)
   (defalias
     ;; system combinations to switch languages
-    en A-S-8 ;; there is no default setting to set this in MacOS
-    ru A-S-9 ;; use Kawa: https://github.com/hatashiro/kawa
+    en C-S-8 ;; there is no default setting to set this in MacOS
+    ru C-S-9 ;; use Kawa: https://github.com/hatashiro/kawa
     ;; other alias
     launch M-spc ;; launch applications
     tlft M-S-[
