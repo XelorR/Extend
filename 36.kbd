@@ -76,7 +76,7 @@
                          @lfun                  @num @rfun
 )
 
-(deflayer gam
+(deflayer gam ;; gaming layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -89,7 +89,7 @@
                          @galt                  ret  prnt
 )
 
-(deflayer gfn
+(deflayer gfn ;; fn for gaming layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -102,7 +102,7 @@
                           XX                    _    _
 )
 
-(deflayer num
+(deflayer num ;; numeric and punctuation layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -115,7 +115,7 @@
                         @lfun                  @num @rfun
 )
 
-(deflayer sym
+(deflayer sym ;; symbol layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -128,7 +128,7 @@
                         @lfun                 @num  @rfun
 )
 
-(deflayer fun
+(deflayer fun ;; function, media and keypad layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
@@ -141,7 +141,7 @@
                          nlck                   kp0  nlck
 )
 
-(deflayer nav
+(deflayer nav ;; navigation layer
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
@@ -154,7 +154,7 @@
                           @lfun                  @rsym @rfun
 )
 
-(deflayer nav_mac
+(deflayer nav_mac ;; navigation layer
  _         _    _     _    _     _                _    _    _    _    _         _    _    _
  f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
 
@@ -167,7 +167,7 @@
                           @lfun                  @rsym @rfun
 )
 
-(deflayer mos
+(deflayer mos ;; mouse layer
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
@@ -180,7 +180,7 @@
                           @lfun                 mltp mrtp
 )
 
-(deflayer mos_mac
+(deflayer mos_mac ;; mouse layer
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
  _         _    _       _    _      _           _    _    _    _    _        _    _    _
 
