@@ -50,6 +50,19 @@
                          @lfun                  @num @rfun
 )
 
+(deflayer rus_йцукен
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
+
+ _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
+@lfun      @ф   @ы   @в   @а   @п               @р   @hо  @л   @д   @ж      @э
+ _         @я   @э   @х   @ы   @ю               @б   @м   @п   @г   @.,
+ _                       @lfun @nav             @num @rfun
+
+                         @lfun                       @rfun
+                         @lfun                  @num @rfun
+)
+
 (deflayer rus_u ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
@@ -298,6 +311,7 @@
   № (switch ((base-layer rus)) S-3 break () (macro @ru 50 S-3 50 @en) break)
   ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
   .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
+  ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
 
   ;; fun
   dr0 (dynamic-macro-record 0)
@@ -375,6 +389,7 @@
   п g
   г u
   ж ;
+  ё grv
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
