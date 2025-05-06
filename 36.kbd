@@ -83,10 +83,10 @@
  i        @ftab q    w    e    r                _    _    _    _    _        _    _    _
  caps      lsft a    s    d    f                _    _    _    _    _        _
  m         lctl z    x    c   @vb               _    _    _    _    _
- _                       @galt spc              ret  prnt
+ _                       @galt spc              ret @gprnt
 
-                         @galt                       prnt
-                         @galt                  ret  prnt
+                         @galt                      @gprnt
+                         @galt                  ret @gprnt
 )
 
 (deflayer gfn ;; fn for gaming layer
@@ -220,7 +220,8 @@
     file M-e ;; Launch file manager
     close_window A-f4
     kill (tap-dance 400 ( @close_window C-S-esc )) ;; Close current window or kill any app
-    prnt M-S-s ;; Make a screenshot
+    gprnt prnt ;; Make a screenshot - full screen
+    prnt M-S-s ;; Make a screenshot - region
   )
 )
 
@@ -234,6 +235,7 @@
     file M-e ;; Launch file manager
     close_window C-q
     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
+    gprnt prnt ;; Make a screenshot
     prnt prnt ;; Make a screenshot
   )
 )
@@ -253,7 +255,8 @@
     file A-M-spc ;; Launch file manager
     close_window M-q
     kill (tap-dance 400 ( @close_window A-M-esc )) ;; Close current window or kill any app
-    prnt M-S-4 ;; Make a screenshot
+    gprnt M-S-3 ;; Make a screenshot - full screen
+    prnt M-S-4 ;; Make a screenshot - region
 	del C-d
 	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
   )
