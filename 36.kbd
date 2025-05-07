@@ -68,7 +68,7 @@
 
  i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
  caps      lsft a    s    d    f                XX   left down rght rsft     _
- m         lctl z    x    c   @vb               XX   XX   XX   XX   rctl
+ m         lctl z    x    c   @vb               XX   XX   XX  @l/\  rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -94,7 +94,7 @@
 
  _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
  _         lsft left down rght XX               XX   left down rght rsft     _
- _         lctl XX   XX   XX   XX               XX   XX   XX   XX   rctl
+ _         lctl XX   XX   XX   XX               XX   XX   XX  @l/\  rctl
  _                       @galt spc              spc @galt
 
                          @galt                      @galt
@@ -199,6 +199,22 @@
 )
 
 ;; -------------------------------------------------------------------------------------
+;; layer to switch betwen typing and gaming layers and toggle mods if any
+
+(deflayer swi ;; switcher, layer to switch layers
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _  @gam_r @gam _    _                _    _  @gam @gam_r _        _
+ _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
+ _                        _    _                _    _
+
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
 ;; alt layers,
 ;; replace default eng and rus to use alternative layouts
 
@@ -233,12 +249,9 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (w e) @eng $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
-  (e r) @rus $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
+  (e r) @eng $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
+  (w e) @rus $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
   (c v) @rus_u $hold-time all-released  (               gam gam_r gfn num sym fun nav mos)
-  (x c) @gam $hold-time all-released    (                         gfn num sym fun nav mos)
-  (z x) @gam_r $hold-time all-released  (                         gfn num sym fun nav mos)
-  (x v) @eng $hold-time all-released    (eng rus rus_u            gfn num sym fun nav mos)
   (r t) @“” $hold-time all-released     (               gam gam_r gfn num sym fun nav mos)
   (y u) @'' $hold-time all-released     (                   gam_r gfn num sym fun nav mos)
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
@@ -415,7 +428,7 @@
   ;; special actions for English layer
 
   ;; eng
-  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle swi))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
@@ -469,7 +482,7 @@
   г u
   ж ;
   ё grv
-  lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
+  lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle swi))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left)))
@@ -598,7 +611,7 @@
   uё (unicode ё)
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
-  _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
+  _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle swi))
   йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
   ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
   шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
