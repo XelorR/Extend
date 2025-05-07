@@ -225,7 +225,7 @@
   (, .) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
   (x c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
   (r t) @“” $hold-time all-released     (               gam gfn num sym fun nav mos)
-  (y u) @'' $hold-time all-released    (                   gfn num sym fun nav mos)
+  (y u) @'' $hold-time all-released     (                   gfn num sym fun nav mos)
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
