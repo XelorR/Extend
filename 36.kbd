@@ -220,10 +220,11 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (c v) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (m ,) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
-  (, .) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
+  (w e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (e r) @rus $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (c v) @rus_u $hold-time all-released  (               gam gfn num sym fun nav mos)
   (x c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (x v) @eng $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
   (r t) @“” $hold-time all-released     (               gam gfn num sym fun nav mos)
   (y u) @'' $hold-time all-released     (                   gfn num sym fun nav mos)
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
@@ -234,13 +235,13 @@
   ;; comment following letters if you want to use йцукен instead of diktor
   (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (e r) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (m ,) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (, .) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @эЭ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (i o) @хХ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   ;; (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (w e) @хХ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (e r) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (m ,) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (, .) @эЭ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
 )
 
 ;; -------------------------------------------------------------------------------------
