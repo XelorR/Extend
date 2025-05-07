@@ -23,7 +23,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
- _        @lz   x    c    v    b                k    m   @,?  @.!  @l/\
+ _        @lz   x    c    v    b                k    m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -68,7 +68,7 @@
 
  i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
  caps      lsft a    s    d    f                XX   left down rght rsft     _
- m         lctl z    x    c   @vb              @l/\  XX   XX   XX   rctl
+ m         lctl z    x    c   @vb              @l/:  XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -94,7 +94,7 @@
 
  _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
  _         lsft left down rght XX               XX   left down rght rsft     _
- _         lctl XX   XX   XX   XX              @l/\  XX   XX   XX   rctl
+ _         lctl XX   XX   XX   XX              @l/:  XX   XX   XX   rctl
  _                       @galt spc              spc @galt
 
                          @galt                      @galt
@@ -209,7 +209,6 @@
  _         _  @gam_r @gam _    _                _    _  @gam @gam_r _        _
  _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
  _                        _    _                _    _
-
                           _                          _     
                           _                     _    _
 )
@@ -224,7 +223,7 @@
 
  _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
 @lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
- _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
+ _        @lz   x    c    v    b                n    m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -428,7 +427,7 @@
   ;; special actions for English layer
 
   ;; eng
-  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle swi))
+  l/: (tap-hold $tap-time $hold-pinky (fork / S-; (lsft rsft)) (layer-toggle swi))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
