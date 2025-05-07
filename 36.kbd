@@ -68,7 +68,7 @@
 
  i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
  caps      lsft a    s    d    f                XX   left down rght rsft     _
- m         lctl z    x    c   @vb               XX   XX   XX  @l/\  rctl
+ m         lctl z    x    c   @vb              @l/\  XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -94,7 +94,7 @@
 
  _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
  _         lsft left down rght XX               XX   left down rght rsft     _
- _         lctl XX   XX   XX   XX               XX   XX   XX  @l/\  rctl
+ _         lctl XX   XX   XX   XX              @l/\  XX   XX   XX   rctl
  _                       @galt spc              spc @galt
 
                          @galt                      @galt
