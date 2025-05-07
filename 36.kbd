@@ -108,7 +108,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @dq  @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
+ _        @“   @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
  _                      @lfun @nav            @num  @rfun
@@ -220,10 +220,12 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (r e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (i u) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
-  (, m) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
-  (v c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (c v) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (m ,) @rus $hold-time all-released    (                   gfn num sym fun nav mos)
+  (, .) @rus_u $hold-time all-released  (                   gfn num sym fun nav mos)
+  (x c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
+  (r t) @“” $hold-time all-released     (               gam gfn num sym fun nav mos)
+  (y u) @'' $hold-time all-released    (                   gfn num sym fun nav mos)
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
@@ -231,14 +233,14 @@
   (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
   ;; comment following letters if you want to use йцукен instead of diktor
   (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   (w e) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (r t) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (e r) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
   ;; (i o) @эЭ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (y u) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
   ;; (w e) @хХ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (r t) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (e r) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -345,7 +347,7 @@
   ^ (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-6 break)
   ` (switch ((base-layer rus)) (macro @en 50 grv 50 @ru) break () grv break)
   at (switch ((base-layer rus)) (macro @en 50 S-2 50 @ru) break () S-2 break)
-  dq (switch ((base-layer rus)) S-2 break () S-' break)
+  “ (switch ((base-layer rus)) S-2 break () S-' break)
   : (switch ((base-layer rus)) S-6 break () S-; break)
   | (switch ((base-layer rus)) (macro @en 50 S-\ 50 @ru) break () S-\ break)
   ~ (switch ((base-layer rus)) (macro @en 50 S-grv 50 @ru) break () S-grv break)
@@ -357,6 +359,8 @@
   ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
   .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
   ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
+  “” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
+  '' (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ' 50 @ru) (macro @en 50 ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left))) break )
 
   ;; fun
   dr0 (dynamic-macro-record 0)
@@ -452,7 +456,7 @@
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
-  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
+  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
