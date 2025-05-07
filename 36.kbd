@@ -66,9 +66,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- i        @ftab q    w    e    r                _    _    _    _    _        _    _    _
- caps      lsft a    s    d    f                _    _    _    _    _        _
- m         lctl z    x    c   @vb               _    _    _    _    _
+ i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
+ caps      lsft a    s    d    f                XX   left down rght rsft     _
+ m         lctl z    x    c   @vb               XX   XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -79,13 +79,26 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _       @gesc  1    2    3    t                _    home up   end  del      _    _    _
- _        caps @h4  @h5  @h6   o                _    left down rght bspc     _
- _        m     j    i    g    p                _    pgup menu pgdn @kill
+ _       @gesc  1    2    3    t                _    _    _    _    _        _    _    _
+ _        caps @h4  @h5  @h6   o                _    _    _    _    _        _
+ _        m     j    i    g    p                _    _    _    _    _ 
  _                        XX  ret               _    _
 
                           XX                         _     
                           XX                    _    _
+)
+
+(deflayer gam_r ;; gaming layer for racing games
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+@gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
+ _         lsft left down rght XX               XX   left down rght rsft     _
+ _         lctl XX   XX   XX   XX               XX   XX   XX   XX   rctl
+ _                       @galt spc              spc @galt
+
+                         @galt                      @galt
+                         @galt                  spc @galt
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -220,28 +233,29 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (w e) @eng $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (e r) @rus $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (c v) @rus_u $hold-time all-released  (               gam gfn num sym fun nav mos)
-  (x c) @gam $hold-time all-released    (               gam gfn num sym fun nav mos)
-  (x v) @eng $hold-time all-released    (eng rus rus_u      gfn num sym fun nav mos)
-  (r t) @“” $hold-time all-released     (               gam gfn num sym fun nav mos)
-  (y u) @'' $hold-time all-released     (                   gfn num sym fun nav mos)
-  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
-  (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gfn         fun nav mos)
+  (w e) @eng $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
+  (e r) @rus $hold-time all-released    (               gam gam_r gfn num sym fun nav mos)
+  (c v) @rus_u $hold-time all-released  (               gam gam_r gfn num sym fun nav mos)
+  (x c) @gam $hold-time all-released    (                         gfn num sym fun nav mos)
+  (z x) @gam_r $hold-time all-released  (                         gfn num sym fun nav mos)
+  (x v) @eng $hold-time all-released    (eng rus rus_u            gfn num sym fun nav mos)
+  (r t) @“” $hold-time all-released     (               gam gam_r gfn num sym fun nav mos)
+  (y u) @'' $hold-time all-released     (                   gam_r gfn num sym fun nav mos)
+  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
+  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
+  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
+  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
+  (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos)
   ;; comment following letters if you want to use йцукен instead of diktor
-  (i o) @йЙ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (m ,) @шШ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
-  (, .) @щЩ $hold-time all-released     (eng            gam gfn num sym fun nav mos) ;; diktor
+  (i o) @йЙ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos) ;; diktor
+  (u i) @ёЁ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos) ;; diktor
+  (m ,) @шШ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos) ;; diktor
+  (, .) @щЩ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @хХ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (u i) @ёЁ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (m ,) @ъЪ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
-  ;; (, .) @эЭ $hold-time all-released     (eng            gam gfn num sym fun nav mos)
+  ;; (i o) @хХ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos)
+  ;; (u i) @ёЁ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos)
+  ;; (m ,) @ъЪ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos)
+  ;; (, .) @эЭ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos)
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -319,6 +333,7 @@
   rus (multi (layer-switch rus) @ru)
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
+  gam_r (multi (layer-switch gam_r) @en)
 
   ;; -------------------------------------------------------------------------------------
   ;; symbols definition
