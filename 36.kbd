@@ -282,7 +282,7 @@
     ;; other alias
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
-    close_window A-f4
+    close_window (multi (release-key lsft) (release-key rsft) A-f4)
     kill (tap-dance 400 ( @close_window C-S-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
     prnt M-S-s ;; Make a screenshot - region
@@ -297,7 +297,7 @@
     ;; other alias
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
-    close_window C-q
+    close_window (multi (release-key lsft) (release-key rsft) C-q)
     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
     prnt M-S-prnt ;; Make a screenshot - region
@@ -317,7 +317,7 @@
     end (fork M-rght M-down (lalt))
     mcon mctl ;; Mission Control, MacOS native
     file A-M-spc ;; Launch file manager
-    close_window M-q
+    close_window (multi (release-key lsft) (release-key rsft) M-q)
     kill (tap-dance 400 ( @close_window A-M-esc )) ;; Close current window or kill any app
     gprnt M-S-3 ;; Make a screenshot - full screen
     prnt M-S-4 ;; Make a screenshot - region
