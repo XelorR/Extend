@@ -317,6 +317,33 @@
     redo C-S-z
   )
 )
+;; as environment variable should be set in context of Kanata,
+;; if you want to create systemd service (which runs before desktop environment)
+;; you have to hardcode variable inside service
+;; (/etc/systemd/system/kanata.service), like this:
+#|
+[Unit]
+Description=Kanata Keyboard Remapping Service
+After=network.target
+
+[Service]
+Environment=XDG_CURRENT_DESKTOP=KDE
+ExecStart=/usr/bin/kanata -c /home/username/path/to/config/kanata.kbd
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+|#
+;; Then run
+#|
+sudo systemctl daemon-reload
+sudo systemctl restart kanata.service
+|#
+;; then check if it is running as expected:
+#|
+journalctl -u kanata.service -f
+|#
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
    launch A-spc ;; launch applications
