@@ -331,7 +331,7 @@
 (environment (XDG_CURRENT_DESKTOP GNOME)
  (defalias
    launch lmet ;; launch applications
-   mcon lmet ;; Mission Control, KDE Plasma default
+   mcon lmet ;; Mission Control, Gnome default
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill @close_window ;; Close current window
@@ -342,7 +342,7 @@
 (environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
  (defalias
    launch lmet ;; launch applications
-   mcon lmet ;; Mission Control, KDE Plasma default
+   mcon lmet ;; Mission Control, Gnome default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill @close_window ;; Close current window
@@ -353,7 +353,7 @@
 (environment (XDG_CURRENT_DESKTOP "")
  (defalias
    launch lmet ;; launch applications
-   mcon lmet ;; Mission Control, KDE Plasma default
+   mcon lmet ;; Mission Control, other desktops
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) A-f4)
    kill @close_window ;; Close current window
