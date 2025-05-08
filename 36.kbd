@@ -291,6 +291,9 @@
 ;; -------------------------------------------------------------------------------------
 ;; platform specific configs
 
+;; -------------------------------------------------------------------------------------
+;; Microsoft Windows
+
 (platform (win winiov2 wintercept)
   (defalias
     ;; system combinations to switch languages
@@ -307,6 +310,9 @@
     redo C-y
   )
 )
+
+;; -------------------------------------------------------------------------------------
+;; GNU Linux
 
 (platform (linux)
   (defalias
@@ -389,6 +395,9 @@ journalctl -u kanata.service -f
  )
 )
 
+;; -------------------------------------------------------------------------------------
+;; Apple MacOS
+
 (platform (macos)
   (defalias
     ;; system combinations to switch languages
@@ -411,6 +420,9 @@ journalctl -u kanata.service -f
 	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
   )
 )
+
+;; -------------------------------------------------------------------------------------
+;; Both, Linux and Windows
 
 (platform (win winiov2 wintercept linux)
   (defalias
