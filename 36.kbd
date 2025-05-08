@@ -140,10 +140,10 @@
  _        @“   @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
- _                      @lfun @nav            @num  @rfun
+ _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
-                        @lfun                 @num  @rfun
+                        @lfun                  @num @rfun
 )
 
 (deflayer fun ;; function, media and keypad layer
