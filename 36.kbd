@@ -168,7 +168,7 @@
 
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
- _         C-z  C-x   C-c  C-v   C-S-z            mltp pgup menu pgdn @file 
+ _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
                           @lfun                        @rfun
@@ -181,7 +181,7 @@
 
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
- _         M-z  M-x   M-c  M-v   M-S-z            mltp pgup menu pgdn @file 
+ _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
  _                        @lfun @nav             @rsym @rfun
 
                           @lfun                        @rfun
@@ -194,7 +194,7 @@
 
  _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v   C-S-z          _    mltp mrtp mmtp @file
+ _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
@@ -207,7 +207,7 @@
 
  _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         M-z  M-x   M-c  M-v   M-S-z          _    mltp mrtp mmtp @file
+ _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
@@ -301,6 +301,7 @@
     kill (tap-dance 400 ( @close_window C-S-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
     prnt M-S-s ;; Make a screenshot - region
+    redo C-y
   )
 )
 
@@ -316,6 +317,7 @@
     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
     prnt M-S-prnt ;; Make a screenshot - region
+    redo C-S-z
   )
 )
 
@@ -336,6 +338,7 @@
     kill (tap-dance 400 ( @close_window A-M-esc )) ;; Close current window or kill any app
     gprnt M-S-3 ;; Make a screenshot - full screen
     prnt M-S-4 ;; Make a screenshot - region
+    redo M-S-z
 	del C-d
 	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
   )
