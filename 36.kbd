@@ -312,7 +312,7 @@
     ;; system combinations to switch languages
     en caps   ;; this can be set in most modern desktop environments
     ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
-    ;; other alias
+    ;; other alias, KDE Plasma specific
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) C-q)
