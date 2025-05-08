@@ -301,6 +301,11 @@
     ru C-S-9 ;; no additional software needed
     ;; other alias
     launch lmet ;; launch applications
+    ;; launch terminal
+    term (macro @launch 300 S-t e r m i n a l 400 ret)
+    terr (macro @en 50 @launch 300 S-t e r m i n a l 400 ret 50 @ru)
+    ter (switch ((base-layer rus)) @terr break () @term break )
+    ;; other bindings
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) A-f4)
@@ -352,6 +357,7 @@ journalctl -u kanata.service -f
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
    launch A-spc ;; launch applications
+   ter C-A-t ;; launch terminal
    mcon M-w ;; Mission Control, KDE Plasma default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
@@ -363,6 +369,7 @@ journalctl -u kanata.service -f
 (environment (XDG_CURRENT_DESKTOP GNOME)
  (defalias
    launch lmet ;; launch applications
+   ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
@@ -374,6 +381,7 @@ journalctl -u kanata.service -f
 (environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
  (defalias
    launch lmet ;; launch applications
+   ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
@@ -385,6 +393,7 @@ journalctl -u kanata.service -f
 (environment (XDG_CURRENT_DESKTOP "")
  (defalias
    launch lmet ;; launch applications
+   ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, other desktops
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) A-f4)
@@ -404,6 +413,9 @@ journalctl -u kanata.service -f
     ru C-S-9 ;; use Kawa: https://github.com/hatashiro/kawa
     ;; other alias
     launch M-spc ;; launch applications
+    term (macro @launch 300 S-t e r m i n a l 400 ret)
+    terr (macro @en 50 @launch 300 S-t e r m i n a l 400 ret 50 @ru)
+    ter (switch ((base-layer rus)) @terr break () @term break ) ;; launch terminal
     tlft M-S-[
     trgt M-S-]
     home (fork M-left M-up (lalt))
@@ -729,10 +741,6 @@ journalctl -u kanata.service -f
   vscode (macro @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
   vscodr (macro @en 50 @launch 300 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
   vsc (switch ((base-layer rus)) @vscodr break () @vscode break )
-  ;; launch terminal
-  term (macro @launch 300 S-t e r m i n a l 400 ret)
-  terr (macro @en 50 @launch 300 S-t e r m i n a l 400 ret 50 @ru)
-  ter (switch ((base-layer rus)) @terr break () @term break )
   ;; tap dance to launch applications
   lnch (tap-dance 500 ( @ter @vsc ))
   ;; emdash
