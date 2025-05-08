@@ -362,6 +362,7 @@
   rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
   gam_r (multi (layer-switch gam_r) @en)
+  qwe (multi (layer-switch qwe) @en)
 
   ;; -------------------------------------------------------------------------------------
   ;; symbols definition
