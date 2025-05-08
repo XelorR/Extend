@@ -300,7 +300,7 @@
     close_window (multi (release-key lsft) (release-key rsft) A-f4)
     kill (tap-dance 400 ( @close_window C-S-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
-    prnt (tap-dance 400 ( M-S-s prnt )) ;; Make a screenshot - region on tap, screen on double tap
+    prnt (tap-dance 400 ( M-S-s A-prnt prnt )) ;; Make a screenshot - region, window, screen
     redo C-y
   )
 )
@@ -316,7 +316,7 @@
     close_window (multi (release-key lsft) (release-key rsft) C-q)
     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
     gprnt prnt ;; Make a screenshot - full screen
-    prnt (tap-dance 400 ( M-S-prnt prnt )) ;; Make a screenshot - region on tap, screen on double tap
+    prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
     redo C-S-z
   )
 )
@@ -337,7 +337,7 @@
     close_window (multi (release-key lsft) (release-key rsft) M-q)
     kill (tap-dance 400 ( @close_window A-M-esc )) ;; Close current window or kill any app
     gprnt M-S-3 ;; Make a screenshot - full screen
-    prnt (tap-dance 400 ( M-S-4 M-S-3 )) ;; Make a screenshot - region on tap, screen on double tap
+    prnt (tap-dance 400 ( M-S-4 (macro M-S-4 spc) M-S-3 )) ;; Make a screenshot - region, window, screen
     redo M-S-z
 	del C-d
 	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
