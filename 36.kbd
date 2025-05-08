@@ -297,6 +297,7 @@
     en C-S-8 ;; it can be set in windows language settings
     ru C-S-9 ;; no additional software needed
     ;; other alias
+    launch lmet ;; launch applications
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) A-f4)
@@ -313,6 +314,7 @@
     en caps   ;; this can be set in most modern desktop environments
     ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
     ;; other alias, KDE Plasma specific
+    launch A-spc ;; launch applications
     mcon M-w ;; Mission Control, KDE Plasma default
     file M-e ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) C-q)
@@ -348,7 +350,6 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
-    launch lmet ;; launch applications
     tlft C-S-tab
     trgt C-tab
     home home
