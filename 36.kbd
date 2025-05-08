@@ -362,7 +362,7 @@ journalctl -u kanata.service -f
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
-   gprnt prnt ;; Make a screenshot - full screen
+   gprnt S-prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
  )
 )
