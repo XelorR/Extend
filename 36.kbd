@@ -319,14 +319,6 @@
 ;; -------------------------------------------------------------------------------------
 ;; GNU Linux
 
-(platform (linux)
-  (defalias
-    ;; system combinations to switch languages
-    en caps   ;; this can be set in most modern desktop environments
-    ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
-    redo C-S-z
-  )
-)
 ;; as environment variable should be set in context of Kanata,
 ;; if you want to create systemd service (which runs before desktop environment)
 ;; you have to hardcode variable inside service
@@ -354,6 +346,15 @@ sudo systemctl restart kanata.service
 #|
 journalctl -u kanata.service -f
 |#
+
+(platform (linux)
+  (defalias
+    ;; system combinations to switch languages
+    en caps   ;; this can be set in most modern desktop environments
+    ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
+    redo C-S-z
+  )
+)
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
    launch A-spc ;; launch applications
