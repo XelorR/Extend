@@ -316,50 +316,50 @@
     ;; other alias, KDE Plasma specific
     redo C-S-z
   )
-  (environment XDG_CURRENT_DESKTOP KDE
-   (defalias
-     launch A-spc ;; launch applications
-     mcon M-w ;; Mission Control, KDE Plasma default
-     file M-e ;; Launch file manager
-     close_window (multi (release-key lsft) (release-key rsft) C-q)
-     kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
-     gprnt prnt ;; Make a screenshot - full screen
-     prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
-   )
-  )
-  (environment XDG_CURRENT_DESKTOP GNOME
-   (defalias
-     launch lmet ;; launch applications
-     mcon lmet ;; Mission Control, KDE Plasma default
-     file C-A-e ;; Launch file manager
-     close_window (multi (release-key lsft) (release-key rsft) C-q)
-     kill @close_window ;; Close current window
-     gprnt prnt ;; Make a screenshot - full screen
-     prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
-   )
-  )
-  (environment XDG_CURRENT_DESKTOP ubuntu:GNOME
-   (defalias
-     launch lmet ;; launch applications
-     mcon lmet ;; Mission Control, KDE Plasma default
-     file M-e ;; Launch file manager
-     close_window (multi (release-key lsft) (release-key rsft) C-q)
-     kill @close_window ;; Close current window
-     gprnt prnt ;; Make a screenshot - full screen
-     prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
-   )
-  )
-  (environment XDG_CURRENT_DESKTOP ""
-   (defalias
-     launch lmet ;; launch applications
-     mcon lmet ;; Mission Control, KDE Plasma default
-     file C-A-e ;; Launch file manager
-     close_window (multi (release-key lsft) (release-key rsft) A-f4)
-     kill @close_window ;; Close current window
-     gprnt prnt ;; Make a screenshot - full screen
-     prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
-   )
-  )
+)
+(environment (XDG_CURRENT_DESKTOP KDE)
+ (defalias
+   launch A-spc ;; launch applications
+   mcon M-w ;; Mission Control, KDE Plasma default
+   file M-e ;; Launch file manager
+   close_window (multi (release-key lsft) (release-key rsft) C-q)
+   kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
+   gprnt prnt ;; Make a screenshot - full screen
+   prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
+ )
+)
+(environment (XDG_CURRENT_DESKTOP GNOME)
+ (defalias
+   launch lmet ;; launch applications
+   mcon lmet ;; Mission Control, KDE Plasma default
+   file C-A-e ;; Launch file manager
+   close_window (multi (release-key lsft) (release-key rsft) C-q)
+   kill @close_window ;; Close current window
+   gprnt prnt ;; Make a screenshot - full screen
+   prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
+ )
+)
+(environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
+ (defalias
+   launch lmet ;; launch applications
+   mcon lmet ;; Mission Control, KDE Plasma default
+   file M-e ;; Launch file manager
+   close_window (multi (release-key lsft) (release-key rsft) C-q)
+   kill @close_window ;; Close current window
+   gprnt prnt ;; Make a screenshot - full screen
+   prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
+ )
+)
+(environment (XDG_CURRENT_DESKTOP "")
+ (defalias
+   launch lmet ;; launch applications
+   mcon lmet ;; Mission Control, KDE Plasma default
+   file C-A-e ;; Launch file manager
+   close_window (multi (release-key lsft) (release-key rsft) A-f4)
+   kill @close_window ;; Close current window
+   gprnt prnt ;; Make a screenshot - full screen
+   prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
+ )
 )
 
 (platform (macos)
