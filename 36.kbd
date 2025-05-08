@@ -390,18 +390,6 @@ journalctl -u kanata.service -f
    prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
  )
 )
-(environment (XDG_CURRENT_DESKTOP "")
- (defalias
-   launch lmet ;; launch applications
-   ter C-A-t ;; launch terminal
-   mcon lmet ;; Mission Control, other desktops
-   file C-A-e ;; Launch file manager
-   close_window (multi (release-key lsft) (release-key rsft) A-f4)
-   kill @close_window ;; Close current window
-   gprnt prnt ;; Make a screenshot - full screen
-   prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
- )
-)
 
 ;; -------------------------------------------------------------------------------------
 ;; Apple MacOS
