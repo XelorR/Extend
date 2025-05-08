@@ -23,7 +23,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
- _        @lz   x    c    v    b                k    m   @,?  @.!  @l/:
+ _        @lz   x    c    v    b               @lk   m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -36,7 +36,7 @@
 
  _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
 @lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
- _         @lф  @э   @х   @ы   @ю               @б   @м   @п   @г   @lж
+ _         @lф  @э   @х   @ы   @ю               @lб  @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
@@ -52,7 +52,7 @@
 
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
- _         @_lф @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_lж
+ _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
@@ -68,7 +68,7 @@
 
  i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
  caps      lsft a    s    d    f                XX   left down rght rsft     _
- m         lctl z    x    c   @vb              @l/:  XX   XX   XX   rctl
+ m         lctl z    x    c   @vb              @ln   XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -94,7 +94,7 @@
 
  _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
  _         lsft left down rght XX               XX   left down rght rsft     _
- _         lctl XX   XX   XX   XX              @l/:  XX   XX   XX   rctl
+ _         lctl XX   XX   XX   XX              @ln   XX   XX   XX   rctl
  _                       @galt spc              spc @galt
 
                          @galt                      @galt
@@ -110,7 +110,7 @@
 
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _
- _         _    _    _    _    _                _    _    _    _   @l/ 
+ _         _    _    _    _    _               @ln   _    _    _    _ 
  _                        _    _                _    _
 
                           _                          _     
@@ -445,7 +445,9 @@
 
   ;; eng
   l/: (tap-hold $tap-time $hold-pinky (fork / S-; (lsft rsft)) (layer-toggle swi))
-  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle qwe))
+  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle swi))
+  ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
+  lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
@@ -500,6 +502,7 @@
   ж ;
   ё grv
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle swi))
+  lб (tap-hold $tap-time $hold-pinky @б (layer-toggle swi))
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left)))
@@ -629,6 +632,7 @@
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
   _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle swi))
+  _lб (tap-hold $tap-time $hold-pinky @_б (layer-toggle swi))
   йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
   ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
   шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
