@@ -102,6 +102,22 @@
 )
 
 ;; -------------------------------------------------------------------------------------
+;; disable remapping
+
+(deflayer qwe ;; no remapping
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _
+ _         _    _    _    _    _                _    _    _    _   @l/ 
+ _                        _    _                _    _
+
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
 ;; layers with extra buttons: numeric, symbol, function
 
 (deflayer num ;; numeric and punctuation layer
@@ -206,7 +222,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _  @gam_r @gam _    _                _    _  @gam @gam_r _        _
+ _         _  @gam_r @gam @qwe _                _  @qwe @gam @gam_r _        _
  _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
  _                        _    _                _    _
                           _                          _     
@@ -428,6 +444,7 @@
 
   ;; eng
   l/: (tap-hold $tap-time $hold-pinky (fork / S-; (lsft rsft)) (layer-toggle swi))
+  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle qwe))
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
