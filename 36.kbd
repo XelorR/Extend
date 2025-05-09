@@ -726,12 +726,18 @@ journalctl -u kanata.service -f
   ;; -------------------------------------------------------------------------------------
   ;; Macros and special buttons with complicated logic
 
-  ;; launch visual studio code
-  vscode (macro @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
-  vscodr (macro @en 50 @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
-  vsc (switch ((base-layer rus)) @vscodr break () @vscode break )
+  ;; launch visual studio code, zed and other applications
+  vscode_en (macro @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
+  vscode_ru (macro @en 50 @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
+  vsc (switch ((base-layer rus)) @vscode_ru break () @vscode_en break )
+  zed_en (macro @launch 400 S-z e d 400 ret)
+  zed_ru (macro @en 50 @launch 400 S-z e d 400 ret 50 @ru)
+  zed (switch ((base-layer rus)) @zed_ru break () @zed_en break )
+  ghostty_en (macro @launch 400 S-g h o s t t y 400 ret)
+  ghostty_ru (macro @en 50 @launch 400 S-g h o s t t y 400 ret 50 @ru)
+  ghostty (switch ((base-layer rus)) @ghostty_ru break () @ghostty_en break )
   ;; tap dance to launch applications
-  lnch (tap-dance 500 ( @ter @vsc ))
+  lnch (tap-dance 500 ( @ter @vsc @zed ))
   ;; emdash
   u— (unicode —)
   ur— (macro @en 50 @u— 50 @ru)
