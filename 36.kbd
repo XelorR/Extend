@@ -301,10 +301,6 @@
     ru C-S-9 ;; no additional software needed
     ;; other alias
     launch lmet ;; launch applications
-    ;; launch terminal
-    term (macro @launch 400 S-t e r m i n a l 400 ret)
-    terr (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
-    ter (switch ((base-layer rus)) @terr break () @term break )
     ;; other bindings
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
@@ -313,6 +309,11 @@
     gprnt prnt ;; Make a screenshot - full screen
     prnt (tap-dance 400 ( M-S-s A-prnt prnt )) ;; Make a screenshot - region, window, screen
     redo C-y
+
+    ;; launching applications
+    term (macro @launch 400 S-t e r m i n a l 400 ret)
+    terr (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
+    ter (switch ((base-layer rus)) @terr break () @term break )
   )
 )
 
@@ -347,24 +348,21 @@ sudo systemctl restart kanata.service
 journalctl -u kanata.service -f
 |#
 
-(platform (linux)
-  (defalias
-    redo C-S-z
-  )
-)
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
    ;; system combinations to switch languages
    en C-S-8 ;; this can be set in KDE Plasma language settings
    ru C-S-9
    launch A-spc ;; launch applications
-   ter C-A-t ;; launch terminal
    mcon M-w ;; Mission Control, KDE Plasma default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill (tap-dance 400 ( @close_window M-A-esc )) ;; Close current window or kill any app
    gprnt S-prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
+   
+   ;; launching applications
+   ter C-A-t ;; launch terminal
  )
 )
 (environment (XDG_CURRENT_DESKTOP GNOME)
@@ -373,13 +371,15 @@ journalctl -u kanata.service -f
    en caps   ;; this can be set in most modern desktop environments, or Gnome Tweaks in Gnome
    ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
    launch lmet ;; launch applications
-   ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill @close_window ;; Close current window
    gprnt prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
+
+   ;; launching applications
+   ter C-A-t ;; launch terminal
  )
 )
 (environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
@@ -388,14 +388,21 @@ journalctl -u kanata.service -f
    en caps   ;; this can be set in most modern desktop environments, or Gnome Tweaks in Gnome
    ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
    launch lmet ;; launch applications
-   ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
    kill @close_window ;; Close current window
    gprnt prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
+
+   ;; launching applications
+   ter C-A-t ;; launch terminal
  )
+)
+(platform (linux)
+  (defalias
+    redo C-S-z
+  )
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -408,9 +415,6 @@ journalctl -u kanata.service -f
     ru C-S-9 ;; use Kawa: https://github.com/hatashiro/kawa
     ;; other alias
     launch M-spc ;; launch applications
-    term (macro @launch 400 S-t e r m i n a l 400 ret)
-    terr (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
-    ter (switch ((base-layer rus)) @terr break () @term break ) ;; launch terminal
     tlft M-S-[
     trgt M-S-]
     home (fork M-left M-up (lalt))
@@ -424,6 +428,14 @@ journalctl -u kanata.service -f
     redo M-S-z
     del C-d
     galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
+
+    ;; launching applications
+    browser_en (macro @launch 400 S-s a f a r i 400 ret)
+    browser_ru (macro @en 50 @launch 400 S-s a f a r i 400 ret 50 @ru)
+    browser (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
+    term (macro @launch 400 S-t e r m i n a l 400 ret)
+    terr (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
+    ter (switch ((base-layer rus)) @terr break () @term break ) ;; launch terminal
   )
 )
 
@@ -438,6 +450,11 @@ journalctl -u kanata.service -f
     end end
     del del
     galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
+
+    ;; launching applications
+    browser_en (macro @launch 400 S-b r o w s e r 400 ret)
+    browser_ru (macro @en 50 @launch 400 S-b r o w s e r 400 ret 50 @ru)
+    browser (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
   )
 )
 
