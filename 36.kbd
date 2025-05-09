@@ -416,8 +416,8 @@ journalctl -u kanata.service -f
     gprnt M-S-3 ;; Make a screenshot - full screen
     prnt (tap-dance 400 ( M-S-4 (macro M-S-4 spc) M-S-3 )) ;; Make a screenshot - region, window, screen
     redo M-S-z
-	del C-d
-	galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
+    del C-d
+    galt (tap-hold $tap-time $hold-time lmet (layer-toggle gfn))
   )
 )
 
@@ -430,8 +430,8 @@ journalctl -u kanata.service -f
     trgt C-tab
     home home
     end end
-	del del
-	galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
+    del del
+    galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
   )
 )
 
@@ -591,7 +591,7 @@ journalctl -u kanata.service -f
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
-	() @ьъ break
+    () @ьъ break
   )
 
   ;; -------------------------------------------------------------------------------------
