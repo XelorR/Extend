@@ -349,14 +349,14 @@ journalctl -u kanata.service -f
 
 (platform (linux)
   (defalias
-    ;; system combinations to switch languages
-    en caps   ;; this can be set in most modern desktop environments
-    ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
     redo C-S-z
   )
 )
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
+   ;; system combinations to switch languages
+   en C-S-8 ;; this can be set in KDE Plasma language settings
+   ru C-S-9
    launch A-spc ;; launch applications
    ter C-A-t ;; launch terminal
    mcon M-w ;; Mission Control, KDE Plasma default
@@ -369,6 +369,9 @@ journalctl -u kanata.service -f
 )
 (environment (XDG_CURRENT_DESKTOP GNOME)
  (defalias
+   ;; system combinations to switch languages
+   en caps   ;; this can be set in most modern desktop environments, or Gnome Tweaks in Gnome
+   ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
    launch lmet ;; launch applications
    ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
@@ -381,6 +384,9 @@ journalctl -u kanata.service -f
 )
 (environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
  (defalias
+   ;; system combinations to switch languages
+   en caps   ;; this can be set in most modern desktop environments, or Gnome Tweaks in Gnome
+   ru S-caps ;; usually, in "Key bindings" -> "Switching to another layout"
    launch lmet ;; launch applications
    ter C-A-t ;; launch terminal
    mcon lmet ;; Mission Control, Gnome default
