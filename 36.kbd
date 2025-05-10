@@ -341,7 +341,7 @@ WantedBy=multi-user.target
 ;; Then run
 #|
 sudo systemctl daemon-reload
-sudo systemctl restart kanata.service
+sudo systemctl enable --now kanata.service
 |#
 ;; then check if it is running as expected:
 #|
