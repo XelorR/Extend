@@ -330,6 +330,9 @@
     term (macro M-r 400 w t 400 ret)
     terr (macro @en 50 M-r 400 w t 400 ret 50 @ru)
     ter (switch ((base-layer rus)) @terr break () @term break )
+    browser_en (macro M-r 400 m s e d g e 400 ret)
+    browser_ru (macro @en 50 M-r 400 m s e d g e 400 ret 50 @ru)
+    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break )
   )
 )
 
@@ -418,6 +421,11 @@ journalctl -u kanata.service -f
 (platform (linux)
   (defalias
     redo C-S-z
+
+    ;; launching applications
+    browser_en (macro @launch 400 S-b r o w s e r 400 ret)
+    browser_ru (macro @en 50 @launch 400 S-b r o w s e r 400 ret 50 @ru)
+    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
   )
 )
 
@@ -468,9 +476,6 @@ journalctl -u kanata.service -f
     galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
 
     ;; launching applications
-    browser_en (macro @launch 400 S-b r o w s e r 400 ret)
-    browser_ru (macro @en 50 @launch 400 S-b r o w s e r 400 ret 50 @ru)
-    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
   )
 )
 
