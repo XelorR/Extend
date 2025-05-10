@@ -239,7 +239,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         _    _    _    _   @gho              _    _    _    _    _        _    _    _
- _         _    _    _   @ter  _                _    _    _    _    _        _
+ _         _    _    _   @ter  _                _   @ntp  _    _    _        _
  _        @zed  _    _   @vsc @bro              _    _    _    _    _
  _                        _    _                _    _
 
@@ -333,6 +333,9 @@
     browser_en (macro M-r 400 m s e d g e 400 ret)
     browser_ru (macro @en 50 M-r 400 m s e d g e 400 ret 50 @ru)
     bro (switch ((base-layer rus)) @browser_ru break () @browser_en break )
+    notepad_en (macro M-r 400 n o t e p a d 400 ret)
+    notepad_ru (macro @en 50 M-r 400 n o t e p a d 400 ret 50 @ru)
+    ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
   )
 )
 
@@ -382,6 +385,9 @@ journalctl -u kanata.service -f
    
    ;; launching applications
    ter C-A-t ;; launch terminal
+   notepad_en (macro @launch 400 k w r i t e 400 ret)
+   notepad_ru (macro @en 50 @launch 400 k w r i t e 400 ret 50 @ru)
+   ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
  )
 )
 (environment (XDG_CURRENT_DESKTOP GNOME)
@@ -399,6 +405,9 @@ journalctl -u kanata.service -f
 
    ;; launching applications
    ter C-A-t ;; launch terminal
+   notepad_en (macro @launch 400 t e x t spc e d i t o r 400 ret)
+   notepad_ru (macro @en 50 @launch 400 t e x t spc e d i t o r 400 ret 50 @ru)
+   ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
  )
 )
 (environment (XDG_CURRENT_DESKTOP ubuntu:GNOME)
@@ -416,6 +425,9 @@ journalctl -u kanata.service -f
 
    ;; launching applications
    ter C-A-t ;; launch terminal
+   notepad_en (macro @launch 400 t e x t spc e d i t o r 400 ret)
+   notepad_ru (macro @en 50 @launch 400 t e x t spc e d i t o r 400 ret 50 @ru)
+   ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
  )
 )
 (platform (linux)
@@ -460,6 +472,9 @@ journalctl -u kanata.service -f
     terminal_en (macro @launch 400 S-t e r m i n a l 400 ret)
     terminal_ru (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
     ter (switch ((base-layer rus)) @terminal_ru break () @terminal_en break ) ;; launch terminal
+    notepad_en (macro @launch 400 t e x t spc e d i t 400 ret)
+    notepad_ru (macro @en 50 @launch 400 t e x t spc e d i t 400 ret 50 @ru)
+    ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
   )
 )
 
