@@ -84,9 +84,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- i        @ftab q    w    e    r                y    XX   up   XX  @ftab     _    _    _
+ i         tab  q    w    e    r                y    XX   up   XX  @ftab     _    _    _
  caps      lsft a    s    d    f                h    left down rght rsft     _
- m         lctl z    x    c   @vb              @ln   XX   XX   XX   rctl
+ m         lctl z    x    c    v               @ln   XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
@@ -98,9 +98,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _       @gesc  1    2    3    t                y    u    i    o    p        [    ]    _
- _        caps @h4  @h5  @h6   o                h    j    k    l    ;        '
- _        m     j    i    g    p                n    m    ,    .    / 
- _                        XX  ret               _    _
+ _        caps @h4  @h5  @h6   g                h    j    k    l    ;        '
+ _        fun   j    i    m    b                n    m    ,    .    / 
+ _                        XX  fun               _    _
 
                           XX                         _     
                           XX                    _    _
@@ -110,8 +110,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @ftab XX   up   XX   XX               XX   XX   up   XX  @ftab     _    _    _
- _         lsft left down rght XX               XX   left down rght rsft     _
+ _         tab  XX   up   XX   XX               XX   XX   up   XX   tab      _    _    _
+ _         lsft left down rght ret              ret  left down rght rsft     _
  _         lctl XX   XX   XX   XX              @ln   XX   XX   XX   rctl
  _                       @galt spc              spc @galt
 
@@ -578,7 +578,6 @@ journalctl -u kanata.service -f
   dp0 (dynamic-macro-play 0)
 
   ;; gam
-  vb (fork v b (lsft rsft))
 
   ;; -------------------------------------------------------------------------------------
   ;; navigation and edition specific
@@ -849,11 +848,11 @@ journalctl -u kanata.service -f
   ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
-  ftab (tap-hold $tap-time $hold-time tab (layer-toggle fun))
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
   lau (layer-while-held lau)
+  fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
