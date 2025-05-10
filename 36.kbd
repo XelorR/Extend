@@ -327,8 +327,8 @@
     redo C-y
 
     ;; launching applications
-    term (macro lmet-r 400 wt 400 ret)
-    terr (macro @en 50 lmet-r 400 wt 400 ret 50 @ru)
+    term (macro M-r 400 wt 400 ret)
+    terr (macro @en 50 M-r 400 wt 400 ret 50 @ru)
     ter (switch ((base-layer rus)) @terr break () @term break )
   )
 )
