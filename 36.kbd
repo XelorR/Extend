@@ -82,7 +82,7 @@
 
 (deflayer gam ;; gaming layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
-@gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
+@gesc      1    2    3    4    5                _    _    _    _    _        _    _    _
 
  i         tab  q    w    e    r                y    XX   up   XX   tab      _    _    _
  caps      lsft a    s    d    f                h    left down rght rsft     _
@@ -97,10 +97,10 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _       @gesc  1    2    3    t                y    u    i    o    p        [    ]    _
- _        caps @h4  @h5  @h6   g                h    j    k    l    ;        '
- _       @fun   j    i    m    b                n    m    ,    .    / 
- _                        XX @fun               _    _
+ _        grv   1    h    2    t                y    u    i    o    p        [    ]    _
+ _       @fun   j    i    m    g                h    j    k    l    ;        '
+ _        caps  3    esc  4    b                n    m    ,    .    / 
+ _                        XX   ret              _    _
 
                           XX                         _     
                           XX                    _    _
