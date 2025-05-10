@@ -853,7 +853,7 @@ journalctl -u kanata.service -f
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
-  lau (tap-hold $tap-time $hold-time ret (layer-toggle lau))
+  lau (layer-while-held lau)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
 )
