@@ -84,8 +84,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
 
- i        @ftab q    w    e    r                XX   XX   up   XX  @ftab     _    _    _
- caps      lsft a    s    d    f                XX   left down rght rsft     _
+ i        @ftab q    w    e    r                y    XX   up   XX  @ftab     _    _    _
+ caps      lsft a    s    d    f                h    left down rght rsft     _
  m         lctl z    x    c   @vb              @ln   XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
@@ -97,9 +97,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _       @gesc  1    2    3    t                _    _    _    _    _        _    _    _
- _        caps @h4  @h5  @h6   o                _    _    _    _    _        _
- _        m     j    i    g    p                _    _    _    _    _ 
+ _       @gesc  1    2    3    t                y    u    i    o    p        [    ]    _
+ _        caps @h4  @h5  @h6   o                h    j    k    l    ;        '
+ _        m     j    i    g    p                n    m    ,    .    / 
  _                        XX  ret               _    _
 
                           XX                         _     
