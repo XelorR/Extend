@@ -232,6 +232,22 @@
 )
 
 ;; -------------------------------------------------------------------------------------
+;; layer with macro to launch applications
+
+(deflayer lau ;; app launcher
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _   @ter @gho              _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _
+ _        @zed  _    _   @vsc @bro             _    _    _    _    _
+ _                        _    _                _    _
+
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
 ;; alt layers,
 ;; replace default eng and rus to use alternative layouts
 
@@ -432,7 +448,7 @@ journalctl -u kanata.service -f
     ;; launching applications
     browser_en (macro @launch 400 S-s a f a r i 400 ret)
     browser_ru (macro @en 50 @launch 400 S-s a f a r i 400 ret 50 @ru)
-    browser (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
+    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
     term (macro @launch 400 S-t e r m i n a l 400 ret)
     terr (macro @en 50 @launch 400 S-t e r m i n a l 400 ret 50 @ru)
     ter (switch ((base-layer rus)) @terr break () @term break ) ;; launch terminal
@@ -454,7 +470,7 @@ journalctl -u kanata.service -f
     ;; launching applications
     browser_en (macro @launch 400 S-b r o w s e r 400 ret)
     browser_ru (macro @en 50 @launch 400 S-b r o w s e r 400 ret 50 @ru)
-    browser (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
+    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
   )
 )
 
@@ -472,7 +488,7 @@ journalctl -u kanata.service -f
   zed (switch ((base-layer rus)) @zed_ru break () @zed_en break )
   ghostty_en (macro @launch 400 S-g h o s t t y 400 ret)
   ghostty_ru (macro @en 50 @launch 400 S-g h o s t t y 400 ret 50 @ru)
-  ghostty (switch ((base-layer rus)) @ghostty_ru break () @ghostty_en break )
+  gho (switch ((base-layer rus)) @ghostty_ru break () @ghostty_en break )
   ;; tap dance to launch applications
   lnch (tap-dance 500 ( @ter @vsc @zed ))
 
