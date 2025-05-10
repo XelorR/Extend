@@ -155,7 +155,7 @@
  _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
- _                       nlck @nav              kp0  nlck
+ _                       nlck @lau              kp0  nlck
 
                          nlck                        nlck
                          nlck                   kp0  nlck
@@ -171,10 +171,10 @@
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
- _                        @lfun @nav             @rsym @rfun
+ _                        @lau  @nav             @rsym @rfun
 
-                          @lfun                        @rfun
-                          @lfun                  @rsym @rfun
+                          @lau                         @rfun
+                          @lau                   @rsym @rfun
 )
 
 (deflayer nav_mac ;; navigation layer
@@ -184,10 +184,10 @@
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
- _                        @lfun @nav             @rsym @rfun
+ _                        @lau  @nav             @rsym @rfun
 
-                          @lfun                        @rfun
-                          @lfun                  @rsym @rfun
+                          @lau                         @rfun
+                          @lau                   @rsym @rfun
 )
 
 (deflayer mos ;; mouse layer
