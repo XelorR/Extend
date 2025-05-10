@@ -458,9 +458,11 @@ journalctl -u kanata.service -f
   )
 )
 
+ ;; -------------------------------------------------------------------------------------
+ ;; All three: GNU Linux, Apple MacOS and Microsoft Windows
+ 
 (defalias
-  ;; -------------------------------------------------------------------------------------
-  ;; launch applications
+  ;; launching applications
   
   vscode_en (macro @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret)
   vscode_ru (macro @en 50 @launch 400 S-v i s u a l 50 spc S-s t u d i o 50 spc S-c o d e 400 ret 50 @ru)
