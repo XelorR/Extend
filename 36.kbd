@@ -97,12 +97,12 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        grv   1    esc  2    t                y    u    i    o    p        [    ]    _
+ _        grv   2    esc  3    t                y    u    i    o    p        [    ]    _
  _       @fun   j    i    m    g                h    j    k    l    ;        '
- _        caps  3    h    4    b                n    m    ,    .    / 
+ _        caps  1    h    4    b                n    m    ,    .    / 
  _                        XX   ret              _    _
 
-                          XX                         _     
+                          XX                         _
                           XX                    _    _
 )
 
