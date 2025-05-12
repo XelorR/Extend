@@ -8,7 +8,7 @@
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
  caps      a    s    d    f    g                h    j    k    l    ;        '
  lsft      z    x    c    v    b                n    m    ,    .    /
- lctl                     esc  spc              ret  rsft
+ lctl                     esc  spc  f22    f23  ret  rsft
 
                                                      menu
                           lalt                       rctl
@@ -25,7 +25,7 @@
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
  _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/:
- _                      @lfun @nav             @num @rfun
+ _                      @lfun @nav  _      _   @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -39,7 +39,7 @@
  _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
 @lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
  _         @lф  @э   @х   @tdы @ю               @lб  @м   @п   @г   @lж
- _                       @lfun @nav             @num @rfun
+ _                       @lfun @nav  _      _   @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
@@ -58,7 +58,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _
  _         _    _    _    _    _               @ln   _    _    _    _ 
- _                        _    _                _    _
+ _                        _    _    _      _    _    _
 
                                                      _
                           _                          _     
@@ -75,7 +75,7 @@
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
  _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж
- _                       @lfun @nav             @num @rfun
+ _                       @lfun @nav  _      _   @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
@@ -92,7 +92,7 @@
  i         tab  q    w    e    r                y    XX   up   XX   tab      _    _    _
  caps      lsft a    s    d    f                h    left down rght rsft     _
  m         lctl z    x    c    v               @ln   XX   XX   XX   rctl
- _                       @galt spc              ret @gprnt
+ _                       @galt spc  _      _    ret @gprnt
 
                                                     @gprnt
                          @galt                      @gprnt
@@ -106,7 +106,7 @@
  _        grv   2    esc  3    t                y    u    i    o    p        [    ]    _
  _       @fun   j    i    m    g                h    j    k    l    ;        '
  _        caps  1    h    4    b                n    m    ,    .    / 
- _                        XX   ret              _    _
+ _                        XX   ret  _      _    _    _
 
                                                      _
                           XX                         _
@@ -120,7 +120,7 @@
  _         tab  XX   up   XX   XX               XX   XX   up   XX   tab      _    _    _
  _         lsft left down rght ret              ret  left down rght rsft     _
  _         lctl XX   XX   XX   XX              @ln   XX   XX   XX   rctl
- _                       @galt spc              spc @galt
+ _                       @galt spc  _      _    spc @galt
 
                                                     @galt
                          @galt                      @galt
@@ -137,7 +137,7 @@
  _        @«”   7    8    9   @₽               lrld @—   @≈   @°   @del      _    _    _
  _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h_  @hbspc    _
  _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
- _                      @lfun @lsym            @num @rfun
+ _                      @lfun @lsym _      _   @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -151,7 +151,7 @@
  _        @“   @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
  _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
- _                      @lfun @nav             @num @rfun
+ _                      @lfun @nav  _      _   @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -165,7 +165,7 @@
  _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
- _                       nlck @lau              kp0  nlck
+ _                       nlck @lau  _      _    kp0  nlck
 
                                                      nlck
                          nlck                        nlck
@@ -182,7 +182,7 @@
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
- _                        @lau  @nav             @rsym @rfun
+ _                        @lau  @nav  _      _   @rsym @rfun
 
                                                        @rfun
                           @lau                         @rfun
@@ -196,7 +196,7 @@
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
- _                        @lau  @nav             @rsym @rfun
+ _                        @lau  @nav  _      _   @rsym @rfun
 
                                                        @rfun
                           @lau                         @rfun
@@ -210,7 +210,7 @@
  _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file
- _                        @lfun @nav            mltp mrtp
+ _                        @lfun @nav  _    _    mltp mrtp
 
                                                      mrtp
                           @lfun                      mrtp
@@ -224,7 +224,7 @@
  _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file
- _                        @lfun @nav            mltp mrtp
+ _                        @lfun @nav  _    _    mltp mrtp
 
                                                      mrtp
                           @lfun                      mrtp
@@ -241,7 +241,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _  @gam_r @gam @qwe _                _  @qwe @gam @gam_r _        _
  _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
- _                        _    _                _    _
+ _                        _    _    _      _    _    _
 
                                                      _
                           _                          _     
@@ -258,7 +258,7 @@
  _         _    _    _    _   @gho              _   @lua  _    _    _        _    _    _
  _         _    _   @ste @ter  _                _   @ntp @exc  _    _        _
  _        @zed  _    _   @vsc @bro              _    _    _    _    _
- _                        _    _                _    _
+ _                        _    _    _      _    _    _
 
                                                      _
                           _                          _     
@@ -276,7 +276,7 @@
  _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
 @lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
  _        @lz   x    c    v    b                n    m   @,?  @.!  @l/:
- _                      @lfun @nav             @num @rfun
+ _                      @lfun @nav  _      _   @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -290,7 +290,7 @@
  _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
 @lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
  _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
- _                       @lfun @nav             @num @rfun
+ _                       @lfun @nav  _      _   @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
