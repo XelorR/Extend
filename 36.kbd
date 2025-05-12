@@ -134,9 +134,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @«”   7    8    9   @₽               lrld @—   @≈   @°   @del      _    _    _
- _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h_  @hbspc    _
- _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
+ _        @«”   7    8    9   @₽               lrld @—   @°   @≈   @del      _    _    _
+ _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
+ _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill
  _                      @lfun @lsym _      _   @num @rfun
 
                                                     @rfun
@@ -959,7 +959,7 @@ journalctl -u kanata.service -f
     h5 (tap-hold $tap-time $hold-middle 5 lctl)
     h6 (tap-hold $tap-time $hold-pinky 6 lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h_ (tap-hold $tap-time $hold-pinky @_ lalt)
+    h= (tap-hold $tap-time $hold-pinky = lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lmet)
@@ -1042,7 +1042,7 @@ journalctl -u kanata.service -f
     h5 (tap-hold $tap-time $hold-middle 5 lmet)
     h6 (tap-hold $tap-time $hold-pinky 6 lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h_ (tap-hold $tap-time $hold-pinky @_ lalt)
+    h= (tap-hold $tap-time $hold-pinky = lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lctl)
