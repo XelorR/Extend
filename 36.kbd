@@ -355,6 +355,7 @@
     notepad_en (macro M-r 400 n o t e p a d 400 ret)
     notepad_ru (macro @en 50 M-r 400 n o t e p a d 400 ret 50 @ru)
     ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
+    exc M-A-S-C-x
   )
 )
 
@@ -406,7 +407,7 @@ journalctl -u kanata.service -f
    ter C-A-t ;; launch terminal
    notepad_en (macro @launch 400 k w r i t e 400 ret)
    notepad_ru (macro @en 50 @launch 400 k w r i t e 400 ret 50 @ru)
-   exc M-A-S-C-x
+   ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
  )
 )
 (environment (XDG_CURRENT_DESKTOP GNOME)
