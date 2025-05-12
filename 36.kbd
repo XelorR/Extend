@@ -24,7 +24,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
- _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/:
+ _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/\
  _                      @lfun @nav @mos   @sym @num @rfun
 
                                                     @rfun
@@ -275,7 +275,7 @@
 
  _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
 @lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
- _        @lz   x    c    v    b                n    m   @,?  @.!  @l/:
+ _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
  _                      @lfun @nav @mos   @sym @num @rfun
 
                                                     @rfun
@@ -632,7 +632,7 @@ journalctl -u kanata.service -f
   ;; special actions for English layer
 
   ;; eng
-  l/: (tap-hold $tap-time $hold-pinky (fork / S-; (lsft rsft)) (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / \ (lsft rsft)) (layer-toggle fun))
   l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
   ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
   lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
