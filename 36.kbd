@@ -638,7 +638,7 @@ journalctl -u kanata.service -f
   ;; special actions for English layer
 
   ;; eng
-  l/\ (tap-hold $tap-time $hold-pinky (fork / \ (lsft rsft)) (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
   l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
   ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
   lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
