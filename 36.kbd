@@ -636,10 +636,10 @@ journalctl -u kanata.service -f
   l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
   ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
   lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
-  td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
-  tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
-  tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
-  tdv (tap-dance-eager 500 ( (macro v) (macro bspc S-9 S-0 left) (macro S-9 S-0 left) (macro S-9 S-0 left)))
+  td' (tap-dance-eager 300 ( (macro ') (macro ' 20 left) (macro ' 20 ' 20 left) (macro ' 20 ' 20 left)))
+  tdq (tap-dance-eager 300 ( (macro q) (macro bspc 20 S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left)))
+  tdj (tap-dance-eager 300 ( (macro j) (macro bspc 20 grv 20 grv 20 left) (macro grv 20 grv 20 left) (macro grv 20 grv 20 left)))
+  tdv (tap-dance-eager 500 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
 
   ;; -------------------------------------------------------------------------------------
   ;; Russian letters
@@ -692,10 +692,10 @@ journalctl -u kanata.service -f
   ё grv
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   lб (tap-hold $tap-time $hold-pinky @б (layer-toggle swi))
-  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
-  tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
-  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left)))
-  tdы (tap-dance-eager 500 ( (macro @ы) (macro bspc S-9 S-0 left) (macro S-9 S-0 left) (macro S-9 S-0 left)))
+  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
+  tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
+  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left)))
+  tdы (tap-dance-eager 500 ( (macro @ы) (macro bspc S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
@@ -864,11 +864,11 @@ journalctl -u kanata.service -f
   u“” (macro @u“ 50 @u” 50 left)
   ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
   «” (switch ((base-layer rus_u)) @u«» break ((base-layer rus)) @ur«» break () @u“” break )
-  brc (macro S-9 S-0 left)
-  []  (switch ((base-layer rus)) (macro @en 50 [ ] left 50 @ru) break () (macro [ ] left) break )
-  {}  (switch ((base-layer rus)) (macro @en 50 S-[ S-] left 50 @ru) break () (macro S-[ S-] left) break )
-  <>  (switch ((base-layer rus)) (macro @en 50 S-, S-. left 50 @ru) break () (macro S-, S-. left) break )
-  -[] (switch ((base-layer rus)) (macro @en 50 home - [ spc ] spc end 50 @ru) break () (macro home - [ spc ] spc end) break )
+  brc (macro S-9 20 S-0 20 left)
+  []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
+  {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
+  <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
+  -[] (switch ((base-layer rus)) (macro @en 50 home - [ 20 spc ] spc 20 end 50 @ru) break () (macro home - [ 20 spc ] 20 spc end) break )
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   
   ;; -------------------------------------------------------------------------------------
