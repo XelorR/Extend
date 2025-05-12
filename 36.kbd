@@ -555,7 +555,7 @@ journalctl -u kanata.service -f
   qwe (multi (layer-switch qwe) @en)
 
   ;; -------------------------------------------------------------------------------------
-  ;; symbols definition
+  ;; Symbols definition
 
   ;; sym
   ;; to use this symbols, you have to ensure:
@@ -603,12 +603,39 @@ journalctl -u kanata.service -f
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ 20 spc ] spc 20 end 50 @ru) break () (macro home - [ 20 spc ] 20 spc end) break )
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
 
+  ;; -------------------------------------------------------------------------------------
+  ;; Unicode symbols
+
+  u— (unicode —)
+  ur— (macro @en 50 @u— 50 @ru)
+  — (switch ((base-layer rus)) @ur— break () @u— break )
+  u₽ (unicode ₽)
+  ur₽ (macro @en 50 @u₽ 50 @ru)
+  ₽ (switch ((base-layer rus)) @ur₽ break () @u₽ break )
+  u° (unicode °)
+  ur° (macro @en 50 @u° 50 @ru)
+  ° (switch ((base-layer rus)) @ur° break () @u° break )
+  u≈ (unicode ≈)
+  ur≈ (macro @en 50 @u≈ 50 @ru)
+  ≈ (switch ((base-layer rus)) @ur≈ break () @u≈ break )
+  u± (unicode ±)
+  ur± (macro @en 50 @u± 50 @ru)
+  ± (switch ((base-layer rus)) @ur± break () @u± break )
+  u« (unicode «)
+  u» (unicode »)
+  u«» (macro @u« 50 @u» 50 left)
+  ur«» (macro @en 50 @u« 50 @u» 50 left 50 @ru)
+  u“ (unicode “)
+  u” (unicode ”)
+  u“” (macro @u“ 50 @u” 50 left)
+  ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
+  «” (switch ((base-layer rus_u)) @u«» break ((base-layer rus)) @ur«» break () @u“” break )
+  
+  ;; -------------------------------------------------------------------------------------
   ;; fun
   dr0 (dynamic-macro-record 0)
   dms dynamic-macro-record-stop
   dp0 (dynamic-macro-play 0)
-
-  ;; gam
 
   ;; -------------------------------------------------------------------------------------
   ;; navigation and edition specific
@@ -838,34 +865,6 @@ journalctl -u kanata.service -f
   эЭ (switch ((base-layer rus)) @э break ((base-layer rus_u)) @_э break )
   ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus_u)) @_ъ break )
 
-  ;; -------------------------------------------------------------------------------------
-  ;; Unicode symbols
-
-  u— (unicode —)
-  ur— (macro @en 50 @u— 50 @ru)
-  — (switch ((base-layer rus)) @ur— break () @u— break )
-  u₽ (unicode ₽)
-  ur₽ (macro @en 50 @u₽ 50 @ru)
-  ₽ (switch ((base-layer rus)) @ur₽ break () @u₽ break )
-  u° (unicode °)
-  ur° (macro @en 50 @u° 50 @ru)
-  ° (switch ((base-layer rus)) @ur° break () @u° break )
-  u≈ (unicode ≈)
-  ur≈ (macro @en 50 @u≈ 50 @ru)
-  ≈ (switch ((base-layer rus)) @ur≈ break () @u≈ break )
-  u± (unicode ±)
-  ur± (macro @en 50 @u± 50 @ru)
-  ± (switch ((base-layer rus)) @ur± break () @u± break )
-  u« (unicode «)
-  u» (unicode »)
-  u«» (macro @u« 50 @u» 50 left)
-  ur«» (macro @en 50 @u« 50 @u» 50 left 50 @ru)
-  u“ (unicode “)
-  u” (unicode ”)
-  u“” (macro @u“ 50 @u” 50 left)
-  ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
-  «” (switch ((base-layer rus_u)) @u«» break ((base-layer rus)) @ur«» break () @u“” break )
-  
   ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
