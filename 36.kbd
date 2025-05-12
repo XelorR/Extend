@@ -25,7 +25,7 @@
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
  _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/:
- _                      @lfun @nav  _      _   @num @rfun
+ _                      @lfun @nav @mos   @sym @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -39,7 +39,7 @@
  _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
 @lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
  _         @lф  @э   @х   @tdы @ю               @lб  @м   @п   @г   @lж
- _                       @lfun @nav  _      _   @num @rfun
+ _                       @lfun @nav @mos   @sym @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
@@ -75,7 +75,7 @@
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
  _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж
- _                       @lfun @nav  _      _   @num @rfun
+ _                       @lfun @nav @mos   @sym @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
@@ -276,7 +276,7 @@
  _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
 @lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
  _        @lz   x    c    v    b                n    m   @,?  @.!  @l/:
- _                      @lfun @nav  _      _   @num @rfun
+ _                      @lfun @nav @mos   @sym @num @rfun
 
                                                     @rfun
                         @lfun                       @rfun
@@ -290,7 +290,7 @@
  _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
 @lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
  _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
- _                       @lfun @nav  _      _   @num @rfun
+ _                       @lfun @nav @mos   @sym @num @rfun
 
                                                      @rfun
                          @lfun                       @rfun
@@ -876,7 +876,9 @@ journalctl -u kanata.service -f
 
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
+  sym (tap-hold $tap-time $hold-time S-tab (layer-toggle sym))
   num (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
   lau (layer-while-held lau)
   fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
