@@ -256,7 +256,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         _    _    _    _   @gho              _   @lua  _    _    _        _    _    _
- _         _    _   @ste @ter  _                _   @ntp  _    _    _        _
+ _         _    _   @ste @ter  _                _   @ntp @exc  _    _        _
  _        @zed  _    _   @vsc @bro              _    _    _    _    _
  _                        _    _                _    _
 
@@ -406,7 +406,7 @@ journalctl -u kanata.service -f
    ter C-A-t ;; launch terminal
    notepad_en (macro @launch 400 k w r i t e 400 ret)
    notepad_ru (macro @en 50 @launch 400 k w r i t e 400 ret 50 @ru)
-   ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
+   exc M-A-S-C-x
  )
 )
 (environment (XDG_CURRENT_DESKTOP GNOME)
@@ -457,6 +457,9 @@ journalctl -u kanata.service -f
     browser_en (macro @launch 400 S-b r o w s e r 400 ret)
     browser_ru (macro @en 50 @launch 400 S-b r o w s e r 400 ret 50 @ru)
     bro (switch ((base-layer rus)) @browser_ru break () @browser_en break ) ;; launch terminal
+    excel_en (macro @launch 400 S-e x c e l 400 ret)
+    excel_ru (macro @en 50 @launch 400 S-e x c e l 400 ret 50 @ru)
+    exc (switch ((base-layer rus)) @excel_ru break () @excel_en break )
   )
 )
 
@@ -494,6 +497,9 @@ journalctl -u kanata.service -f
     notepad_en (macro @launch 400 t e x t spc e d i t 400 ret)
     notepad_ru (macro @en 50 @launch 400 t e x t spc e d i t 400 ret 50 @ru)
     ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
+    excel_en (macro @launch 400 S-e x c e l 400 ret)
+    excel_ru (macro @en 50 @launch 400 S-e x c e l 400 ret 50 @ru)
+    exc (switch ((base-layer rus)) @excel_ru break () @excel_en break )
   )
 )
 
