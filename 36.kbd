@@ -10,6 +10,7 @@
  lsft      z    x    c    v    b                n    m    ,    .    /
  lctl                     esc  spc              ret  rsft
 
+                                                     menu
                           lalt                       rctl
                           lmet                  ralt rmet
 )
@@ -26,6 +27,7 @@
  _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
+                                                    @rfun
                         @lfun                       @rfun
                         @lfun                  @num @rfun
 )
@@ -39,6 +41,7 @@
  _         @lф  @э   @х   @tdы @ю               @lб  @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
 
+                                                     @rfun
                          @lfun                       @rfun
                          @lfun                  @num @rfun
 )
@@ -73,6 +76,7 @@
  _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж
  _                       @lfun @nav             @num @rfun
 
+                                                     @rfun
                          @lfun                       @rfun
                          @lfun                  @num @rfun
 )
@@ -89,6 +93,7 @@
  m         lctl z    x    c    v               @ln   XX   XX   XX   rctl
  _                       @galt spc              ret @gprnt
 
+                                                    @gprnt
                          @galt                      @gprnt
                          @galt                  ret @gprnt
 )
@@ -115,6 +120,7 @@
  _         lctl XX   XX   XX   XX              @ln   XX   XX   XX   rctl
  _                       @galt spc              spc @galt
 
+                                                    @galt
                          @galt                      @galt
                          @galt                  spc @galt
 )
@@ -131,6 +137,7 @@
  _         0    1    2    3   @$               @at   =   @,?  @.!  @kill
  _                      @lfun @lsym            @num @rfun
 
+                                                    @rfun
                         @lfun                       @rfun
                         @lfun                  @num @rfun
 )
@@ -144,6 +151,7 @@
  _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
  _                      @lfun @nav             @num @rfun
 
+                                                    @rfun
                         @lfun                       @rfun
                         @lfun                  @num @rfun
 )
@@ -157,6 +165,7 @@
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
  _                       nlck @lau              kp0  nlck
 
+                                                     nlck
                          nlck                        nlck
                          nlck                   kp0  nlck
 )
@@ -173,6 +182,7 @@
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
  _                        @lau  @nav             @rsym @rfun
 
+                                                       @rfun
                           @lau                         @rfun
                           @lau                   @rsym @rfun
 )
@@ -186,6 +196,7 @@
  _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
  _                        @lau  @nav             @rsym @rfun
 
+                                                       @rfun
                           @lau                         @rfun
                           @lau                   @rsym @rfun
 )
@@ -199,6 +210,7 @@
  _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
+                                                     mrtp
                           @lfun                      mrtp
                           @lfun                 mltp mrtp
 )
@@ -212,6 +224,7 @@
  _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file
  _                        @lfun @nav            mltp mrtp
 
+                                                     mrtp
                           @lfun                      mrtp
                           @lfun                 mltp mrtp
 )
@@ -228,6 +241,7 @@
  _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
  _                        _    _                _    _
 
+                                                     _
                           _                          _     
                           _                     _    _
 )
@@ -244,6 +258,7 @@
  _        @zed  _    _   @vsc @bro              _    _    _    _    _
  _                        _    _                _    _
 
+                                                     _
                           _                          _     
                           _                     _    _
 )
@@ -261,6 +276,7 @@
  _        @lz   x    c    v    b                n    m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
+                                                    @rfun
                         @lfun                       @rfun
                         @lfun                  @num @rfun
 )
@@ -274,6 +290,7 @@
  _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
  _                       @lfun @nav             @num @rfun
 
+                                                     @rfun
                          @lfun                       @rfun
                          @lfun                  @num @rfun
 )
