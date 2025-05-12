@@ -23,7 +23,7 @@
 
  _        @tdq  w    f    p    g               @tdj  l    u    y   @td'      _    _    _
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       ;
- _        @lz   x    c    v    b               @lk   m   @,?  @.!  @l/:
+ _        @lz   x    c   @tdv  b               @lk   m   @,?  @.!  @l/:
  _                      @lfun @nav             @num @rfun
 
                         @lfun                       @rfun
@@ -36,7 +36,7 @@
 
  _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
 @lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
- _         @lф  @э   @х   @ы   @ю               @lб  @м   @п   @г   @lж
+ _         @lф  @э   @х   @tdы @ю               @lб  @м   @п   @г   @lж
  _                       @lfun @nav             @num @rfun
 
                          @lfun                       @rfun
@@ -286,7 +286,6 @@
   (e r) @eng $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
   (w e) @rus $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
   (c v) @rus_u $hold-time all-released  (               gam gam_r gfn num sym fun nav mos qwe)
-  (r t) @brc $hold-time all-released    (               gam gam_r gfn         fun nav mos qwe)
   (y u) -    $hold-time all-released    (                   gam_r gfn         fun nav mos qwe)
   (s f) @brc $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
   (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
@@ -615,6 +614,7 @@ journalctl -u kanata.service -f
   td' (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left)))
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc grv grv left) (macro grv grv left) (macro grv grv left)))
+  tdv (tap-dance-eager 500 ( (macro v) (macro bspc S-9 S-0 left) (macro S-9 S-0 left) (macro S-9 S-0 left)))
 
   ;; -------------------------------------------------------------------------------------
   ;; Russian letters
@@ -670,6 +670,7 @@ journalctl -u kanata.service -f
   tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left)))
   tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left)))
+  tdы (tap-dance-eager 500 ( (macro @ы) (macro bspc S-9 S-0 left) (macro S-9 S-0 left) (macro S-9 S-0 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
