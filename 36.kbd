@@ -332,8 +332,8 @@
 (platform (win winiov2 wintercept)
   (defalias
     ;; system combinations to switch languages
-    en A-S-8 ;; it can be set in windows language settings
-    ru A-S-9 ;; no additional software needed
+    en C-8 ;; it can be set in windows language settings
+    ru C-9 ;; no additional software needed
     ;; other alias
     launch lmet ;; launch applications
     ;; other bindings
@@ -392,8 +392,8 @@ journalctl -u kanata.service -f
 (environment (XDG_CURRENT_DESKTOP KDE)
  (defalias
    ;; system combinations to switch languages
-   en A-S-8 ;; this can be set in KDE Plasma language settings
-   ru A-S-9
+   en C-8 ;; this can be set in KDE Plasma language settings
+   ru C-9
    launch A-spc ;; launch applications
    mcon M-w ;; Mission Control, KDE Plasma default
    file M-e ;; Launch file manager
