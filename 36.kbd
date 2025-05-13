@@ -96,20 +96,6 @@
                           XX                    _    _
 )
 
-(deflayer gam_r ;; gaming layer for racing games
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-@gesc      _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _         tab  XX   up   XX   XX               XX   XX   up   XX   tab      _    _    _
- _         lsft left down rght ret              ret  left down rght rsft     _
- _         lctl XX   XX   XX   XX              @ln   XX   XX   XX   rctl
- _                       @galt spc  _      _    spc @galt
-
-                                                    @galt
-                         @galt                      @galt
-                         @galt                  spc @galt
-)
-
 ;; -------------------------------------------------------------------------------------
 ;; layers with extra buttons: numeric, symbol, function
 
@@ -222,7 +208,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _  @gam_r @gam @qwe _                _  @qwe @gam @gam_r _        _
+ _         _    _    @gam @qwe _                _  @qwe @gam   _    _        _
  _         _    _    @rus @eng _                _  @eng @rus   _    _ 
  _                        _    _    _      _    _    _
 
@@ -285,25 +271,25 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (e r) @eng $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
-  (x c) @_   $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
-  (c v) -    $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
-  (u o) @[]  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
-  (j l) @{}  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
-  (m .) @-[] $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
+  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   ;; comment following letters if you want to use йцукен instead of diktor
-  (i o) @й   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (u i) @ё   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (m ,) @ш   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (, .) @щ   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
+  (i o) @й   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
+  (u i) @ё   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
+  (m ,) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
+  (, .) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @х  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
-  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
-  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
-  ;; (, .) @э  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
+  ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -533,7 +519,6 @@ journalctl -u kanata.service -f
   eng (multi (layer-switch eng) @en)
   rus (multi (layer-switch rus) @ru)
   gam (multi (layer-switch gam) @en)
-  gam_r (multi (layer-switch gam_r) @en)
   qwe (multi (layer-switch qwe) @en)
 
   ;; -------------------------------------------------------------------------------------
