@@ -103,7 +103,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @«”   7    8    9   @₽               lrld @—   @°   @≈   @del      _    _    _
+ _        @«”   7    8    9   @₽              @lrld @—   @°   @≈   @del      _    _    _
  _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
  _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill
  _                      @lfun @lsym _      _   @num @rfun
@@ -568,7 +568,13 @@ journalctl -u kanata.service -f
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
   <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
   -[] (switch ((base-layer rus)) (macro @en 50 home - [ 20 spc ] spc 20 end 50 @ru) break () (macro home - [ 20 spc ] 20 spc end) break )
+
+  ;; -------------------------------------------------------------------------------------
+  ;; Custom functionality
+
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
+  rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lgui) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rgui))
+  lrld (tap-dance 400 (lrld @rele))
 
   ;; -------------------------------------------------------------------------------------
   ;; Unicode symbols
