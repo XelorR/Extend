@@ -66,23 +66,6 @@
 )
 
 ;; -------------------------------------------------------------------------------------
-;; backup, unicode typing for Russian language
-
-(deflayer rus_u ;; diktor
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
- @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0      @star =    _
-
- _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   _
-@lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
- _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж
- _                       @lfun @nav @mos   @sym @num @rfun
-
-                                                     @rfun
-                         @lfun                       @rfun
-                         @lfun                  @num @rfun
-)
-
-;; -------------------------------------------------------------------------------------
 ;; gaming layer and sublayers
 
 (deflayer gam ;; gaming layer
@@ -240,7 +223,7 @@
 
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _  @gam_r @gam @qwe _                _  @qwe @gam @gam_r _        _
- _         _  @rus_u @rus @eng _                _  @eng @rus @rus_u _ 
+ _         _    _    @rus @eng _                _  @eng @rus   _    _ 
  _                        _    _    _      _    _    _
 
                                                      _
@@ -302,25 +285,25 @@
 
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
-  (e r) @eng $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
-  (x c) @_   $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
-  (c v) -    $hold-time all-released    (               gam gam_r gfn num sym fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
-  (u o) @[]  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
-  (j l) @{}  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
-  (m .) @-[] $hold-time all-released    (eng rus rus_u  gam gam_r gfn         fun nav mos qwe)
+  (e r) @eng $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
+  (w e) @rus $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
+  (x c) @_   $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
+  (c v) -    $hold-time all-released    (        gam gam_r gfn num sym fun nav mos qwe)
+  (s f) @brc $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
+  (u o) @[]  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
+  (j l) @{}  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
+  (w r) @<>  $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
+  (m .) @-[] $hold-time all-released    (eng rus gam gam_r gfn         fun nav mos qwe)
   ;; comment following letters if you want to use йцукен instead of diktor
-  (i o) @йЙ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (u i) @ёЁ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (m ,) @шШ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe) ;; diktor
-  (, .) @щЩ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe) ;; diktor
+  (i o) @й   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
+  (u i) @ё   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
+  (m ,) @ш   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
+  (, .) @щ   $hold-time all-released    (eng     gam gfn gam_r num sym fun nav mos qwe) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @хХ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe)
-  ;; (u i) @ёЁ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe)
-  ;; (m ,) @ъЪ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe)
-  ;; (, .) @эЭ $hold-time all-released     (eng            gam gfn gam_r num sym fun nav mos qwe)
+  ;; (i o) @х  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
+  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
+  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
+  ;; (, .) @э  $hold-time all-released     (eng     gam gfn gam_r num sym fun nav mos qwe)
 )
 
 ;; -------------------------------------------------------------------------------------
@@ -549,7 +532,6 @@ journalctl -u kanata.service -f
 
   eng (multi (layer-switch eng) @en)
   rus (multi (layer-switch rus) @ru)
-  rus_u (multi (layer-switch rus_u) @en)
   gam (multi (layer-switch gam) @en)
   gam_r (multi (layer-switch gam_r) @en)
   qwe (multi (layer-switch qwe) @en)
@@ -629,7 +611,7 @@ journalctl -u kanata.service -f
   u” (unicode ”)
   u“” (macro @u“ 50 @u” 50 left)
   ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
-  «” (switch ((base-layer rus_u)) @u«» break ((base-layer rus)) @ur«» break () @u“” break )
+  «” (switch ((base-layer rus)) @ur«» break () @u“” break )
   
   ;; -------------------------------------------------------------------------------------
   ;; fun
@@ -641,8 +623,8 @@ journalctl -u kanata.service -f
   ;; navigation and edition specific
 
   ;; nav
-  lctl (switch ((base-layer rus)) lctl break ((base-layer rus_u)) lctl break () (one-shot 500 lctl) break )
-  lmet (switch ((base-layer rus)) lmet break ((base-layer rus_u)) lmet break () (one-shot 500 lmet) break )
+  lctl (switch ((base-layer rus)) lctl break () (one-shot 500 lctl) break )
+  lmet (switch ((base-layer rus)) lmet break () (one-shot 500 lmet) break )
 
   ;; mos
   mu (movemouse-up 1 1)
@@ -737,135 +719,6 @@ journalctl -u kanata.service -f
   )
 
   ;; -------------------------------------------------------------------------------------
-  ;; Russian letters, implemented as unicode symbols
-
-  ;; rus_u
-  Ъ (unicode Ъ)
-  _1 (fork 1 @Ъ (lsft rsft))
-  Ь (unicode Ь)
-  _2 (fork 2 @Ь (lsft rsft))
-  u№ (unicode №)
-  _3 (fork 3 @u№ (lsft rsft))
-  _4 (fork 4 S-5 (lsft rsft))
-  _5 (fork 5 S-; (lsft rsft))
-  _6 (fork 6 ; (lsft rsft))
-  _7 (fork 7 (unmod -) (lsft rsft))
-  _8 (fork 8 S-' (lsft rsft))
-  uц (unicode ц)
-  uЦ (unicode Ц)
-  _ц (fork @uц @uЦ (lsft rsft))
-  uь (unicode ь)
-  uъ (unicode ъ)
-  uЪ (unicode Ъ)
-  _ь (fork @uь @uъ (lsft rsft))
-  _ъ (fork @uъ @uЪ (lsft rsft))
-  uя (unicode я)
-  uЯ (unicode Я)
-  _я (fork @uя @uЯ (lsft rsft))
-  u, (unicode ,)
-  u? (unicode ?)
-  _,? (fork @u, @u? (lsft rsft))
-  u. (unicode .)
-  u! (unicode !)
-  _.! (fork @u. @u! (lsft rsft))
-  uз (unicode з)
-  uЗ (unicode З)
-  _з (fork @uз @uЗ (lsft rsft))
-  uв (unicode в)
-  uВ (unicode В)
-  _в (fork @uв @uВ (lsft rsft))
-  uк (unicode к)
-  uК (unicode К)
-  _к (fork @uк @uК (lsft rsft))
-  uд (unicode д)
-  uД (unicode Д)
-  _д (fork @uд @uД (lsft rsft))
-  uч (unicode ч)
-  uЧ (unicode Ч)
-  _ч (fork @uч @uЧ (lsft rsft))
-  uш (unicode ш)
-  uШ (unicode Ш)
-  _ш (fork @uш @uШ (lsft rsft))
-  uщ (unicode щ)
-  uЩ (unicode Щ)
-  _щ (fork @uщ @uЩ (lsft rsft))
-  uу (unicode у)
-  uУ (unicode У)
-  _у (fork @uу @uУ (lsft rsft))
-  uи (unicode и)
-  uИ (unicode И)
-  _и (fork @uи @uИ (lsft rsft))
-  uе (unicode е)
-  uЕ (unicode Е)
-  _е (fork @uе @uЕ (lsft rsft))
-  uо (unicode о)
-  uО (unicode О)
-  _о (fork @uо @uО (lsft rsft))
-  uа (unicode а)
-  uА (unicode А)
-  _а (fork @uа @uА (lsft rsft))
-  uл (unicode л)
-  uЛ (unicode Л)
-  _л (fork @uл @uЛ (lsft rsft))
-  uн (unicode н)
-  uН (unicode Н)
-  _н (fork @uн @uН (lsft rsft))
-  uт (unicode т)
-  uТ (unicode Т)
-  _т (fork @uт @uТ (lsft rsft))
-  uс (unicode с)
-  uС (unicode С)
-  _с (fork @uс @uС (lsft rsft))
-  uр (unicode р)
-  uР (unicode Р)
-  _р (fork @uр @uР (lsft rsft))
-  uй (unicode й)
-  uЙ (unicode Й)
-  _й (fork @uй @uЙ (lsft rsft))
-  uф (unicode ф)
-  uФ (unicode Ф)
-  _ф (fork @uф @uФ (lsft rsft))
-  uэ (unicode э)
-  uЭ (unicode Э)
-  _э (fork @uэ @uЭ (lsft rsft))
-  uх (unicode х)
-  uХ (unicode Х)
-  _х (fork @uх @uХ (lsft rsft))
-  uы (unicode ы)
-  uЫ (unicode Ы)
-  _ы (fork @uы @uЫ (lsft rsft))
-  uю (unicode ю)
-  uЮ (unicode Ю)
-  _ю (fork @uю @uЮ (lsft rsft))
-  uб (unicode б)
-  uБ (unicode Б)
-  _б (fork @uб @uБ (lsft rsft))
-  uм (unicode м)
-  uМ (unicode М)
-  _м (fork @uм @uМ (lsft rsft))
-  uп (unicode п)
-  uП (unicode П)
-  _п (fork @uп @uП (lsft rsft))
-  uг (unicode г)
-  uГ (unicode Г)
-  _г (fork @uг @uГ (lsft rsft))
-  uж (unicode ж)
-  uЖ (unicode Ж)
-  _ж (fork @uж @uЖ (lsft rsft))
-  uё (unicode ё)
-  uЁ (unicode Ё)
-  _ё (fork @uё @uЁ (lsft rsft))
-  _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
-  _lб (tap-hold $tap-time $hold-pinky @_б (layer-toggle swi))
-  йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
-  ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
-  шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
-  щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
-  хХ (switch ((base-layer rus)) @х break ((base-layer rus_u)) @_х break )
-  эЭ (switch ((base-layer rus)) @э break ((base-layer rus_u)) @_э break )
-  ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus_u)) @_ъ break )
-
-  ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
@@ -938,15 +791,6 @@ journalctl -u kanata.service -f
     hл (tap-hold $tap-time $hold-middle @л (multi lctl (layer-while-held eng)))
     hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
     hж (tap-hold $tap-time $hold-pinky @ж (multi lmet (layer-while-held eng)))
-    ;; rus_u ;; diktor
-    _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
-    _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
-    _hе (tap-hold $tap-time $hold-middle @_е (multi lctl (layer-while-held eng)))
-    _hо (tap-hold $tap-time $hold-index @_о lsft)
-    _hн (tap-hold $tap-time $hold-index @_н lsft)
-    _hт (tap-hold $tap-time $hold-middle @_т (multi lctl (layer-while-held eng)))
-    _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
-    _hр (tap-hold $tap-time $hold-pinky @_р (multi lmet (layer-while-held eng)))
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rmet)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
@@ -1021,15 +865,6 @@ journalctl -u kanata.service -f
     hл (tap-hold $tap-time $hold-middle @л (multi lmet (layer-while-held eng)))
     hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
     hж (tap-hold $tap-time $hold-pinky @ж (multi lctl (layer-while-held eng)))
-    ;; rus_u ;; diktor
-    _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
-    _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
-    _hе (tap-hold $tap-time $hold-middle @_е (multi lmet (layer-while-held eng)))
-    _hо (tap-hold $tap-time $hold-index @_о lsft)
-    _hн (tap-hold $tap-time $hold-index @_н lsft)
-    _hт (tap-hold $tap-time $hold-middle @_т (multi lmet (layer-while-held eng)))
-    _hс (tap-hold $tap-time $hold-ring @_с (multi lalt (layer-while-held eng)))
-    _hр (tap-hold $tap-time $hold-pinky @_р (multi lctl (layer-while-held eng)))
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rctl)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
