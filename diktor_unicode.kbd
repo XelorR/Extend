@@ -152,6 +152,7 @@
 (platform (win winiov2 wintercept linux)
   (defalias
     ;; modtaps (GACS)
+    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos))
     ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
@@ -167,6 +168,7 @@
 (platform (macos)
   (defalias
     ;; modtaps (GCAS)
+    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos_mac))
     ;; rus_u ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))

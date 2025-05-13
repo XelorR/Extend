@@ -738,7 +738,6 @@ journalctl -u kanata.service -f
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
     lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
-    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos))
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
@@ -812,7 +811,6 @@ journalctl -u kanata.service -f
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav_mac))
     lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos_mac))
-    _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos_mac))
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
