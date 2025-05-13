@@ -103,7 +103,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @«”   7    8    9   @₽              @lrld @—   @°   @≈   @del      _    _    _
+ _        @«”   7    8    9   @₽               @lrd @—   @°   @≈   @del      _    _    _
  _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
  _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill
  _                      @lfun @lsym _      _   @num @rfun
@@ -574,7 +574,7 @@ journalctl -u kanata.service -f
 
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lgui) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rgui))
-  lrld (tap-dance 400 (lrld @rele))
+  lrd (tap-dance 400 (lrld @rele))
 
   ;; -------------------------------------------------------------------------------------
   ;; Unicode symbols
