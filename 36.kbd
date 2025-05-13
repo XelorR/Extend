@@ -573,7 +573,7 @@ journalctl -u kanata.service -f
   ;; Custom functionality
 
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
-  rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lgui) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rgui))
+  rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lmet) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rmet))
   lrd (tap-dance 400 (lrld @rele))
 
   ;; -------------------------------------------------------------------------------------
