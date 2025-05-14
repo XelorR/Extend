@@ -669,6 +669,8 @@ journalctl -u kanata.service -f
   (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
   (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
   (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (, .) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (m ,) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
   (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
@@ -676,10 +678,9 @@ journalctl -u kanata.service -f
   (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (i o) @й   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
   (u i) @ё   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  (m ,) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  (, .) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
+  (i k) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
+  (o l) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
   ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
   ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
-  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
-  ;; (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
+  ;; (o l) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
 )
