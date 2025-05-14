@@ -469,6 +469,7 @@ journalctl -u kanata.service -f
 ;; (include eng_qwerty.kbd)
 
 (include rus_diktor.kbd)
+;; (include uni_diktor.kbd) ;; backup version in unicode symbols
 ;; (include rus_йцукенг.kbd)
 
 ;; -------------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 ;; -------------------------------------------------------------------------------------
 ;; backup, unicode typing for Russian language
 
-(deflayer rus_u ;; diktor
+(deflayer rus ;; diktor
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0     @_star =    _
 
@@ -16,12 +16,10 @@
 )
 
 (defalias
-  rus_u (multi (layer-switch rus_u) @en)
-
   ;; -------------------------------------------------------------------------------------
   ;; Russian letters, implemented as unicode symbols
 
-  ;; rus_u
+  ;; rus
   Ъ (unicode Ъ)
   _1 (fork 1 @Ъ (lsft rsft))
   Ь (unicode Ь)
@@ -140,20 +138,20 @@
   _ё (fork @uё @uЁ (lsft rsft))
   _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
   _lб (tap-hold $tap-time $hold-pinky @_б (layer-toggle swi))
-  йЙ (switch ((base-layer rus)) @й break ((base-layer rus_u)) @_й break )
-  ёЁ (switch ((base-layer rus)) grv break ((base-layer rus_u)) @_ё break )
-  шШ (switch ((base-layer rus)) @ш break ((base-layer rus_u)) @_ш break )
-  щЩ (switch ((base-layer rus)) @щ break ((base-layer rus_u)) @_щ break )
-  хХ (switch ((base-layer rus)) @х break ((base-layer rus_u)) @_х break )
-  эЭ (switch ((base-layer rus)) @э break ((base-layer rus_u)) @_э break )
-  ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus_u)) @_ъ break )
+  йЙ (switch ((base-layer rus)) @й break ((base-layer rus)) @_й break )
+  ёЁ (switch ((base-layer rus)) grv break ((base-layer rus)) @_ё break )
+  шШ (switch ((base-layer rus)) @ш break ((base-layer rus)) @_ш break )
+  щЩ (switch ((base-layer rus)) @щ break ((base-layer rus)) @_щ break )
+  хХ (switch ((base-layer rus)) @х break ((base-layer rus)) @_х break )
+  эЭ (switch ((base-layer rus)) @э break ((base-layer rus)) @_э break )
+  ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus)) @_ъ break )
 )
 
 (platform (win winiov2 wintercept linux)
   (defalias
     ;; modtaps (GACS)
     _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos))
-    ;; rus_u ;; diktor
+    ;; rus ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lmet (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
     _hе (tap-hold $tap-time $hold-middle @_е (multi lctl (layer-while-held eng)))
@@ -169,7 +167,7 @@
   (defalias
     ;; modtaps (GCAS)
     _lф (tap-hold $tap-time $hold-pinky @_ф (layer-toggle mos_mac))
-    ;; rus_u ;; diktor
+    ;; rus ;; diktor
     _hу (tap-hold $tap-time $hold-pinky @_у (multi lctl (layer-while-held eng)))
     _hи (tap-hold $tap-time $hold-ring @_и (multi lalt (layer-while-held eng)))
     _hе (tap-hold $tap-time $hold-middle @_е (multi lmet (layer-while-held eng)))
