@@ -12,13 +12,6 @@
                          @lfun                  @num @rfun
 )
 
-(defchordsv2
-  (i o) @й   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (u i) @ё   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (m ,) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (, .) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-)
-
 (defalias
   ;; Russian letters and custom numbers
 
