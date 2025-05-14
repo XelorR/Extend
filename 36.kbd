@@ -17,8 +17,22 @@
 
 ;; BUTTON DEFINITIONS ==================================================================
 
+;; -------------------------------------------------------------------------------------
+;; home row mods, settings
+
+(defvar
+  tap-time 200
+  hold-time 200
+
+  hold-index 150
+  hold-middle 150
+  hold-ring 170
+  hold-pinky 195
+)
+
 (include control.kbd)
 (include symbols.kbd)
+(include sublayers-modtaps.kbd)
 
 (defalias
   ;; -------------------------------------------------------------------------------------
@@ -42,93 +56,6 @@
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
   ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
-)
-
-;; -------------------------------------------------------------------------------------
-;; home row mods, settings
-
-(defvar
-  tap-time 200
-  hold-time 200
-
-  hold-index 150
-  hold-middle 150
-  hold-ring 170
-  hold-pinky 195
-)
-
-;; -------------------------------------------------------------------------------------
-;; home row mods, GNU Linux and Windows version
-
-(platform (win winiov2 wintercept linux)
-  (defalias
-    nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
-    mopt @lctl
-    ocm lalt
-    ;; modtaps (GACS)
-    ;; num
-    h: (tap-hold $tap-time $hold-ring @: rmet)
-    h4 (tap-hold $tap-time $hold-ring 4 lalt)
-    h5 (tap-hold $tap-time $hold-middle 5 lctl)
-    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
-    hn- (tap-hold $tap-time $hold-index - rsft)
-    h= (tap-hold $tap-time $hold-pinky = lalt)
-    hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
-    ;; sym
-    h\ (tap-hold $tap-time $hold-pinky \ lmet)
-    hlb (tap-hold $tap-time $hold-ring @lb lalt)
-    h- (tap-hold $tap-time $hold-middle - lctl)
-    hrb (tap-hold $tap-time $hold-index @rb lsft)
-    h{ (tap-hold $tap-time $hold-index @{ lsft)
-    h; (tap-hold $tap-time $hold-middle @; lctl)
-    h} (tap-hold $tap-time $hold-ring @} lalt)
-    h! (tap-hold $tap-time $hold-pinky @! lmet)
-    ;; fun
-    f11 (tap-hold $tap-time $hold-pinky f11 lmet)
-    f4 (tap-hold $tap-time $hold-ring f4 lalt)
-    f5 (tap-hold $tap-time $hold-middle f5 lctl)
-    f6 (tap-hold $tap-time $hold-index f6 lsft)
-    kp4 (tap-hold $tap-time $hold-index 4 lsft)
-    kp5 (tap-hold $tap-time $hold-middle 5 lctl)
-    kp6 (tap-hold $tap-time $hold-ring 6 lalt)
-  )
-)
-
-;; -------------------------------------------------------------------------------------
-;; home row mods, MacOS version
-
-(platform (macos)
-  (defalias
-    nav (tap-hold $tap-time $hold-time spc (layer-toggle nav_mac))
-    mopt (tap-hold $tap-time $hold-middle @lmet lalt)
-    ocm (tap-hold $tap-time $hold-pinky lalt lmet)
-    ;; modtaps (GCAS)
-    ;; num
-    h: (tap-hold $tap-time $hold-ring @: rctl)
-    h4 (tap-hold $tap-time $hold-ring 4 lalt)
-    h5 (tap-hold $tap-time $hold-middle 5 lmet)
-    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
-    hn- (tap-hold $tap-time $hold-index - rsft)
-    h= (tap-hold $tap-time $hold-pinky = lalt)
-    hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
-    ;; sym
-    h\ (tap-hold $tap-time $hold-pinky \ lctl)
-    hlb (tap-hold $tap-time $hold-ring @lb lalt)
-    h- (tap-hold $tap-time $hold-middle - lmet)
-    hrb (tap-hold $tap-time $hold-index @rb lsft)
-    h{ (tap-hold $tap-time $hold-index @{ lsft)
-    h; (tap-hold $tap-time $hold-middle @; lmet)
-    h} (tap-hold $tap-time $hold-ring @} lalt)
-    h! (tap-hold $tap-time $hold-pinky @! lctl)
-    ;; fun
-    f11 (tap-hold $tap-time $hold-pinky f11 lctl)
-    f4 (tap-hold $tap-time $hold-ring f4 lalt)
-    f5 (tap-hold $tap-time $hold-middle f5 lmet)
-    f6 (tap-hold $tap-time $hold-index f6 lsft)
-    kp4 (tap-hold $tap-time $hold-index 4 lsft)
-    kp5 (tap-hold $tap-time $hold-middle 5 lmet)
-    kp6 (tap-hold $tap-time $hold-ring 6 lalt)
-  )
 )
 
 ;; LAYERS ==============================================================================
