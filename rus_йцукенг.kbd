@@ -1,0 +1,90 @@
+(deflayer rus ;; йцукен
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
+
+ _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
+@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
+ _         @lя  @ч   @с   @м   @и               @lт  @ьъ  @б   @ю   @.,
+ _                       @lfun @nav @mos   @sym @num @rfun
+
+                                                     @rfun
+                         @lfun                       @rfun
+                         @lfun                  @num @rfun
+)
+
+(defchordsv2
+  (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+)
+
+(defalias
+  ;; Russian letters
+
+  ц w
+  ь m
+  ьъ (fork m (unmod ]) (lsft rsft)) ;; diktor
+  я z
+  з p
+  в d
+  к r
+  д l
+  ч x
+  ш i
+  щ o
+  у e
+  и b
+  е t
+  о j
+  а f
+  л k
+  н y
+  т n
+  с c
+  р h
+  й q
+  ф a
+  э '
+  х [
+  ъ ]
+  ы s
+  ю .
+  б ,
+  м v
+  п g
+  г u
+  ж ;
+  ё grv
+  lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos))
+  lт (tap-hold $tap-time $hold-pinky @т (layer-toggle swi))
+  tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
+)
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    ;; modtaps (GACS)
+    ;; rus ;; йцукен
+    hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
+    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
+    hв (tap-hold $tap-time $hold-middle @в (multi lctl (layer-while-held eng)))
+    hа (tap-hold $tap-time $hold-index @а lsft)
+    hл (tap-hold $tap-time $hold-middle @л (multi lctl (layer-while-held eng)))
+    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
+    hж (tap-hold $tap-time $hold-pinky @ж (multi lmet (layer-while-held eng)))
+  )
+)
+
+(platform (macos)
+  (defalias
+    ;; modtaps (GCAS)
+    ;; rus ;; йцукен
+    hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
+    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
+    hв (tap-hold $tap-time $hold-middle @в (multi lmet (layer-while-held eng)))
+    hа (tap-hold $tap-time $hold-index @а lsft)
+    hл (tap-hold $tap-time $hold-middle @л (multi lmet (layer-while-held eng)))
+    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
+    hж (tap-hold $tap-time $hold-pinky @ж (multi lctl (layer-while-held eng)))
+  )
+)

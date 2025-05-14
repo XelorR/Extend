@@ -395,14 +395,6 @@ journalctl -u kanata.service -f
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
-    ;; rus ;; йцукен
-    hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
-    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
-    hв (tap-hold $tap-time $hold-middle @в (multi lctl (layer-while-held eng)))
-    hа (tap-hold $tap-time $hold-index @а lsft)
-    hл (tap-hold $tap-time $hold-middle @л (multi lctl (layer-while-held eng)))
-    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
-    hж (tap-hold $tap-time $hold-pinky @ж (multi lmet (layer-while-held eng)))
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rmet)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
@@ -440,14 +432,6 @@ journalctl -u kanata.service -f
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
-    ;; rus ;; йцукен
-    hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
-    hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
-    hв (tap-hold $tap-time $hold-middle @в (multi lmet (layer-while-held eng)))
-    hа (tap-hold $tap-time $hold-index @а lsft)
-    hл (tap-hold $tap-time $hold-middle @л (multi lmet (layer-while-held eng)))
-    hд (tap-hold $tap-time $hold-ring @д (multi lalt (layer-while-held eng)))
-    hж (tap-hold $tap-time $hold-pinky @ж (multi lctl (layer-while-held eng)))
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rctl)
     h4 (tap-hold $tap-time $hold-ring 4 lalt)
@@ -484,6 +468,7 @@ journalctl -u kanata.service -f
 ;; (include eng_qwerty.kbd)
 
 (include rus_diktor.kbd)
+;; (include rus_йцукенг.kbd)
 
 ;; -------------------------------------------------------------------------------------
 ;; disable remapping - activate it when your frend is using your keyboard
@@ -674,24 +659,6 @@ journalctl -u kanata.service -f
 )
 
 ;; -------------------------------------------------------------------------------------
-;; alt layers,
-;; replace default eng and rus to use alternative layouts
-
-(deflayer rus_йцукен
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
-@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
-
- _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
-@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
- _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
- _                       @lfun @nav @mos   @sym @num @rfun
-
-                                                     @rfun
-                         @lfun                       @rfun
-                         @lfun                  @num @rfun
-)
-
-;; -------------------------------------------------------------------------------------
 ;; combo definition
 
 (defcfg concurrent-tap-hold yes)
@@ -705,9 +672,4 @@ journalctl -u kanata.service -f
   (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
 )
