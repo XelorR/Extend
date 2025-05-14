@@ -62,9 +62,9 @@
   ё grv
   lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
   lб (tap-hold $tap-time $hold-pinky @б (layer-toggle swi))
-  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
-  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left)))
-  tdы (tap-dance-eager 500 ( (macro @ы) (macro bspc S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
+  tdц (tap-dance-eager 400 ( (macro @ц) (macro bspc @en 50 S-, 20 S-. 30 @ru 20 left) (macro @en 50 S-, 20 S-. 30 @ru 20 left) (macro @en 50 S-, 20 S-. 30 @ru 20 left)))
+  tdч (tap-dance-eager 400 ( (macro @ч) (macro bspc @en 50 [ 20 ] 30 @ru 20 left) (macro @en 50 [ 20 ] 30 @ru 20 left) (macro @en 50 [ 20 ] 30 @ru 20 left)))
+  tdы (tap-dance-eager 300 ( (macro @ы) (macro bspc S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
