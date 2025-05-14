@@ -1,5 +1,5 @@
-;; ----------------------------------------------------------------------------------------
-;; matrix, what to remap
+;; MATRIX ==============================================================================
+;; what to remap
 
 (defsrc
  f24       f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
@@ -15,241 +15,7 @@
                           lmet                  ralt rmet
 )
 
-;; -------------------------------------------------------------------------------------
-;; main typing layers
-
-(include eng_colemak.kbd)
-;; (include eng_qwerty.kbd)
-
-(include rus_diktor.kbd)
-
-;; -------------------------------------------------------------------------------------
-;; disable remapping - activate it when your frend is using your keyboard
-;;   move it up to first defined layer if you want to keep config
-;;   on your grandmother's laptop
-
-(deflayer qwe ;; no remapping
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _
- _         _    _    _    _    _               @ln   _    _    _    _ 
- _                        _    _    _      _    _    _
-
-                                                     _
-                          _                          _     
-                          _                     _    _
-)
-
-;; -------------------------------------------------------------------------------------
-;; gaming layer and sublayers
-
-(deflayer gam ;; gaming layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-@gesc      1    2    3    4    5                _    _    _    _    _        _    _    _
-
- i         tab  q    w    e    r                y    XX   up   XX   tab      _    _    _
- caps      lsft a    s    d    f                h    left down rght rsft     _
- m         lctl z    x    c    v               @ln   XX   XX   XX   rctl
- _                       @galt spc  _      _    ret @gprnt
-
-                                                    @gprnt
-                         @galt                      @gprnt
-                         @galt                  ret @gprnt
-)
-
-(deflayer gfn ;; fn for gaming layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        grv   2    esc  3    t                y    u    i    o    p        [    ]    _
- _       @fun   j    i    m    g                h    j    k    l    ;        '
- _        caps  1    h    4    b                n    m    ,    .    / 
- _                        XX   ret  _      _    _    _
-
-                                                     _
-                          XX                         _
-                          XX                    _    _
-)
-
-;; -------------------------------------------------------------------------------------
-;; layers with extra buttons: numeric, symbol, function
-
-(deflayer num ;; numeric and punctuation layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        @«”   7    8    9   @₽               @lrd @—   @°   @≈   @del      _    _    _
- _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
- _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill
- _                      @lfun @lsym _      _   @num @rfun
-
-                                                    @rfun
-                        @lfun                       @rfun
-                        @lfun                  @num @rfun
-)
-
-(deflayer sym ;; symbol layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        @“   @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
- _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
- _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
- _                      @lfun @nav  _      _   @num @rfun
-
-                                                    @rfun
-                        @lfun                       @rfun
-                        @lfun                  @num @rfun
-)
-
-(deflayer fun ;; function, media and keypad layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
- _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
- _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
- _                       nlck @lau  _      _    kp0  nlck
-
-                                                     nlck
-                         nlck                        nlck
-                         nlck                   kp0  nlck
-)
-
-;; ------------------------------------------------------------------------------------------
-;; layers for navigation, edition and function
-
-(deflayer nav ;; navigation layer
- _         _    _     _    _     _                _    _    _    _    _         _    _    _
- f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
-
- _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
- _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
- _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
- _                        @lau  @nav  _      _   @rsym @rfun
-
-                                                       @rfun
-                          @lau                         @rfun
-                          @lau                   @rsym @rfun
-)
-
-(deflayer nav_mac ;; navigation layer
- _         _    _     _    _     _                _    _    _    _    _         _    _    _
- f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
-
- _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
- _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
- _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
- _                        @lau  @nav  _      _   @rsym @rfun
-
-                                                       @rfun
-                          @lau                         @rfun
-                          @lau                   @rsym @rfun
-)
-
-(deflayer mos ;; mouse layer
- _         _    _       _    _      _           _    _    _    _    _        _    _    _
- _         _    _       _    _      _           _    _    _    _    _        _    _    _
-
- _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
- _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file
- _                        @lfun @nav  _    _    mltp mrtp
-
-                                                     mrtp
-                          @lfun                      mrtp
-                          @lfun                 mltp mrtp
-)
-
-(deflayer mos_mac ;; mouse layer
- _         _    _       _    _      _           _    _    _    _    _        _    _    _
- _         _    _       _    _      _           _    _    _    _    _        _    _    _
-
- _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
- _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file
- _                        @lfun @nav  _    _    mltp mrtp
-
-                                                     mrtp
-                          @lfun                      mrtp
-                          @lfun                 mltp mrtp
-)
-
-;; -------------------------------------------------------------------------------------
-;; layer to switch betwen typing and gaming layers and toggle mods if any
-
-(deflayer swi ;; switcher, layer to switch layers
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    @gam @qwe _                _  @qwe @gam   _    _        _
- _         _    _    @rus @eng _                _  @eng @rus   _    _ 
- _                        _    _    _      _    _    _
-
-                                                     _
-                          _                          _     
-                          _                     _    _
-)
-
-;; -------------------------------------------------------------------------------------
-;; layer with macro to launch applications
-
-(deflayer lau ;; app launcher
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _         _    _    _    _   @gho              _   @lua  _    _    _        _    _    _
- _         _    _   @ste @ter  _                _   @ntp @exc  _    _        _
- _        @zed  _    _   @vsc @bro              _    _    _    _    _
- _                        _    _    _      _    _    _
-
-                                                     _
-                          _                          _     
-                          _                     _    _
-)
-
-;; -------------------------------------------------------------------------------------
-;; alt layers,
-;; replace default eng and rus to use alternative layouts
-
-(deflayer rus_йцукен
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
-@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
-
- _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
-@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
- _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
- _                       @lfun @nav @mos   @sym @num @rfun
-
-                                                     @rfun
-                         @lfun                       @rfun
-                         @lfun                  @num @rfun
-)
-
-;; -------------------------------------------------------------------------------------
-;; combo definition
-
-(defcfg concurrent-tap-hold yes)
-(defchordsv2
-  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
-  ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-  ;; (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
-)
-
+;; BUTTON DEFINITIONS ==================================================================
 ;; -------------------------------------------------------------------------------------
 ;; platform specific configs
 
@@ -708,4 +474,240 @@ journalctl -u kanata.service -f
     kp5 (tap-hold $tap-time $hold-middle 5 lmet)
     kp6 (tap-hold $tap-time $hold-ring 6 lalt)
   )
+)
+
+;; LAYERS ==============================================================================
+;; -------------------------------------------------------------------------------------
+;; main typing layers
+
+(include eng_colemak.kbd)
+;; (include eng_qwerty.kbd)
+
+(include rus_diktor.kbd)
+
+;; -------------------------------------------------------------------------------------
+;; disable remapping - activate it when your frend is using your keyboard
+;;   move it up to first defined layer if you want to keep config
+;;   on your grandmother's laptop
+
+(deflayer qwe ;; no remapping
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _
+ _         _    _    _    _    _               @ln   _    _    _    _ 
+ _                        _    _    _      _    _    _
+
+                                                     _
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
+;; gaming layer and sublayers
+
+(deflayer gam ;; gaming layer
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+@gesc      1    2    3    4    5                _    _    _    _    _        _    _    _
+
+ i         tab  q    w    e    r                y    XX   up   XX   tab      _    _    _
+ caps      lsft a    s    d    f                h    left down rght rsft     _
+ m         lctl z    x    c    v               @ln   XX   XX   XX   rctl
+ _                       @galt spc  _      _    ret @gprnt
+
+                                                    @gprnt
+                         @galt                      @gprnt
+                         @galt                  ret @gprnt
+)
+
+(deflayer gfn ;; fn for gaming layer
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        grv   2    esc  3    t                y    u    i    o    p        [    ]    _
+ _       @fun   j    i    m    g                h    j    k    l    ;        '
+ _        caps  1    h    4    b                n    m    ,    .    / 
+ _                        XX   ret  _      _    _    _
+
+                                                     _
+                          XX                         _
+                          XX                    _    _
+)
+
+;; -------------------------------------------------------------------------------------
+;; layers with extra buttons: numeric, symbol, function
+
+(deflayer num ;; numeric and punctuation layer
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @«”   7    8    9   @₽               @lrd @—   @°   @≈   @del      _    _    _
+ _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
+ _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill
+ _                      @lfun @lsym _      _   @num @rfun
+
+                                                    @rfun
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
+(deflayer sym ;; symbol layer
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @“   @<    =   @>   @`               @^   @[   @_   @]   @'        _    _    _
+ _        @h\  @hlb @h-  @hrb @+               @%   @h{  @h;  @h}  @h!       _
+ _        @#   @*   @:   @/   @$               @at  @|   @~   @&   @?        
+ _                      @lfun @nav  _      _   @num @rfun
+
+                                                    @rfun
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
+(deflayer fun ;; function, media and keypad layer
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
+ _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
+ _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll
+ _                       nlck @lau  _      _    kp0  nlck
+
+                                                     nlck
+                         nlck                        nlck
+                         nlck                   kp0  nlck
+)
+
+;; ------------------------------------------------------------------------------------------
+;; layers for navigation, edition and function
+
+(deflayer nav ;; navigation layer
+ _         _    _     _    _     _                _    _    _    _    _         _    _    _
+ f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
+
+ _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
+ _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
+ _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file 
+ _                        @lau  @nav  _      _   @rsym @rfun
+
+                                                       @rfun
+                          @lau                         @rfun
+                          @lau                   @rsym @rfun
+)
+
+(deflayer nav_mac ;; navigation layer
+ _         _    _     _    _     _                _    _    _    _    _         _    _    _
+ f13       f1   f2    f3   f3    f5               f6   f7   f8   f9   f10       f11  f12  del
+
+ _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
+ _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
+ _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file 
+ _                        @lau  @nav  _      _   @rsym @rfun
+
+                                                       @rfun
+                          @lau                         @rfun
+                          @lau                   @rsym @rfun
+)
+
+(deflayer mos ;; mouse layer
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+
+ _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
+ _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file
+ _                        @lfun @nav  _    _    mltp mrtp
+
+                                                     mrtp
+                          @lfun                      mrtp
+                          @lfun                 mltp mrtp
+)
+
+(deflayer mos_mac ;; mouse layer
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+ _         _    _       _    _      _           _    _    _    _    _        _    _    _
+
+ _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
+ _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
+ _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file
+ _                        @lfun @nav  _    _    mltp mrtp
+
+                                                     mrtp
+                          @lfun                      mrtp
+                          @lfun                 mltp mrtp
+)
+
+;; -------------------------------------------------------------------------------------
+;; layer to switch betwen typing and gaming layers and toggle mods if any
+
+(deflayer swi ;; switcher, layer to switch layers
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    @gam @qwe _                _  @qwe @gam   _    _        _
+ _         _    _    @rus @eng _                _  @eng @rus   _    _ 
+ _                        _    _    _      _    _    _
+
+                                                     _
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
+;; layer with macro to launch applications
+
+(deflayer lau ;; app launcher
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         _    _    _    _   @gho              _   @lua  _    _    _        _    _    _
+ _         _    _   @ste @ter  _                _   @ntp @exc  _    _        _
+ _        @zed  _    _   @vsc @bro              _    _    _    _    _
+ _                        _    _    _      _    _    _
+
+                                                     _
+                          _                          _     
+                          _                     _    _
+)
+
+;; -------------------------------------------------------------------------------------
+;; alt layers,
+;; replace default eng and rus to use alternative layouts
+
+(deflayer rus_йцукен
+ _          _    _    _    _    _                _    _    _    _    _       _    _    _
+@ё          _    _    _    _    _                _    _    _    _    _       _    _    _
+
+ _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    _
+@lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
+ _         @я   @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,
+ _                       @lfun @nav @mos   @sym @num @rfun
+
+                                                     @rfun
+                         @lfun                       @rfun
+                         @lfun                  @num @rfun
+)
+
+;; -------------------------------------------------------------------------------------
+;; combo definition
+
+(defcfg concurrent-tap-hold yes)
+(defchordsv2
+  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
+  ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (m ,) @ъ  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
+  ;; (, .) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
 )
