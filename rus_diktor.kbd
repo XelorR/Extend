@@ -81,7 +81,6 @@
 
 (platform (macos)
   (defalias
-    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos_mac))
     ;; modtaps (GCAS)
     ;; rus ;; diktor
@@ -98,7 +97,6 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
-    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
     lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
     ;; modtaps (GACS)
     ;; rus ;; diktor

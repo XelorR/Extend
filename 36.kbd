@@ -371,6 +371,7 @@ journalctl -u kanata.service -f
   fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
+  ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
 )
 
 ;; -------------------------------------------------------------------------------------
