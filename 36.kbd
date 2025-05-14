@@ -68,7 +68,7 @@
   ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
   .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
   ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
-  “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-'' 29 left) break )
+  “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-' 20 left) break )
   '' (switch ((base-layer rus)) (macro @en 50 ' 20 ' 20 left  50 @ru) break () (macro ' 20 ' 20 left) break )
   `` (switch ((base-layer rus)) (macro @en 50 ` 20 ` 20 left  50 @ru) break () (macro ` 20 ` 20 left) break )
   td“” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
