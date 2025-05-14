@@ -19,6 +19,8 @@
 ;; main typing layers
 
 (include eng_colemak.kbd)
+;; (include eng_qwerty.kbd)
+
 (include rus_diktor.kbd)
 
 ;; -------------------------------------------------------------------------------------
@@ -212,20 +214,6 @@
 ;; -------------------------------------------------------------------------------------
 ;; alt layers,
 ;; replace default eng and rus to use alternative layouts
-
-(deflayer eng_qwerty
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
-@lfun     @ha  @hqs @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
- _        @lz   x    c    v    b                n    m   @,?  @.!  @l/\
- _                      @lfun @nav @mos   @sym @num @rfun
-
-                                                    @rfun
-                        @lfun                       @rfun
-                        @lfun                  @num @rfun
-)
 
 (deflayer rus_йцукен
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
@@ -606,14 +594,6 @@ journalctl -u kanata.service -f
   qbspc (fork bspc @close_window (lsft rsft))
 
   ;; -------------------------------------------------------------------------------------
-  ;; special actions for English layer
-
-  ;; eng
-  ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
-  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
-  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
-
-  ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
@@ -649,14 +629,6 @@ journalctl -u kanata.service -f
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
-    ;; eng ;; qwerty
-    hqs (tap-hold $tap-time $hold-ring s lalt)
-    hd (tap-hold $tap-time $hold-middle d lctl)
-    hf (tap-hold $tap-time $hold-index f lsft)
-    hj (tap-hold $tap-time $hold-index j lsft)
-    hk (tap-hold $tap-time $hold-middle k lctl)
-    hl (tap-hold $tap-time $hold-ring l lalt)
-    hq' (tap-hold $tap-time $hold-pinky ' lmet)
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
     hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
@@ -702,14 +674,6 @@ journalctl -u kanata.service -f
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
-    ;; eng ;; qwerty
-    hqs (tap-hold $tap-time $hold-ring s lalt)
-    hd (tap-hold $tap-time $hold-middle d lmet)
-    hf (tap-hold $tap-time $hold-index f lsft)
-    hj (tap-hold $tap-time $hold-index j lsft)
-    hk (tap-hold $tap-time $hold-middle k lmet)
-    hl (tap-hold $tap-time $hold-ring l lalt)
-    hq' (tap-hold $tap-time $hold-pinky ' lctl)
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
     hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))

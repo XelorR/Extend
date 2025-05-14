@@ -19,6 +19,8 @@
   tdq (tap-dance-eager 300 ( (macro q) (macro bspc 20 S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left)))
   tdj (tap-dance-eager 300 ( (macro j) (macro bspc 20 grv 20 grv 20 left) (macro grv 20 grv 20 left) (macro grv 20 grv 20 left)))
   tdv (tap-dance-eager 500 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
+  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
 )
 
 (platform (win winiov2 wintercept linux)

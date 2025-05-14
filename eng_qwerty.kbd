@@ -1,0 +1,52 @@
+(deflayer eng ;; qwerty
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
+@lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
+ _        @lz   x    c   @tdv  b               @ln   m   @,?  @.!  @l/\
+ _                      @lfun @nav @mos   @sym @num @rfun
+
+                                                    @rfun
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
+(defalias
+  ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
+  lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
+  tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left) (macro S-' 20 S-' 20 left)))
+  tdv (tap-dance-eager 300 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
+  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
+)
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    ;; modtaps (GACS)
+    ;; eng ;; qwerty
+    ha (tap-hold $tap-time $hold-pinky a lmet)
+    hs (tap-hold $tap-time $hold-ring s lalt)
+    hd (tap-hold $tap-time $hold-middle d lctl)
+    hf (tap-hold $tap-time $hold-index f lsft)
+    hj (tap-hold $tap-time $hold-index j lsft)
+    hk (tap-hold $tap-time $hold-middle k lctl)
+    hl (tap-hold $tap-time $hold-ring l lalt)
+    hq' (tap-hold $tap-time $hold-pinky ' lmet)
+  )
+)
+
+(platform (macos)
+  (defalias
+    ;; modtaps (GCAS)
+    ;; eng ;; qwerty
+    ha (tap-hold $tap-time $hold-pinky a lctl)
+    hqs (tap-hold $tap-time $hold-ring s lalt)
+    hd (tap-hold $tap-time $hold-middle d lmet)
+    hf (tap-hold $tap-time $hold-index f lsft)
+    hj (tap-hold $tap-time $hold-index j lsft)
+    hk (tap-hold $tap-time $hold-middle k lmet)
+    hl (tap-hold $tap-time $hold-ring l lalt)
+    hq' (tap-hold $tap-time $hold-pinky ' lctl)
+  )
+)
