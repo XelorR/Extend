@@ -32,19 +32,7 @@
                         @lfun                  @num @rfun
 )
 
-(deflayer rus ;; diktor
- _          _    _    _    _    _                _    _    _    _    _       _    _    _
-@ё         @1   @2    3   @4   @5               @6   @7   @8    9    0      @star =    _
-
- _         @tdц @*ь  @я   @,?  @.!              @з   @в   @к   @д   @tdч    @ш   @щ    _
-@lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
- _         @lф  @э   @х   @tdы @ю               @lб  @м   @п   @г   @lж
- _                       @lfun @nav @mos   @sym @num @rfun
-
-                                                     @rfun
-                         @lfun                       @rfun
-                         @lfun                  @num @rfun
-)
+(include rus_diktor.kbd)
 
 ;; -------------------------------------------------------------------------------------
 ;; disable remapping - activate it when your frend is using your keyboard
@@ -280,11 +268,6 @@
   (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; comment following letters if you want to use йцукен instead of diktor
-  (i o) @й   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (u i) @ё   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (m ,) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
-  (, .) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; diktor
   ;; uncomment if you use йцукен instead of diktor and need additional letters on combos
   ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
   ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe)
@@ -649,67 +632,6 @@ journalctl -u kanata.service -f
   tdv (tap-dance-eager 500 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
 
   ;; -------------------------------------------------------------------------------------
-  ;; Russian letters
-
-  ;; rus
-  1 (fork 1 S-] (lsft rsft)) ;; diktor
-  2 (fork 2 S-m (lsft rsft)) ;; diktor
-  ;; 3 is the same in йцукен ;; diktor
-  4 (fork 4 S-5 (lsft rsft)) ;; diktor
-  5 (fork 5 S-6 (lsft rsft)) ;; diktor
-  6 (fork 6 S-4 (lsft rsft)) ;; diktor
-  7 (fork 7 (unmod -) (lsft rsft)) ;; diktor
-  8 (fork 8 S-2 (lsft rsft)) ;; diktor
-  ;; 9 is the same in йцукен ;; diktor
-  ;; 0 is the same in йцукен ;; diktor
-  star (fork S-8 S-- (lsft rsft)) ;; diktor
-  ц w
-  ь m
-  ьъ (fork m (unmod ]) (lsft rsft)) ;; diktor
-  я z
-  з p
-  в d
-  к r
-  д l
-  ч x
-  ш i
-  щ o
-  у e
-  и b
-  е t
-  о j
-  а f
-  л k
-  н y
-  т n
-  с c
-  р h
-  й q
-  ф a
-  э '
-  х [
-  ъ ]
-  ы s
-  ю .
-  б ,
-  м v
-  п g
-  г u
-  ж ;
-  ё grv
-  lж (tap-hold $tap-time $hold-pinky @ж (layer-toggle fun))
-  lб (tap-hold $tap-time $hold-pinky @б (layer-toggle swi))
-  tdц (tap-dance-eager 500 ( (macro @ц) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
-  tdй (tap-dance-eager 500 ( (macro @й) (macro bspc S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left) (macro S-2 20 S-2 20 left)))
-  tdч (tap-dance-eager 500 ( (macro @ч) (macro bspc @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left) (macro @en 50 ' 20 ' 30 @ru 20 left)))
-  tdы (tap-dance-eager 500 ( (macro @ы) (macro bspc S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
-  *ь (switch
-    ((key-history f 1)) (macro n m) break ;; а - ть
-    ((key-history j 1)) (macro d f) break ;; о - ва
-    () @ьъ break
-  )
-
-  ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
@@ -742,8 +664,6 @@ journalctl -u kanata.service -f
 (platform (win winiov2 wintercept linux)
   (defalias
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav))
-    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
-    lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos))
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
@@ -764,15 +684,6 @@ journalctl -u kanata.service -f
     hk (tap-hold $tap-time $hold-middle k lctl)
     hl (tap-hold $tap-time $hold-ring l lalt)
     hq' (tap-hold $tap-time $hold-pinky ' lmet)
-    ;; rus ;; diktor
-    hу (tap-hold $tap-time $hold-pinky @у (multi lmet (layer-while-held eng)))
-    hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
-    hе (tap-hold $tap-time $hold-middle @е (multi lctl (layer-while-held eng)))
-    hо (tap-hold $tap-time $hold-index @о lsft)
-    hн (tap-hold $tap-time $hold-index @н rsft)
-    hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lctl (layer-while-held eng)) (w))
-    hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
-    hр (tap-hold $tap-time $hold-pinky @р (multi lmet (layer-while-held eng)))
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
     hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
@@ -815,8 +726,6 @@ journalctl -u kanata.service -f
 (platform (macos)
   (defalias
     nav (tap-hold $tap-time $hold-time spc (layer-toggle nav_mac))
-    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
-    lф (tap-hold $tap-time $hold-pinky a (layer-toggle mos_mac))
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
@@ -837,15 +746,6 @@ journalctl -u kanata.service -f
     hk (tap-hold $tap-time $hold-middle k lmet)
     hl (tap-hold $tap-time $hold-ring l lalt)
     hq' (tap-hold $tap-time $hold-pinky ' lctl)
-    ;; rus ;; diktor
-    hу (tap-hold $tap-time $hold-pinky @у (multi lctl (layer-while-held eng)))
-    hи (tap-hold $tap-time $hold-ring @и (multi lalt (layer-while-held eng)))
-    hе (tap-hold $tap-time $hold-middle @е (multi lmet (layer-while-held eng)))
-    hо (tap-hold $tap-time $hold-index @о lsft)
-    hн (tap-hold $tap-time $hold-index @н rsft)
-    hт (tap-hold-except-keys $tap-time $hold-middle @т (multi lmet (layer-while-held eng)) (w))
-    hс (tap-hold $tap-time $hold-ring @с (multi lalt (layer-while-held eng)))
-    hр (tap-hold $tap-time $hold-pinky @р (multi lctl (layer-while-held eng)))
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
     hы (tap-hold $tap-time $hold-ring @ы (multi lalt (layer-while-held eng)))
