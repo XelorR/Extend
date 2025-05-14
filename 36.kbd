@@ -18,6 +18,7 @@
 ;; BUTTON DEFINITIONS ==================================================================
 
 (include control.kbd)
+(include symbols.kbd)
 
 (defalias
   ;; -------------------------------------------------------------------------------------
@@ -27,117 +28,7 @@
   rus (multi (layer-switch rus) @ru)
   gam (multi (layer-switch gam) @en)
   qwe (multi (layer-switch qwe) @en)
-
-  ;; -------------------------------------------------------------------------------------
-  ;; Symbols definition
-
-  ;; sym
-  ;; to use this symbols, you have to ensure:
-  ;; - that you have US (qwerty) and RU (йцукен) layouts set in the system
-  ;; - set separate activation shortcuts for @en and @ru - just look at the definitions
-  % S-5
-  + S-=
-  * S-8
-  _ S--
-  lb S-9
-  rb S-0
-  { (switch ((base-layer rus)) (macro @en 50 S-[ 50 @ru) break () S-[ break )
-  ; (switch ((base-layer rus)) S-4 break () ; break )
-  } (switch ((base-layer rus)) (macro @en 50 S-] 50 @ru) break () S-] break )
-  ! S-1
-  # (switch ((base-layer rus)) (macro @en 50 S-3 50 @ru) break () S-3 break)
-  $ (switch ((base-layer rus)) (macro @en 50 S-4 50 @ru) break () S-4 break)
-  & (switch ((base-layer rus)) (macro @en 50 S-7 50 @ru) break () S-7 break)
-  ' (switch ((base-layer rus)) (macro @en 50 ' 50 @ru) break () ' break)
-  < (switch ((base-layer rus)) (macro @en 50 S-, 50 @ru) break () S-, break)
-  > (switch ((base-layer rus)) (macro @en 50 S-. 50 @ru) break () S-. break)
-  [ (switch ((base-layer rus)) (macro @en 50 [ 50 @ru) break () [ break)
-  ] (switch ((base-layer rus)) (macro @en 50 ] 50 @ru) break () ] break)
-  ^ (switch ((base-layer rus)) (macro @en 50 S-6 50 @ru) break () S-6 break)
-  ` (switch ((base-layer rus)) (macro @en 50 grv 50 @ru) break () grv break)
-  at (switch ((base-layer rus)) (macro @en 50 S-2 50 @ru) break () S-2 break)
-  “ (switch ((base-layer rus)) S-2 break () S-' break)
-  : (switch ((base-layer rus)) S-6 break () S-; break)
-  | (switch ((base-layer rus)) (macro @en 50 S-\ 50 @ru) break () S-\ break)
-  ~ (switch ((base-layer rus)) (macro @en 50 S-grv 50 @ru) break () S-grv break)
-  , (switch ((base-layer rus)) S-/ break () , break )
-  . (switch ((base-layer rus)) / break () . break )
-  ? (switch ((base-layer rus)) S-7 break () S-/ break )
-  / (switch ((base-layer rus)) S-\ break () / break )
-  № (switch ((base-layer rus)) S-3 break () (macro @ru 50 S-3 50 @en) break)
-  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
-  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
-  ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
-  “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-' 20 left) break )
-  '' (switch ((base-layer rus)) (macro @en 50 ' 20 ' 20 left  50 @ru) break () (macro ' 20 ' 20 left) break )
-  `` (switch ((base-layer rus)) (macro @en 50 ` 20 ` 20 left  50 @ru) break () (macro ` 20 ` 20 left) break )
-  td“” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
-  td'' (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ' 50 @ru) (macro @en 50 ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left))) break )
-  brc (macro S-9 20 S-0 20 left)
-  []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
-  {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
-  <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
-  -[] (switch ((base-layer rus)) (macro @en 50 home - [ 20 spc ] spc 20 end 50 @ru) break () (macro home - [ 20 spc ] 20 spc end) break )
-
-  ;; -------------------------------------------------------------------------------------
-  ;; Unicode symbols
-
-  u— (unicode —)
-  ur— (macro @en 50 @u— 50 @ru)
-  — (switch ((base-layer rus)) @ur— break () @u— break )
-  u₽ (unicode ₽)
-  ur₽ (macro @en 50 @u₽ 50 @ru)
-  ₽ (switch ((base-layer rus)) @ur₽ break () @u₽ break )
-  u° (unicode °)
-  ur° (macro @en 50 @u° 50 @ru)
-  ° (switch ((base-layer rus)) @ur° break () @u° break )
-  u≈ (unicode ≈)
-  ur≈ (macro @en 50 @u≈ 50 @ru)
-  ≈ (switch ((base-layer rus)) @ur≈ break () @u≈ break )
-  u± (unicode ±)
-  ur± (macro @en 50 @u± 50 @ru)
-  ± (switch ((base-layer rus)) @ur± break () @u± break )
-  u« (unicode «)
-  u» (unicode »)
-  u«» (macro @u« 50 @u» 50 left)
-  ur«» (macro @en 50 @u« 50 @u» 50 left 50 @ru)
-  u“ (unicode “)
-  u” (unicode ”)
-  u“” (macro @u“ 50 @u” 50 left)
-  ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
-  «” (switch ((base-layer rus)) @ur«» break () @u“” break )
-  
-  ;; -------------------------------------------------------------------------------------
-  ;; fun
-  dr0 (dynamic-macro-record 0)
-  dms dynamic-macro-record-stop
-  dp0 (dynamic-macro-play 0)
-
-  ;; -------------------------------------------------------------------------------------
-  ;; navigation and edition specific
-
-  ;; nav
-  lctl (switch ((base-layer rus)) lctl break () (one-shot 500 lctl) break )
-  lmet (switch ((base-layer rus)) lmet break () (one-shot 500 lmet) break )
-
-  ;; mos
-  mu (movemouse-up 1 1)
-  md (movemouse-down 1 1)
-  ml (movemouse-left 1 1)
-  mr (movemouse-right 1 1)
-  mwu (mwheel-up 50 120)
-  mwd (mwheel-down 50 120)
-  mwl (mwheel-left 50 120)
-  mwr (mwheel-right 50 120)
-  
-  ;; -------------------------------------------------------------------------------------
-  ;; custom shifted things
-
-  gesc (fork esc (unmod grv) (lsft rsft))
-  croll (fork caps (unmod slck) (lsft rsft))
-  qdel (fork del @close_window (lsft rsft))
-  qbspc (fork bspc @close_window (lsft rsft))
-
+ 
   ;; -------------------------------------------------------------------------------------
   ;; switchers to sublayers
 

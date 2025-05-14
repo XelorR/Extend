@@ -225,4 +225,35 @@ journalctl -u kanata.service -f
   cw (switch ((base-layer rus)) (caps-word-custom 2000 (a b c d e f g h i j k l m n o p q r s t u v w x y z , . ' ; [ ]) (bspc del)) break () (caps-word 2000) break )
   rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lmet) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rmet))
   lrd (tap-dance 400 (lrld @rele))
+
+  ;; -------------------------------------------------------------------------------------
+  ;; fun
+  dr0 (dynamic-macro-record 0)
+  dms dynamic-macro-record-stop
+  dp0 (dynamic-macro-play 0)
+
+  ;; -------------------------------------------------------------------------------------
+  ;; navigation and edition specific
+
+  ;; nav
+  lctl (switch ((base-layer rus)) lctl break () (one-shot 500 lctl) break )
+  lmet (switch ((base-layer rus)) lmet break () (one-shot 500 lmet) break )
+
+  ;; mos
+  mu (movemouse-up 1 1)
+  md (movemouse-down 1 1)
+  ml (movemouse-left 1 1)
+  mr (movemouse-right 1 1)
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+  
+  ;; -------------------------------------------------------------------------------------
+  ;; custom shifted things
+
+  gesc (fork esc (unmod grv) (lsft rsft))
+  croll (fork caps (unmod slck) (lsft rsft))
+  qdel (fork del @close_window (lsft rsft))
+  qbspc (fork bspc @close_window (lsft rsft))
 )
