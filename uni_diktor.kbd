@@ -138,13 +138,12 @@
   _ё (fork @uё @uЁ (lsft rsft))
   _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
   _lб (tap-hold $tap-time $hold-pinky @_б (layer-toggle swi))
-  йЙ (switch ((base-layer rus)) @й break ((base-layer rus)) @_й break )
-  ёЁ (switch ((base-layer rus)) grv break ((base-layer rus)) @_ё break )
-  шШ (switch ((base-layer rus)) @ш break ((base-layer rus)) @_ш break )
-  щЩ (switch ((base-layer rus)) @щ break ((base-layer rus)) @_щ break )
-  хХ (switch ((base-layer rus)) @х break ((base-layer rus)) @_х break )
-  эЭ (switch ((base-layer rus)) @э break ((base-layer rus)) @_э break )
-  ъЪ (switch ((base-layer rus)) @ъ break ((base-layer rus)) @_ъ break )
+
+  ;; extra letters which doesn't fit 10 columns
+  rus[ @_ш
+  rus] @_щ
+  rus` @_ё
+  rus' @_й
 )
 
 (platform (win winiov2 wintercept linux)

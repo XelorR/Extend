@@ -70,6 +70,12 @@
     ((key-history j 1)) (macro d f) break ;; о - ва
     () @ьъ break
   )
+
+  ;; extra letters which doesn't fit 10 columns
+  rus[ @ш
+  rus] @щ
+  rus` @ё
+  rus' @й
 )
 
 (platform (macos)
