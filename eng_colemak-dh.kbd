@@ -1,6 +1,6 @@
 (deflayer eng ;; colemak
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         1    2    3    4    5                6    7    8    9    0        -    =    _
 
  _        @tdq  w    f    p    b               @tdj  l    u    y   @td;      _    _    _
 @lfun     @ha  @hr  @hs  @ht   g                m   @hn  @he  @hi  @ho       _
