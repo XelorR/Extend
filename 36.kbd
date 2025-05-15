@@ -278,11 +278,16 @@
   (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
   (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (i o) @й   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  (u i) @ё   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  (i k) @ш   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  (o l) @щ   $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe) ;; rus diktor
-  ;; (i o) @х  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
-  ;; (u i) @ё  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
-  ;; (o l) @э  $hold-time all-released     (eng     gam gfn num sym fun nav mos qwe) ;; rus йцукенг
+  (i o) @ex' $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe)
+  (u i) @ex` $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe)
+  (i k) @ex[ $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe)
+  (o l) @ex] $hold-time all-released    (eng     gam gfn num sym fun nav mos qwe)
+)
+
+(defalias
+  ;; extra letters which doesn't fit 10 columns and 3 rows
+  ex[ (switch ((base-layer rus)) @rus[ () @eng[ break)
+  ex] (switch ((base-layer rus)) @rus] () @eng] break)
+  ex` (switch ((base-layer rus)) @rus` () @eng` break)
+  ex' (switch ((base-layer rus)) @rus' () @eng' break)
 )
