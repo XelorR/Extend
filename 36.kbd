@@ -286,8 +286,8 @@
 
 (defalias
   ;; extra letters which doesn't fit 10 columns and 3 rows
-  ex[ (switch ((base-layer rus)) @rus[ () @eng[ break)
-  ex] (switch ((base-layer rus)) @rus] () @eng] break)
-  ex` (switch ((base-layer rus)) @rus` () @eng` break)
-  ex' (switch ((base-layer rus)) @rus' () @eng' break)
+  ex[ (switch ((base-layer rus)) @rus[ break () @eng[ break)
+  ex] (switch ((base-layer rus)) @rus] break () @eng] break)
+  ex` (switch ((base-layer rus)) @rus` break () @eng` break)
+  ex' (switch ((base-layer rus)) @rus' break () @eng' break)
 )
