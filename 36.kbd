@@ -63,6 +63,7 @@
 ;; main typing layers
 
 (include eng_colemak.kbd)
+;; (include eng_colemak-dh.kbd)
 ;; (include eng_qwerty.kbd)
 
 (include rus_diktor.kbd)
