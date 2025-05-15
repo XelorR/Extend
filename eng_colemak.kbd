@@ -2,9 +2,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         1    2    3    4    5                6    7    8    9    0        -    =    _
 
- _        @tdq  w    f    p    g               @tdj  l    u    y   @td;      _    _    _
-@lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       _
- _        @lz   x    c   @tdv  b               @lk   m    ,    .   @l/       _
+ _        @tdq  w    f    p    g               @tdj  l    u    y   @td;      [    ]    \
+@lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       '
+ _        @lz   x    c   @tdv  b               @lk   m    ,    .   @l/       rsft
  _                      @lfun @nav @mos   @sym @num @rfun
 
                         @lfun                       @rfun
