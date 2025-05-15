@@ -3,8 +3,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @tdq  w    e    r    t                y    u    i    o    p        _    _    _
-@lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq'      ;
- _        @lz   x    c   @tdv  b               @ln   m   @,?  @.!  @l/\
+@lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq;      _
+ _        @lz   x    c   @tdv  b               @ln   m    ,    .   @l/
  _                      @lfun @nav @mos   @sym @num @rfun
 
                                                     @rfun
@@ -23,7 +23,7 @@
   eng[ [
   eng] ]
   eng` grv
-  eng' ;
+  eng' '
 )
 
 (platform (win winiov2 wintercept linux)
@@ -37,7 +37,7 @@
     hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lctl)
     hl (tap-hold $tap-time $hold-ring l lalt)
-    hq' (tap-hold $tap-time $hold-pinky ' lmet)
+    hq; (tap-hold $tap-time $hold-pinky ; lmet)
   )
 )
 
@@ -52,6 +52,6 @@
     hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lmet)
     hl (tap-hold $tap-time $hold-ring l lalt)
-    hq' (tap-hold $tap-time $hold-pinky ' lctl)
+    hq; (tap-hold $tap-time $hold-pinky ; lctl)
   )
 )
