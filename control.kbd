@@ -48,6 +48,7 @@ After=network.target
 
 [Service]
 Environment=XDG_CURRENT_DESKTOP=KDE
+Environment=KEYBOARD_TYPE=LAPTOP
 ExecStart=/usr/bin/kanata -c /home/username/path/to/config/kanata.kbd
 Restart=always
 User=root
