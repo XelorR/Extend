@@ -1,0 +1,54 @@
+(deflayer eng ;; graphite
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _    _    _        _    _    _
+
+ _         b    l    d    w    z               @td'  f    o    u   @tdj      _    _    _
+@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
+ _        @lq   x    m    c   @tdv             @lk   p   @,?  @.!  @l/\
+ _                      @lfun @nav @mos   @sym @num @rfun
+
+                                                    @rfun
+                        @lfun                       @rfun
+                        @lfun                  @num @rfun
+)
+
+(defalias
+  lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
+  lq (tap-hold $tap-time $hold-pinky q (layer-toggle mos))
+  tdj (tap-dance-eager 400 ( (macro j) (macro bspc 20 [ 20 ] 20 left) (macro [ 20 ] 20 left) (macro [ 20 ] 20 left)))
+  ;; tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left)))
+  td' (tap-dance-eager 300 ( (macro ') (macro bspc 20 S-[ 20 S-] 20 left) (macro S-[ 20 S-] 20 left) (macro S-[ 20 S-] 20 left)))
+  tdv (tap-dance-eager 300 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
+  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
+  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
+)
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    ;; modtaps (GACS)
+    ;; eng ;; colemak
+    hn (tap-hold $tap-time $hold-pinky n lmet)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    ht (tap-hold $tap-time $hold-middle t lctl)
+    hs (tap-hold $tap-time $hold-index s lsft)
+    hh (tap-hold $tap-time $hold-index h lsft)
+    ha (tap-hold $tap-time $hold-middle a lctl)
+    he (tap-hold $tap-time $hold-ring e lalt)
+    hi (tap-hold $tap-time $hold-pinky i lmet)
+  )
+)
+
+(platform (macos)
+  (defalias
+    ;; modtaps (GCAS)
+    ;; eng ;; colemak
+    hn (tap-hold $tap-time $hold-pinky n lctl)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    ht (tap-hold $tap-time $hold-middle t lmet)
+    hs (tap-hold $tap-time $hold-index s lsft)
+    hh (tap-hold $tap-time $hold-index h lsft)
+    ha (tap-hold $tap-time $hold-middle a lmet)
+    he (tap-hold $tap-time $hold-ring e lalt)
+    hi (tap-hold $tap-time $hold-pinky i lctl)
+  )
+)
