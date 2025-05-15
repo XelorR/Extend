@@ -2,7 +2,7 @@
  _          _    _    _    _    _                _    _    _    _    _       _    _    _
 @ё          1    2    3    4    5                6    7    8    9    0       -    =    _
 
- _         @tdй @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    \
+ _         @й   @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    \
 @lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
  _         @lя  @ч   @с   @м   @и               @lт  @ьъ  @б   @ю   @.,      rsft
  _                       @lfun @nav @mos   @sym @num @rfun
@@ -50,7 +50,6 @@
   ё grv
   lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos))
   lт (tap-hold $tap-time $hold-pinky @т (layer-toggle swi))
-  tdй (tap-dance-eager 400 ( (macro @й) (macro bspc @en 50 S-, 20 S-. 30 @ru 20 left) (macro @en 50 S-, 20 S-. 30 @ru 20 left) (macro @en 50 S-, 20 S-. 30 @ru 20 left)))
 
   ;; extra letters which doesn't fit 10 columns
   rus[ @х

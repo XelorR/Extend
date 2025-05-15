@@ -2,9 +2,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         1    2    3    4    5                6    7    8    9    0        -    =    _
 
- _        @tdq  w    e    r    t                y    u    i    o    p        [    ]    \
+ _         q    w    e    r    t                y    u    i    o    p        [    ]    \
 @lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq;      '
- _        @lz   x    c   @tdv  b               @ln   m    ,    .   @l/       rsft
+ _        @lz   x    c    v    b               @ln   m    ,    .    /        rsft
  _                      @lfun @nav @mos   @sym @num @rfun
 
                         @lfun                       @rfun
@@ -12,12 +12,6 @@
 )
 
 (defalias
-  lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
-  tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left)))
-  tdv (tap-dance-eager 300 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
-  l/ (tap-hold $tap-time $hold-pinky / (layer-toggle fun))
-  l/\ (tap-hold $tap-time $hold-pinky (fork / (unmod \) (lsft rsft)) (layer-toggle fun))
-
   ;; extra letters which doesn't fit 10 columns
   eng[ [
   eng] ]
@@ -27,6 +21,7 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
+    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos))
     ;; modtaps (GACS)
     ;; eng ;; qwerty
     ha (tap-hold $tap-time $hold-pinky a lmet)
@@ -42,6 +37,7 @@
 
 (platform (macos)
   (defalias
+    lz (tap-hold $tap-time $hold-pinky z (layer-toggle mos_mac))
     ;; modtaps (GCAS)
     ;; eng ;; qwerty
     ha (tap-hold $tap-time $hold-pinky a lctl)

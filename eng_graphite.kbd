@@ -2,9 +2,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         1    2    3    4    5                6    7    8    9    0        [    ]    _
 
- _         b    l    d    w    z               @'_   f    o    u   @tdj      ;    =    \
+ _         b    l    d    w    z               @'_   f    o    u    j        ;    =    \
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @,?
- _        @lq   x    m    c   @tdv             @lk   p   @.>  @-“  @l/<      rsft
+ _        @lq   x    m    c    v               @lk   p   @.>  @-“  @/<       rsft
  _                      @lfun @nav @mos   @sym @num @rfun
 
                         @lfun                       @rfun
@@ -17,15 +17,10 @@
   .> .
   -“ (fork - S-' (lsft rsft))
   /< (fork / S-, (lsft rsft))
-  l/< (tap-hold $tap-time $hold-pinky @/< (layer-toggle fun))
   ;; ,? is defined in symbols and used also by diktor
 
   lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
-  lq (tap-hold $tap-time $hold-pinky q (layer-toggle mos))
-  tdj (tap-dance-eager 400 ( (macro j) (macro bspc 20 [ 20 ] 20 left) (macro [ 20 ] 20 left) (macro [ 20 ] 20 left)))
   ;; tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left)))
-  td' (tap-dance-eager 300 ( (macro ') (macro bspc 20 S-[ 20 S-] 20 left) (macro S-[ 20 S-] 20 left) (macro S-[ 20 S-] 20 left)))
-  tdv (tap-dance-eager 300 ( (macro v) (macro bspc 20 S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left) (macro S-9 20 S-0 20 left)))
 
   ;; extra letters which doesn't fit 10 columns
   eng[ ;
@@ -36,6 +31,7 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
+    lq (tap-hold $tap-time $hold-pinky q (layer-toggle mos))
     ;; modtaps (GACS)
     ;; eng ;; colemak
     hn (tap-hold $tap-time $hold-pinky n lmet)
@@ -51,6 +47,7 @@
 
 (platform (macos)
   (defalias
+    lq (tap-hold $tap-time $hold-pinky q (layer-toggle mos_mac))
     ;; modtaps (GCAS)
     ;; eng ;; colemak
     hn (tap-hold $tap-time $hold-pinky n lctl)
