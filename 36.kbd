@@ -264,8 +264,9 @@
 ;; -------------------------------------------------------------------------------------
 ;; combo definition
 
-(environment (KEYBOARD_MOD "")
 (defcfg concurrent-tap-hold yes)
+
+(environment (KEYBOARD_MOD "")
 (defchordsv2
   ;; left side
   (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
@@ -291,7 +292,6 @@
 ))
 
 (environment (KEYBOARD_MOD "WIDE")
-(defcfg concurrent-tap-hold yes)
 (defchordsv2
   ;; left side
   (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
