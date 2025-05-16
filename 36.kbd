@@ -110,8 +110,8 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      1    2    3    4    5                _    _    _    _    _        _    _    _
 
- i         tab  q    w    e    r                y    XX   up   XX   tab      _    _    _
- caps      lsft a    s    d    f                h    left down rght rsft     _
+ i         tab  q    w    e    r                _    XX   up   XX   tab      _    _    _
+ caps      lsft a    s    d    f                _    left down rght rsft     _
  m         lctl z    x    c    v               @ln   XX   XX   XX   rctl     _
  _                       @galt spc  _      _    ret @gprnt
 
@@ -123,9 +123,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        grv   2    esc  3    t                y    u    i    o    p        [    ]    _
- _       @fun   j    i    m    g                h    j    k    l    ;        '
- _        caps  1    h    4    b                n    m    ,    .    /        _
+ _        grv   2    esc  3    t                _    _    _    _    _        _    _    _
+ _       @fun   j    i    m    g                _    _    _    _    _        _
+ _        caps  1    h    4    b                _    _    _    _    _        _
  _                        XX   ret  _      _    _    _
 
                           XX                         _
