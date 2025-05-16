@@ -196,7 +196,7 @@
 
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
- _         M-z  M-x   M-c  M-v  @redo             mltp pgup @mnu pgdn @kill     _
+ _         M-z  M-x   M-c  M-v  @redo            mltp pgup @file pgdn @kill     _
  _                        @lau  @nav  _      _   @rsym @rfun
 
                           @lau                         @rfun
