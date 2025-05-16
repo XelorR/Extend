@@ -15,7 +15,7 @@
     mcon M-tab ;; Mission Control, Windows default
     file M-e ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) A-f4)
-    kill (tap-dance 400 ( @close_window C-S-esc )) ;; Close current window or kill any app
+    kill C-S-esc ;; Kill any app
     gprnt prnt ;; Make a screenshot - full screen
     prnt (tap-dance 400 ( M-S-s A-prnt prnt )) ;; Make a screenshot - region, window, screen
     redo C-y
@@ -75,7 +75,7 @@ journalctl -u kanata.service -f
    mcon M-w ;; Mission Control, KDE Plasma default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
-   kill (tap-dance 400 ( @close_window C-esc )) ;; Close current window or kill any app
+   kill C-esc ;; Kill any app
    gprnt S-prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( M-S-prnt M-prnt S-prnt prnt )) ;; Make a screenshot - region, window, screen
    
@@ -95,7 +95,7 @@ journalctl -u kanata.service -f
    mcon lmet ;; Mission Control, Gnome default
    file C-A-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
-   kill @close_window ;; Close current window
+   kill (macro @launch 400 S-s y s 50 t e m 50 spc 50 S-m o n i 50 t o r 400 ret) ;; Kill any app
    gprnt prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
 
@@ -115,7 +115,7 @@ journalctl -u kanata.service -f
    mcon lmet ;; Mission Control, Gnome default
    file M-e ;; Launch file manager
    close_window (multi (release-key lsft) (release-key rsft) C-q)
-   kill @close_window ;; Close current window
+   kill (macro @launch 400 S-s y s 50 t e m 50 spc 50 S-m o n i 50 t o r 400 ret) ;; Kill any app
    gprnt prnt ;; Make a screenshot - full screen
    prnt (tap-dance 400 ( S-prnt M-prnt prnt )) ;; Make a screenshot - region, window, screen
 
@@ -157,7 +157,7 @@ journalctl -u kanata.service -f
     mcon mctl ;; Mission Control, MacOS native
     file A-M-spc ;; Launch file manager
     close_window (multi (release-key lsft) (release-key rsft) M-q)
-    kill (tap-dance 400 ( @close_window A-M-esc )) ;; Close current window or kill any app
+    kill A-M-esc ;; Kill any app
     gprnt M-S-3 ;; Make a screenshot - full screen
     prnt (tap-dance 400 ( M-S-4 (macro M-S-4 spc) M-S-3 )) ;; Make a screenshot - region, window, screen
     redo M-S-z
@@ -219,6 +219,7 @@ journalctl -u kanata.service -f
   lua (switch ((base-layer rus)) @luanti_ru break () @luanti_en break )
   ;; tap dance to launch applications
   lnch (tap-dance 500 ( @ter @vsc @zed ))
+  mnu (fork menu @file (lsft rsft))
 
   ;; -------------------------------------------------------------------------------------
   ;; Custom functionality

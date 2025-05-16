@@ -141,7 +141,7 @@
 
  _        @«”   7    8    9   @₽               @lrd @—   @°   @≈   @del      _    _    _
  _        @h:  @h4  @h5  @h6  @+               @%   @hn- @h;  @h=  @hbspc    _
- _         0    1    2    3   @$               @at  @|   @,?  @.!  @kill     _
+ _         0    1    2    3   @$               @at  @|   @,?  @.!  @rele     _
  _                      @lfun @lsym _      _   @num @rfun
 
                         @lfun                       @rfun
@@ -183,7 +183,7 @@
 
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
- _         C-z  C-x   C-c  C-v  @redo             mltp pgup menu pgdn @file     _
+ _         C-z  C-x   C-c  C-v  @redo             mltp pgup @mnu pgdn @kill     _
  _                        @lau  @nav  _      _   @rsym @rfun
 
                           @lau                         @rfun
@@ -196,7 +196,7 @@
 
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
- _         M-z  M-x   M-c  M-v  @redo             mltp pgup menu pgdn @file     _
+ _         M-z  M-x   M-c  M-v  @redo             mltp pgup @mnu pgdn @kill     _
  _                        @lau  @nav  _      _   @rsym @rfun
 
                           @lau                         @rfun
@@ -209,7 +209,7 @@
 
  _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @file    _
+ _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @kill    _
  _                        @lfun @nav  _    _    mltp mrtp
 
                           @lfun                      mrtp
@@ -222,7 +222,7 @@
 
  _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @file    _
+ _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @kill    _
  _                        @lfun @nav  _    _    mltp mrtp
 
                           @lfun                      mrtp
