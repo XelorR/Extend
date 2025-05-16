@@ -1,6 +1,6 @@
 (deflayer eng ;; graphite
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         1    2    3    4    5                6    7    8    9    0        [    ]    _
+ _         1    2    3    4    5                6    7    8    9    0        [   @]bs  _
 
  _         b    l    d    w    z               @'_   f    o    u    j        ;    =    \
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @,?
@@ -10,6 +10,9 @@
                         @lfun                       @rfun
                         @lfun                  @num @rfun
 )
+
+(environment (KEYBOARD_MOD "") (defalias ]bs ]))
+(environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc))
 
 (defalias
   ;; graphite custom shifted symbols
