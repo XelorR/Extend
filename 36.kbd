@@ -264,6 +264,7 @@
 ;; -------------------------------------------------------------------------------------
 ;; combo definition
 
+(environment (KEYBOARD_MOD "")
 (defcfg concurrent-tap-hold yes)
 (defchordsv2
   ;; left side
@@ -287,7 +288,33 @@
   (u i) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
   (m ,) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
   (, .) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-)
+))
+
+(environment (KEYBOARD_MOD "WIDE")
+(defcfg concurrent-tap-hold yes)
+(defchordsv2
+  ;; left side
+  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (r f) @“”  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (e d) @``  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (w s) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  ;; right side
+  (i k) @''  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (o l) @brc $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (p ;) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (i p) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (k ;) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (, /) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (o p) @ex' $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (i o) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (, .) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (. /) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+))
 
 (defalias
   ;; extra letters which doesn't fit 10 columns and 3 rows
