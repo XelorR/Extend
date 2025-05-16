@@ -15,7 +15,7 @@ After=network.target
 
 [Service]
 Environment=XDG_CURRENT_DESKTOP=KDE
-Environment=KEYBOARD_MOD=WIDE
+Environment=KEYBOARD_MOD=ANGLE_WIDE
 ExecStart=/usr/bin/kanata -c /home/username/path/to/config/kanata.kbd
 Restart=always
 User=root
