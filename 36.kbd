@@ -15,47 +15,7 @@
                           lmet                  ralt rmet
 ))
 
-(environment (KEYBOARD_MOD ANGLE)
-(defsrc
- f24       f1   f2   f3   f4   f5               f6   f7   f8   f9   f10      f11  f12  del
- grv       1    2    3    4    5                6    7    8    9    0        -    =    bspc
-
- tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
- caps      a    s    d    f    g                h    j    k    l    ;        '
- b         lsft z    x    c    v                n    m    ,    .    /        rsft
- lctl                     esc  spc  f22    f23  ret  rctl
-
-                          lalt                       menu
-                          lmet                  ralt rmet
-))
-
-(environment (KEYBOARD_MOD WIDE)
-(defsrc
- f24       f1   f2   f3   f4   f5               f7   f8   f9   f10  f11      f12  f6   del
- grv       1    2    3    4    5                7    8    9    0    -        =    bspc 6
-
- tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
- caps      a    s    d    f    g                j    k    l    ;    '        h
- lsft      z    x    c    v    b                m    ,    .    /    rsft     n
- lctl                     esc  spc  f22    f23  ret  rctl
-
-                          lalt                       menu
-                          lmet                  ralt rmet
-))
-
-(environment (KEYBOARD_MOD ANGLE_WIDE)
-(defsrc
- f24       f1   f2   f3   f4   f5               f7   f8   f9   f10  f11      f12  f6   del
- grv       1    2    3    4    5                7    8    9    0    -        =    bspc 6
-
- tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
- caps      a    s    d    f    g                j    k    l    ;    '        h
- b         lsft z    x    c    v                m    ,    .    /    rsft     n
- lctl                     esc  spc  f22    f23  ret  rctl
-
-                          lalt                       menu
-                          lmet                  ralt rmet
-))
+(include opt-src.kbd)
 
 ;; BUTTON DEFINITIONS ==================================================================
 
@@ -319,80 +279,7 @@
   (, .) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
 ))
 
-(environment (KEYBOARD_MOD ANGLE)
-(defchordsv2
-  ;; left side
-  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (z x) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (x c) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (r f) @“”  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (e d) @``  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w s) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; right side
-  (u j) @''  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i k) @brc $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (o l) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (i o) @ex' $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (u i) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (m ,) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (, .) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-))
-
-(environment (KEYBOARD_MOD WIDE)
-(defchordsv2
-  ;; left side
-  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (r f) @“”  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (e d) @``  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w s) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; right side
-  (i k) @''  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (o l) @brc $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (p ;) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i p) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (k ;) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (, /) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (o p) @ex' $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i o) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (, .) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (. /) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-))
-
-(environment (KEYBOARD_MOD ANGLE_WIDE)
-(defchordsv2
-  ;; left side
-  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (z x) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (x c) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (r f) @“”  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (e d) @``  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w s) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  ;; right side
-  (i k) @''  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (o l) @brc $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (p ;) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i p) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (k ;) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (, /) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (o p) @ex' $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i o) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (, .) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (. /) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-))
+(include opt-combo.kbd)
 
 (defalias
   ;; extra letters which doesn't fit 10 columns and 3 rows

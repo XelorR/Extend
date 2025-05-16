@@ -13,8 +13,10 @@
 
 (environment (KEYBOARD_MOD "") (defalias ]bs ]))
 (environment (KEYBOARD_MOD ANGLE) (defalias ]bs ]))
+(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ]bs ]))
 (environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc))
 (environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ]bs bspc))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ]bs bspc))
 
 (defalias
   ;; graphite custom shifted symbols
