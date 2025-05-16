@@ -2,39 +2,6 @@
 ;; platform specific configs
 
 ;; -------------------------------------------------------------------------------------
-;; Microsoft Windows
-
-(platform (win winiov2 wintercept)
-  (defalias
-    ;; system combinations to switch languages
-    en C-8 ;; it can be set in windows language settings
-    ru C-9 ;; no additional software needed
-    ;; other alias
-    launch lmet ;; launch applications
-    ;; other bindings
-    mcon M-tab ;; Mission Control, Windows default
-    file M-e ;; Launch file manager
-    close_window (multi (release-key lsft) (release-key rsft) A-f4)
-    kill C-S-esc ;; Kill any app
-    gprnt prnt ;; Make a screenshot - full screen
-    prnt (tap-dance 400 ( M-S-s A-prnt prnt )) ;; Make a screenshot - region, window, screen
-    redo C-y
-
-    ;; launching applications
-    terminal_en (macro M-r 400 w t 400 ret)
-    terminal_ru (macro @en 50 M-r 400 w t 400 ret 50 @ru)
-    ter (switch ((base-layer rus)) @terminal_ru break () @terminal_en break )
-    browser_en (macro M-r 400 m s e d g e 400 ret)
-    browser_ru (macro @en 50 M-r 400 m s e d g e 400 ret 50 @ru)
-    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break )
-    notepad_en (macro M-r 400 n o t e p a d 400 ret)
-    notepad_ru (macro @en 50 M-r 400 n o t e p a d 400 ret 50 @ru)
-    ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
-    exc M-A-S-C-x
-  )
-)
-
-;; -------------------------------------------------------------------------------------
 ;; GNU Linux
 
 ;; as environment variable should be set in context of Kanata,
@@ -141,6 +108,55 @@ journalctl -u kanata.service -f
 )
 
 ;; -------------------------------------------------------------------------------------
+;; Microsoft Windows
+
+(platform (win winiov2 wintercept)
+  (defalias
+    ;; system combinations to switch languages
+    en C-8 ;; it can be set in windows language settings
+    ru C-9 ;; no additional software needed
+    ;; other alias
+    launch lmet ;; launch applications
+    ;; other bindings
+    mcon M-tab ;; Mission Control, Windows default
+    file M-e ;; Launch file manager
+    close_window (multi (release-key lsft) (release-key rsft) A-f4)
+    kill C-S-esc ;; Kill any app
+    gprnt prnt ;; Make a screenshot - full screen
+    prnt (tap-dance 400 ( M-S-s A-prnt prnt )) ;; Make a screenshot - region, window, screen
+    redo C-y
+
+    ;; launching applications
+    terminal_en (macro M-r 400 w t 400 ret)
+    terminal_ru (macro @en 50 M-r 400 w t 400 ret 50 @ru)
+    ter (switch ((base-layer rus)) @terminal_ru break () @terminal_en break )
+    browser_en (macro M-r 400 m s e d g e 400 ret)
+    browser_ru (macro @en 50 M-r 400 m s e d g e 400 ret 50 @ru)
+    bro (switch ((base-layer rus)) @browser_ru break () @browser_en break )
+    notepad_en (macro M-r 400 n o t e p a d 400 ret)
+    notepad_ru (macro @en 50 M-r 400 n o t e p a d 400 ret 50 @ru)
+    ntp (switch ((base-layer rus)) @notepad_ru break () @notepad_en break )
+    exc M-A-S-C-x
+  )
+)
+
+;; -------------------------------------------------------------------------------------
+;; Both, Linux and Windows
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    tlft C-S-tab
+    trgt C-tab
+    home home
+    end end
+    del del
+    galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
+
+    ;; launching applications
+  )
+)
+
+;; -------------------------------------------------------------------------------------
 ;; Apple MacOS
 
 (platform (macos)
@@ -177,22 +193,6 @@ journalctl -u kanata.service -f
     excel_en (macro @launch 400 S-e x c e l 400 ret)
     excel_ru (macro @en 50 @launch 400 S-e x c e l 400 ret 50 @ru)
     exc (switch ((base-layer rus)) @excel_ru break () @excel_en break )
-  )
-)
-
-;; -------------------------------------------------------------------------------------
-;; Both, Linux and Windows
-
-(platform (win winiov2 wintercept linux)
-  (defalias
-    tlft C-S-tab
-    trgt C-tab
-    home home
-    end end
-    del del
-    galt (tap-hold $tap-time $hold-time lalt (layer-toggle gfn))
-
-    ;; launching applications
   )
 )
 
