@@ -22,7 +22,7 @@
 
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
  caps      a    s    d    f    g                h    j    k    l    ;        '
- lsft      b    z    x    c    v                n    m    ,    .    /        rsft
+ b         lsft z    x    c    v                n    m    ,    .    /        rsft
  lctl                     esc  spc  f22    f23  ret  rctl
 
                           lalt                       menu
@@ -50,7 +50,7 @@
 
  tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
  caps      a    s    d    f    g                j    k    l    ;    '        h
- lsft      b    z    x    c    v                m    ,    .    /    rsft     n
+ b         lsft z    x    c    v                m    ,    .    /    rsft     n
  lctl                     esc  spc  f22    f23  ret  rctl
 
                           lalt                       menu
