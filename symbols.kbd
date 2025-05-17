@@ -36,19 +36,6 @@
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
   № (switch ((base-layer rus)) S-3 break () (macro @ru 50 S-3 50 @en) break)
-  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
-  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
-  ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
-  “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-' 20 left) break )
-  '' (switch ((base-layer rus)) (macro @en 50 ' 20 ' 20 left  50 @ru) break () (macro ' 20 ' 20 left) break )
-  `` (switch ((base-layer rus)) (macro @en 50 ` 20 ` 20 left  50 @ru) break () (macro ` 20 ` 20 left) break )
-  td“” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
-  td'' (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ' 50 @ru) (macro @en 50 ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left))) break )
-  brc (macro S-9 20 S-0 20 left)
-  []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
-  {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
-  <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
-  -[] (switch ((base-layer rus)) (macro @en 50 @home - spc 20 [ spc 20 ] spc 20 @end 50 @ru) break () (macro @home 20 - spc 20 [ spc 20 ] spc 20 @end) break )
 
   ;; -------------------------------------------------------------------------------------
   ;; Unicode symbols
@@ -77,4 +64,25 @@
   u“” (macro @u“ 50 @u” 50 left)
   ur“” (macro @en 50 @u“ 50 @u” 50 left 50 @ru)
   «” (switch ((base-layer rus)) @ur«» break () @u“” break )
+
+  ;; -------------------------------------------------------------------------------------
+  ;; Combined symbols
+
+  ,? (switch ((base-layer rus)) (fork S-/ S-7 (lsft rsft)) break () (fork , S-/ (lsft rsft)) break )
+  .! (switch ((base-layer rus)) (fork / S-1 (lsft rsft)) break () (fork . S-1 (lsft rsft)) break )
+  ., (switch ((base-layer rus)) (fork / S-/ (lsft rsft)) break () (fork . , (lsft rsft)) break )
+  “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-' 20 left) break )
+  '' (switch ((base-layer rus)) (macro @en 50 ' 20 ' 20 left  50 @ru) break () (macro ' 20 ' 20 left) break )
+  `` (switch ((base-layer rus)) (macro @en 50 ` 20 ` 20 left  50 @ru) break () (macro ` 20 ` 20 left) break )
+  td“” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
+  td'' (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ' 50 @ru) (macro @en 50 ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left))) break )
+  brc (macro S-9 20 S-0 20 left)
+  []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
+  {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
+  <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
+  -[] (switch ((base-layer rus)) (macro @en 50 @home - spc 20 [ spc 20 ] spc 20 @end 50 @ru) break () (macro @home 20 - spc 20 [ spc 20 ] spc 20 @end) break )
+  #№ (fork @# @№ (lsft rsft))
+  $₽ (fork @$ @₽ (lsft rsft))
+  +± (fork @+ @± (lsft rsft))
+  =≈ (fork @= @≈ (lsft rsft))
 )
