@@ -86,4 +86,18 @@
   +± (fork @+ @± (lsft rsft))
   =≈ (fork = @≈ (lsft rsft))
   %° (fork @% @° (lsft rsft))
+
+  ;; -------------------------------------------------------------------------------------
+  ;; Numbers with shift, to be similar with sym layer
+
+  0# (fork 0 @# (lsft rsft))
+  1* (fork 1 @* (lsft rsft))
+  2: (fork 2 @: (lsft rsft))
+  3/ (fork 3 @/ (lsft rsft))
+  4lb (fork 4 @lb (lsft rsft))
+  5- (fork 5 (unmod -) (lsft rsft))
+  6rb (fork 6 @rb (lsft rsft))
+  7< (fork 7 @< (lsft rsft))
+  8= (fork 8 (unmod =) (lsft rsft))
+  9> (fork 9 @> (lsft rsft))
 )

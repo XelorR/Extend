@@ -9,11 +9,11 @@
     ;; modtaps (GACS)
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rmet)
-    h4 (tap-hold $tap-time $hold-ring 4 lalt)
-    h5 (tap-hold $tap-time $hold-middle 5 lctl)
-    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
+    h4 (tap-hold $tap-time $hold-ring @4lb lalt)
+    h5 (tap-hold $tap-time $hold-middle @5- lctl)
+    h6 (tap-hold $tap-time $hold-pinky @6rb lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h= (tap-hold $tap-time $hold-pinky = lalt)
+    h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lmet)
@@ -46,11 +46,11 @@
     ;; modtaps (GCAS)
     ;; num
     h: (tap-hold $tap-time $hold-ring @: rctl)
-    h4 (tap-hold $tap-time $hold-ring 4 lalt)
-    h5 (tap-hold $tap-time $hold-middle 5 lmet)
-    h6 (tap-hold $tap-time $hold-pinky 6 lsft)
+    h4 (tap-hold $tap-time $hold-ring @4lb lalt)
+    h5 (tap-hold $tap-time $hold-middle @5- lmet)
+    h6 (tap-hold $tap-time $hold-pinky @6rb lsft)
     hn- (tap-hold $tap-time $hold-index - rsft)
-    h= (tap-hold $tap-time $hold-pinky = lalt)
+    h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
     h\ (tap-hold $tap-time $hold-pinky \ lctl)
