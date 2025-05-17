@@ -16,7 +16,7 @@
     h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
-    h\ (tap-hold $tap-time $hold-pinky \ lmet)
+    h\ (tap-hold $tap-time $hold-pinky (unmod \) lmet)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
     h- (tap-hold $tap-time $hold-middle - lctl)
     hrb (tap-hold $tap-time $hold-index @rb lsft)
@@ -53,7 +53,7 @@
     h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
     hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
-    h\ (tap-hold $tap-time $hold-pinky \ lctl)
+    h\ (tap-hold $tap-time $hold-pinky (unmod \) lctl)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
     h- (tap-hold $tap-time $hold-middle - lmet)
     hrb (tap-hold $tap-time $hold-index @rb lsft)
