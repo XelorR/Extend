@@ -8,10 +8,10 @@
  _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   \
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
  _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж     rsft
- _                       @lfun @nav @mos   @sym @num @rfun
+ _                       @lfun @nav @mos   @sym @sym @rfun
 
                          @lfun                       @rfun
-                         @lfun                  @num @rfun
+                         @lfun                  @sym @rfun
 )
 
 (defalias

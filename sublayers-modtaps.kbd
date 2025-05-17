@@ -7,14 +7,6 @@
     mopt @lctl
     ocm lalt
     ;; modtaps (GACS)
-    ;; num
-    h: (tap-hold $tap-time $hold-ring @: rmet)
-    h4 (tap-hold $tap-time $hold-ring @4lb lalt)
-    h5 (tap-hold $tap-time $hold-middle @5- lctl)
-    h6 (tap-hold $tap-time $hold-pinky @6rb lsft)
-    hn- (tap-hold $tap-time $hold-index (fork - @— (lsft rsft)) rsft)
-    h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
-    hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; sym
     h$ (tap-hold $tap-time $hold-pinky @$₽ lmet)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
@@ -24,6 +16,7 @@
     h; (tap-hold $tap-time $hold-middle @; lctl)
     h} (tap-hold $tap-time $hold-ring @} lalt)
     h“ (tap-hold $tap-time $hold-pinky @“”“ lmet)
+    hbspc (tap-hold $tap-time $hold-pinky bspc lmet)
     ;; fun
     f11 (tap-hold $tap-time $hold-pinky f11 lmet)
     f4 (tap-hold $tap-time $hold-ring f4 lalt)
@@ -44,14 +37,6 @@
     mopt (tap-hold $tap-time $hold-middle @lmet lalt)
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
-    ;; num
-    h: (tap-hold $tap-time $hold-ring @: rctl)
-    h4 (tap-hold $tap-time $hold-ring @4lb lalt)
-    h5 (tap-hold $tap-time $hold-middle @5- lmet)
-    h6 (tap-hold $tap-time $hold-pinky @6rb lsft)
-    hn- (tap-hold $tap-time $hold-index (fork - @— (lsft rsft)) rsft)
-    h= (tap-hold $tap-time $hold-pinky @=≈ lalt)
-    hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; sym
     h$ (tap-hold $tap-time $hold-pinky @$₽ lctl)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
@@ -61,6 +46,7 @@
     h; (tap-hold $tap-time $hold-middle @; lmet)
     h} (tap-hold $tap-time $hold-ring @} lalt)
     h“ (tap-hold $tap-time $hold-pinky @“”“ lctl)
+    hbspc (tap-hold $tap-time $hold-pinky bspc lctl)
     ;; fun
     f11 (tap-hold $tap-time $hold-pinky f11 lctl)
     f4 (tap-hold $tap-time $hold-ring f4 lalt)

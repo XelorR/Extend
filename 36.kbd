@@ -50,8 +50,7 @@
 
   lsym (tap-hold $tap-time $hold-time spc (layer-toggle sym))
   rsym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
-  sym (tap-hold $tap-time $hold-time S-tab (layer-toggle sym))
-  num (tap-hold $tap-time $hold-time ret (layer-toggle num))
+  sym (tap-hold $tap-time $hold-time ret (layer-toggle sym))
   mos (tap-hold $tap-time $hold-time tab (layer-toggle mos))
   lau (layer-while-held lau)
   fun (layer-while-held fun)
@@ -124,19 +123,6 @@
 ;; -------------------------------------------------------------------------------------
 ;; layers with extra buttons: numeric, symbol, function
 
-(deflayer num ;; numeric and punctuation layer
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
-
- _        @“   @7<  @8=  @9>  @`               @lrd @—   @«”  @≈   @del      _    _    _
- _        @h$  @h4  @h5  @h6  @+±              @%°  @hn- @h;  @h=  @hbspc    _
- _        @0#  @1*  @2:  @3/  @$₽              @at  @|   @,?  @.!  @rele     _
- _                      @lfun @lsym _      _   @num @rfun
-
-                        @lfun                       @rfun
-                        @lfun                  @num @rfun
-)
-
 (deflayer sym ;; symbol layer
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
@@ -144,7 +130,7 @@
  _        @!?  @<«  @=≈  @>»  @`               @lrd @[   @_   @]   @|¦       _    _    _
  _        @h$  @hlb @h-  @hrb @+±              @%°  @h{  @h;  @h}  @h“       _
  _        @#№  @*   @:   @/\  @at              @^   @\   @~   @&   @'        _
- _                      @lfun @nav  _      _    XX  @rfun
+ _                      @lfun @lau  _      _    XX  @rfun
 
                         @lfun                       @rfun
                         @lfun                   XX  @rfun
@@ -157,10 +143,10 @@
  _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll    _
- _                       nlck @lau  _      _   @lkp0 nlck
+ _                       nlck @nav  _      _   @lkp0 nlck
 
                          nlck                        nlck
-                         nlck                   kp0  nlck
+                         nlck                  @lkp0 nlck
 )
 
 ;; ------------------------------------------------------------------------------------------
@@ -173,10 +159,10 @@
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup @mnu pgdn @kill     _
- _                        @lau  @nav  _      _   @rsym @rfun
+ _                        @lfun @nav  _      _   @lau @rfun
 
-                          @lau                         @rfun
-                          @lau                   @rsym @rfun
+                          @lfun                       @rfun
+                          @lfun                  @lau @rfun
 )
 
 (deflayer nav_mac ;; navigation layer
@@ -186,10 +172,10 @@
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v  @redo            mltp pgup @file pgdn @kill     _
- _                        @lau  @nav  _      _   @rsym @rfun
+ _                        @lau  @nav  _      _   @lau @rfun
 
-                          @lau                         @rfun
-                          @lau                   @rsym @rfun
+                          @lau                        @rfun
+                          @lau                   @lau @rfun
 )
 
 (deflayer mos ;; mouse layer
@@ -258,26 +244,26 @@
 (environment (KEYBOARD_MOD "")
 (defchordsv2
   ;; left side
-  (e r) @eng $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w e) @rus $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (x c) @_   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (c v) -    $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (r f) @“”  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (e d) @``  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w s) @:   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (w r) @<>  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (s f) @brc $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
+  (e r) @eng $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (w e) @rus $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (x c) @_   $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (c v) -    $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (r f) @“”  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (e d) @``  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (w s) @:   $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (w r) @<>  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
+  (s f) @brc $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
   ;; right side
-  (u j) @''  $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (i k) @brc $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (o l) @;   $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (u o) @[]  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (j l) @{}  $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (m .) @-[] $hold-time all-released    (eng rus gam gfn         fun nav mos qwe)
-  (i o) @ex' $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (u i) @ex` $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (m ,) @ex[ $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
-  (, .) @ex] $hold-time all-released    (        gam gfn num sym fun nav mos qwe)
+  (u j) @''  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (i k) @brc $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (o l) @;   $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (u o) @[]  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
+  (j l) @{}  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
+  (m .) @-[] $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
+  (i o) @ex' $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (u i) @ex` $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (m ,) @ex[ $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
+  (, .) @ex] $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
 ))
 
 (include opt-combo.kbd)

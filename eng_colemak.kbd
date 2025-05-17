@@ -5,10 +5,10 @@
  _         q    w    f    p    g                j    l    u    y    ;        [    ]    \
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       '
  _        @lz   x    c    v    b               @lk   m    ,    .    /        rsft
- _                      @lfun @nav @mos   @sym @num @rfun
+ _                      @lfun @nav @mos   @sym @sym @rfun
 
                         @lfun                       @rfun
-                        @lfun                  @num @rfun
+                        @lfun                  @sym @rfun
 )
 
 (defalias
