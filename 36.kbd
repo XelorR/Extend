@@ -128,7 +128,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
  _        @“   @7<  @8=  @9>  @`               @lrd @—   @«”  @≈   @del      _    _    _
- _        @h\  @h4  @h5  @h6  @+±              @%°  @hn- @h;  @h=  @hbspc    _
+ _        @h$  @h4  @h5  @h6  @+±              @%°  @hn- @h;  @h=  @hbspc    _
  _        @0#  @1*  @2:  @3/  @$₽              @at  @|   @,?  @.!  @rele     _
  _                      @lfun @lsym _      _   @num @rfun
 
@@ -140,13 +140,13 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _        @“   @<   @=≈  @>   @`               @^   @[   @_   @]   @'        _    _    _
- _        @h\  @hlb @h-  @hrb @+±              @%°  @h{  @h;  @h}  @h!       _
- _        @#№  @*   @:   @/   @$₽              @at  @|   @~   @&   @?        _
- _                      @lfun @nav  _      _   @num @rfun
+ _        @!?  @<«  @=≈  @>»  @`               @lrd @[   @_   @]   @|¦       _    _    _
+ _        @h$  @hlb @h-  @hrb @+±              @%°  @h{  @h;  @h}  @h“       _
+ _        @#№  @*   @:   @/\  @at              @^   @\   @~   @&   @'        _
+ _                      @lfun @nav  _      _    XX  @rfun
 
                         @lfun                       @rfun
-                        @lfun                  @num @rfun
+                        @lfun                   XX  @rfun
 )
 
 (deflayer fun ;; function, media and keypad layer

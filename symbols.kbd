@@ -35,6 +35,7 @@
   . (switch ((base-layer rus)) / break () . break )
   ? (switch ((base-layer rus)) S-7 break () S-/ break )
   / (switch ((base-layer rus)) S-\ break () / break )
+  \ (unmod \)
   № (switch ((base-layer rus)) S-3 break () (macro @ru 50 S-3 50 @en) break)
 
   ;; -------------------------------------------------------------------------------------
@@ -46,6 +47,9 @@
   u₽ (unicode ₽)
   ur₽ (macro @en 50 @u₽ 50 @ru)
   ₽ (switch ((base-layer rus)) @ur₽ break () @u₽ break )
+  u¦ (unicode ¦)
+  ur¦ (macro @en 50 @u¦ 50 @ru)
+  ¦ (switch ((base-layer rus)) @ur¦ break () @u¦ break )
   u° (unicode °)
   ur° (macro @en 50 @u° 50 @ru)
   ° (switch ((base-layer rus)) @ur° break () @u° break )
@@ -57,6 +61,10 @@
   ± (switch ((base-layer rus)) @ur± break () @u± break )
   u« (unicode «)
   u» (unicode »)
+  ur« (macro @en 50 @u« 50 @ru)
+  ur» (macro @en 50 @u» 50 @ru)
+  « (switch ((base-layer rus)) @ur« break () @u« break )
+  » (switch ((base-layer rus)) @ur» break () @u» break )
   u«» (macro @u« 50 @u» 50 left)
   ur«» (macro @en 50 @u« 50 @u» 50 left 50 @ru)
   u“ (unicode “)
@@ -74,8 +82,10 @@
   “” (switch ((base-layer rus)) (macro S-2 20 S-2 20 left) break () (macro S-' 20 S-' 20 left) break )
   '' (switch ((base-layer rus)) (macro @en 50 ' 20 ' 20 left  50 @ru) break () (macro ' 20 ' 20 left) break )
   `` (switch ((base-layer rus)) (macro @en 50 ` 20 ` 20 left  50 @ru) break () (macro ` 20 ` 20 left) break )
+  “”“ (fork @“ @“” (lsft rsft))
   td“” (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro S-2) (macro bspc S-2 S-2 left) (macro S-2 S-2 left) (macro S-2 S-2 left))) break () (tap-dance-eager 300 ( (macro S-') (macro bspc S-' S-' left) (macro S-' S-' left) (macro S-' S-' left))) break )
   td'' (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ' 50 @ru) (macro @en 50 ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left) (macro @en 50 ' ' 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro ') (macro ' left) (macro ' ' left) (macro ' ' left))) break )
+  td`` (switch ((base-layer rus)) (tap-dance-eager 400 ( (macro @en 50 ` 50 @ru) (macro @en 50 ` 30 @ru 20 left) (macro @en 50 ` ` 30 @ru 20 left) (macro @en 50 ` ` 30 @ru 20 left))) break () (tap-dance-eager 300 ( (macro `) (macro ` left) (macro ` ` left) (macro ` ` left))) break )
   brc (macro S-9 20 S-0 20 left)
   []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
@@ -86,6 +96,11 @@
   +± (fork @+ @± (lsft rsft))
   =≈ (fork = @≈ (lsft rsft))
   %° (fork @% @° (lsft rsft))
+  /\ (fork @/ @\ (lsft rsft))
+  !? (fork @! @? (lsft rsft))
+  |¦ (fork @| @¦ (lsft rsft))
+  <« (fork @< @« (lsft rsft))
+  >» (fork @> @» (lsft rsft))
 
   ;; -------------------------------------------------------------------------------------
   ;; Numbers with shift, to be similar with sym layer
