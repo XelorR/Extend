@@ -6,7 +6,7 @@
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
  caps      a    s    d    f    g                h    j    k    l    ;        '
  b         lsft z    x    c    v                n    m    ,    .    /        rsft
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet
@@ -20,7 +20,7 @@
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
  caps      a    s    d    f    g                h    j    k    l    ;        '
  lsft      nubs z    x    c    v                n    m    ,    .    /        rsft
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet
@@ -34,7 +34,7 @@
  tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
  caps      a    s    d    f    g                j    k    l    ;    '        h
  lsft      z    x    c    v    b                m    ,    .    /    rsft     n
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet
@@ -48,7 +48,7 @@
  tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
  caps      a    s    d    f    g                j    k    l    ;    '        h
  b         lsft z    x    c    v                m    ,    .    /    rsft     n
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet
@@ -62,7 +62,7 @@
  tab       q    w    e    r    t                u    i    o    p    [        ]    \    y
  caps      a    s    d    f    g                j    k    l    ;    '        h
  lsft      nubs z    x    c    v                m    ,    .    /    rsft     n
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet

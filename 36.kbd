@@ -9,7 +9,7 @@
  tab       q    w    e    r    t                y    u    i    o    p        [    ]    \
  caps      a    s    d    f    g                h    j    k    l    ;        '
  lsft      z    x    c    v    b                n    m    ,    .    /        rsft
- lctl                     esc  spc  f22    f23  ret  rctl
+ lctl                     esc  spc              ret  rctl
 
                           lalt                       menu
                           lmet                  ralt rmet
@@ -85,7 +85,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _
  _         _    _    _    _    _               @ln   _    _    _    _        _
- _                        _    _    _      _    _    _
+ _                        _    _                _    _
 
                           _                          _     
                           _                     _    _
@@ -101,7 +101,7 @@
  i         tab  q    w    e    r                _    XX   up   XX   tab      _    _    _
  caps      lsft a    s    d    f                _    left down rght rsft     _
  m         lctl z    x    c    v               @ln   XX   XX   XX   rctl     _
- _                       @galt spc  _      _    ret @gprnt
+ _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt
                          @galt                  ret @gprnt
@@ -114,7 +114,7 @@
  _        grv   2    esc  3    t                _    _    _    _    _        _    _    _
  _       @fun   j    i    m    g                _    _    _    _    _        _
  _        caps  1    h    4    b                _    _    _    _    _        _
- _                        XX   ret  _      _    _    _
+ _                        XX   ret              _    _
 
                           XX                         _
                           XX                    _    _
@@ -130,7 +130,7 @@
  _        @!?  @<«  @=≈  @>»  @`               @lrd @[   @_   @]   @|¦       _    _    _
  _        @h$  @hlb @h-  @hrb @+±              @%°  @h{  @h;  @h}  @h“       _
  _        @#№  @*   @:   @/\  @at              @^   @\   @~   @&   @'        _
- _                      @lfun @lau  _      _    XX  @rfun
+ _                      @lfun @lau              XX  @rfun
 
                         @lfun                       @rfun
                         @lfun                   XX  @rfun
@@ -143,7 +143,7 @@
  _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
  _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll    _
- _                       nlck @nav  _      _   @lkp0 nlck
+ _                       nlck @nav             @lkp0 nlck
 
                          nlck                        nlck
                          nlck                  @lkp0 nlck
@@ -159,7 +159,7 @@
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup @mnu pgdn @kill     _
- _                        @lfun @nav  _      _   @lau @rfun
+ _                        @lfun @nav             @lau @rfun
 
                           @lfun                       @rfun
                           @lfun                  @lau @rfun
@@ -172,7 +172,7 @@
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v  @redo            mltp pgup @file pgdn @kill     _
- _                        @lau  @nav  _      _   @lau @rfun
+ _                        @lau  @nav             @lau @rfun
 
                           @lau                        @rfun
                           @lau                   @lau @rfun
@@ -185,7 +185,7 @@
  _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @kill    _
- _                        @lfun @nav  _    _    mltp mrtp
+ _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
                           @lfun                 mltp mrtp
@@ -198,7 +198,7 @@
  _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
  _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @kill    _
- _                        @lfun @nav  _    _    mltp mrtp
+ _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
                           @lfun                 mltp mrtp
@@ -214,7 +214,7 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    @gam @qwe _                _  @qwe @gam   _    _        _
  _         _    _    @rus @eng _                _  @eng @rus   _    _        _
- _                        _    _    _      _    _    _
+ _                        _    _                _    _
 
                           _                          _
                           _                     _    _
@@ -230,7 +230,7 @@
  _         _    _    _    _   @gho              _   @lua  _    _    _        _    _    _
  _         _    _   @ste @ter  _                _   @ntp @exc  _    _        _
  _        @zed  _    _   @vsc @bro              _    _    _    _    _        _
- _                        _    _    _      _    _    _
+ _                        _    _                _    _
 
                           _                          _     
                           _                     _    _
