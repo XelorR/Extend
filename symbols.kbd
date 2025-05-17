@@ -85,4 +85,5 @@
   $₽ (fork @$ @₽ (lsft rsft))
   +± (fork @+ @± (lsft rsft))
   =≈ (fork @= @≈ (lsft rsft))
+  %° (fork @% @° (lsft rsft))
 )
