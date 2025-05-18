@@ -2,7 +2,7 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        -    _    _
 
- _         q    w    f    p    g                j    l    u   @ly   ;        [    ]    \
+ _         q   @lw   f    p    g                j    l    u   @ly   ;        [    ]    \
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       '
  _        @lz   x    c    v    b                k    m    ,    .    /        rsft
  _                      @lfun @nav             @sym @rfun
@@ -12,6 +12,7 @@
 )
 
 (defalias
+  lw (tap-hold $tap-time $hold-pinky w (layer-toggle fun))
   ly (tap-hold $tap-time $hold-pinky y (layer-toggle swi))
 
   ;; extra letters which doesn't fit 10 columns
