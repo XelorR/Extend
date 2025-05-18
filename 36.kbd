@@ -184,7 +184,7 @@
 
  _         del @tlft  tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lmet lalt @lctl lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         C-z  C-x   C-c  C-v  @redo           _    mltp mrtp mmtp @kill    _
+ _         C-z  C-x   C-c  C-v  @redo           _   @dr0 @dms @dp0 @kill    _
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
@@ -197,7 +197,7 @@
 
  _         bspc @tlft tab @trgt @lnch           _   @mwl @mu  @mwr @mwu      _    _    _
  _         lctl @ocm @mopt lsft @prnt           _   @ml  @md  @mr  @mwd      _
- _         M-z  M-x   M-c  M-v  @redo           _    mltp mrtp mmtp @kill    _
+ _         M-z  M-x   M-c  M-v  @redo           _   @dr0 @dms @dp0 @kill    _
  _                        @lfun @nav            mltp mrtp
 
                           @lfun                      mrtp
