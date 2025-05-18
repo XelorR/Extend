@@ -56,7 +56,7 @@
   fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
-  ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
+  lo (tap-hold $tap-time $hold-pinky o (layer-toggle swi))
 )
 
 ;; LAYERS ==============================================================================
@@ -81,9 +81,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         _    _    _    _    _                _    _    _    _    _        _    _    _
+ _         _    _    _    _    _                _    _    _   @lo   _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _
- _         _    _    _    _    _               @ln   _    _    _    _        _
+ _         _    _    _    _    _                _    _    _    _    _        _
  _                        _    _                _    _
 
                           _                          _     
@@ -97,9 +97,9 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 @gesc      1    2    3    4    5                _    _    _    _    _        _    _    _
 
- i         tab  q    w    e    r                _    XX   up   XX   tab      _    _    _
+ i         tab  q    w    e    r                _    XX   up  @lo   tab      _    _    _
  caps      lsft a    s    d    f                _    left down rght rsft     _
- m         lctl z    x    c    v               @ln   XX   XX   XX   rctl     _
+ m         lctl z    x    c    v                _    XX   XX   XX   rctl     _
  _                       @galt spc              ret @gprnt
 
                          @galt                      @gprnt

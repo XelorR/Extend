@@ -2,9 +2,9 @@
  _         _    _    _    _    _                f6   f7   f8   f9    f10     f11  f12  _
 @ё         @1   @2    3   @4   @5               @6   @7   @8    9    0      @star _    _
 
- _         @ц   @*ь  @я   @,?  @.!              @з   @в   @к   @д   @ч      @ш   @щ    \
+ _         @ц   @*ь  @я   @,?  @.!              @з   @в   @к   @lд  @ч      @ш   @щ    \
 @lfun      @hу  @hи  @hе  @hо  @а               @л   @hн  @hт  @hс  @hр     @й
- _         @lф  @э   @х   @ы   @ю               @lб  @м   @п   @г   @ж       rsft
+ _         @lф  @э   @х   @ы   @ю               @б   @м   @п   @г   @ж       rsft
  _                       @lfun @nav             @sym @rfun
 
                          @lfun                       @rfun
@@ -59,7 +59,7 @@
   г u
   ж ;
   ё grv
-  lб (tap-hold $tap-time $hold-pinky @б (layer-toggle swi))
+  lд (tap-hold $tap-time $hold-pinky @д (layer-toggle swi))
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва

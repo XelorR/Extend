@@ -5,9 +5,9 @@
  _         _    _    _    _    _                f6   f7   f8   f9    f10    f11   f12  _
  @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0     @_star _    _
 
- _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_д  @_ч     @_ш  @_щ   \
+ _         @_ц  @_ь  @_я  @_,? @_.!             @_з  @_в  @_к  @_lд @_ч     @_ш  @_щ   \
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
- _         @_lф @_э  @_х  @_ы  @_ю              @_lб @_м  @_п  @_г  @_lж     rsft
+ _         @_lф @_э  @_х  @_ы  @_ю              @_б  @_м  @_п  @_г  @_lж     rsft
  _                       @lfun @nav             @sym @rfun
 
                          @lfun                       @rfun
@@ -136,7 +136,7 @@
   uЁ (unicode Ё)
   _ё (fork @uё @uЁ (lsft rsft))
   _lж (tap-hold $tap-time $hold-pinky @_ж (layer-toggle fun))
-  _lб (tap-hold $tap-time $hold-pinky @_б (layer-toggle swi))
+  _lд (tap-hold $tap-time $hold-pinky @_д (layer-toggle swi))
 
   ;; extra letters which doesn't fit 10 columns
   rus[ @_ш

@@ -2,9 +2,9 @@
  _          _    _    _    _    _                f6   f7   f8   f9   f10     f11  f12  _
 @ё          1    2    3    4    5                6    7    8    9    0       -    _    _
 
- _         @й   @ц   @у   @к   @е               @н   @г   @ш   @щ   @з      @х   @ъ    \
+ _         @й   @ц   @у   @к   @е               @н   @г   @ш   @lщ  @з      @х   @ъ    \
 @lfun      @hф  @hы  @hв  @hа  @п               @р   @hо  @hл  @hд  @hж     @э
- _         @lя  @ч   @с   @м   @и               @lт  @ьъ  @б   @ю   @.,      rsft
+ _         @lя  @ч   @с   @м   @и               @т   @ьъ  @б   @ю   @.,      rsft
  _                       @lfun @nav             @sym @rfun
 
                          @lfun                       @rfun
@@ -49,7 +49,7 @@
   ж ;
   ё grv
   lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos))
-  lт (tap-hold $tap-time $hold-pinky @т (layer-toggle swi))
+  lщ (tap-hold $tap-time $hold-pinky @щ (layer-toggle swi))
 
   ;; extra letters which doesn't fit 10 columns
   rus[ @х

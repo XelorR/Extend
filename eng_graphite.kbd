@@ -2,9 +2,9 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        [   @]bs  _
 
- _         b    l    d    w    z               @'_   f    o    u    j        ;    =    \
+ _         b    l    d    w    z               @'_   f    o   @lu   j        ;    =    \
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @,?
- _        @lq   x    m    c    v               @lk   p   @.>  @-“  @/<       rsft
+ _        @lq   x    m    c    v                k    p   @.>  @-“  @/<       rsft
  _                      @lfun @nav             @sym @rfun
 
                         @lfun                       @rfun
@@ -26,7 +26,7 @@
   /< (fork / S-, (lsft rsft))
   ;; ,? is defined in symbols and used also by diktor
 
-  lk (tap-hold $tap-time $hold-pinky k (layer-toggle swi))
+  lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
   ;; tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left)))
 
   ;; extra letters which doesn't fit 10 columns
