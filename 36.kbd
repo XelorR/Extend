@@ -56,7 +56,6 @@
   fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
-  lkp0 (tap-hold $tap-time $hold-time kp0 (layer-toggle sym))
   ln (tap-hold $tap-time $hold-pinky n (layer-toggle swi))
 )
 
@@ -140,13 +139,13 @@
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
  _         _    _    _    _    _                _    _    _    _    _        _    _    _
 
- _         f12  f7   f8   f9  volu             @dr0  kp7  kp8  kp9 @del      _    _    _
- _        @f11 @f4  @f5  @f6  vold             @dms @kp4 @kp5 @kp6 @hbspc    _
- _         f10  f1   f2   f3  mute             @dp0  kp1  kp2  kp3 @croll    _
- _                       nlck @nav             @lkp0 nlck
+ _         f12  f7   f8   f9  volu             @/    7    8    9   @del      _    _    _
+ _        @f11 @f4  @f5  @f6  vold              -   @h4  @h5  @h6  @hbspc    _
+ _         f10  f1   f2   f3  mute              0    1    2    3   @croll    _
+ _                      @lfun @nav             @lau @rfun
 
-                         nlck                        nlck
-                         nlck                  @lkp0 nlck
+                        @lfun                       @rfun
+                        @lfun                  @lau @rfun
 )
 
 ;; ------------------------------------------------------------------------------------------
