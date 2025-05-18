@@ -48,7 +48,6 @@
   г u
   ж ;
   ё grv
-  lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos))
   lщ (tap-hold $tap-time $hold-pinky @щ (layer-toggle swi))
   lц (tap-hold $tap-time $hold-pinky @ц (layer-toggle fun))
 
@@ -61,6 +60,7 @@
 
 (platform (win winiov2 wintercept linux)
   (defalias
+    lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos))
     ;; modtaps (GACS)
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lmet (layer-while-held eng)))
@@ -75,6 +75,7 @@
 
 (platform (macos)
   (defalias
+    lя (tap-hold $tap-time $hold-pinky @я (layer-toggle mos_mac))
     ;; modtaps (GCAS)
     ;; rus ;; йцукен
     hф (tap-hold $tap-time $hold-pinky @ф (multi lctl (layer-while-held eng)))
