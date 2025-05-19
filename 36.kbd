@@ -142,10 +142,10 @@
  _         f12  f7   f8   f9  volu             @/    7    8    9   @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold              -   @h4  @h5  @h6  @hbspc    _
  _         f10  f1   f2   f3  mute              0    1    2    3   @croll    _
- _                      @lfun @nav             @lau @rfun
+ _                      @lfun @nav              ret @rfun
 
                         @lfun                       @rfun
-                        @lfun                  @lau @rfun
+                        @lfun                   ret @rfun
 )
 
 ;; ------------------------------------------------------------------------------------------
