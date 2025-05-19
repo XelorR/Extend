@@ -2,14 +2,21 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        -    _    _
 
- _         q   @lw   f    p    g                j    l    u   @ly   ;        [    ]    \
-@lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho       '
+ _         q   @lw   f    p    g                j    l    u   @ly  @;or'     [    ]    \
+@lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho      @'or;
  _        @lz   x    c    v    b                k    m    ,    .    /        rsft
  _                      @lfun @nav             @sym @rfun
 
                         @lfun                       @rfun
                         @lfun                  @sym @rfun
 )
+
+(environment (KEYBOARD_MOD "") (defalias ;or' ; 'or; ']))
+(environment (KEYBOARD_MOD ANGLE) (defalias ;or' ; 'or; ']))
+(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ;or' ; 'or; ']))
+(environment (KEYBOARD_MOD WIDE) (defalias ;or' ' 'or; ;]))
+(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ;or' ' 'or; ;]))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ;or' ' 'or; ;]))
 
 (defalias
   lw (tap-hold $tap-time $hold-pinky w (layer-toggle fun))
@@ -19,7 +26,7 @@
   eng[ [
   eng] ]
   eng` grv
-  eng' '
+  eng' @'or;
 )
 
 (platform (win winiov2 wintercept linux)
