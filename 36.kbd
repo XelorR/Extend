@@ -249,13 +249,11 @@
   (c v) -    $hold-time all-released    (        gam gfn  sym     nav mos qwe)
   (r f) @“”  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
   (e d) @``  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
-  (w s) @:   $hold-time all-released    (        gam gfn  sym     nav mos qwe)
   (w r) @<>  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
   (s f) @brc $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
   ;; right side
   (u j) @''  $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
   (i k) @brc $hold-time all-released    (        gam gfn  sym fun nav mos qwe)
-  (o l) @;   $hold-time all-released    (        gam gfn  sym     nav mos qwe)
   (u o) @[]  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
   (j l) @{}  $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
   (m .) @-[] $hold-time all-released    (eng rus gam gfn      fun nav mos qwe)
