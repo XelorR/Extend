@@ -10,7 +10,7 @@
     ocm lalt
     ;; modtaps (GACS)
     ;; sym
-    h$ (tap-hold $tap-time $hold-pinky @$₽ lmet)
+    h$₽ (tap-hold $tap-time $hold-pinky @$₽ lmet)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
     h- (tap-hold $tap-time $hold-middle (fork - @— (lsft rsft)) lctl)
     hrb (tap-hold $tap-time $hold-index @rb lsft)
@@ -40,7 +40,7 @@
     ocm (tap-hold $tap-time $hold-pinky lalt lmet)
     ;; modtaps (GCAS)
     ;; sym
-    h$ (tap-hold $tap-time $hold-pinky @$₽ lctl)
+    h$₽ (tap-hold $tap-time $hold-pinky @$₽ lctl)
     hlb (tap-hold $tap-time $hold-ring @lb lalt)
     h- (tap-hold $tap-time $hold-middle (fork - @— (lsft rsft)) lmet)
     hrb (tap-hold $tap-time $hold-index @rb lsft)
