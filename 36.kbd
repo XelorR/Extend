@@ -56,7 +56,6 @@
   fun (layer-while-held fun)
   lfun (tap-hold $tap-time $hold-time esc (layer-toggle fun))
   rfun (tap-hold $tap-time $hold-time @cw (layer-toggle fun))
-  lo (tap-hold $tap-time $hold-pinky o (layer-toggle swi))
   l_ (tap-hold $tap-time $hold-pinky _ (layer-toggle swi))
 )
 
