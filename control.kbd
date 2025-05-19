@@ -238,8 +238,8 @@ journalctl -u kanata.service -f
   ;; navigation and edition specific
 
   ;; nav
-  lctl (switch ((base-layer rus)) lctl break () (one-shot 500 lctl) break )
-  lmet (switch ((base-layer rus)) lmet break () (one-shot 500 lmet) break )
+  lctl (switch ((base-layer rus)) (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lctl)) break () (one-shot 500 lctl) break )
+  lmet (switch ((base-layer rus)) (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lmet)) break () (one-shot 500 lmet) break )
 
   ;; mos
   mu (movemouse-up 1 1)
