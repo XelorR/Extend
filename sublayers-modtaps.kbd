@@ -1,5 +1,7 @@
-;; -------------------------------------------------------------------------------------
-;; home row mods, GNU Linux and Windows version
+(defalias
+  lctl (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lctl)) lctl) break () (one-shot 500 lctl) break )
+  lmet (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lmet)) lmet) break () (one-shot 500 lmet) break )
+)
 
 (platform (win winiov2 wintercept linux)
   (defalias

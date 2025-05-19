@@ -234,13 +234,6 @@ journalctl -u kanata.service -f
   dms dynamic-macro-record-stop
   dp0 (dynamic-macro-play 0)
 
-  ;; -------------------------------------------------------------------------------------
-  ;; navigation and edition specific
-
-  ;; nav
-  lctl (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lctl)) lctl) break () (one-shot 500 lctl) break )
-  lmet (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lmet)) lmet) break () (one-shot 500 lmet) break )
-
   ;; mos
   mu (movemouse-up 1 1)
   md (movemouse-down 1 1)
