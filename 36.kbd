@@ -63,14 +63,14 @@
 ;; -------------------------------------------------------------------------------------
 ;; main typing layers
 
-(include eng_colemak.kbd)
-;; (include eng_colemak-dh.kbd)
-;; (include eng_graphite.kbd)
-;; (include eng_qwerty.kbd)
+(environment (LAYOUT_ENG COLEMAK) (include eng_colemak.kbd) )
+(environment (LAYOUT_ENG COLEMAK_DH) (include eng_colemak-dh.kbd) )
+(environment (LAYOUT_ENG GRAPHITE) (include eng_graphite.kbd) )
+(environment (LAYOUT_ENG "") (include eng_qwerty.kbd) )
 
-(include rus_diktor.kbd)
-;; (include uni_diktor.kbd) ;; backup version in unicode symbols
-;; (include rus_йцукенг.kbd)
+(environment (LAYOUT_RUS DIKTOR) (include rus_diktor.kbd) )
+(environment (LAYOUT_RUS DIKTOR_UNICODE) (include uni_diktor.kbd) )
+(environment (LAYOUT_RUS "") (include rus_йцукенг.kbd) )
 
 ;; -------------------------------------------------------------------------------------
 ;; disable remapping - activate it when your frend is using your keyboard
