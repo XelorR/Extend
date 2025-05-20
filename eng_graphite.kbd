@@ -2,21 +2,14 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        [   @]bs  _
 
- _         b   @ll   d    w    z               @'_   f    o   @lu   j        ;    =    \
-@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @,?
- _        @lq   x    m    c    v                k    p   @.>  @-“  @/<       rsft
+ _         b   @ll   d    w    z               @s4   f    o   @lu   j       @s5  @s7   \
+@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @s6
+ _        @lq   x    m    c    v                k    p   @s1  @s2  @s3       rsft
  _                      @lfun @nav             @sym @rfun
 
                         @lfun                       @rfun
                         @lfun                  @sym @rfun
 )
-
-(environment (KEYBOARD_MOD "") (defalias ]bs ]))
-(environment (KEYBOARD_MOD ANGLE) (defalias ]bs ]))
-(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ]bs ]))
-(environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc))
-(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ]bs bspc))
-(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ]bs bspc))
 
 (defalias
   ;; graphite custom shifted symbols
@@ -28,14 +21,20 @@
 
   ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
   lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
-  ;; tdq (tap-dance-eager 400 ( (macro q) (macro bspc 20 S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left) (macro S-, 20 S-. 20 left)))
 
   ;; extra letters which doesn't fit 10 columns
-  eng[ ;
-  eng] =
+  eng[ @s5
+  eng] @s7
   eng` grv
-  eng' @,?
+  eng' @s6
 )
+
+(environment (KEYBOARD_MOD "") (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
+(environment (KEYBOARD_MOD ANGLE) (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
+(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
+(environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 @/\ s4 ' s5 - s6 ; s7 =))
+(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 @/\ s4 ' s5 - s6 ; s7 =))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ]bs bspc s1 @,? s2 @.! s3 @/\ s4 ' s5 - s6 ; s7 =))
 
 (platform (win winiov2 wintercept linux)
   (defalias
