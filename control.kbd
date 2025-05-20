@@ -232,7 +232,7 @@ journalctl -u kanata.service -f
   lctl (switch ((base-layer rus))
     (tap-hold $tap-time $hold-ring
       (multi
-        (one-shot 500 (layer-while-held eng)
+        (one-shot 500 (layer-while-held eng))
         (one-shot 500 lctl)
       )
       lctl
@@ -242,7 +242,7 @@ journalctl -u kanata.service -f
   lmet (switch ((base-layer rus))
     (tap-hold $tap-time $hold-ring
       (multi
-        (one-shot 500 (layer-while-held eng)
+        (one-shot 500 (layer-while-held eng))
         (one-shot 500 lmet)
       )
       lmet
