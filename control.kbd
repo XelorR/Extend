@@ -228,6 +228,28 @@ journalctl -u kanata.service -f
   rele (multi (release-key lsft) (release-key lalt) (release-key lctl) (release-key lmet) (release-key rsft) (release-key ralt) (release-key rctl) (release-key rmet))
   lrd (tap-dance 400 (lrld @rele))
 
+  ;; one shot modifiers
+  lctl (switch ((base-layer rus))
+    (tap-hold $tap-time $hold-ring
+      (multi
+        (one-shot 500 (layer-while-held eng)
+        (one-shot 500 lctl)
+      )
+      lctl
+    ) break
+    () (one-shot 500 lctl) break
+  )
+  lmet (switch ((base-layer rus))
+    (tap-hold $tap-time $hold-ring
+      (multi
+        (one-shot 500 (layer-while-held eng)
+        (one-shot 500 lmet)
+      )
+      lmet
+    ) break
+    () (one-shot 500 lmet) break
+  )
+
   ;; -------------------------------------------------------------------------------------
   ;; fun
   dr0 (dynamic-macro-record 0)
@@ -243,10 +265,6 @@ journalctl -u kanata.service -f
   mwd (mwheel-down 50 120)
   mwl (mwheel-left 50 120)
   mwr (mwheel-right 50 120)
-  
-  ;; nav
-  lctl (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lctl)) lctl) break () (one-shot 500 lctl) break )
-  lmet (switch ((base-layer rus)) (tap-hold $tap-time $hold-ring (multi (one-shot 500 (layer-while-held eng)) (one-shot 500 lmet)) lmet) break () (one-shot 500 lmet) break )
 
   ;; -------------------------------------------------------------------------------------
   ;; custom shifted things
