@@ -63,6 +63,7 @@
   *ь (switch
     ((key-history f 1)) (macro n m) break ;; а - ть
     ((key-history j 1)) (macro d f) break ;; о - ва
+    ((key-history e 1)) (macro x i) break ;; у - чш
     () @ьъ break
   )
   lь (tap-hold $tap-time $hold-pinky @*ь (layer-toggle fun))
