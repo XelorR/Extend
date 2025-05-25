@@ -90,7 +90,7 @@
   []  (switch ((base-layer rus)) (macro @en 50 [ 20 ] 20 left 50 @ru) break () (macro [ 20 ] 20 left) break )
   {}  (switch ((base-layer rus)) (macro @en 50 S-[ 20 S-] 20 left 50 @ru) break () (macro S-[ 20 S-] 20 left) break )
   <>  (switch ((base-layer rus)) (macro @en 50 S-, 20 S-. 20 left 50 @ru) break () (macro S-, 20 S-. 20 left) break )
-  -[] (switch ((base-layer rus)) (macro @en 50 @home - spc 20 [ spc 20 ] spc 20 @end 50 @ru) break () (macro @home 20 - spc 20 [ spc 20 ] spc 20 @end) break )
+  -[] (switch ((base-layer rus)) (macro @en 50 @home 20 - 20 spc 20 [ 20 spc 20 ] spc 20 @end 50 @ru) break () (macro @home 20 - 20 spc 20 [ 20 spc 20 ] spc 20 @end) break )
   #№ (fork @# @№ (lsft rsft))
   $₽ (fork @$ @₽ (lsft rsft))
   +± (fork @+ @± (lsft rsft))
