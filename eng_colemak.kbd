@@ -2,7 +2,7 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        -    _    _
 
- _         q   @lw   f    p    g                j    l    u   @ly  @;or'     [    ]    \
+ _        @*q  @lw   f    p    g                j    l    u   @ly  @;or'     [    ]    \
 @lfun     @ha  @hr  @hs  @ht   d                h   @hn  @he  @hi  @ho      @'or;
  _        @lz  @*x  @*c   v    b                k    m   @s1  @s2  @s3       rsft
  _                      @lfun @nav             @sym @rfun
@@ -31,6 +31,11 @@
     ((and (key-history s 3) (key-history f 2) (key-history m 1))) (macro 30 bspc bspc bspc 30 S-s 10 S-f 10 S-m 10 S-c 30) break
     ((and (key-history l 3) (key-history m 2) (key-history r 1))) (macro 30 bspc bspc bspc 30 S-l 10 S-m 10 S-r 10 S-c 30) break
     () c break
+  )
+
+  *q (switch
+    ((and (key-history g 2) (key-history b 1))) (macro 30 bspc bspc 30 S-g 10 S-b 10 S-q 30) break
+    () q break
   )
 
   ;; extra letters which doesn't fit 10 columns
