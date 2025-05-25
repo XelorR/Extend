@@ -13,7 +13,7 @@
 
 (defalias
   ⟐ (switch
-    ((key-history spc 1)) (macro t h e) break
+    ((key-history spc 1)) (macro t h e spc) break
     ((key-history s 1)) c break
     ((key-history p 1)) h break
     ((key-history h 1)) y break
