@@ -5,25 +5,38 @@
  _         b   @ll   d   @*c   v                j    f    o   @lu   '        _    _    _
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
  _        @lx  @*q   m    w    z               @*k   p   @,?  @.!   -        rsft
- _                      @lfun @nav             @sym @⟐fun
+ _                      @lfun @nav             @sym @rfun
 
-                        @lfun                       @⟐fun
-                        @lfun                  @sym @⟐fun
+                        @lfun                       @rfun
+                        @lfun                  @sym @rfun
 )
 
 (defalias
-  ⟐ (switch
-    ((key-history spc 1)) (macro t h e spc) break
-    ((key-history s 1)) c break
-    ((key-history p 1)) h break
-    ((key-history h 1)) y break
-    () XX break
-  )
-
-  *k (switch
-    ((key-history t 1)) (macro i o n) break
-    ((key-history n 1)) (macro t i o n) break
-    () k break
+  *k (tap-dance 400
+    (switch
+      ((key-history spc 1)) (macro t h e spc) break
+      ((key-history b 1)) (macro e f o r e) break
+      ((key-history t 1)) (macro m e n t) break
+      ((key-history w 1)) (macro h i c h) break
+      ((key-history m 1)) (macro e n t) break
+      ((key-history q 1)) (macro u e n) break
+      ((key-history n 1)) (macro i o n) break
+      ((key-history j 1)) (macro u s t) break
+      ((key-history i 1)) (macro o n) break
+      ((key-history v 1)) (macro e r) break
+      ((key-history . 1)) (macro . /) break
+      ((key-history , 1)) (macro spc b u t) break
+      ((key-history o 1)) a break
+      ((key-history u 1)) e break
+      ((key-history r 1)) l break
+      ((key-history s 1)) c break
+      ((key-history p 1)) h break
+      ((key-history h 1)) y break
+      ((key-history - 1)) (macro S-.) break
+      ((key-history = 1)) (macro S-.) break
+      () k break
+    )
+    (macro k)
   )
 
   *c (switch
@@ -39,7 +52,6 @@
 
   ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
   lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
-  ⟐fun (tap-hold $tap-time $hold-time @⟐ (layer-toggle fun))
 
   ;; extra letters which doesn't fit 10 columns
   eng[ [
