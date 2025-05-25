@@ -4,7 +4,7 @@
 
  _         b   @ll   d    w    v                j    f    o   @lu   '        _    _    _
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
- _        @lx  @*q   m   @*c   z                k    p   @,?  @.!   -        rsft
+ _        @lx  @*q   m   @*c   z               @*k   p   @,?  @.!   -        rsft
  _                      @lfun @nav             @sym @⟐fun
 
                         @lfun                       @⟐fun
@@ -18,6 +18,12 @@
     ((key-history p 1)) h break
     ((key-history h 1)) y break
     () XX break
+  )
+
+  *k (switch
+    ((key-history t 1)) (macro i o n) break
+    ((key-history n 1)) (macro t i o n) break
+    () k break
   )
 
   *c (switch
