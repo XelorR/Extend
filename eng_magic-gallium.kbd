@@ -1,0 +1,61 @@
+(deflayer eng ;; graphite
+ _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
+ _         1    2    3    4    5                6    7    8    9    0        _    _    _
+
+ _         b   @ll   d    w    v               @⟐    f    o   @lu   j        _    _    _
+@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
+ _        @lx   q    m    c    z                k    p   @,?  @.!   '       rsft
+ _                      @lfun @nav             @sym @rfun
+
+                        @lfun                       @rfun
+                        @lfun                  @sym @rfun
+)
+
+(defalias
+  ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
+  lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
+
+  ⟐ (switch
+    ((key-history spc 1)) (macro t h e) break
+    ((key-history s 1)) c break
+    () XX break
+  )
+
+  ;; extra letters which doesn't fit 10 columns
+  eng[ [
+  eng] ]
+  eng` grv
+  eng' ;
+)
+
+(platform (win winiov2 wintercept linux)
+  (defalias
+    lx (tap-hold $tap-time $hold-pinky q (layer-toggle mos))
+    ;; modtaps (GACS)
+    ;; eng ;; colemak
+    hn (tap-hold $tap-time $hold-pinky n lmet)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    ht (tap-hold $tap-time $hold-middle t lctl)
+    hs (tap-hold $tap-time $hold-index s lsft)
+    hh (tap-hold $tap-time $hold-index h lsft)
+    ha (tap-hold $tap-time $hold-middle a lctl)
+    he (tap-hold $tap-time $hold-ring e lalt)
+    hi (tap-hold $tap-time $hold-pinky i lmet)
+  )
+)
+
+(platform (macos)
+  (defalias
+    lx (tap-hold $tap-time $hold-pinky q (layer-toggle mos_mac))
+    ;; modtaps (GCAS)
+    ;; eng ;; colemak
+    hn (tap-hold $tap-time $hold-pinky n lctl)
+    hr (tap-hold $tap-time $hold-ring r lalt)
+    ht (tap-hold $tap-time $hold-middle t lmet)
+    hs (tap-hold $tap-time $hold-index s lsft)
+    hh (tap-hold $tap-time $hold-index h lsft)
+    ha (tap-hold $tap-time $hold-middle a lmet)
+    he (tap-hold $tap-time $hold-ring e lalt)
+    hi (tap-hold $tap-time $hold-pinky i lctl)
+  )
+)
