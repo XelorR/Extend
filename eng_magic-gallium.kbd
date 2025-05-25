@@ -2,24 +2,27 @@
  _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        _    _    _
 
- _         b   @ll   d    w    v               @⟐    f    o   @lu   j        _    _    _
+ _         b   @ll   d    w    v                j    f    o   @lu   '        _    _    _
 @lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
- _        @lx   q    m    c    z                k    p   @,?  @.!   '       rsft
- _                      @lfun @nav             @sym @rfun
+ _        @lx   q    m    c    z                k    p   @,?  @.!   -        rsft
+ _                      @lfun @nav             @sym @⟐fun
 
-                        @lfun                       @rfun
-                        @lfun                  @sym @rfun
+                        @lfun                       @⟐fun
+                        @lfun                  @sym @⟐fun
 )
 
 (defalias
-  ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
-  lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
-
   ⟐ (switch
     ((key-history spc 1)) (macro t h e) break
     ((key-history s 1)) c break
+    ((key-history p 1)) h break
+    ((key-history h 1)) y break
     () XX break
   )
+
+  ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
+  lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
+  ⟐fun (tap-hold $tap-time $hold-time @⟐ (layer-toggle fun))
 
   ;; extra letters which doesn't fit 10 columns
   eng[ [
