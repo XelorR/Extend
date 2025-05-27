@@ -131,7 +131,7 @@
  _        @!?  @<«  @=≈  @>»  @`               @lrd @[   @_   @]   @'        _    _    _
  _        @h$₽ @hlb @h-  @hrb @+±              @%°  @h{  @h;  @h}  @h“       _
  _        @#№  @*   @:   @/\  @at              @^   @\   @~   @&   @|¦       _
- _                      @lfun @lau              XX  @rfun
+ _                      @lfun @nav              XX  @rfun
 
                         @lfun                       @rfun
                         @lfun                   XX  @rfun
@@ -144,10 +144,10 @@
  _         f12  f7   f8   f9  volu             @/    7    8    9   @del      _    _    _
  _        @f11 @f4  @f5  @f6  vold              -   @h4  @h5  @h6  @hbspc    _
  _         f10  f1   f2   f3  mute              0    1    2    3   @croll    _
- _                      @lfun @nav              ret @rfun
+ _                       @lau @nav              ret @lau
 
-                        @lfun                       @rfun
-                        @lfun                   ret @rfun
+                         @lau                       @lau
+                         @lau                   ret @lau
 )
 
 ;; ------------------------------------------------------------------------------------------
@@ -160,10 +160,10 @@
  _       @qdel @tlft  tab @trgt @lnch             ins  home up   end  del       _    _    _
  _         lmet lalt @lctl lsft @prnt            @mcon left down rght bspc      _
  _         C-z  C-x   C-c  C-v  @redo             mltp pgup @mnu pgdn @kill     _
- _                        @lfun @nav             @lau @rfun
+ _                        @lfun @nav             @sym @rfun
 
                           @lfun                       @rfun
-                          @lfun                  @lau @rfun
+                          @lfun                  @sym @rfun
 )
 
 (deflayer nav_mac ;; navigation layer
@@ -173,10 +173,10 @@
  _       @qbspc @tlft tab @trgt @lnch             ins @home up  @end @del       _    _    _
  _         lctl @ocm @mopt lsft @prnt            @mcon left down rght bspc      _
  _         M-z  M-x   M-c  M-v  @redo            mltp pgup @file pgdn @kill     _
- _                        @lau  @nav             @lau @rfun
+ _                        @lfun @nav             @sym @rfun
 
-                          @lau                        @rfun
-                          @lau                   @lau @rfun
+                          @lfun                       @rfun
+                          @lfun                  @sym @rfun
 )
 
 (deflayer mos ;; mouse layer
