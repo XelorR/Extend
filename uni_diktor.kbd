@@ -2,8 +2,8 @@
 ;; backup, unicode typing for Russian language
 
 (deflayer rus ;; diktor
- _         _    _    _    _    _                f6   f7   f8   f9    f10    f11   f12  _
- @_ё       @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0     @_star _    _
+@mos       _    _    _    _    _                f6   f7   f8   f9    f10    f11   f12  _
+@_ё        @_1  @_2  @_3  @_4  @_5              @_6  @_7  @_8   9    0     @_star _    _
 
  _         @_ц  @_lь @_я  @_,? @_.!             @_з  @_в  @_к  @_lд @_ч     @_ш  @_щ   \
 @lfun      @_hу @_hи @_hе @_hо @_а              @_л  @_hн @_hт @_hс @_hр    @_й
