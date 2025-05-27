@@ -14,7 +14,6 @@
 (defalias
   *k (tap-dance 400 (
     (switch
-      ((key-history spc 1)) (macro t h e spc) break
       ((key-history b 1)) (macro e f o r e) break
       ((key-history t 1)) (macro m e n t) break
       ((key-history w 1)) (macro h i c h) break
