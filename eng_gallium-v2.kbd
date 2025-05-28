@@ -2,14 +2,21 @@
 @mos       _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
  _         1    2    3    4    5                6    7    8    9    0        _    _    _
 
- _         b   @ll   d   @*c   v                j    f    o   @lu   '        _    _    _
-@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi       ;
- _        @lx  @*q   m    w    z               @*k   p   @,?  @.!   -        rsft
+ _         b   @ll   d   @*c   v                j    f    o   @lu  @s4       _    _    _
+@lfun     @hn  @hr  @ht  @hs   g                y   @hh  @ha  @he  @hi      @s5
+ _        @lx  @*q   m    w    z               @*k   p   @s1  @s2  @s3       rsft
  _                      @lfun @nav             @sym @rfun
 
                         @lfun                       @rfun
                         @lfun                  @sym @rfun
 )
+
+(environment (KEYBOARD_MOD "") (defalias s1 ' s2 ; s3 . s4 , s5 /))
+(environment (KEYBOARD_MOD ANGLE) (defalias s1 ' s2 ; s3 . s4 , s5 /))
+(environment (KEYBOARD_MOD ANGLE_ISO) (defalias s1 ' s2 ; s3 . s4 , s5 /))
+(environment (KEYBOARD_MOD WIDE) (defalias s1 @,? s2 @.! s3 - s4 ' s5 ;'))
+(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias s1 @,? s2 @.! s3 - s4 ' s5 ;'))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias s1 @,? s2 @.! s3 - s4 ' s5 ;'))
 
 (defalias
   *k (tap-dance 400 (
