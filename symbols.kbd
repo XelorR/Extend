@@ -108,13 +108,11 @@
   *k (tap-dance 300 (
     (switch
       ((key-history b 1)) (macro e f o r e) break
-      ((key-history t 1)) (macro m e n t) break
       ((key-history w 1)) (macro h i c h) break
       ((key-history m 1)) (macro e n t) break
-      ((key-history q 1)) (macro u e n) break
+      ((key-history q 1)) (macro u e) break
       ((key-history n 1)) (macro i o n) break
       ((key-history j 1)) (macro u s t) break
-      ((key-history i 1)) (macro o n) break
       ((key-history v 1)) (macro e r) break
       ((key-history . 1)) (macro . /) break
       ((key-history , 1)) (macro spc b u t) break
