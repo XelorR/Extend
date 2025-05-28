@@ -152,6 +152,11 @@
     () ' break
   )
 
+  *,? (switch
+    ((or (key-history . 1) (key-history / 1))) @brc break
+    () @,? break
+  )
+
   ;; -------------------------------------------------------------------------------------
   ;; Numbers with shift, to be similar with sym layer
 
