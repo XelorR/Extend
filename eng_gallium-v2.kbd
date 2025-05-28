@@ -19,43 +19,6 @@
 (environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias s1 @,? s2 @.! s3 - s4 ' s5 ;'))
 
 (defalias
-  *k (tap-dance 400 (
-    (switch
-      ((key-history b 1)) (macro e f o r e) break
-      ((key-history t 1)) (macro m e n t) break
-      ((key-history w 1)) (macro h i c h) break
-      ((key-history m 1)) (macro e n t) break
-      ((key-history q 1)) (macro u e n) break
-      ((key-history n 1)) (macro i o n) break
-      ((key-history j 1)) (macro u s t) break
-      ((key-history i 1)) (macro o n) break
-      ((key-history v 1)) (macro e r) break
-      ((key-history . 1)) (macro . /) break
-      ((key-history , 1)) (macro spc b u t) break
-      ((key-history o 1)) a break
-      ((key-history u 1)) e break
-      ((key-history r 1)) l break
-      ((key-history - 1)) (macro S-.) break
-      ((key-history = 1)) (macro S-.) break
-      () k break
-    )
-    (macro k))
-  )
-
-  *q (switch
-    ((and (key-history g 2) (key-history b 1))) (macro 30 bspc bspc 30 S-g 10 S-b 10 S-q 30) break
-    ((key-history p 1)) h break
-    ((key-history h 1)) y break
-    ((key-history s 1)) c break
-    () q break
-  )
-
-  *c (switch
-    ((and (key-history s 3) (key-history f 2) (key-history m 1))) (macro 30 bspc bspc bspc 30 S-s 10 S-f 10 S-m 10 S-c 30) break
-    ((and (key-history l 3) (key-history m 2) (key-history r 1))) (macro 30 bspc bspc bspc 30 S-l 10 S-m 10 S-r 10 S-c 30) break
-    () c break
-  )
-
   ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
   lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
 
@@ -63,7 +26,7 @@
   eng[ [
   eng] ]
   eng` grv
-  eng' ;
+  eng' @s5
 )
 
 (platform (win winiov2 wintercept linux)
