@@ -65,8 +65,7 @@
 
 (include eng_colemak.kbd)
 ;; (include eng_colemak-dh.kbd)
-;; (include eng_magic-gallium.kbd)
-;; (include eng_gallium-v2-cw-sym.kbd)
+;; (include eng_gallium-v2.kbd)
 ;; (include eng_graphite.kbd)
 ;; (include eng_qwerty.kbd)
 
