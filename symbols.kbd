@@ -105,7 +105,7 @@
   ;; -------------------------------------------------------------------------------------
   ;; magic letters
 
-  *k (tap-dance 400 (
+  *k (tap-dance 300 (
     (switch
       ((key-history b 1)) (macro e f o r e) break
       ((key-history t 1)) (macro m e n t) break
