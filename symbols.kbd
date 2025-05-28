@@ -129,6 +129,11 @@
     () q break
   )
 
+  *m (switch
+    ((and (key-history c 2) (key-history r 1))) (macro 30 bspc bspc 30 S-c 10 S-r 10 S-m 30) break
+    () q break
+  )
+
   *c (switch
     ((and (key-history s 3) (key-history f 2) (key-history m 1))) (macro 30 bspc bspc bspc 30 S-s 10 S-f 10 S-m 10 S-c 30) break
     ((and (key-history l 3) (key-history m 2) (key-history r 1))) (macro 30 bspc bspc bspc 30 S-l 10 S-m 10 S-r 10 S-c 30) break
