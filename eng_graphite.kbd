@@ -32,9 +32,9 @@
 (environment (KEYBOARD_MOD "") (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
 (environment (KEYBOARD_MOD ANGLE) (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
 (environment (KEYBOARD_MOD ANGLE_ISO) (defalias ]bs ] s1 @.> s2 @-“ s3 @/< s4 @'_ s5 ; s6 @,? s7 =))
-(environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 ' s5 - s6 ; s7 =))
-(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 ' s5 - s6 ; s7 =))
-(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 ' s5 - s6 ; s7 =))
+(environment (KEYBOARD_MOD WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 @*' s5 - s6 ; s7 =))
+(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 @*' s5 - s6 ; s7 =))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ]bs bspc s1 @,? s2 @.! s3 - s4 @*' s5 - s6 ; s7 =))
 
 (platform (win winiov2 wintercept linux)
   (defalias
