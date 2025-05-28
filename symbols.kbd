@@ -147,10 +147,10 @@
   )
 
   *' (switch
-    ((key-history (or spc 9 [ ,) 1)) (macro S-' 20 S-' 20 left) break
-    ((and (key-history 0 2) (key-history left 1)) (macro S-' 20 S-' 20 left) break)
-    ((and (key-history ] 2) (key-history left 1)) (macro S-' 20 S-' 20 left) break)
-    ((and (key-history , 2) (key-history left 1)) (macro S-' 20 S-' 20 left) break)
+    ((key-history spc 1)) (macro S-' 20 S-' 20 left) break
+    ((and (key-history 0 2) (key-history left 1))) (macro S-' 20 S-' 20 left) break
+    ((and (key-history ] 2) (key-history left 1))) (macro S-' 20 S-' 20 left) break
+    ((and (key-history , 2) (key-history left 1))) (macro S-' 20 S-' 20 left) break
     () ' break
   )
 
