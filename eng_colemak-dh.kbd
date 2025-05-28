@@ -16,25 +16,34 @@
  _         1    2    3    4    5                6    7    8    9    0        -    _    _
 
  _         q    w    f    p    b                j    l    u   @ly  @;or'     [    ]    \
-@cw        a    r    s    t    g                m    n    e    i    o       @'or;
- _         z    x    c    d    v                k    h   @s1  @s2  @s3       rsft
- _                        _    _                _    _
+@cw       @ha  @hr  @hs  @ht   g                m   @hn  @he  @hi  @ho      @'or;
+ _        @hz   x    c    d    v                k    h   @s1  @s2  @s3       rsft
+ _                        _   @nav              _    _
 
                           _                          _
                           _                     _    _
 )
 
-(environment (KEYBOARD_MOD "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD ANGLE) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
-(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
-(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
-
 (defalias
   lw (tap-hold $tap-time $hold-pinky w (layer-toggle fun))
   ly (tap-hold $tap-time $hold-pinky y (layer-toggle swi))
 
+  ht (tap-hold $tap-time $hold-index t lsft)
+  hn (tap-hold $tap-time $hold-index n lsft)
+  hz (tap-hold $tap-time $hold-index z lsft)
+  h- (tap-hold $tap-time $hold-index - lsft)
+  hr (tap-hold $tap-time $hold-ring r lalt)
+  hi (tap-hold $tap-time $hold-ring i lalt)
+)
+
+(environment (KEYBOARD_MOD "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
+(environment (KEYBOARD_MOD ANGLE) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
+(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
+(environment (KEYBOARD_MOD WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 @h-))
+(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 @h-))
+(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 @h-))
+
+(defalias
   ;; extra letters which doesn't fit 10 columns
   eng[ [
   eng] ]
@@ -48,12 +57,8 @@
     ;; modtaps (GACS)
     ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lmet)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lctl)
-    ht (tap-hold $tap-time $hold-index t lsft)
-    hn (tap-hold $tap-time $hold-index n lsft)
     he (tap-hold $tap-time $hold-middle e lctl)
-    hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lmet)
   )
 )
@@ -64,12 +69,8 @@
     ;; modtaps (GCAS)
     ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lctl)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lmet)
-    ht (tap-hold $tap-time $hold-index t lsft)
-    hn (tap-hold $tap-time $hold-index n lsft)
     he (tap-hold $tap-time $hold-middle e lmet)
-    hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lctl)
   )
 )
