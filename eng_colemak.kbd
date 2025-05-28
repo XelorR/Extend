@@ -11,6 +11,19 @@
                         @lfun                  @sym @rfun
 )
 
+(deflayer engr ;; colemak rowstag, regular mods
+ _         _    _    _    _    _                f6   f7   f8   f9   f10      f11  f12  _
+ _         1    2    3    4    5                6    7    8    9    0        -    _    _
+
+ _         q    w    f    p    g                j    l    u    y   @;or'     [    ]    \
+ _         a    r    s    t    d                h    n    e    i    o       @'or;
+ _         z    x    c    v    b                k    m   @s1  @s2  @s3       rsft
+ _                        _    _                _    _
+
+                          _                          _
+                          _                     _    _
+)
+
 (environment (KEYBOARD_MOD "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
 (environment (KEYBOARD_MOD ANGLE) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
 (environment (KEYBOARD_MOD ANGLE_ISO) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
