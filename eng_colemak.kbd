@@ -38,10 +38,8 @@
     ;; modtaps (GACS)
     ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lmet)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lctl)
     he (tap-hold $tap-time $hold-middle e lctl)
-    hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lmet)
   )
 )
@@ -52,10 +50,8 @@
     ;; modtaps (GCAS)
     ;; eng ;; colemak
     ha (tap-hold $tap-time $hold-pinky a lctl)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     hs (tap-hold $tap-time $hold-middle s lmet)
     he (tap-hold $tap-time $hold-middle e lmet)
-    hi (tap-hold $tap-time $hold-ring i lalt)
     ho (tap-hold $tap-time $hold-pinky o lctl)
   )
 )
