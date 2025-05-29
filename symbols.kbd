@@ -153,7 +153,7 @@
   )
 
   *,? (switch
-    ((or (key-history . 1) (key-history / 1))) @brc break
+    ((or (key-history . 1) (key-history / 1))) (multi bspc @brc) break
     () @,? break
   )
 
