@@ -21,12 +21,8 @@
   hi (tap-hold $tap-time $hold-ring i lalt)
 )
 
-(environment (KEYBOARD_MOD "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD ANGLE) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD ANGLE_ISO) (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
-(environment (KEYBOARD_MOD WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
-(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
-(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
+(environment (ALT_SYMBOLS "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
+(environment (ALT_SYMBOLS XELOR) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
 
 (defalias
   ;; extra letters which doesn't fit 10 columns

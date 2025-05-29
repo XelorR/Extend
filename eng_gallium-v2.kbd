@@ -11,17 +11,20 @@
                         @lfun                  @sym @rfun
 )
 
-(environment (KEYBOARD_MOD "") (defalias s1 ' s2 ; s3 . s4 , s5 /))
-(environment (KEYBOARD_MOD ANGLE) (defalias s1 ' s2 ; s3 . s4 , s5 /))
-(environment (KEYBOARD_MOD ANGLE_ISO) (defalias s1 ' s2 ; s3 . s4 , s5 /))
-(environment (KEYBOARD_MOD WIDE) (defalias s1 @*,? s2 @.! s3 - s4 @*' s5 ;))
-(environment (KEYBOARD_MOD ANGLE_WIDE) (defalias s1 @*,? s2 @.! s3 - s4 @*' s5 ;))
-(environment (KEYBOARD_MOD ANGLE_WIDE_ISO) (defalias s1 @*,? s2 @.! s3 - s4 @*' s5 ;))
-
 (defalias
   ll (tap-hold $tap-time $hold-pinky l (layer-toggle fun))
   lu (tap-hold $tap-time $hold-pinky u (layer-toggle swi))
 
+  hs (tap-hold $tap-time $hold-index s lsft)
+  hh (tap-hold $tap-time $hold-index h lsft)
+  hr (tap-hold $tap-time $hold-ring r lalt)
+  he (tap-hold $tap-time $hold-ring e lalt)
+)
+
+(environment (ALT_SYMBOLS "") (defalias s1 ' s2 ; s3 . s4 , s5 /))
+(environment (ALT_SYMBOLS XELOR) (defalias s1 @*,? s2 @.! s3 - s4 @*' s5 ;))
+
+(defalias
   ;; extra letters which doesn't fit 10 columns
   eng[ [
   eng] ]
@@ -33,14 +36,9 @@
   (defalias
     lx (tap-hold $tap-time $hold-pinky q (layer-toggle mos))
     ;; modtaps (GACS)
-    ;; eng ;; colemak
     hn (tap-hold $tap-time $hold-pinky n lmet)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     ht (tap-hold $tap-time $hold-middle t lctl)
-    hs (tap-hold $tap-time $hold-index s lsft)
-    hh (tap-hold $tap-time $hold-index h lsft)
     ha (tap-hold $tap-time $hold-middle a lctl)
-    he (tap-hold $tap-time $hold-ring e lalt)
     hi (tap-hold $tap-time $hold-pinky i lmet)
   )
 )
@@ -49,14 +47,9 @@
   (defalias
     lx (tap-hold $tap-time $hold-pinky q (layer-toggle mos_mac))
     ;; modtaps (GCAS)
-    ;; eng ;; colemak
     hn (tap-hold $tap-time $hold-pinky n lctl)
-    hr (tap-hold $tap-time $hold-ring r lalt)
     ht (tap-hold $tap-time $hold-middle t lmet)
-    hs (tap-hold $tap-time $hold-index s lsft)
-    hh (tap-hold $tap-time $hold-index h lsft)
     ha (tap-hold $tap-time $hold-middle a lmet)
-    he (tap-hold $tap-time $hold-ring e lalt)
     hi (tap-hold $tap-time $hold-pinky i lctl)
   )
 )

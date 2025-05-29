@@ -3,8 +3,8 @@
  _         1    2    3    4    5                6    7    8    9    0        -    _    _
 
  _        @*q  @lw   e    r    t                y    u    i   @lo   p        [    ]    \
-@lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq;      '
- _        @lz   x   @*c   v    b                n   @*m   ,    .    /        rsft
+@lfun     @ha  @hs  @hd  @hf   g                h   @hj  @hk  @hl  @hq;     @'or;
+ _        @lz   x   @*c   v    b                n   @*m  @s1  @s2  @s3       rsft
  _                      @lfun @nav             @sym @rfun
 
                         @lfun                       @rfun
@@ -15,11 +15,21 @@
   lw (tap-hold $tap-time $hold-pinky w (layer-toggle fun))
   lo (tap-hold $tap-time $hold-pinky o (layer-toggle swi))
 
+  hf (tap-hold $tap-time $hold-index f lsft)
+  hj (tap-hold $tap-time $hold-index j lsft)
+  hs (tap-hold $tap-time $hold-ring s lalt)
+  hl (tap-hold $tap-time $hold-ring l lalt)
+)
+
+(environment (ALT_SYMBOLS "") (defalias ;or' ; 'or; ' s1 , s2 . s3 /))
+(environment (ALT_SYMBOLS XELOR) (defalias ;or' @*' 'or; ; s1 @*,? s2 @.! s3 -))
+
+(defalias
   ;; extra letters which doesn't fit 10 columns
   eng[ [
   eng] ]
   eng` grv
-  eng' '
+  eng' @'or;
 )
 
 (platform (win winiov2 wintercept linux)
@@ -28,13 +38,9 @@
     ;; modtaps (GACS)
     ;; eng ;; qwerty
     ha (tap-hold $tap-time $hold-pinky a lmet)
-    hs (tap-hold $tap-time $hold-ring s lalt)
     hd (tap-hold $tap-time $hold-middle d lctl)
-    hf (tap-hold $tap-time $hold-index f lsft)
-    hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lctl)
-    hl (tap-hold $tap-time $hold-ring l lalt)
-    hq; (tap-hold $tap-time $hold-pinky ; lmet)
+    hq; (tap-hold $tap-time $hold-pinky @;or' lmet)
   )
 )
 
@@ -44,12 +50,8 @@
     ;; modtaps (GCAS)
     ;; eng ;; qwerty
     ha (tap-hold $tap-time $hold-pinky a lctl)
-    hqs (tap-hold $tap-time $hold-ring s lalt)
     hd (tap-hold $tap-time $hold-middle d lmet)
-    hf (tap-hold $tap-time $hold-index f lsft)
-    hj (tap-hold $tap-time $hold-index j lsft)
     hk (tap-hold $tap-time $hold-middle k lmet)
-    hl (tap-hold $tap-time $hold-ring l lalt)
-    hq; (tap-hold $tap-time $hold-pinky ; lctl)
+    hq; (tap-hold $tap-time $hold-pinky @;or' lctl)
   )
 )
